@@ -173,28 +173,35 @@ export default function Navbar() {
 
             {/* Top Right Group (Desktop) */}
             <div className="top-links" style={{ display: "none", alignItems: "center", gap: 32 }}>
-              {/* Language Selector (First) */}
-              <button
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 6,
-                  background: "rgba(255,255,255,0.1)",
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  padding: "8px 12px",
-                  borderRadius: "4px",
-                  color: "#fff",
-                  fontSize: 12,
-                  fontWeight: 800,
-                  cursor: "pointer",
-                  transition: "background 0.2s",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.2)")}
-                onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
-              >
-                <Globe size={14} />
-                EN
-              </button>
+              {/* Language Selector */}
+              <div style={{ position: "relative", display: "flex", alignItems: "center" }}>
+                <Globe size={14} color="#fff" style={{ position: "absolute", left: 10, pointerEvents: "none" }} />
+                <select
+                  style={{
+                    appearance: "none",
+                    background: "rgba(255,255,255,0.1)",
+                    border: "1px solid rgba(255,255,255,0.2)",
+                    padding: "8px 28px 8px 30px",
+                    borderRadius: "4px",
+                    color: "#fff",
+                    fontSize: 12,
+                    fontWeight: 800,
+                    cursor: "pointer",
+                    outline: "none",
+                    transition: "background 0.2s",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.2)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
+                >
+                  <option value="en" style={{ color: "#000" }}>EN</option>
+                  <option value="es" style={{ color: "#000" }}>ES</option>
+                  <option value="fr" style={{ color: "#000" }}>FR</option>
+                  <option value="de" style={{ color: "#000" }}>DE</option>
+                  <option value="zh" style={{ color: "#000" }}>ZH</option>
+                  <option value="ar" style={{ color: "#000" }}>AR</option>
+                </select>
+                <ChevronDown size={12} color="#fff" style={{ position: "absolute", right: 10, pointerEvents: "none" }} />
+              </div>
 
               <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
                 {topLinks.map((link) => {
@@ -249,8 +256,8 @@ export default function Navbar() {
           </div>
         </motion.div>
 
-        {/* Bottom Bar (Frosted Glass) */}
-        <div className="bottom-bar" style={{ display: "none", borderBottom: "1px solid rgba(144, 202, 249, 0.4)", position: "relative", background: "rgba(255, 255, 255, 0.85)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}>
+        {/* Bottom Bar (White) */}
+        <div className="bottom-bar" style={{ display: "none", borderBottom: "1px solid #90CAF9", position: "relative", background: "#fff" }}>
           <div
             style={{
               maxWidth: 1600,

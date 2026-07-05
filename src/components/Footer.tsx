@@ -76,28 +76,28 @@ export default function Footer() {
 
       {/* Band 2: Contact Info */}
       <div style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-        <div style={{ maxWidth: 1440, margin: "0 auto", padding: "24px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 32 }}>
+        <div className="footer-contact-band" style={{ maxWidth: 1440, margin: "0 auto", padding: "24px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 32 }}>
           {/* USA Office */}
-          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 24 }}>
+          <div className="footer-office-block" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 24 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <MapPin size={16} color="#2196F3" />
-              <span style={{ fontSize: 13, fontWeight: 500, color: "#fff", textTransform: "uppercase" }}>105 MAXES ROAD, MELVILLE, NY 11737, USA</span>
+              <MapPin size={16} color="#2196F3" className="office-icon" />
+              <span className="office-text" style={{ fontSize: 13, fontWeight: 500, color: "#fff", textTransform: "uppercase" }}>105 MAXES ROAD, MELVILLE, NY 11737, USA</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <Phone size={16} color="#2196F3" />
-              <span style={{ fontSize: 13, fontWeight: 500 }}>+1 (512) 782-8880</span>
+              <Phone size={16} color="#2196F3" className="office-icon" />
+              <span className="office-text" style={{ fontSize: 13, fontWeight: 500 }}>+1 (512) 782-8880</span>
             </div>
           </div>
           
           {/* Canada Office */}
-          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 24 }}>
+          <div className="footer-office-block" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 24 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <MapPin size={16} color="#2196F3" />
-              <span style={{ fontSize: 13, fontWeight: 500, color: "#fff", textTransform: "uppercase" }}>ONE YOUNGE STREET, TORONTO, ONTARIO M5E 1R4 CANADA</span>
+              <MapPin size={16} color="#2196F3" className="office-icon" />
+              <span className="office-text" style={{ fontSize: 13, fontWeight: 500, color: "#fff", textTransform: "uppercase" }}>ONE YOUNGE STREET, TORONTO, ONTARIO M5E 1R4 CANADA</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <Phone size={16} color="#2196F3" />
-              <span style={{ fontSize: 13, fontWeight: 500 }}>+1 (438) 805-9990</span>
+              <Phone size={16} color="#2196F3" className="office-icon" />
+              <span className="office-text" style={{ fontSize: 13, fontWeight: 500 }}>+1 (438) 805-9990</span>
             </div>
           </div>
         </div>
@@ -290,6 +290,22 @@ export default function Footer() {
         @media (min-width: 1024px) {
           .footer-main-grid {
             grid-template-columns: 1.5fr 1fr 1.2fr 1fr 1fr !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .footer-contact-band {
+            flex-direction: column;
+            align-items: flex-start !important;
+            gap: 24px !important;
+            padding: 24px 24px !important;
+          }
+          .footer-office-block {
+            flex-direction: column;
+            align-items: flex-start !important;
+            gap: 12px !important;
+          }
+          .office-text {
+            font-size: 11px !important;
           }
         }
       `}</style>

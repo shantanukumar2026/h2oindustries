@@ -50,7 +50,7 @@ export default function Solutions() {
             </div>
             <h2
               className="font-display"
-              style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.2rem)", fontWeight: 900, color: "#0B1929", lineHeight: 1.0, textTransform: "uppercase" }}
+              style={{ fontSize: "clamp(1.8rem, 8vw, 3.2rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.0, textTransform: "uppercase" }}
             >
               Engineering Solutions<br />
               <span style={{ color: "#1565C0" }}>For Every Application</span>
@@ -155,9 +155,9 @@ function SolutionRow({ sol, index }: { sol: typeof solutions[0]; index: number }
           <h3
             className="font-display"
             style={{
-              fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
+              fontSize: "clamp(1.5rem, 6vw, 2.6rem)",
               fontWeight: 900,
-              color: "#0B1929",
+              color: "#0D3A73",
               lineHeight: 1.05,
               marginBottom: 20,
               textTransform: "uppercase",
@@ -184,7 +184,7 @@ function SolutionRow({ sol, index }: { sol: typeof solutions[0]; index: number }
                 }}>
                   <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#1565C0" }} />
                 </div>
-                <span style={{ fontSize: 15, color: "#0B1929", fontWeight: 500 }}>{pt}</span>
+                <span style={{ fontSize: 15, color: "#0D3A73", fontWeight: 500 }}>{pt}</span>
               </li>
             ))}
           </ul>

@@ -27,7 +27,7 @@ export default function ManufacturingProcess() {
             </div>
             <h2
               className="font-display"
-              style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.2rem)", fontWeight: 900, color: "#0B1929", lineHeight: 1.0, marginBottom: 16, textTransform: "uppercase" }}
+              style={{ fontSize: "clamp(1.8rem, 8vw, 3.2rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.0, marginBottom: 16, textTransform: "uppercase" }}
             >
               Our Manufacturing<br />
               <span style={{ color: "#1565C0" }}>Process</span>
@@ -107,7 +107,7 @@ export default function ManufacturingProcess() {
                   </div>
                   <h3
                     className="font-display"
-                    style={{ fontSize: 20, fontWeight: 900, color: "#0B1929", marginBottom: 10, textTransform: "uppercase" }}
+                    style={{ fontSize: 20, fontWeight: 900, color: "#0D3A73", marginBottom: 10, textTransform: "uppercase" }}
                   >
                     {step.title}
                   </h3>
@@ -162,7 +162,7 @@ export default function ManufacturingProcess() {
                     <span style={{ fontSize: 11, fontWeight: 800, color: "#1565C0", letterSpacing: "0.1em" }}>{step.num}</span>
                     <h3
                       className="font-display"
-                      style={{ fontSize: 22, fontWeight: 900, color: "#0B1929", textTransform: "uppercase" }}
+                      style={{ fontSize: 22, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase" }}
                     >
                       {step.title}
                     </h3>

@@ -81,7 +81,7 @@ export default function About() {
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(2.5rem, 4vw, 4rem)",
+                fontSize: "clamp(2rem, 8vw, 4rem)",
                 fontWeight: 900,
                 lineHeight: 1,
                 color: "#0D3A73",

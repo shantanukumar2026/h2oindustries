@@ -54,7 +54,7 @@ export default function Industries() {
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(2.5rem, 4vw, 4rem)",
+                fontSize: "clamp(2rem, 8vw, 4rem)",
                 fontWeight: 900,
                 color: "#fff",
                 lineHeight: 1,

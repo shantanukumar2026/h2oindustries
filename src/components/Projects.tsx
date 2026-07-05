@@ -34,7 +34,7 @@ export default function Projects() {
             </div>
             <h2
               className="font-display"
-              style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.2rem)", fontWeight: 900, color: "#0B1929", lineHeight: 1.0, marginBottom: 16, textTransform: "uppercase" }}
+              style={{ fontSize: "clamp(1.8rem, 8vw, 3.2rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.0, marginBottom: 16, textTransform: "uppercase" }}
             >
               Our Products<br />
               <span style={{ color: "#1565C0" }}>In Action</span>
@@ -97,7 +97,7 @@ export default function Projects() {
               </div>
               <div style={{ padding: "16px 24px", background: "#fff", borderTop: "1px solid #90CAF9", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div>
-                  <p style={{ fontSize: 15, fontWeight: 700, color: "#0B1929" }}>{lb.label}</p>
+                  <p style={{ fontSize: 15, fontWeight: 700, color: "#0D3A73" }}>{lb.label}</p>
                   <p style={{ fontSize: 11, color: "#1565C0", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>H2 Industries™</p>
                 </div>
                 <button onClick={() => setLb(null)} style={{ background: "#F5F7FA", border: "none", borderRadius: 8, padding: 8, cursor: "pointer" }}>

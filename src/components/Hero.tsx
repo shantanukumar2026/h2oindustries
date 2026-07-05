@@ -100,7 +100,7 @@ export default function Hero() {
           <h1
             className="font-display"
             style={{
-              fontSize: "clamp(3rem, 5vw, 4.5rem)",
+              fontSize: "clamp(2rem, 8vw, 4.5rem)",
               fontWeight: 900,
               lineHeight: 1,
               color: "#fff",
@@ -380,12 +380,17 @@ export default function Hero() {
             flex-direction: column !important;
             justify-content: center !important;
             align-items: flex-start !important;
-            padding: 0 30px !important;
+            padding: 0 20px !important;
           }
           .hero-right-content {
             align-items: flex-start !important;
             margin-top: 40px !important;
             margin-right: 0 !important;
+            width: 100% !important;
+          }
+          .hero-right-content a {
+            width: 100% !important;
+            max-width: 320px !important;
           }
         }
         @media (max-width: 768px) {

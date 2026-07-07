@@ -33,7 +33,7 @@ export default function About() {
       <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 8, background: "#0D2B55" }} />
       <div style={{ position: "absolute", top: 8, left: 0, width: "100%", height: 2, background: "#1565C0" }} />
 
-      <div className="about-container" style={{ maxWidth: 1440, margin: "0 auto" }}>
+      <div className="about-container" style={{ maxWidth: 1720, margin: "0 auto" }}>
         {/* Top: split layout */}
         <div
           ref={ref}

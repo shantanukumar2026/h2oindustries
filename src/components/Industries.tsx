@@ -22,7 +22,7 @@ export default function Industries() {
       {/* Top Border Accent */}
       <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 4, background: "#2196F3" }} />
 
-      <div className="industries-container" style={{ maxWidth: 1440, margin: "0 auto", position: "relative" }}>
+      <div className="industries-container" style={{ maxWidth: 1720, margin: "0 auto", position: "relative" }}>
         {/* Header */}
         <div ref={ref} style={{ marginBottom: 64, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>

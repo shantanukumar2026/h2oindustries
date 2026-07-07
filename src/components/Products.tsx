@@ -1,21 +1,22 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Search, Eye, X, ArrowRight } from "lucide-react";
 
-const allProducts = [
-  { id: 1, image: "/images/2.jpeg", name: "Modular Sampling Station — Type A", category: "Sampling Stations", sku: "H2-SS-A001", description: "Compact dual-door modular sampling enclosure with integrated stainless steel valve and probe assembly. Designed for accessible water sampling in confined stormwater environments.", features: ["Dual-door access panel", "316 stainless steel valve", "Corrosion-resistant body", "Tamper-resistant fasteners"] },
-  { id: 2, image: "/images/3.jpeg", name: "Modular Sampling Station — Type B", category: "Sampling Stations", sku: "H2-SS-B002", description: "Wide-body modular sampling station with optimised dual-compartment layout. Features integrated stainless probe assembly and enhanced interior access for maintenance teams.", features: ["Wide-body enclosure", "Enhanced access geometry", "Integrated probe mount", "UV-stabilised polymer"] },
-  { id: 3, image: "/images/4.jpeg", name: "Aluminium Inlet Drain — Standard", category: "Drainage Infrastructure", sku: "H2-ID-AL003", description: "Precision-machined aluminium stormwater inlet drain with conical base and segmented barrel sections. Engineered for high-flow municipal drainage applications.", features: ["Machined aluminium construction", "Segmented modular barrel", "Conical flange base", "H2 Industries branded caps"] },
-  { id: 4, image: "/images/5.jpeg", name: "Polymer Column Drain — Black Series", category: "Drainage Infrastructure", sku: "H2-CD-BK004", description: "High-density polymer column drainage system in matte black finish. Features a stabilising foot plate and removable top cap for secure installation.", features: ["HDPE moulded construction", "Stabilising foot plate", "Removable top cap", "Matte black coating"] },
-  { id: 5, image: "/images/6.jpeg", name: "Aluminium Inlet Drain — Extended", category: "Drainage Infrastructure", sku: "H2-ID-AL005", description: "Extended-barrel variant of the aluminium inlet drain series. Additional barrel section provides greater depth accommodation for deep kerb or road infrastructure.", features: ["Extended barrel depth", "Precision machined finish", "Screw-fit cap with grating", "Anodised surface treatment"] },
-  { id: 6, image: "/images/7.jpeg", name: "Sampling Station — Concrete Environment", category: "Sampling Stations", sku: "H2-SS-CE006", description: "H2 sampling station system shown in a concrete industrial environment — demonstrating fit and finish in real-world structural settings.", features: ["In-situ installation ready", "Heavy-duty exterior", "Anti-UV coating", "Industrial environment rated"] },
-  { id: 7, image: "/images/8.jpeg", name: "Modular Enclosure Unit — Closed Body", category: "Sampling Stations", sku: "H2-ME-CB007", description: "Closed-body modular enclosure for water sampling and monitoring equipment. Features a side-access port, locking lid, and integrated probe outlet.", features: ["Side-access port", "Integrated probe outlet", "Locking top lid", "Compact profile"] },
-  { id: 8, image: "/images/9.jpeg", name: "Flat-Panel Sampling Station — Open", category: "Sampling Stations", sku: "H2-SS-FP008", description: "Flat-panel dual-door sampling station shown open, revealing the full stainless steel probe and valve assembly. Top-mount and bottom-pass configurations available.", features: ["Full-panel door access", "Bottom probe pass-through", "Top-mount valve", "Dual-latch closure"] },
-  { id: 9, image: "/images/WhatsApp Image 2026-07-01 at 10.48.44 AM.jpeg", name: "Stainless Steel Sampling Probe — Long Reach", category: "Probe Systems", sku: "H2-PR-LR009", description: "Long-reach stainless steel sampling probe with matte black polymer carrier housing. Engineered for deep pipe insertion, maintenance access, and water quality monitoring.", features: ["Long-reach 316 stainless rod", "Black polymer carrier", "Precision tip fitting", "Drop-in installation"] },
-  { id: 10, image: "/images/WhatsApp Image 2026-07-01 at 10.48.48 AM.jpeg", name: "Polymer Column Drain — Water Series", category: "Drainage Infrastructure", sku: "H2-CD-BK010", description: "Compact black polymer column drain from the H2 Water Series. Engineered with precision top cap detailing and branded barrel rings.", features: ["Water Series branding", "Precision top cap", "Branded barrel rings", "Compact footprint"] },
+export const allProducts = [
+  { id: 1, image: "/images/2.jpeg", name: "Modular Sampling Station — Type A", category: "Sampling Stations", sku: "H2-SS-A001", price: "$1,850.00", description: "Compact dual-door modular sampling enclosure with integrated stainless steel valve and probe assembly. Designed for accessible water sampling in confined stormwater environments.", features: ["Dual-door access panel", "316 stainless steel valve", "Corrosion-resistant body", "Tamper-resistant fasteners"] },
+  { id: 2, image: "/images/3.jpeg", name: "Modular Sampling Station — Type B", category: "Sampling Stations", sku: "H2-SS-B002", price: "$2,100.00", description: "Wide-body modular sampling station with optimised dual-compartment layout. Features integrated stainless probe assembly and enhanced interior access for maintenance teams.", features: ["Wide-body enclosure", "Enhanced access geometry", "Integrated probe mount", "UV-stabilised polymer"] },
+  { id: 3, image: "/images/4.jpeg", name: "Aluminium Inlet Drain — Standard", category: "Drainage Infrastructure", sku: "H2-ID-AL003", price: "$850.00", description: "Precision-machined aluminium stormwater inlet drain with conical base and segmented barrel sections. Engineered for high-flow municipal drainage applications.", features: ["Machined aluminium construction", "Segmented modular barrel", "Conical flange base", "H2 Industries branded caps"] },
+  { id: 4, image: "/images/5.jpeg", name: "Polymer Column Drain — Black Series", category: "Drainage Infrastructure", sku: "H2-CD-BK004", price: "$620.00", description: "High-density polymer column drainage system in matte black finish. Features a stabilising foot plate and removable top cap for secure installation.", features: ["HDPE moulded construction", "Stabilising foot plate", "Removable top cap", "Matte black coating"] },
+  { id: 5, image: "/images/6.jpeg", name: "Aluminium Inlet Drain — Extended", category: "Drainage Infrastructure", sku: "H2-ID-AL005", price: "$1,050.00", description: "Extended-barrel variant of the aluminium inlet drain series. Additional barrel section provides greater depth accommodation for deep kerb or road infrastructure.", features: ["Extended barrel depth", "Precision machined finish", "Screw-fit cap with grating", "Anodised surface treatment"] },
+  { id: 6, image: "/images/7.jpeg", name: "Sampling Station — Concrete Environment", category: "Sampling Stations", sku: "H2-SS-CE006", price: "$2,400.00", description: "H2 sampling station system shown in a concrete industrial environment — demonstrating fit and finish in real-world structural settings.", features: ["In-situ installation ready", "Heavy-duty exterior", "Anti-UV coating", "Industrial environment rated"] },
+  { id: 7, image: "/images/8.jpeg", name: "Modular Enclosure Unit — Closed Body", category: "Sampling Stations", sku: "H2-ME-CB007", price: "$1,550.00", description: "Closed-body modular enclosure for water sampling and monitoring equipment. Features a side-access port, locking lid, and integrated probe outlet.", features: ["Side-access port", "Integrated probe outlet", "Locking top lid", "Compact profile"] },
+  { id: 8, image: "/images/9.jpeg", name: "Flat-Panel Sampling Station — Open", category: "Sampling Stations", sku: "H2-SS-FP008", price: "$1,950.00", description: "Flat-panel dual-door sampling station shown open, revealing the full stainless steel probe and valve assembly. Top-mount and bottom-pass configurations available.", features: ["Full-panel door access", "Bottom probe pass-through", "Top-mount valve", "Dual-latch closure"] },
+  { id: 9, image: "/images/WhatsApp Image 2026-07-01 at 10.48.44 AM.jpeg", name: "Stainless Steel Sampling Probe — Long Reach", category: "Probe Systems", sku: "H2-PR-LR009", price: "$380.00", description: "Long-reach stainless steel sampling probe with matte black polymer carrier housing. Engineered for deep pipe insertion, maintenance access, and water quality monitoring.", features: ["Long-reach 316 stainless rod", "Black polymer carrier", "Precision tip fitting", "Drop-in installation"] },
+  { id: 10, image: "/images/WhatsApp Image 2026-07-01 at 10.48.48 AM.jpeg", name: "Polymer Column Drain — Water Series", category: "Drainage Infrastructure", sku: "H2-CD-BK010", price: "$580.00", description: "Compact black polymer column drain from the H2 Water Series. Engineered with precision top cap detailing and branded barrel rings.", features: ["Water Series branding", "Precision top cap", "Branded barrel rings", "Compact footprint"] },
 ];
 
 const cats = ["All", "Sampling Stations", "Drainage Infrastructure", "Probe Systems"];
@@ -44,7 +45,7 @@ export default function Products() {
 
   return (
     <section id="products" className="section-pad products-section" style={{ background: "#F0F7FF" }}>
-      <div className="products-container" style={{ maxWidth: 1440, margin: "0 auto" }}>
+      <div className="products-container" style={{ maxWidth: 1720, margin: "0 auto" }}>
         {/* Header */}
         <div ref={ref} style={{ textAlign: "left", marginBottom: 64 }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
@@ -350,6 +351,7 @@ function ProductCard({ product, onQuickView, catColor }: {
   catColor: string;
 }) {
   const [hovered, setHovered] = useState(false);
+  const router = useRouter();
 
   return (
     <div
@@ -450,7 +452,7 @@ function ProductCard({ product, onQuickView, catColor }: {
           {product.name}
         </h3>
         <button
-          onClick={onQuickView}
+          onClick={() => router.push(`/products/${product.id}`)}
           style={{
             width: "100%",
             padding: "12px",

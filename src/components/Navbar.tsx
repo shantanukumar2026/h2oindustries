@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Info, Mail, MapPin, User, FileText, ChevronDown, Search, ArrowRight, Globe } from "lucide-react";
@@ -15,7 +16,7 @@ const topLinks = [
 const mainLinks = [
   {
     label: "Products",
-    href: "#products",
+    href: "/products",
     mega: {
       image: "/images/2.jpeg",
       title: "INDUSTRIAL MANUFACTURING",
@@ -91,6 +92,8 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -101,7 +104,18 @@ export default function Navbar() {
   const nav = (href: string) => {
     setMobileOpen(false);
     setActiveSubmenu(null);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    if (href.startsWith("/")) {
+      router.push(href);
+    } else {
+      if (pathname !== "/") {
+        router.push("/" + href);
+      } else {
+        const el = document.querySelector(href);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
   };
 
   return (

@@ -41,7 +41,7 @@ export default function Solutions() {
 
   return (
     <section id="solutions" className="section-pad" style={{ background: "#fff" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
+      <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
         {/* Header */}
         <div ref={ref} style={{ textAlign: "center", marginBottom: 80 }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>

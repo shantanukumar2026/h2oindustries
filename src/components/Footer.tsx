@@ -42,7 +42,7 @@ export default function Footer() {
       
       {/* Band 1: Careers CTA */}
       <div style={{ background: "#0D3A73", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="footer-cta-pad" style={{ maxWidth: 1440, margin: "0 auto", padding: "32px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: 32, textAlign: "center" }}>
+        <div className="footer-cta-pad" style={{ maxWidth: 1720, margin: "0 auto", padding: "32px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: 32, textAlign: "center" }}>
           <h3 style={{ fontSize: 24, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", margin: 0, letterSpacing: "0.02em" }}>
             ENGINEER YOUR CAREER. <span style={{ color: "#2196F3" }}>APPLY NOW AT H2 INDUSTRIES.</span>
           </h3>
@@ -76,7 +76,7 @@ export default function Footer() {
 
       {/* Band 2: Contact Info */}
       <div style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="footer-contact-band" style={{ maxWidth: 1440, margin: "0 auto", padding: "24px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 32 }}>
+        <div className="footer-contact-band" style={{ maxWidth: 1720, margin: "0 auto", padding: "24px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 32 }}>
           {/* USA Office */}
           <div className="footer-office-block" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 24 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
@@ -105,7 +105,7 @@ export default function Footer() {
 
       {/* Band 3: Main Links & Newsletter */}
       <div style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="footer-main-pad" style={{ maxWidth: 1600, margin: "0 auto", padding: "64px 60px" }}>
+        <div className="footer-main-pad" style={{ maxWidth: 1720, margin: "0 auto", padding: "64px 60px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 32 }} className="footer-main-grid">
             
             {/* Newsletter */}
@@ -260,7 +260,7 @@ export default function Footer() {
 
       {/* Band 4: Legal / Bottom */}
       <div>
-        <div className="footer-legal-pad" style={{ maxWidth: 1440, margin: "0 auto", padding: "24px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
+        <div className="footer-legal-pad" style={{ maxWidth: 1720, margin: "0 auto", padding: "24px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <p style={{ fontSize: 13, fontWeight: 500, margin: 0 }}>
             © {new Date().getFullYear()}, All Rights Reserved.
           </p>

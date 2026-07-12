@@ -272,7 +272,7 @@ export default function ProductDetailPage() {
                     onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#1565C0"; e.currentTarget.style.color = "#1565C0"; }}
                     onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#90CAF9"; e.currentTarget.style.color = "#0D3A73"; }}
                   >
-                    Request RFQ
+                    Request More Info
                   </button>
                 </div>
               </div>

@@ -46,7 +46,7 @@ export default function CurbBoxFeature() {
               }}
             >
               <video
-                src="/videos/6156382_France Lake Morning Autumn_By_SPICY_MOTION_Artlist_HD.mp4"
+                src="/videos/hero-bg-optimized.mp4"
                 autoPlay
                 loop
                 muted

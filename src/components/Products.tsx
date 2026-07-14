@@ -28,6 +28,7 @@ const catColors: Record<string, string> = {
 };
 
 export default function Products() {
+  const router = useRouter();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [search, setSearch] = useState("");

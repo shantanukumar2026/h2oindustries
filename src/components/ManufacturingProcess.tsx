@@ -3,18 +3,21 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Lightbulb, Ruler, Cog, FlaskConical, Truck } from "lucide-react";
+import homeData from "../data/home.json";
 
-const steps = [
-  { icon: Lightbulb, num: "01", title: "Design", desc: "Thorough design process — identifying requirements, environmental impacts, and performance targets before a single part is drawn.", detail: "CAD modelling · Feasibility studies · Environmental impact assessment" },
-  { icon: Ruler, num: "02", title: "Engineering", desc: "Translating design concepts into precision technical specifications. Material selection, structural analysis, and compliance requirements are validated.", detail: "Material science · Structural analysis · Compliance review" },
-  { icon: Cog, num: "03", title: "Manufacturing", desc: "Products are manufactured using precision CNC machining, injection moulding, and polymer forming processes — ensuring exact dimensional accuracy.", detail: "CNC machining · Injection moulding · Quality-controlled fabrication" },
-  { icon: FlaskConical, num: "04", title: "Testing", desc: "Every product undergoes rigorous testing for dimensional accuracy, material performance, and environmental durability before release.", detail: "Dimensional verification · Load testing · Environmental simulation" },
-  { icon: Truck, num: "05", title: "Delivery", desc: "Finished products are quality-checked, packaged, and dispatched — from single units to large-scale infrastructure project orders.", detail: "Packaging & protection · Project delivery · Customer support" },
-];
+const iconMap: Record<string, React.ElementType> = {
+  Lightbulb,
+  Ruler,
+  Cog,
+  FlaskConical,
+  Truck
+};
 
 export default function ManufacturingProcess() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+
+  const { header, steps } = homeData.process;
 
   return (
     <section id="process" style={{ background: "#F5F7FA", padding: "60px 0 120px 0" }}>
@@ -23,17 +26,17 @@ export default function ManufacturingProcess() {
         <div ref={ref} style={{ textAlign: "center", marginBottom: 64 }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
             <div className="pill-tag" style={{ marginBottom: 20, display: "inline-flex" }}>
-              <span className="dot" /> How We Build
+              <span className="dot" /> {header.tagline}
             </div>
             <h2
               className="font-display"
               style={{ fontSize: "clamp(1.8rem, 8vw, 3.2rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.0, marginBottom: 16, textTransform: "uppercase" }}
             >
-              Our Manufacturing<br />
-              <span style={{ color: "#1565C0" }}>Process</span>
+              {header.title}<br />
+              <span style={{ color: "#1565C0" }}>{header.highlight}</span>
             </h2>
             <p style={{ color: "#4A6375", fontSize: 17, maxWidth: 560, margin: "0 auto", lineHeight: 1.65 }}>
-              Every H2 Industries product passes through a disciplined five-stage manufacturing process — ensuring precision, reliability, and environmental performance.
+              {header.subtitle}
             </p>
           </motion.div>
         </div>
@@ -51,7 +54,7 @@ export default function ManufacturingProcess() {
           }} />
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 16 }}>
             {steps.map((step, i) => {
-              const Icon = step.icon;
+              const Icon = iconMap[step.icon as keyof typeof iconMap] || Lightbulb;
               return (
                 <motion.div
                   key={step.num}
@@ -122,7 +125,7 @@ export default function ManufacturingProcess() {
         {/* Mobile vertical */}
         <div className="process-mobile" style={{ display: "flex", flexDirection: "column", gap: 0 }}>
           {steps.map((step, i) => {
-            const Icon = step.icon;
+            const Icon = iconMap[step.icon as keyof typeof iconMap] || Lightbulb;
             return (
               <motion.div
                 key={step.num}

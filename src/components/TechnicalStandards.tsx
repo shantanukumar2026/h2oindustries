@@ -3,17 +3,13 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { BookmarkCheck, FileText, Anchor } from "lucide-react";
+import homeData from "../data/home.json";
 
 export default function TechnicalStandards() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
-  const standards = [
-    { name: "AS/NZS 3996", desc: "Access Covers & Grates" },
-    { name: "ISO 9001:2015", desc: "Quality Management Systems" },
-    { name: "ISO 14001:2015", desc: "Environmental Management" },
-    { name: "WSA 137", desc: "Industry Standards for Water" },
-  ];
+  const { header, button, items } = homeData.standards;
 
   return (
     <section id="standards" className="standards-section" style={{ 
@@ -31,11 +27,11 @@ export default function TechnicalStandards() {
             style={{ flex: "1 1 400px" }}
           >
             <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
-              ENGINEERING<br />
-              <span style={{ color: "#42A5F5" }}>STANDARDS</span>
+              {header.title}<br />
+              <span style={{ color: "#42A5F5" }}>{header.highlight}</span>
             </h2>
             <p style={{ color: "#90CAF9", fontSize: 16, lineHeight: 1.6, marginBottom: 32 }}>
-              Infrastructure demands absolute certainty. Our technical specifications align with rigorous international and local standards, ensuring every product is load-rated, environmentally safe, and built for purpose.
+              {header.subtitle}
             </p>
 
             <div style={{ display: "flex", gap: 24, marginBottom: 40 }}>
@@ -65,7 +61,7 @@ export default function TechnicalStandards() {
               transition: "all 0.2s"
             }}>
               <FileText size={18} />
-              Download Spec Sheets
+              {button}
             </button>
           </motion.div>
 
@@ -75,7 +71,7 @@ export default function TechnicalStandards() {
             transition={{ duration: 0.6, delay: 0.2 }}
             style={{ flex: "1 1 500px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}
           >
-            {standards.map((std, i) => (
+            {items.map((std, i) => (
               <div key={i} style={{ 
                 background: "rgba(255,255,255,0.03)", 
                 border: "1px solid rgba(255,255,255,0.05)", 

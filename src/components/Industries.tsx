@@ -3,19 +3,22 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Building2, Waves, Construction, Leaf, Flame, Sprout } from "lucide-react";
+import homeData from "../data/home.json";
 
-const industries = [
-  { icon: Building2, title: "MUNICIPAL WATER", desc: "Stormwater sampling stations and drainage systems for councils and local authorities managing public water infrastructure.", accent: "#2196F3" },
-  { icon: Waves, title: "MARINE & COASTAL", desc: "Ocean-focused water quality monitoring products designed to prevent marine pollution at the stormwater source.", accent: "#0288D1" },
-  { icon: Construction, title: "CIVIL INFRASTRUCTURE", desc: "Heavy-duty drainage and access solutions for roads, bridges, and major civil construction projects.", accent: "#607D8B" },
-  { icon: Leaf, title: "ENVIRONMENTAL", desc: "Precision sampling systems for environmental engineers conducting comprehensive water quality assessments.", accent: "#43A047" },
-  { icon: Flame, title: "INDUSTRIAL FACILITIES", desc: "Robust water management infrastructure for industrial sites requiring compliant stormwater management.", accent: "#EF6C00" },
-  { icon: Sprout, title: "AGRICULTURAL", desc: "Durable drainage and sampling products engineered to withstand agricultural environments and protect waterways.", accent: "#558B2F" },
-];
+const iconMap: Record<string, React.ElementType> = {
+  Building2,
+  Waves,
+  Construction,
+  Leaf,
+  Flame,
+  Sprout
+};
 
 export default function Industries() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+
+  const { header, items } = homeData.industries;
 
   return (
     <section id="industries" className="industries-section" style={{ background: "#020B14", position: "relative" }}>
@@ -47,7 +50,7 @@ export default function Industries() {
                   textTransform: "uppercase",
                 }}
               >
-                Industries We Serve
+                {header.tagline}
               </span>
             </div>
             
@@ -64,11 +67,11 @@ export default function Industries() {
                 letterSpacing: "0.02em",
               }}
             >
-              BUILT FOR THE INDUSTRIES<br />
-              <span style={{ color: "#2196F3" }}>THAT SHAPE OUR WORLD</span>
+              {header.title}<br />
+              <span style={{ color: "#2196F3" }}>{header.highlight}</span>
             </h2>
             <p style={{ color: "#42A5F5", fontSize: 16, maxWidth: 600, margin: "0 auto", lineHeight: 1.6, fontWeight: 500 }}>
-              H2 Industries products are deployed across a broad range of sectors — wherever precision water management matters most.
+              {header.subtitle}
             </p>
           </motion.div>
         </div>
@@ -79,8 +82,8 @@ export default function Industries() {
           gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
           gap: 24,
         }}>
-          {industries.map((ind, i) => {
-            const Icon = ind.icon;
+          {items.map((ind, i) => {
+            const Icon = iconMap[ind.icon as keyof typeof iconMap] || Building2;
             return (
               <motion.div
                 key={ind.title}
@@ -107,7 +110,7 @@ export default function Industries() {
   );
 }
 
-function IndustryCard({ ind, Icon }: { ind: typeof industries[0]; Icon: React.ElementType }) {
+function IndustryCard({ ind, Icon }: { ind: any; Icon: React.ElementType }) {
   const [hovered, setHovered] = useState(false);
 
   return (

@@ -3,14 +3,18 @@
 import { useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import TrustGuarantee from "@/components/TrustGuarantee";
+import WhoWeAre from "@/components/WhoWeAre";
+import WhatWeDo from "@/components/WhatWeDo";
+import WhatWeGive from "@/components/WhatWeGive";
+import Testimonials from "@/components/Testimonials";
+
+// Original Technical Sections
 import Solutions from "@/components/Solutions";
 import TechnologyInnovation from "@/components/TechnologyInnovation";
 import ResearchDevelopment from "@/components/ResearchDevelopment";
+import InfrastructureFacilities from "@/components/InfrastructureFacilities";
 import ManufacturingCapabilities from "@/components/ManufacturingCapabilities";
 import ManufacturingProcess from "@/components/ManufacturingProcess";
-import InfrastructureFacilities from "@/components/InfrastructureFacilities";
 import CurbBoxFeature from "@/components/CurbBoxFeature";
 import Products from "@/components/Products";
 import QualityCompliance from "@/components/QualityCompliance";
@@ -18,12 +22,13 @@ import TechnicalStandards from "@/components/TechnicalStandards";
 import Industries from "@/components/Industries";
 import GlobalSupplyNetwork from "@/components/GlobalSupplyNetwork";
 import Sustainability from "@/components/Sustainability";
+
 import Footer from "@/components/Footer";
 
 import PresentationSlide from "@/components/PresentationSlide";
 import GlobalProgressBar from "@/components/GlobalProgressBar";
 
-export default function Home() {
+export default function HomepageTwo() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -43,30 +48,34 @@ export default function Home() {
       >
         <PresentationSlide><Hero /></PresentationSlide>
         
-        {/* 1. Introduction: Who we are */}
-        <PresentationSlide><About /></PresentationSlide>
-        <PresentationSlide><TrustGuarantee /></PresentationSlide>
+        {/* Story Section 1: The Genesis */}
+        <PresentationSlide><WhoWeAre /></PresentationSlide>
         
-        {/* 2. Innovation: The problems we solve and how we approach them */}
+        {/* Story Section 2: The Operations */}
+        <PresentationSlide><WhatWeDo /></PresentationSlide>
+        
+        {/* Story Section 3: The Guarantee */}
+        <PresentationSlide><WhatWeGive /></PresentationSlide>
+        
+        {/* Story Section 4: The Proof */}
+        <PresentationSlide><Testimonials /></PresentationSlide>
+        
+        {/* Original Technical & Infrastructure Sections */}
         <PresentationSlide><Solutions /></PresentationSlide>
         <PresentationSlide><TechnologyInnovation /></PresentationSlide>
         <PresentationSlide><ResearchDevelopment /></PresentationSlide>
         
-        {/* 3. The Engine: Our facilities and how we build */}
         <PresentationSlide><InfrastructureFacilities /></PresentationSlide>
         <PresentationSlide><ManufacturingCapabilities /></PresentationSlide>
         <PresentationSlide><ManufacturingProcess /></PresentationSlide>
         
-        {/* 4. The Output: What we actually produce */}
         <PresentationSlide><CurbBoxFeature /></PresentationSlide>
         <PresentationSlide><Products /></PresentationSlide>
         
-        {/* 5. The Proof: Quality standards and real-world usage */}
         <PresentationSlide><QualityCompliance /></PresentationSlide>
         <PresentationSlide><TechnicalStandards /></PresentationSlide>
         <PresentationSlide><Industries /></PresentationSlide>
         
-        {/* 6. The Scale & Future: Global reach and commitment */}
         <PresentationSlide><GlobalSupplyNetwork /></PresentationSlide>
         <PresentationSlide><Sustainability /></PresentationSlide>
         

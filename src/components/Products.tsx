@@ -5,21 +5,11 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Search, Eye, X, ArrowRight } from "lucide-react";
+import homeData from "../data/home.json";
 
-export const allProducts = [
-  { id: 1, image: "/images/2.jpeg", name: "Modular Sampling Station — Type A", category: "Sampling Stations", sku: "H2-SS-A001", price: "$1,850.00", description: "Compact dual-door modular sampling enclosure with integrated stainless steel valve and probe assembly. Designed for accessible water sampling in confined stormwater environments.", features: ["Dual-door access panel", "316 stainless steel valve", "Corrosion-resistant body", "Tamper-resistant fasteners"] },
-  { id: 2, image: "/images/3.jpeg", name: "Modular Sampling Station — Type B", category: "Sampling Stations", sku: "H2-SS-B002", price: "$2,100.00", description: "Wide-body modular sampling station with optimised dual-compartment layout. Features integrated stainless probe assembly and enhanced interior access for maintenance teams.", features: ["Wide-body enclosure", "Enhanced access geometry", "Integrated probe mount", "UV-stabilised polymer"] },
-  { id: 3, image: "/images/4.jpeg", name: "Aluminium Inlet Drain — Standard", category: "Drainage Infrastructure", sku: "H2-ID-AL003", price: "$850.00", description: "Precision-machined aluminium stormwater inlet drain with conical base and segmented barrel sections. Engineered for high-flow municipal drainage applications.", features: ["Machined aluminium construction", "Segmented modular barrel", "Conical flange base", "H2 Industries branded caps"] },
-  { id: 4, image: "/images/5.jpeg", name: "Polymer Column Drain — Black Series", category: "Drainage Infrastructure", sku: "H2-CD-BK004", price: "$620.00", description: "High-density polymer column drainage system in matte black finish. Features a stabilising foot plate and removable top cap for secure installation.", features: ["HDPE moulded construction", "Stabilising foot plate", "Removable top cap", "Matte black coating"] },
-  { id: 5, image: "/images/6.jpeg", name: "Aluminium Inlet Drain — Extended", category: "Drainage Infrastructure", sku: "H2-ID-AL005", price: "$1,050.00", description: "Extended-barrel variant of the aluminium inlet drain series. Additional barrel section provides greater depth accommodation for deep kerb or road infrastructure.", features: ["Extended barrel depth", "Precision machined finish", "Screw-fit cap with grating", "Anodised surface treatment"] },
-  { id: 6, image: "/images/7.jpeg", name: "Sampling Station — Concrete Environment", category: "Sampling Stations", sku: "H2-SS-CE006", price: "$2,400.00", description: "H2 sampling station system shown in a concrete industrial environment — demonstrating fit and finish in real-world structural settings.", features: ["In-situ installation ready", "Heavy-duty exterior", "Anti-UV coating", "Industrial environment rated"] },
-  { id: 7, image: "/images/8.jpeg", name: "Modular Enclosure Unit — Closed Body", category: "Sampling Stations", sku: "H2-ME-CB007", price: "$1,550.00", description: "Closed-body modular enclosure for water sampling and monitoring equipment. Features a side-access port, locking lid, and integrated probe outlet.", features: ["Side-access port", "Integrated probe outlet", "Locking top lid", "Compact profile"] },
-  { id: 8, image: "/images/9.jpeg", name: "Flat-Panel Sampling Station — Open", category: "Sampling Stations", sku: "H2-SS-FP008", price: "$1,950.00", description: "Flat-panel dual-door sampling station shown open, revealing the full stainless steel probe and valve assembly. Top-mount and bottom-pass configurations available.", features: ["Full-panel door access", "Bottom probe pass-through", "Top-mount valve", "Dual-latch closure"] },
-  { id: 9, image: "/images/WhatsApp Image 2026-07-01 at 10.48.44 AM.jpeg", name: "Stainless Steel Sampling Probe — Long Reach", category: "Probe Systems", sku: "H2-PR-LR009", price: "$380.00", description: "Long-reach stainless steel sampling probe with matte black polymer carrier housing. Engineered for deep pipe insertion, maintenance access, and water quality monitoring.", features: ["Long-reach 316 stainless rod", "Black polymer carrier", "Precision tip fitting", "Drop-in installation"] },
-  { id: 10, image: "/images/WhatsApp Image 2026-07-01 at 10.48.48 AM.jpeg", name: "Polymer Column Drain — Water Series", category: "Drainage Infrastructure", sku: "H2-CD-BK010", price: "$580.00", description: "Compact black polymer column drain from the H2 Water Series. Engineered with precision top cap detailing and branded barrel rings.", features: ["Water Series branding", "Precision top cap", "Branded barrel rings", "Compact footprint"] },
-];
+export const allProducts = homeData.products.items;
 
-const cats = ["All", "Sampling Stations", "Drainage Infrastructure", "Probe Systems"];
+const cats = homeData.products.categories;
 
 const catColors: Record<string, string> = {
   "Sampling Stations": "#1565C0",
@@ -43,6 +33,7 @@ export default function Products() {
   });
   const visible = filtered.slice(0, count);
   const hasMore = count < filtered.length;
+  const { header, searchPlaceholder, emptyMessage, button } = homeData.products;
 
   return (
     <section id="products" className="section-pad products-section" style={{ background: "transparent" }}>
@@ -72,7 +63,7 @@ export default function Products() {
                   textTransform: "uppercase",
                 }}
               >
-                Equipment Range
+                {header.tagline}
               </span>
             </div>
             
@@ -89,15 +80,15 @@ export default function Products() {
                 letterSpacing: "0.02em",
               }}
             >
-              OUR PRODUCT<br />
+              {header.title}<br />
               <span style={{ color: "#1565C0" }}>
-                MARKETPLACE
+                {header.highlight}
               </span>
             </h2>
             <div style={{ width: 80, height: 4, background: "#1565C0", marginBottom: 32 }} />
 
             <p style={{ color: "#0D3A73", fontSize: 16, maxWidth: 600, lineHeight: 1.7, fontWeight: 600 }}>
-              Browse the complete H2 Industries range — precision-engineered water management products for heavy industrial, municipal, and environmental applications.
+              {header.subtitle}
             </p>
           </motion.div>
         </div>
@@ -112,7 +103,7 @@ export default function Products() {
             <Search size={18} style={{ position: "absolute", left: 16, top: "50%", transform: "translateY(-50%)", color: "#1565C0" }} />
             <input
               type="text"
-              placeholder="Search by name, category or SKU…"
+              placeholder={searchPlaceholder}
               value={search}
               onChange={(e) => { setSearch(e.target.value); setCount(4); }}
               style={{
@@ -191,7 +182,7 @@ export default function Products() {
 
         {filtered.length === 0 && (
           <div style={{ textAlign: "center", padding: "80px 0", background: "#fff", border: "2px dashed #CFD8DC", marginTop: 24 }}>
-            <p style={{ color: "#455A64", fontSize: 16, fontWeight: 700, textTransform: "uppercase" }}>NO PRODUCTS FOUND MATCHING YOUR SEARCH.</p>
+            <p style={{ color: "#455A64", fontSize: 16, fontWeight: 700, textTransform: "uppercase" }}>{emptyMessage}</p>
           </div>
         )}
 
@@ -218,7 +209,7 @@ export default function Products() {
               onMouseEnter={(e) => { e.currentTarget.style.background = "#1565C0"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "#0D3A73"; }}
             >
-              VIEW ALL PRODUCTS <ArrowRight size={16} />
+              {button} <ArrowRight size={16} />
             </button>
           </div>
         )}

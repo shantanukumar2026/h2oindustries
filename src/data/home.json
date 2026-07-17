@@ -1,0 +1,486 @@
+{
+  "hero": {
+    "tagline": "Precision Water Management",
+    "heading": {
+      "line1": "ENGINEERING THE",
+      "line2": "WATERWORKS",
+      "highlight": "AUTHORITY"
+    },
+    "subheading": "Next-Generation Hydro-Infrastructure &\nEngineering Solutions",
+    "commandCenter": {
+      "title": "Command Center",
+      "primaryButton": {
+        "text": "Explore Capabilities",
+        "link": "#capabilities"
+      },
+      "secondaryButton": {
+        "text": "Succeed With Us",
+        "link": "#contact"
+      }
+    }
+  },
+  "about": {
+    "items": [
+      {
+        "title": "DEDICATED TO SAVING OUR OCEANS",
+        "subtitle": "THROUGH ENGINEERING",
+        "desc": "H2 Industries was founded with a single unwavering mission: to develop industrial water management products that actively reduce environmental harm.",
+        "points": [
+          "Actively reduces environmental harm",
+          "Industrial-grade water management"
+        ],
+        "video": "/portfolio/1.mp4",
+        "theme": "dark"
+      },
+      {
+        "title": "PRECISION ENGINEERING",
+        "subtitle": "FOR THE TOUGHEST ENVIRONMENTS",
+        "desc": "Every product is precision-engineered to meet the most demanding industrial and environmental standards.",
+        "points": [
+          "Engineered for absolute reliability",
+          "Meets demanding environmental standards"
+        ],
+        "video": "/portfolio/2.mp4",
+        "theme": "light"
+      },
+      {
+        "title": "MODULAR ENCLOSURES",
+        "subtitle": "BUILT TO LAST",
+        "desc": "We design for compatibility with emerging hydrogen and clean-energy projects, and for long-term protection of waterways.",
+        "points": [
+          "Long-term waterway protection",
+          "Compatible with clean-energy projects"
+        ],
+        "video": "/portfolio/3.mp4",
+        "theme": "dark"
+      },
+      {
+        "title": "SUSTAINABLE IMPACT",
+        "subtitle": "GLOBAL REACH",
+        "desc": "We engineer products that reduce pollutant entry into stormwater systems, contributing to a cleaner, healthier planet.",
+        "points": [
+          "Reduces pollutant entry into stormwater",
+          "Contributes to a cleaner, healthier planet"
+        ],
+        "video": "/portfolio/4.mp4",
+        "theme": "light"
+      }
+    ]
+  },
+  "trust": {
+    "header": {
+      "titleStart": "The",
+      "titleHighlight": "Standard",
+      "titleEnd": "of Trust",
+      "subtitle": "Engineered for absolute reliability. Designed to redefine industry standards."
+    },
+    "items": [
+      {
+        "id": "who-we-are",
+        "title": "WHO WE ARE",
+        "desc": "Industry leaders in advanced water management, forged on a foundation of precision and environmental stewardship.",
+        "icon": "Users",
+        "color": "#2196F3"
+      },
+      {
+        "id": "what-we-do",
+        "title": "WHAT WE DO",
+        "desc": "We engineer cutting-edge infrastructure. Intercepting pollutants and providing robust systems for complex urban environments.",
+        "icon": "Target",
+        "color": "#00BCD4"
+      },
+      {
+        "id": "why-trust-us",
+        "title": "WHY TRUST US",
+        "desc": "Decades of rigorous testing. Our solutions don't just meet standards—they define them. We build partnerships, not just products.",
+        "icon": "ShieldCheck",
+        "color": "#3F51B5"
+      },
+      {
+        "id": "our-guarantee",
+        "title": "OUR GUARANTEE",
+        "desc": "Unwavering durability and precision-machined quality. Every product is built to endure the absolute toughest conditions.",
+        "icon": "Award",
+        "color": "#00E5FF"
+      }
+    ]
+  },
+  "solutions": {
+    "header": {
+      "tagline": "Products In Action",
+      "title": "ENGINEERING SOLUTIONS",
+      "highlight": "FOR EVERY APPLICATION"
+    },
+    "items": [
+      {
+        "id": "stormwater",
+        "title": "Precision-Engineered Drainage",
+        "category": "Stormwater Infrastructure",
+        "desc": "Machined to exacting tolerances, delivering consistent performance in municipal and civil stormwater infrastructure. Features a segmented barrel system for adaptable depth configurations.",
+        "specs": {
+          "material": "High-Grade Aluminium",
+          "rating": "Municipal Class D",
+          "tolerance": "±0.1mm"
+        },
+        "image": "/images/4.jpeg",
+        "icon": "Settings"
+      },
+      {
+        "id": "monitoring",
+        "title": "Modular Sampling Stations",
+        "category": "Water Quality Monitoring",
+        "desc": "A secure access platform for environmental engineers. The flat-panel dual-door design provides full interior visibility and accommodates complex probe assemblies.",
+        "specs": {
+          "material": "Industrial Polymer",
+          "rating": "IP67 Enclosure",
+          "tolerance": "N/A"
+        },
+        "image": "/images/9.jpeg",
+        "icon": "Activity"
+      },
+      {
+        "id": "urban",
+        "title": "Black Series Column Drainage",
+        "category": "Urban Water Management",
+        "desc": "Designed for urban environments demanding durability and aesthetics. Features an integrated stabilising foot plate for secure road and kerb installations.",
+        "specs": {
+          "material": "HDPE Moulded",
+          "rating": "Heavy Duty",
+          "tolerance": "N/A"
+        },
+        "image": "/images/5.jpeg",
+        "icon": "Maximize"
+      }
+    ]
+  },
+  "technology": {
+    "header": {
+      "tagline": "Next-Gen Manufacturing",
+      "title": "TECHNOLOGY &",
+      "highlight": "INNOVATION",
+      "subtitle": "Pushing the boundaries of industrial production. We leverage advanced automation, AI-driven quality control, and precision tooling to deliver unmatched reliability at scale."
+    },
+    "items": [
+      {
+        "icon": "Cpu",
+        "title": "Automation Core",
+        "desc": "Robotics-assisted fabrication lines minimizing human error and maximizing output consistency."
+      },
+      {
+        "icon": "Zap",
+        "title": "Precision Engineering",
+        "desc": "Tolerance controls down to the micron ensuring seamless assembly of multi-part drainage structures."
+      },
+      {
+        "icon": "Activity",
+        "title": "Smart Diagnostics",
+        "desc": "Integrated telemetry options for real-time flow rate monitoring and leak detection."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Resilience Testing",
+        "desc": "Automated hydrostatic pressure testing applied to every batch before dispatch."
+      }
+    ]
+  },
+  "research": {
+    "header": {
+      "tagline": "Innovation Lab",
+      "title": "RESEARCH &",
+      "highlight": "DEVELOPMENT",
+      "subtitle": "We don't just manufacture components; we engineer the future of water infrastructure. Our dedicated R&D division constantly explores new polymers, advanced moulding techniques, and sustainable materials to ensure our products outperform industry standards."
+    },
+    "features": [
+      { "icon": "Microscope", "title": "Advanced Materials Testing", "desc": "Simulating decades of wear in extreme environmental chambers to validate polymer longevity." },
+      { "icon": "Layers", "title": "Structural Optimisation", "desc": "Using finite element analysis (FEA) to reduce material weight without compromising integrity." },
+      { "icon": "Network", "title": "Smart Integration", "desc": "Developing IoT-ready embedded sensors for real-time municipal stormwater network monitoring." },
+      { "icon": "Compass", "title": "Sustainable Prototyping", "desc": "3D printing initial models using recycled composites before finalizing injection molds." }
+    ],
+    "metrics": {
+      "tensile": "85.4 MPa",
+      "thermal": "-40°C / +85°C"
+    }
+  },
+  "infrastructure": {
+    "header": {
+      "title": "INFRASTRUCTURE &",
+      "highlight": "FACILITIES",
+      "subtitle": "Scale meets precision. Our distributed manufacturing network combines vast production capacity with specialized, highly-controlled operational zones."
+    },
+    "facilities": [
+      { "title": "Primary Extrusion Facility", "desc": "120,000 sq ft unit dedicated to high-volume polymer processing.", "span": 2, "height": 400, "video": "/portfolio/1.mp4" },
+      { "title": "Quality Assurance Lab", "desc": "Climate-controlled testing environment with advanced spectroscopy.", "span": 1, "height": 400, "video": "/portfolio/2.mp4" },
+      { "title": "Logistics Hub", "desc": "Automated warehousing ensuring rapid dispatch across North America.", "span": 1, "height": 300, "video": "/portfolio/3.mp4" },
+      { "title": "Heavy Fabrication Wing", "desc": "Specialized sector for custom steel reinforcement and structural assembly.", "span": 2, "height": 300, "video": "/portfolio/4.mp4" }
+    ]
+  },
+  "capabilities": {
+    "header": {
+      "tagline": "Core Capabilities",
+      "title": "MANUFACTURING",
+      "highlight": "EXCELLENCE",
+      "subtitle": "Our facilities are equipped with state-of-the-art machinery capable of processing advanced polymers and metals. We control the entire production cycle to guarantee unparalleled quality."
+    },
+    "items": [
+      { "title": "Heavy-Duty Injection Moulding", "desc": "High-tonnage moulding capable of producing large structural drainage components with absolute dimensional stability.", "imageColor": "#1565C0" },
+      { "title": "Industrial Fabrication", "desc": "Custom steel and heavy polymer fabrication for specialized municipal and industrial infrastructure projects.", "imageColor": "#0D47A1" },
+      { "title": "Precision Machining", "desc": "CNC milling and turning for critical sealing surfaces and complex valve components.", "imageColor": "#1E88E5" },
+      { "title": "Custom Engineering", "desc": "Bespoke design-to-manufacture services tailoring products to specific environmental and site requirements.", "imageColor": "#0D3A73" }
+    ]
+  },
+  "process": {
+    "header": {
+      "tagline": "How We Build",
+      "title": "Our Manufacturing",
+      "highlight": "Process",
+      "subtitle": "Every H2 Industries product passes through a disciplined five-stage manufacturing process — ensuring precision, reliability, and environmental performance."
+    },
+    "steps": [
+      { "icon": "Lightbulb", "num": "01", "title": "Design", "desc": "Thorough design process — identifying requirements, environmental impacts, and performance targets before a single part is drawn.", "detail": "CAD modelling · Feasibility studies · Environmental impact assessment" },
+      { "icon": "Ruler", "num": "02", "title": "Engineering", "desc": "Translating design concepts into precision technical specifications. Material selection, structural analysis, and compliance requirements are validated.", "detail": "Material science · Structural analysis · Compliance review" },
+      { "icon": "Cog", "num": "03", "title": "Manufacturing", "desc": "Products are manufactured using precision CNC machining, injection moulding, and polymer forming processes — ensuring exact dimensional accuracy.", "detail": "CNC machining · Injection moulding · Quality-controlled fabrication" },
+      { "icon": "FlaskConical", "num": "04", "title": "Testing", "desc": "Every product undergoes rigorous testing for dimensional accuracy, material performance, and environmental durability before release.", "detail": "Dimensional verification · Load testing · Environmental simulation" },
+      { "icon": "Truck", "num": "05", "title": "Delivery", "desc": "Finished products are quality-checked, packaged, and dispatched — from single units to large-scale infrastructure project orders.", "detail": "Packaging & protection · Project delivery · Customer support" }
+    ]
+  },
+  "curbbox": {
+    "header": {
+      "tagline": "Signature Series",
+      "title": "THE H2",
+      "highlight": "CURB BOX",
+      "subtitle": "Designed for maximum durability in harsh environments, the H2 Curb Box sets the standard for municipal water infrastructure reliability."
+    },
+    "watermark": "H2 CURB BOX",
+    "image": "/images/curb-box.png",
+    "badges": {
+      "materialSpec": "High-Yield Cast Iron",
+      "adaptability": "Adjustable Riser Core"
+    },
+    "specs": [
+      { "icon": "ShieldCheck", "label": "Cast-iron & HDPE composite body" },
+      { "icon": "Wrench", "label": "Telescoping adjustable riser" },
+      { "icon": "Layers", "label": "Locking lid — traffic-rated" }
+    ],
+    "button": "Explore Products"
+  },
+  "products": {
+    "header": {
+      "tagline": "Equipment Range",
+      "title": "OUR PRODUCT",
+      "highlight": "MARKETPLACE",
+      "subtitle": "Browse the complete H2 Industries range — precision-engineered water management products for heavy industrial, municipal, and environmental applications."
+    },
+    "searchPlaceholder": "Search by name, category or SKU…",
+    "emptyMessage": "NO PRODUCTS FOUND MATCHING YOUR SEARCH.",
+    "button": "VIEW ALL PRODUCTS",
+    "categories": ["All", "Sampling Stations", "Drainage Infrastructure", "Probe Systems"],
+    "items": [
+      { "id": 1, "image": "/images/2.jpeg", "name": "Modular Sampling Station — Type A", "category": "Sampling Stations", "sku": "H2-SS-A001", "price": "$1,850.00", "description": "Compact dual-door modular sampling enclosure with integrated stainless steel valve and probe assembly. Designed for accessible water sampling in confined stormwater environments.", "features": ["Dual-door access panel", "316 stainless steel valve", "Corrosion-resistant body", "Tamper-resistant fasteners"] },
+      { "id": 2, "image": "/images/3.jpeg", "name": "Modular Sampling Station — Type B", "category": "Sampling Stations", "sku": "H2-SS-B002", "price": "$2,100.00", "description": "Wide-body modular sampling station with optimised dual-compartment layout. Features integrated stainless probe assembly and enhanced interior access for maintenance teams.", "features": ["Wide-body enclosure", "Enhanced access geometry", "Integrated probe mount", "UV-stabilised polymer"] },
+      { "id": 3, "image": "/images/4.jpeg", "name": "Aluminium Inlet Drain — Standard", "category": "Drainage Infrastructure", "sku": "H2-ID-AL003", "price": "$850.00", "description": "Precision-machined aluminium stormwater inlet drain with conical base and segmented barrel sections. Engineered for high-flow municipal drainage applications.", "features": ["Machined aluminium construction", "Segmented modular barrel", "Conical flange base", "H2 Industries branded caps"] },
+      { "id": 4, "image": "/images/5.jpeg", "name": "Polymer Column Drain — Black Series", "category": "Drainage Infrastructure", "sku": "H2-CD-BK004", "price": "$620.00", "description": "High-density polymer column drainage system in matte black finish. Features a stabilising foot plate and removable top cap for secure installation.", "features": ["HDPE moulded construction", "Stabilising foot plate", "Removable top cap", "Matte black coating"] },
+      { "id": 5, "image": "/images/6.jpeg", "name": "Aluminium Inlet Drain — Extended", "category": "Drainage Infrastructure", "sku": "H2-ID-AL005", "price": "$1,050.00", "description": "Extended-barrel variant of the aluminium inlet drain series. Additional barrel section provides greater depth accommodation for deep kerb or road infrastructure.", "features": ["Extended barrel depth", "Precision machined finish", "Screw-fit cap with grating", "Anodised surface treatment"] },
+      { "id": 6, "image": "/images/7.jpeg", "name": "Sampling Station — Concrete Environment", "category": "Sampling Stations", "sku": "H2-SS-CE006", "price": "$2,400.00", "description": "H2 sampling station system shown in a concrete industrial environment — demonstrating fit and finish in real-world structural settings.", "features": ["In-situ installation ready", "Heavy-duty exterior", "Anti-UV coating", "Industrial environment rated"] },
+      { "id": 7, "image": "/images/8.jpeg", "name": "Modular Enclosure Unit — Closed Body", "category": "Sampling Stations", "sku": "H2-ME-CB007", "price": "$1,550.00", "description": "Closed-body modular enclosure for water sampling and monitoring equipment. Features a side-access port, locking lid, and integrated probe outlet.", "features": ["Side-access port", "Integrated probe outlet", "Locking top lid", "Compact profile"] },
+      { "id": 8, "image": "/images/9.jpeg", "name": "Flat-Panel Sampling Station — Open", "category": "Sampling Stations", "sku": "H2-SS-FP008", "price": "$1,950.00", "description": "Flat-panel dual-door sampling station shown open, revealing the full stainless steel probe and valve assembly. Top-mount and bottom-pass configurations available.", "features": ["Full-panel door access", "Bottom probe pass-through", "Top-mount valve", "Dual-latch closure"] },
+      { "id": 9, "image": "/images/WhatsApp Image 2026-07-01 at 10.48.44 AM.jpeg", "name": "Stainless Steel Sampling Probe — Long Reach", "category": "Probe Systems", "sku": "H2-PR-LR009", "price": "$380.00", "description": "Long-reach stainless steel sampling probe with matte black polymer carrier housing. Engineered for deep pipe insertion, maintenance access, and water quality monitoring.", "features": ["Long-reach 316 stainless rod", "Black polymer carrier", "Precision tip fitting", "Drop-in installation"] },
+      { "id": 10, "image": "/images/WhatsApp Image 2026-07-01 at 10.48.48 AM.jpeg", "name": "Polymer Column Drain — Water Series", "category": "Drainage Infrastructure", "sku": "H2-CD-BK010", "price": "$580.00", "description": "Compact black polymer column drain from the H2 Water Series. Engineered with precision top cap detailing and branded barrel rings.", "features": ["Water Series branding", "Precision top cap", "Branded barrel rings", "Compact footprint"] }
+    ]
+  },
+  "quality": {
+    "header": {
+      "tagline": "Zero Compromise",
+      "title": "QUALITY &",
+      "highlight": "COMPLIANCE",
+      "subtitle": "Our multi-stage quality assurance protocol guarantees that every product leaving our facility is engineered to last generations."
+    },
+    "workflow": [
+      { "icon": "Search", "title": "Material Inspection", "desc": "Raw polymer batches are tested for melt flow index and tensile strength before entering production." },
+      { "icon": "ShieldAlert", "title": "In-Process QC", "desc": "Automated optical inspection during injection moulding ensures zero dimensional deviation." },
+      { "icon": "CheckCircle", "title": "Final Verification", "desc": "Assembled units undergo hydrostatic pressure and load-bearing tests mimicking real-world stress." },
+      { "icon": "Award", "title": "Certification", "desc": "Every batch is logged with full traceability, meeting or exceeding national compliance standards." }
+    ]
+  },
+  "standards": {
+    "header": {
+      "title": "ENGINEERING",
+      "highlight": "STANDARDS",
+      "subtitle": "Infrastructure demands absolute certainty. Our technical specifications align with rigorous international and local standards, ensuring every product is load-rated, environmentally safe, and built for purpose."
+    },
+    "button": "Download Spec Sheets",
+    "items": [
+      { "name": "AS/NZS 3996", "desc": "Access Covers & Grates" },
+      { "name": "ISO 9001:2015", "desc": "Quality Management Systems" },
+      { "name": "ISO 14001:2015", "desc": "Environmental Management" },
+      { "name": "WSA 137", "desc": "Industry Standards for Water" }
+    ]
+  },
+  "industries": {
+    "header": {
+      "tagline": "Industries We Serve",
+      "title": "BUILT FOR THE INDUSTRIES",
+      "highlight": "THAT SHAPE OUR WORLD",
+      "subtitle": "H2 Industries products are deployed across a broad range of sectors — wherever precision water management matters most."
+    },
+    "items": [
+      { "icon": "Building2", "title": "MUNICIPAL WATER", "desc": "Stormwater sampling stations and drainage systems for councils and local authorities managing public water infrastructure.", "accent": "#2196F3" },
+      { "icon": "Waves", "title": "MARINE & COASTAL", "desc": "Ocean-focused water quality monitoring products designed to prevent marine pollution at the stormwater source.", "accent": "#0288D1" },
+      { "icon": "Construction", "title": "CIVIL INFRASTRUCTURE", "desc": "Heavy-duty drainage and access solutions for roads, bridges, and major civil construction projects.", "accent": "#607D8B" },
+      { "icon": "Leaf", "title": "ENVIRONMENTAL", "desc": "Precision sampling systems for environmental engineers conducting comprehensive water quality assessments.", "accent": "#43A047" },
+      { "icon": "Flame", "title": "INDUSTRIAL FACILITIES", "desc": "Robust water management infrastructure for industrial sites requiring compliant stormwater management.", "accent": "#EF6C00" },
+      { "icon": "Sprout", "title": "AGRICULTURAL", "desc": "Durable drainage and sampling products engineered to withstand agricultural environments and protect waterways.", "accent": "#558B2F" }
+    ]
+  },
+  "globalNetwork": {
+    "header": {
+      "tagline": "Global Reach",
+      "title": "WORLDWIDE",
+      "highlight": "SUPPLY NETWORK",
+      "subtitle": "Seamlessly delivering heavy industrial infrastructure from our production floors to your site, anywhere in the world. Our integrated logistics network ensures projects stay on schedule, irrespective of geography."
+    },
+    "stats": [
+      { "value": "40+", "label": "Countries Served" },
+      { "value": "12", "label": "Global Dist. Hubs" },
+      { "value": "24/7", "label": "Logistics Support" }
+    ],
+    "modes": [
+      { "icon": "Ship", "label": "Ocean Freight" },
+      { "icon": "Plane", "label": "Air Cargo" },
+      { "icon": "Truck", "label": "Ground Transport" }
+    ]
+  },
+  "sustainability": {
+    "header": {
+      "tagline": "Environmental Responsibility",
+      "title": "MANUFACTURING",
+      "highlight": "TOMORROW",
+      "subtitle": "We build infrastructure to manage the world's most vital resource. That responsibility extends to how we manufacture our products — prioritizing energy efficiency, waste reduction, and sustainable polymers."
+    },
+    "initiatives": [
+      { "icon": "Droplet", "title": "Water Conservation", "value": "100%", "desc": "Closed-loop water cooling systems in our manufacturing facilities." },
+      { "icon": "Recycle", "title": "Material Recovery", "value": "85%", "desc": "Of all manufacturing polymer by-products are reclaimed and re-processed." },
+      { "icon": "Wind", "title": "Emission Reduction", "value": "Zero", "desc": "VOC emissions across all our primary injection moulding lines." },
+      { "icon": "TreePine", "title": "Green Packaging", "value": "100%", "desc": "Biodegradable or fully recyclable transport packaging." }
+    ]
+  },
+  "story": {
+    "whoWeAre": {
+      "tagline": "The Genesis of H2",
+      "title": "WHO WE ARE",
+      "highlight": "BEYOND THE SURFACE",
+      "paragraphs": [
+        "We are more than just engineers. H2 Industries was forged by a collective of environmental scientists, material experts, and heavy infrastructure specialists with a singular, unwavering focus: to stop the degradation of our natural waterways.",
+        "For decades, the standard approach to municipal water management was passive. We exist to make it active. We build the physical barriers that stand between industrial pollution and the pristine oceans we rely on."
+      ],
+      "stats": [
+        { "value": "25+", "label": "Years Engineering" },
+        { "value": "100%", "label": "Commitment to Oceans" }
+      ],
+      "image": "/images/2.jpeg"
+    },
+    "whatWeDo": {
+      "tagline": "Our Operations",
+      "title": "WHAT WE ARE",
+      "highlight": "DOING",
+      "paragraphs": [
+        "We engineer and manufacture next-generation hydro-infrastructure. From heavy-duty stormwater inlet drains to highly sensitive modular sampling stations, we provide the physical architecture required to intercept pollutants before they reach our oceans.",
+        "Our facilities utilize advanced polymer extrusion, precision CNC machining, and rigorous hydrostatic testing. We don't just build parts; we engineer complete, fail-safe systems for the most demanding urban environments."
+      ],
+      "features": [
+        { "title": "Precision Interception", "desc": "Capturing micro-pollutants at the source." },
+        { "title": "Robust Architecture", "desc": "Infrastructure designed for heavy urban loads." },
+        { "title": "Smart Monitoring", "desc": "Integrated sampling access for real-time data." }
+      ],
+      "image": "/images/5.jpeg"
+    },
+    "whatWeGive": {
+      "tagline": "The H2 Guarantee",
+      "title": "WHAT WE ARE",
+      "highlight": "GIVING",
+      "paragraphs": [
+        "When you specify an H2 product, you are buying absolute certainty. We give our partners the confidence that their infrastructure will perform flawlessly, decade after decade.",
+        "We give back to the planet. Every product deployed is a direct investment in cleaner oceans, safer drinking water, and a sustainable legacy for future generations."
+      ],
+      "guarantees": [
+        "Unwavering structural durability",
+        "Rigorous dimensional tolerances",
+        "Dedicated project support",
+        "Measurable environmental impact"
+      ],
+      "image": "/images/4.jpeg"
+    }
+  },
+  "testimonials": {
+    "header": {
+      "tagline": "Client Success",
+      "title": "TRUSTED BY",
+      "highlight": "INDUSTRY LEADERS",
+      "subtitle": "See what leading municipal authorities, civil engineers, and environmental agencies say about our infrastructure solutions."
+    },
+    "items": [
+      {
+        "quote": "H2 Industries' modular sampling stations have transformed how we monitor stormwater outfalls. The build quality is exceptional, and their responsiveness is unmatched.",
+        "author": "Sarah Jenkins",
+        "role": "Chief Environmental Engineer",
+        "company": "Metro Water Authority"
+      },
+      {
+        "quote": "When you specify an H2 product, you know it's going to outlast the project itself. Their custom fabrication team delivered exactly what our coastal infrastructure required.",
+        "author": "David Chen",
+        "role": "Director of Infrastructure",
+        "company": "Coastal Civil Group"
+      },
+      {
+        "quote": "The dimensional accuracy on their heavy-duty injection moulded components is incredible. Zero rework on site, perfect fit every single time.",
+        "author": "Marcus Thorne",
+        "role": "Lead Procurement Officer",
+        "company": "National Utilities Network"
+      }
+    ]
+  },
+  "footer": {
+    "cta": {
+      "titlePart1": "ENGINEER YOUR CAREER.",
+      "titlePart2": "APPLY NOW AT H2 INDUSTRIES.",
+      "button": "SEE JOBS",
+      "link": "#careers"
+    },
+    "offices": [
+      { "address": "105 MAXES ROAD, MELVILLE, NY 11737, USA", "phone": "+1 (512) 782-8880" },
+      { "address": "ONE YOUNGE STREET, TORONTO, ONTARIO M5E 1R4 CANADA", "phone": "+1 (438) 805-9990" }
+    ],
+    "newsletter": {
+      "title": "GET H2 INDUSTRIES NEWS",
+      "desc": "Once or twice a month we'll send you H2 news with industry content you can use.",
+      "placeholder": "Enter your email address",
+      "button": "SUBMIT",
+      "disclaimer": "By submitting this form, you agree to the processing of your personal data by H2 Industries as described in the Privacy Statement."
+    },
+    "links": {
+      "COMPANY": [
+        { "label": "Careers", "href": "/company#careers" },
+        { "label": "About Us", "href": "/company" },
+        { "label": "Capabilities", "href": "/capabilities" }
+      ],
+      "PRODUCTS & SERVICES": [
+        { "label": "View All Products", "href": "/products" },
+        { "label": "Quality Standards", "href": "/quality" },
+        { "label": "Technical Docs", "href": "/quality#standards" }
+      ],
+      "INDUSTRIES": [
+        { "label": "Municipal Water", "href": "/industries" },
+        { "label": "Marine & Coastal", "href": "/industries" },
+        { "label": "Civil Infrastructure", "href": "/industries" }
+      ]
+    },
+    "socials": [
+      { "icon": "Globe", "label": "Website", "href": "#" },
+      { "icon": "MessageCircle", "label": "Contact", "href": "#" },
+      { "icon": "Share2", "label": "Social", "href": "#" }
+    ],
+    "legal": {
+      "copyright": "All Rights Reserved.",
+      "links": ["Terms of Service", "Privacy Policy", "Mandatory Disclosures", "Cookie Policy"]
+    }
+  }
+}

@@ -3,39 +3,18 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { ArrowRight, Settings, Maximize, Activity } from "lucide-react";
+import { ArrowRight, Settings, Maximize, Activity, LucideIcon } from "lucide-react";
+import homeData from "@/data/home.json";
 
-const solutions = [
-  {
-    id: "stormwater",
-    title: "Precision-Engineered Drainage",
-    category: "Stormwater Infrastructure",
-    desc: "Machined to exacting tolerances, delivering consistent performance in municipal and civil stormwater infrastructure. Features a segmented barrel system for adaptable depth configurations.",
-    specs: { material: "High-Grade Aluminium", rating: "Municipal Class D", tolerance: "±0.1mm" },
-    image: "/images/4.jpeg",
-    icon: Settings
-  },
-  {
-    id: "monitoring",
-    title: "Modular Sampling Stations",
-    category: "Water Quality Monitoring",
-    desc: "A secure access platform for environmental engineers. The flat-panel dual-door design provides full interior visibility and accommodates complex probe assemblies.",
-    specs: { material: "Industrial Polymer", rating: "IP67 Enclosure", tolerance: "N/A" },
-    image: "/images/9.jpeg",
-    icon: Activity
-  },
-  {
-    id: "urban",
-    title: "Black Series Column Drainage",
-    category: "Urban Water Management",
-    desc: "Designed for urban environments demanding durability and aesthetics. Features an integrated stabilising foot plate for secure road and kerb installations.",
-    specs: { material: "HDPE Moulded", rating: "Heavy Duty", tolerance: "N/A" },
-    image: "/images/5.jpeg",
-    icon: Maximize
-  }
-];
+const iconMap: Record<string, LucideIcon> = {
+  Settings,
+  Activity,
+  Maximize,
+};
 
 export default function Solutions() {
+  const solutions = homeData.solutions.items;
+  const header = homeData.solutions.header;
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [activeTab, setActiveTab] = useState(solutions[0].id);
@@ -54,14 +33,14 @@ export default function Solutions() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(33, 150, 243, 0.1)", border: "1px solid rgba(33, 150, 243, 0.3)", padding: "6px 16px", marginBottom: 24 }}>
               <span style={{ color: "#90CAF9", fontSize: 12, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                Products In Action
+                {header.tagline}
               </span>
             </div>
             
             <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.8rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, textTransform: "uppercase", fontStyle: "italic" }}>
-              ENGINEERING SOLUTIONS<br />
+              {header.title}<br />
               <span style={{ color: "#2196F3" }}>
-                FOR EVERY APPLICATION
+                {header.highlight}
               </span>
             </h2>
           </motion.div>
@@ -79,7 +58,7 @@ export default function Solutions() {
           >
             {solutions.map((sol) => {
               const isActive = activeTab === sol.id;
-              const Icon = sol.icon;
+              const Icon = iconMap[sol.icon] || Settings;
               return (
                 <button
                   key={sol.id}

@@ -3,17 +3,20 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ShieldAlert, CheckCircle, Search, Award } from "lucide-react";
+import homeData from "../data/home.json";
 
-const workflow = [
-  { icon: Search, title: "Material Inspection", desc: "Raw polymer batches are tested for melt flow index and tensile strength before entering production." },
-  { icon: ShieldAlert, title: "In-Process QC", desc: "Automated optical inspection during injection moulding ensures zero dimensional deviation." },
-  { icon: CheckCircle, title: "Final Verification", desc: "Assembled units undergo hydrostatic pressure and load-bearing tests mimicking real-world stress." },
-  { icon: Award, title: "Certification", desc: "Every batch is logged with full traceability, meeting or exceeding national compliance standards." },
-];
+const iconMap: Record<string, React.ElementType> = {
+  Search,
+  ShieldAlert,
+  CheckCircle,
+  Award
+};
 
 export default function QualityCompliance() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+
+  const { header, workflow } = homeData.quality;
 
   return (
     <section 
@@ -33,15 +36,15 @@ export default function QualityCompliance() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(21, 101, 192, 0.3)", padding: "6px 16px", marginBottom: 24, border: "1px solid rgba(33, 150, 243, 0.2)" }}>
               <span style={{ color: "#90CAF9", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                Zero Compromise
+                {header.tagline}
               </span>
             </div>
             
             <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.8rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 20, textTransform: "uppercase", fontStyle: "italic" }}>
-              QUALITY & <span style={{ color: "#2196F3" }}>COMPLIANCE</span>
+              {header.title} <span style={{ color: "#2196F3" }}>{header.highlight}</span>
             </h2>
             <p style={{ color: "#90CAF9", fontSize: 16, maxWidth: 600, margin: "0 auto", lineHeight: 1.6 }}>
-              Our multi-stage quality assurance protocol guarantees that every product leaving our facility is engineered to last generations.
+              {header.subtitle}
             </p>
           </motion.div>
         </div>
@@ -52,27 +55,29 @@ export default function QualityCompliance() {
           <div style={{ display: "none", position: "absolute", top: 80, left: "10%", right: "10%", height: 2, background: "rgba(33, 150, 243, 0.2)" }} className="qc-line" />
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 40, position: "relative", zIndex: 10 }}>
-            {workflow.map((step, i) => (
-              <motion.div
-                key={step.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
-                style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}
-              >
-                <div style={{ 
-                  width: 80, 
-                  height: 80, 
-                  background: "#0D274D", 
-                  borderRadius: "50%", 
-                  display: "flex", 
-                  alignItems: "center", 
-                  justifyContent: "center",
-                  border: "2px solid #2196F3",
-                  marginBottom: 24,
-                  position: "relative"
-                }}>
-                  <step.icon size={32} color="#42A5F5" />
+            {workflow.map((step, i) => {
+              const Icon = iconMap[step.icon as keyof typeof iconMap] || Search;
+              return (
+                <motion.div
+                  key={step.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: i * 0.15 }}
+                  style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}
+                >
+                  <div style={{ 
+                    width: 80, 
+                    height: 80, 
+                    background: "#0D274D", 
+                    borderRadius: "50%", 
+                    display: "flex", 
+                    alignItems: "center", 
+                    justifyContent: "center",
+                    border: "2px solid #2196F3",
+                    marginBottom: 24,
+                    position: "relative"
+                  }}>
+                    <Icon size={32} color="#42A5F5" />
                   
                   {/* Step Number Badge */}
                   <div style={{
@@ -95,10 +100,11 @@ export default function QualityCompliance() {
                   </div>
                 </div>
 
-                <h3 style={{ color: "#fff", fontSize: 18, fontWeight: 800, marginBottom: 12, textTransform: "uppercase" }}>{step.title}</h3>
-                <p style={{ color: "#64B5F6", fontSize: 14, lineHeight: 1.6, margin: 0 }}>{step.desc}</p>
-              </motion.div>
-            ))}
+                  <h3 style={{ color: "#fff", fontSize: 18, fontWeight: 800, marginBottom: 12, textTransform: "uppercase" }}>{step.title}</h3>
+                  <p style={{ color: "#64B5F6", fontSize: 14, lineHeight: 1.6, margin: 0 }}>{step.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

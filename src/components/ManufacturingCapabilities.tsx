@@ -2,33 +2,12 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-
-const capabilities = [
-  {
-    title: "Heavy-Duty Injection Moulding",
-    desc: "High-tonnage moulding capable of producing large structural drainage components with absolute dimensional stability.",
-    imageColor: "#1565C0",
-  },
-  {
-    title: "Industrial Fabrication",
-    desc: "Custom steel and heavy polymer fabrication for specialized municipal and industrial infrastructure projects.",
-    imageColor: "#0D47A1",
-  },
-  {
-    title: "Precision Machining",
-    desc: "CNC milling and turning for critical sealing surfaces and complex valve components.",
-    imageColor: "#1E88E5",
-  },
-  {
-    title: "Custom Engineering",
-    desc: "Bespoke design-to-manufacture services tailoring products to specific environmental and site requirements.",
-    imageColor: "#0D3A73",
-  },
-];
+import homeData from "../data/home.json";
 
 export default function ManufacturingCapabilities() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const { header, items } = homeData.capabilities;
 
   return (
     <section 
@@ -45,25 +24,25 @@ export default function ManufacturingCapabilities() {
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", border: "1px solid #E0E0E0", padding: "6px 16px", marginBottom: 20 }}>
               <span style={{ width: 8, height: 8, background: "#1565C0", borderRadius: "50%" }} />
               <span style={{ color: "#4A6375", fontSize: 12, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                Core Capabilities
+                {header.tagline}
               </span>
             </div>
             
             <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.1, textTransform: "uppercase" }}>
-              MANUFACTURING<br />
-              <span style={{ color: "#1565C0" }}>EXCELLENCE</span>
+              {header.title}<br />
+              <span style={{ color: "#1565C0" }}>{header.highlight}</span>
             </h2>
           </motion.div>
           
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }} style={{ maxWidth: 500 }}>
             <p style={{ color: "#4A6375", fontSize: 16, lineHeight: 1.6, margin: 0 }}>
-              Our facilities are equipped with state-of-the-art machinery capable of processing advanced polymers and metals. We control the entire production cycle to guarantee unparalleled quality.
+              {header.subtitle}
             </p>
           </motion.div>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 32 }}>
-          {capabilities.map((cap, i) => (
+          {items.map((cap, i) => (
             <motion.div
               key={cap.title}
               initial={{ opacity: 0, y: 30 }}

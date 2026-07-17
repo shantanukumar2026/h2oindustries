@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Volume2, VolumeX, MessageSquare, Phone, Mail, User, ArrowRight } from "lucide-react";
+import homeData from "@/data/home.json";
 
 export default function Hero() {
   const [isMuted, setIsMuted] = useState(true);
@@ -14,6 +15,8 @@ export default function Hero() {
       setIsMuted(!isMuted);
     }
   };
+
+  const data = homeData.hero;
 
   return (
     <section
@@ -31,7 +34,7 @@ export default function Hero() {
       <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
         <video
           ref={videoRef}
-          src="/videos/hero-bg-optimized.mp4"
+          src={data.videoBg || "/videos/hero-bg-optimized.mp4"}
           autoPlay
           loop
           muted={isMuted}
@@ -91,7 +94,7 @@ export default function Hero() {
                 textTransform: "uppercase",
               }}
             >
-              Precision Water Management
+              {data.tagline}
             </span>
           </div>
 
@@ -110,11 +113,11 @@ export default function Hero() {
               margin: "16px 0",
             }}
           >
-            ENGINEERING THE
+            {data.heading.line1}
             <br />
-            WATERWORKS
+            {data.heading.line2}
             <br />
-            <span style={{ color: "#42A5F5" }}>AUTHORITY</span>
+            <span style={{ color: "#42A5F5" }}>{data.heading.highlight}</span>
           </h1>
 
           {/* Sub block */}
@@ -135,8 +138,12 @@ export default function Hero() {
                 margin: 0,
               }}
             >
-              Next-Generation Hydro-Infrastructure &<br />
-              Engineering Solutions
+              {data.subheading.split('\n').map((line, i) => (
+                <span key={i}>
+                  {line}
+                  <br />
+                </span>
+              ))}
             </p>
           </div>
         </motion.div>
@@ -175,12 +182,12 @@ export default function Hero() {
                 margin: 0,
               }}
             >
-              Command Center
+              {data.commandCenter.title}
             </h3>
           </div>
           
           <a
-            href="#capabilities"
+            href={data.commandCenter.primaryButton.link}
             style={{
               display: "flex",
               alignItems: "center",
@@ -206,12 +213,12 @@ export default function Hero() {
               e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
             }}
           >
-            Explore Capabilities
+            {data.commandCenter.primaryButton.text}
             <ArrowRight size={18} />
           </a>
 
           <a
-            href="#contact"
+            href={data.commandCenter.secondaryButton.link}
             style={{
               display: "flex",
               alignItems: "center",
@@ -238,7 +245,7 @@ export default function Hero() {
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >
-            Succeed With Us
+            {data.commandCenter.secondaryButton.text}
             <ArrowRight size={18} />
           </a>
         </motion.div>

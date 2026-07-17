@@ -3,33 +3,20 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Network, Microscope, Layers, Compass } from "lucide-react";
+import homeData from "../data/home.json";
+
+const iconMap: Record<string, React.ElementType> = {
+  Microscope,
+  Layers,
+  Network,
+  Compass
+};
 
 export default function ResearchDevelopment() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
-  const features = [
-    {
-      icon: Microscope,
-      title: "Advanced Materials Testing",
-      desc: "Simulating decades of wear in extreme environmental chambers to validate polymer longevity.",
-    },
-    {
-      icon: Layers,
-      title: "Structural Optimisation",
-      desc: "Using finite element analysis (FEA) to reduce material weight without compromising integrity.",
-    },
-    {
-      icon: Network,
-      title: "Smart Integration",
-      desc: "Developing IoT-ready embedded sensors for real-time municipal stormwater network monitoring.",
-    },
-    {
-      icon: Compass,
-      title: "Sustainable Prototyping",
-      desc: "3D printing initial models using recycled composites before finalizing injection molds.",
-    },
-  ];
+  const { header, features, metrics } = homeData.research;
 
   return (
     <section 
@@ -68,31 +55,34 @@ export default function ResearchDevelopment() {
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1565C0", padding: "4px 16px", marginBottom: 24 }}>
               <div style={{ width: 12, height: 2, background: "#fff" }} />
               <span style={{ color: "#fff", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                Innovation Lab
+                {header.tagline}
               </span>
             </div>
             
             <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
-              RESEARCH &<br />
-              <span style={{ color: "#42A5F5" }}>DEVELOPMENT</span>
+              {header.title}<br />
+              <span style={{ color: "#42A5F5" }}>{header.highlight}</span>
             </h2>
             
             <p style={{ color: "#90CAF9", fontSize: 16, lineHeight: 1.7, marginBottom: 32, maxWidth: 540 }}>
-              We don&apos;t just manufacture components; we engineer the future of water infrastructure. Our dedicated R&D division constantly explores new polymers, advanced moulding techniques, and sustainable materials to ensure our products outperform industry standards.
+              {header.subtitle}
             </p>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-              {features.map((feature, i) => (
-                <div key={i} style={{ display: "flex", gap: 16 }}>
-                  <div style={{ width: 40, height: 40, borderRadius: "8px", background: "rgba(33, 150, 243, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, border: "1px solid rgba(33, 150, 243, 0.2)" }}>
-                    <feature.icon size={20} color="#42A5F5" />
+              {features.map((feature, i) => {
+                const Icon = iconMap[feature.icon as keyof typeof iconMap] || Compass;
+                return (
+                  <div key={i} style={{ display: "flex", gap: 16 }}>
+                    <div style={{ width: 40, height: 40, borderRadius: "8px", background: "rgba(33, 150, 243, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, border: "1px solid rgba(33, 150, 243, 0.2)" }}>
+                      <Icon size={20} color="#42A5F5" />
+                    </div>
+                    <div>
+                      <h4 style={{ color: "#fff", fontSize: 14, fontWeight: 700, marginBottom: 6 }}>{feature.title}</h4>
+                      <p style={{ color: "#64B5F6", fontSize: 13, lineHeight: 1.5, margin: 0 }}>{feature.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 style={{ color: "#fff", fontSize: 14, fontWeight: 700, marginBottom: 6 }}>{feature.title}</h4>
-                    <p style={{ color: "#64B5F6", fontSize: 13, lineHeight: 1.5, margin: 0 }}>{feature.desc}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </motion.div>
 
@@ -134,7 +124,7 @@ export default function ResearchDevelopment() {
                 style={{ position: "absolute", top: "15%", left: "5%", background: "rgba(6, 35, 71, 0.8)", backdropFilter: "blur(4px)", padding: "12px 16px", border: "1px solid #2196F3", borderRadius: 4 }}
               >
                 <div style={{ color: "#90CAF9", fontSize: 10, textTransform: "uppercase", letterSpacing: 1, marginBottom: 4 }}>Tensile Strength</div>
-                <div style={{ color: "#fff", fontSize: 18, fontWeight: 800 }}>85.4 MPa</div>
+                <div style={{ color: "#fff", fontSize: 18, fontWeight: 800 }}>{metrics.tensile}</div>
               </motion.div>
 
               <motion.div 
@@ -143,7 +133,7 @@ export default function ResearchDevelopment() {
                 style={{ position: "absolute", bottom: "20%", right: "-5%", background: "rgba(6, 35, 71, 0.8)", backdropFilter: "blur(4px)", padding: "12px 16px", border: "1px solid #42A5F5", borderRadius: 4 }}
               >
                 <div style={{ color: "#90CAF9", fontSize: 10, textTransform: "uppercase", letterSpacing: 1, marginBottom: 4 }}>Thermal Tolerance</div>
-                <div style={{ color: "#fff", fontSize: 18, fontWeight: 800 }}>-40°C / +85°C</div>
+                <div style={{ color: "#fff", fontSize: 18, fontWeight: 800 }}>{metrics.thermal}</div>
               </motion.div>
             </div>
           </motion.div>

@@ -3,17 +3,13 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import homeData from "../data/home.json";
 
 export default function InfrastructureFacilities() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
-  const facilities = [
-    { title: "Primary Extrusion Facility", desc: "120,000 sq ft unit dedicated to high-volume polymer processing.", span: 2, height: 400, video: "/portfolio/1.mp4" },
-    { title: "Quality Assurance Lab", desc: "Climate-controlled testing environment with advanced spectroscopy.", span: 1, height: 400, video: "/portfolio/2.mp4" },
-    { title: "Logistics Hub", desc: "Automated warehousing ensuring rapid dispatch across North America.", span: 1, height: 300, video: "/portfolio/3.mp4" },
-    { title: "Heavy Fabrication Wing", desc: "Specialized sector for custom steel reinforcement and structural assembly.", span: 2, height: 300, video: "/portfolio/4.mp4" },
-  ];
+  const { header, facilities } = homeData.infrastructure;
 
   return (
     <section 
@@ -28,14 +24,14 @@ export default function InfrastructureFacilities() {
         <div ref={ref} style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 40, marginBottom: 64 }}>
           <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6 }}>
             <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.1, textTransform: "uppercase" }}>
-              INFRASTRUCTURE &<br />
-              <span style={{ color: "#1565C0" }}>FACILITIES</span>
+              {header.title}<br />
+              <span style={{ color: "#1565C0" }}>{header.highlight}</span>
             </h2>
           </motion.div>
           
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }} style={{ maxWidth: 460 }}>
             <p style={{ color: "#4A6375", fontSize: 16, lineHeight: 1.6, margin: 0 }}>
-              Scale meets precision. Our distributed manufacturing network combines vast production capacity with specialized, highly-controlled operational zones.
+              {header.subtitle}
             </p>
           </motion.div>
         </div>

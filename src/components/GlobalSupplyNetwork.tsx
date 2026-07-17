@@ -3,22 +3,19 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Globe2, Ship, Plane, Truck } from "lucide-react";
+import homeData from "../data/home.json";
+
+const iconMap: Record<string, React.ElementType> = {
+  Ship,
+  Plane,
+  Truck
+};
 
 export default function GlobalSupplyNetwork() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
-  const stats = [
-    { value: "40+", label: "Countries Served" },
-    { value: "12", label: "Global Dist. Hubs" },
-    { value: "24/7", label: "Logistics Support" },
-  ];
-
-  const modes = [
-    { icon: Ship, label: "Ocean Freight" },
-    { icon: Plane, label: "Air Cargo" },
-    { icon: Truck, label: "Ground Transport" },
-  ];
+  const { header, stats, modes } = homeData.globalNetwork;
 
   return (
     <section 
@@ -61,17 +58,17 @@ export default function GlobalSupplyNetwork() {
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#1565C0", padding: "4px 16px", marginBottom: 24 }}>
               <Globe2 size={16} color="#fff" />
               <span style={{ color: "#fff", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                Global Reach
+                {header.tagline}
               </span>
             </div>
             
             <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
-              WORLDWIDE<br />
-              <span style={{ color: "#42A5F5" }}>SUPPLY NETWORK</span>
+              {header.title}<br />
+              <span style={{ color: "#42A5F5" }}>{header.highlight}</span>
             </h2>
             
             <p style={{ color: "#90CAF9", fontSize: 16, lineHeight: 1.7, marginBottom: 40, maxWidth: 540 }}>
-              Seamlessly delivering heavy industrial infrastructure from our production floors to your site, anywhere in the world. Our integrated logistics network ensures projects stay on schedule, irrespective of geography.
+              {header.subtitle}
             </p>
 
             <div style={{ display: "flex", gap: 40, marginBottom: 48 }}>
@@ -88,12 +85,15 @@ export default function GlobalSupplyNetwork() {
             </div>
 
             <div style={{ display: "flex", gap: 16 }}>
-              {modes.map((mode, i) => (
-                <div key={i} style={{ display: "flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.05)", padding: "8px 16px", borderRadius: 4, border: "1px solid rgba(255,255,255,0.1)" }}>
-                  <mode.icon size={16} color="#90CAF9" />
-                  <span style={{ color: "#fff", fontSize: 12, fontWeight: 600 }}>{mode.label}</span>
-                </div>
-              ))}
+              {modes.map((mode, i) => {
+                const Icon = iconMap[mode.icon as keyof typeof iconMap] || Ship;
+                return (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.05)", padding: "8px 16px", borderRadius: 4, border: "1px solid rgba(255,255,255,0.1)" }}>
+                    <Icon size={16} color="#90CAF9" />
+                    <span style={{ color: "#fff", fontSize: 12, fontWeight: 600 }}>{mode.label}</span>
+                  </div>
+                );
+              })}
             </div>
           </motion.div>
 

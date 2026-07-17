@@ -4,16 +4,19 @@ import { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, ShieldCheck, Wrench, Layers, Settings, CheckCircle2, Play } from "lucide-react";
 import Image from "next/image";
+import homeData from "../data/home.json";
 
-const specs = [
-  { icon: ShieldCheck, label: "Cast-iron & HDPE composite body" },
-  { icon: Wrench, label: "Telescoping adjustable riser" },
-  { icon: Layers, label: "Locking lid — traffic-rated" },
-];
+const iconMap: Record<string, React.ElementType> = {
+  ShieldCheck,
+  Wrench,
+  Layers
+};
 
 export default function CurbBoxFeature() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  const { header, watermark, image, badges, specs, button } = homeData.curbbox;
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -28,7 +31,7 @@ export default function CurbBoxFeature() {
       
       {/* Background Typography Watermark */}
       <motion.div className="watermark" style={{ y: yWatermark, position: "absolute", top: "10%", left: "-5%", fontSize: "clamp(10rem, 20vw, 25rem)", fontWeight: 900, color: "rgba(13, 58, 115, 0.03)", whiteSpace: "nowrap", fontStyle: "italic", pointerEvents: "none", zIndex: 0 }}>
-        H2 CURB BOX
+        {watermark}
       </motion.div>
 
       <div className="curbbox-container" style={{ maxWidth: 1600, margin: "0 auto", position: "relative" }}>
@@ -84,8 +87,8 @@ export default function CurbBoxFeature() {
                 style={{ position: "relative", width: "100%", height: "100%", zIndex: 1, mixBlendMode: "multiply" }}
               >
                 <Image
-                  src="/images/curb-box.png"
-                  alt="H2 Curb Box"
+                  src={image}
+                  alt={header.title}
                   fill
                   style={{ objectFit: "contain", filter: "drop-shadow(0 40px 60px rgba(0,0,0,0.15))" }}
                 />
@@ -100,7 +103,7 @@ export default function CurbBoxFeature() {
               >
                 <div style={{ background: "#fff", padding: "10px 20px", borderRadius: 8, border: "1px solid #E0E0E0", boxShadow: "0 10px 30px rgba(0,0,0,0.08)", display: "flex", flexDirection: "column" }}>
                   <span style={{ color: "#2196F3", fontSize: 10, fontWeight: 900, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 2 }}>MATERIAL SPEC</span>
-                  <span style={{ color: "#0D3A73", fontSize: 14, fontWeight: 800, textTransform: "uppercase" }}>High-Yield Cast Iron</span>
+                  <span style={{ color: "#0D3A73", fontSize: 14, fontWeight: 800, textTransform: "uppercase" }}>{badges.materialSpec}</span>
                 </div>
                 <div style={{ width: 60, height: 2, background: "linear-gradient(to right, #2196F3, transparent)" }} />
               </motion.div>
@@ -114,7 +117,7 @@ export default function CurbBoxFeature() {
                 <div style={{ width: 60, height: 2, background: "linear-gradient(to left, #2196F3, transparent)" }} />
                 <div style={{ background: "#fff", padding: "10px 20px", borderRadius: 8, border: "1px solid #E0E0E0", boxShadow: "0 10px 30px rgba(0,0,0,0.08)", display: "flex", flexDirection: "column" }}>
                   <span style={{ color: "#2196F3", fontSize: 10, fontWeight: 900, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 2 }}>ADAPTABILITY</span>
-                  <span style={{ color: "#0D3A73", fontSize: 14, fontWeight: 800, textTransform: "uppercase" }}>Adjustable Riser Core</span>
+                  <span style={{ color: "#0D3A73", fontSize: 14, fontWeight: 800, textTransform: "uppercase" }}>{badges.adaptability}</span>
                 </div>
               </motion.div>
               
@@ -133,20 +136,20 @@ export default function CurbBoxFeature() {
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(21, 101, 192, 0.1)", padding: "6px 16px", marginBottom: 24 }}>
               <Settings size={14} color="#1565C0" />
               <span style={{ color: "#1565C0", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                Signature Series
+                {header.tagline}
               </span>
             </div>
 
             <h2 className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.1, marginBottom: 16, textTransform: "uppercase", fontStyle: "italic" }}>
-              THE H2<br/>
-              <span style={{ color: "#2196F3" }}>CURB BOX</span>
+              {header.title}<br/>
+              <span style={{ color: "#2196F3" }}>{header.highlight}</span>
             </h2>
-            <p style={{ color: "#4A6375", fontSize: 16, lineHeight: 1.6, marginBottom: 24, fontWeight: 500 }}>Designed for maximum durability in harsh environments, the H2 Curb Box sets the standard for municipal water infrastructure reliability.</p>
+            <p style={{ color: "#4A6375", fontSize: 16, lineHeight: 1.6, marginBottom: 24, fontWeight: 500 }}>{header.subtitle}</p>
 
             {/* Feature List */}
             <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 32 }}>
               {specs.map((s, i) => {
-                const Icon = s.icon;
+                const Icon = iconMap[s.icon as keyof typeof iconMap] || ShieldCheck;
                 return (
                   <motion.div 
                     initial={{ opacity: 0, x: 20 }}
@@ -186,7 +189,7 @@ export default function CurbBoxFeature() {
               onMouseEnter={(e) => { e.currentTarget.style.background = "#1E88E5"; e.currentTarget.style.transform = "translateX(4px)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "#1565C0"; e.currentTarget.style.transform = "translateX(0)"; }}
             >
-              Explore Products <ArrowRight size={20} />
+              {button} <ArrowRight size={20} />
             </a>
           </motion.div>
         </div>

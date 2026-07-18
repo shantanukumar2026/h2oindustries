@@ -20,7 +20,7 @@ export default function ManufacturingProcess() {
   const { header, steps } = homeData.process;
 
   return (
-    <section id="process" style={{ background: "#F5F7FA", height: "100vh", paddingTop: 120, boxSizing: "border-box", overflow: "hidden", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+    <section id="process" style={{ background: "#F5F7FA", padding: "60px 0 120px 0" }}>
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
         {/* Header */}
         <div ref={ref} style={{ textAlign: "center", marginBottom: 64 }}>

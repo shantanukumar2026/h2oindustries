@@ -22,7 +22,7 @@ export default function Solutions() {
   const activeSolution = solutions.find(s => s.id === activeTab) || solutions[0];
 
   return (
-    <section id="solutions" style={{ background: "#062347", height: "100vh", paddingTop: 120, boxSizing: "border-box", position: "relative", overflow: "hidden", borderTop: "1px solid rgba(255,255,255,0.05)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+    <section id="solutions" style={{ background: "#062347", padding: "120px 0", position: "relative", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
       {/* Background blueprint grid */}
       <div style={{ position: "absolute", inset: 0, opacity: 0.1, backgroundImage: "linear-gradient(rgba(33, 150, 243, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(33, 150, 243, 0.2) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
 

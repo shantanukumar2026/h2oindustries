@@ -23,14 +23,8 @@ export default function TechnologyInnovation() {
       id="technology" 
       style={{ 
         background: "#FAFAFA",
-        height: "100vh",
-        paddingTop: 120,
-        boxSizing: "border-box",
-        position: "relative",
-        overflow: "hidden",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
+        padding: "120px 0",
+        position: "relative"
       }}
     >
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>

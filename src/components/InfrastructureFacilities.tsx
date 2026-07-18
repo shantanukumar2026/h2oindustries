@@ -16,13 +16,7 @@ export default function InfrastructureFacilities() {
       id="infrastructure" 
       style={{ 
         background: "#F5F7FA", 
-        height: "100vh",
-        paddingTop: 120,
-        boxSizing: "border-box",
-        overflow: "hidden",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
+        padding: "120px 0 60px 0",
       }}
     >
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>

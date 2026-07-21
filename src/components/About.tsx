@@ -35,7 +35,6 @@ function PortfolioSection({ item, index }: { item: any; index: number }) {
     <section 
       ref={ref}
       style={{ 
-        height: "100vh", 
         width: "100%", 
         background: sectionBgColor,
         display: "flex",
@@ -43,7 +42,7 @@ function PortfolioSection({ item, index }: { item: any; index: number }) {
         justifyContent: "center",
         position: "relative",
         overflow: "hidden",
-        paddingTop: "80px"
+        padding: "48px 0"
       }}
     >
       <div 
@@ -54,8 +53,7 @@ function PortfolioSection({ item, index }: { item: any; index: number }) {
           padding: "0 60px",
           display: "grid",
           gridTemplateColumns: index % 2 === 0 ? "45% 55%" : "55% 45%",
-          alignItems: "center",
-          height: "100%"
+          alignItems: "center"
         }}
         className="portfolio-grid"
       >
@@ -111,7 +109,7 @@ function PortfolioSection({ item, index }: { item: any; index: number }) {
         </div>
 
         {/* Media Side */}
-        <div style={{ order: index % 2 === 0 ? 2 : 1, position: "relative", height: "60vh", width: "100%" }} className="portfolio-media">
+        <div style={{ order: index % 2 === 0 ? 2 : 1, position: "relative", minHeight: "350px", height: "auto", aspectRatio: "16/9", width: "100%" }} className="portfolio-media">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -121,7 +119,6 @@ function PortfolioSection({ item, index }: { item: any; index: number }) {
               width: "100%", 
               height: "100%", 
               position: "relative",
-              // We remove the hard border and box shadow here so the focus is on the overlapping text card
               background: "transparent",
               overflow: "hidden"
             }}
@@ -148,16 +145,18 @@ function PortfolioSection({ item, index }: { item: any; index: number }) {
         @media (max-width: 1024px) {
           .portfolio-grid {
             grid-template-columns: 1fr !important;
-            padding: 80px 30px 60px 30px !important;
-            gap: 40px !important;
+            padding: 48px 24px !important;
+            gap: 24px !important;
           }
           .portfolio-content { 
             order: 2 !important; 
-            margin: -60px 20px 0 20px !important; 
+            margin: 0 !important; 
+            padding: 24px !important;
           }
           .portfolio-media { 
             order: 1 !important; 
-            height: 40vh !important; 
+            min-height: 250px !important; 
+            height: auto !important;
           }
         }
       `}</style>

@@ -14,7 +14,7 @@ export default function TechnicalStandards() {
   return (
     <section id="standards" className="standards-section" style={{ 
         background: "#062347", 
-        padding: "100px 0",
+        padding: "48px 0",
         borderTop: "1px solid rgba(255,255,255,0.05)"
       }}>
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
@@ -45,21 +45,25 @@ export default function TechnicalStandards() {
               </div>
             </div>
 
-            <button style={{ 
-              background: "transparent", 
-              border: "1px solid #2196F3", 
-              color: "#2196F3", 
-              padding: "14px 28px", 
-              fontSize: 14, 
-              fontWeight: 800, 
-              textTransform: "uppercase", 
-              letterSpacing: 1, 
-              display: "flex", 
-              alignItems: "center", 
-              gap: 12,
-              cursor: "pointer",
-              transition: "all 0.2s"
-            }}>
+            <button 
+              onMouseEnter={(e) => e.currentTarget.style.background = "rgba(33, 150, 243, 0.1)"}
+              onMouseLeave={(e) => e.currentTarget.style.background = "transparent"}
+              style={{ 
+                background: "transparent", 
+                border: "1px solid #2196F3", 
+                color: "#2196F3", 
+                padding: "14px 28px", 
+                fontSize: 14, 
+                fontWeight: 800, 
+                textTransform: "uppercase", 
+                letterSpacing: 1, 
+                display: "flex", 
+                alignItems: "center", 
+                gap: 12,
+                cursor: "pointer",
+                transition: "all 0.2s"
+              }}
+            >
               <FileText size={18} />
               {button}
             </button>
@@ -81,6 +85,7 @@ export default function TechnicalStandards() {
                 flexDirection: "column",
                 alignItems: "flex-start",
                 transition: "all 0.3s",
+                height: "100%"
               }}>
                 <div style={{ width: 12, height: 4, background: "#1565C0", marginBottom: 16 }} />
                 <h4 style={{ color: "#fff", fontSize: 18, fontWeight: 800, marginBottom: 8, letterSpacing: 0.5 }}>{std.name}</h4>

@@ -20,8 +20,7 @@ export default function CurbBoxFeature() {
         backgroundColor: "#f0f6ff",
         position: "relative",
         overflow: "hidden",
-        height: "100vh",
-        paddingTop: 120,
+        padding: "48px 0",
         boxSizing: "border-box",
         display: "flex",
         flexDirection: "column",
@@ -65,8 +64,6 @@ export default function CurbBoxFeature() {
       <div
         className="curbbox-container"
         style={{
-          flex: 1,
-          minHeight: 0,
           maxWidth: 1440,
           width: "100%",
           margin: "0 auto",
@@ -86,7 +83,6 @@ export default function CurbBoxFeature() {
             gap: 50,
             alignItems: "center",
             width: "100%",
-            height: "100%",
           }}
         >
           {/* ───────── LEFT: Product Showcase ───────── */}
@@ -99,24 +95,24 @@ export default function CurbBoxFeature() {
               display: "flex",
               justifyContent: "center",
               alignItems: "flex-end",
-              height: "100%",
               width: "100%",
               paddingBottom: "3%",
+              minHeight: "450px"
             }}
           >
             {/* Glowing Halo Behind Product */}
             <div
               style={{
                 position: "absolute",
-                bottom: "20%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "min(320px, 65%)",
-                height: "min(320px, 65%)",
+                top: "10%",
+                left: "10%",
+                right: "10%",
+                bottom: "5%",
                 background: "radial-gradient(circle, rgba(22,101,193,0.15) 0%, rgba(22,101,193,0.05) 40%, transparent 70%)",
+                filter: "blur(40px)",
                 borderRadius: "50%",
+                pointerEvents: "none",
                 zIndex: 0,
-                filter: "blur(20px)",
               }}
             />
 
@@ -319,7 +315,7 @@ export default function CurbBoxFeature() {
                 background: "linear-gradient(135deg, #0D47A1, #1565C0)",
                 color: "#fff",
                 textDecoration: "none",
-                padding: "1.4vh 28px",
+                padding: "14px 28px",
                 borderRadius: 6,
                 fontSize: 13,
                 fontWeight: 800,

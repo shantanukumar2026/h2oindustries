@@ -14,7 +14,7 @@ export default function ManufacturingCapabilities() {
       id="capabilities" 
       style={{ 
         background: "#F5F7FA", 
-        padding: "60px 0 60px 0",
+        padding: "48px 0",
       }}
     >
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
@@ -41,19 +41,32 @@ export default function ManufacturingCapabilities() {
           </motion.div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 32 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }} className="capabilities-grid">
           {items.map((cap, i) => (
             <motion.div
               key={cap.title}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.15 }}
+              style={{ height: "100%" }}
             >
               <CapabilityCard cap={cap} />
             </motion.div>
           ))}
         </div>
       </div>
+      <style>{`
+        @media (max-width: 1200px) {
+          .capabilities-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .capabilities-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

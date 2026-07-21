@@ -17,7 +17,7 @@ export default function WhatWeDo() {
       style={{ 
         background: "#F5F7FA", 
         color: "#062347", 
-        padding: "100px 0",
+        padding: "48px 0",
         position: "relative",
         overflow: "hidden"
       }}

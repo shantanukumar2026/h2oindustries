@@ -24,7 +24,7 @@ export default function ResearchDevelopment() {
       style={{ 
         position: "relative",
         background: "#062347", 
-        padding: "100px 0",
+        padding: "48px 0",
         overflow: "hidden"
       }}
     >
@@ -59,7 +59,7 @@ export default function ResearchDevelopment() {
               </span>
             </div>
             
-            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
+            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
               {header.title}<br />
               <span style={{ color: "#42A5F5" }}>{header.highlight}</span>
             </h2>

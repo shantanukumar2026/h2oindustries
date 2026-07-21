@@ -47,16 +47,16 @@ export default function Products() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
-                background: "#0D3A73",
-                border: "1px solid #1565C0",
+                background: "rgba(21, 101, 192, 0.1)",
+                border: "1px solid rgba(21, 101, 192, 0.3)",
                 padding: "6px 16px",
-                marginBottom: 24,
+                marginBottom: 20,
               }}
             >
-              <div style={{ width: 12, height: 2, background: "#42A5F5" }} />
+              <div style={{ width: 12, height: 2, background: "#1565C0" }} />
               <span
                 style={{
-                  color: "#fff",
+                  color: "#1565C0",
                   fontSize: 12,
                   fontWeight: 800,
                   letterSpacing: "0.15em",
@@ -87,7 +87,7 @@ export default function Products() {
             </h2>
             <div style={{ width: 80, height: 4, background: "#1565C0", marginBottom: 32 }} />
 
-            <p style={{ color: "#0D3A73", fontSize: 16, maxWidth: 600, lineHeight: 1.7, fontWeight: 600 }}>
+            <p style={{ color: "#4A6375", fontSize: 16, maxWidth: 600, lineHeight: 1.7, fontWeight: 500 }}>
               {header.subtitle}
             </p>
           </motion.div>
@@ -173,6 +173,7 @@ export default function Products() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.35, delay: i < 8 ? i * 0.04 : 0 }}
+                style={{ height: "100%" }}
               >
                 <ProductCard product={p} onQuickView={() => setQv(p)} catColor={catColors[p.category] ?? "#1565C0"} />
               </motion.div>
@@ -191,7 +192,7 @@ export default function Products() {
             <button
               onClick={() => router.push("/products")}
               style={{
-                background: "#0D3A73",
+                background: "#1565C0",
                 color: "#fff",
                 border: "none",
                 padding: "16px 32px",
@@ -206,8 +207,8 @@ export default function Products() {
                 alignItems: "center",
                 gap: 8,
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "#1565C0"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "#0D3A73"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#0D47A1"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "#1565C0"; }}
             >
               {button} <ArrowRight size={16} />
             </button>
@@ -335,14 +336,14 @@ export default function Products() {
       </AnimatePresence>
 
       <style>{`
-        .products-section { padding: 40px 0 100px 0; }
+        .products-section { padding: 48px 0; }
         .products-container { padding: 0 60px; }
         @media (min-width: 768px) {
           .modal-grid { grid-template-columns: 1fr 1.2fr !important; }
         }
         @media (max-width: 767px) {
           .modal-img-col { border-right: none !important; border-bottom: 1px solid #E0E0E0 !important; }
-          .products-section { padding: 20px 0 60px 0; }
+          .products-section { padding: 32px 0; }
           .products-container { padding: 0 24px; }
         }
       `}</style>
@@ -435,7 +436,7 @@ function ProductCard({ product, onQuickView, catColor }: {
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              background: "#2196F3",
+              background: "#1565C0",
               color: "#fff",
               border: "none",
               padding: "12px 20px",
@@ -448,10 +449,10 @@ function ProductCard({ product, onQuickView, catColor }: {
               transition: "all 0.2s",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#1E88E5";
+              e.currentTarget.style.background = "#0D47A1";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#2196F3";
+              e.currentTarget.style.background = "#1565C0";
             }}
           >
             <Eye size={16} /> QUICK VIEW

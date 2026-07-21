@@ -12,8 +12,6 @@ export default function PresentationSlide({ children }: PresentationSlideProps) 
       className="presentation-slide"
       style={{ 
         width: "100%",
-        scrollSnapAlign: "start",
-        scrollSnapStop: "always",
         position: "relative"
       }}
     >

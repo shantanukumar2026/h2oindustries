@@ -16,7 +16,7 @@ export default function InfrastructureFacilities() {
       id="infrastructure" 
       style={{ 
         background: "#F5F7FA", 
-        padding: "120px 0 60px 0",
+        padding: "48px 0",
       }}
     >
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
@@ -51,7 +51,7 @@ export default function InfrastructureFacilities() {
               transition={{ duration: 0.6, delay: i * 0.15 }}
               style={{
                 gridColumn: `span ${fac.span}`,
-                minHeight: fac.height,
+                height: 360,
                 background: "#062347",
                 position: "relative",
                 overflow: "hidden",

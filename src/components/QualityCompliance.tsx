@@ -23,7 +23,7 @@ export default function QualityCompliance() {
       id="quality" 
       style={{ 
         background: "#020B14", 
-        padding: "100px 0",
+        padding: "48px 0",
         position: "relative"
       }}
     >
@@ -32,15 +32,15 @@ export default function QualityCompliance() {
 
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
         
-        <div ref={ref} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", marginBottom: 60 }}>
+        <div ref={ref} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", marginBottom: 48 }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(21, 101, 192, 0.3)", padding: "6px 16px", marginBottom: 24, border: "1px solid rgba(33, 150, 243, 0.2)" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(21, 101, 192, 0.3)", padding: "6px 16px", marginBottom: 20, border: "1px solid rgba(33, 150, 243, 0.2)" }}>
               <span style={{ color: "#90CAF9", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
                 {header.tagline}
               </span>
             </div>
             
-            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.8rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 20, textTransform: "uppercase", fontStyle: "italic" }}>
+            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.2rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 20, textTransform: "uppercase", fontStyle: "italic" }}>
               {header.title} <span style={{ color: "#2196F3" }}>{header.highlight}</span>
             </h2>
             <p style={{ color: "#90CAF9", fontSize: 16, maxWidth: 600, margin: "0 auto", lineHeight: 1.6 }}>

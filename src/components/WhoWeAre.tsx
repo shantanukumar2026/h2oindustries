@@ -16,7 +16,7 @@ export default function WhoWeAre() {
       style={{ 
         background: "#062347", 
         color: "#fff", 
-        padding: "100px 0",
+        padding: "48px 0",
         position: "relative",
         overflow: "hidden"
       }}
@@ -36,14 +36,14 @@ export default function WhoWeAre() {
               </span>
             </div>
             
-            <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 900, lineHeight: 1.1, marginBottom: 32, textTransform: "uppercase" }}>
+            <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 3.2rem)", fontWeight: 900, lineHeight: 1.1, marginBottom: 32, textTransform: "uppercase" }}>
               {data.title} <br/>
               <span style={{ color: "#2196F3" }}>{data.highlight}</span>
             </h2>
             
             <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
               {data.paragraphs.map((p, i) => (
-                <p key={i} style={{ color: "#90CAF9", fontSize: 18, lineHeight: 1.7, fontWeight: 400, margin: 0 }}>
+                <p key={i} style={{ color: "#90CAF9", fontSize: 16, lineHeight: 1.7, margin: 0 }}>
                   {p}
                 </p>
               ))}
@@ -63,7 +63,7 @@ export default function WhoWeAre() {
             </div>
             
             {/* Stats Overlay */}
-            <div style={{ position: "absolute", bottom: -32, left: -32, right: 32, display: "flex", gap: 16 }}>
+            <div style={{ position: "absolute", bottom: -24, left: 24, right: 24, display: "flex", gap: 16 }}>
               {data.stats.map((stat, i) => (
                 <div key={i} style={{ flex: 1, background: "#0D3A73", padding: "24px", borderLeft: "4px solid #2196F3", boxShadow: "0 20px 40px rgba(0,0,0,0.2)" }}>
                   <div style={{ fontSize: 32, fontWeight: 900, color: "#fff", marginBottom: 8 }}>{stat.value}</div>

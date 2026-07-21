@@ -22,22 +22,22 @@ export default function Solutions() {
   const activeSolution = solutions.find(s => s.id === activeTab) || solutions[0];
 
   return (
-    <section id="solutions" style={{ background: "#062347", padding: "120px 0", position: "relative", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+    <section id="solutions" style={{ background: "#062347", padding: "48px 0", position: "relative", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
       {/* Background blueprint grid */}
       <div style={{ position: "absolute", inset: 0, opacity: 0.1, backgroundImage: "linear-gradient(rgba(33, 150, 243, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(33, 150, 243, 0.2) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
 
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px", position: "relative", zIndex: 10 }}>
         
         {/* Header */}
-        <div ref={ref} style={{ marginBottom: 60, display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+        <div ref={ref} style={{ marginBottom: 40, display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(33, 150, 243, 0.1)", border: "1px solid rgba(33, 150, 243, 0.3)", padding: "6px 16px", marginBottom: 24 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(33, 150, 243, 0.1)", border: "1px solid rgba(33, 150, 243, 0.3)", padding: "6px 16px", marginBottom: 20 }}>
               <span style={{ color: "#90CAF9", fontSize: 12, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" }}>
                 {header.tagline}
               </span>
             </div>
             
-            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.8rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, textTransform: "uppercase", fontStyle: "italic" }}>
+            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.2rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, textTransform: "uppercase", fontStyle: "italic" }}>
               {header.title}<br />
               <span style={{ color: "#2196F3" }}>
                 {header.highlight}

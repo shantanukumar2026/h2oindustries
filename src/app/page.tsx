@@ -34,13 +34,7 @@ export default function Home() {
       
       <main 
         ref={containerRef}
-        style={{ 
-          height: "100vh", 
-          overflowY: "scroll", 
-          scrollSnapType: "y mandatory",
-          scrollBehavior: "smooth" 
-        }}
-        className="presentation-container hide-scrollbar"
+        className="w-full relative"
       >
         <PresentationSlide><Hero /></PresentationSlide>
         

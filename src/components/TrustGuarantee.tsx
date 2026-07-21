@@ -39,8 +39,8 @@ export default function TrustGuarantee() {
       ref={containerRef}
       style={{
         position: "relative",
-        background: "#030b17", // Extremely deep blue/black for max contrast
-        padding: "160px 0",
+        background: "#030b17", 
+        padding: "48px 0",
         overflow: "hidden",
         borderTop: "1px solid rgba(255,255,255,0.02)"
       }}
@@ -59,7 +59,7 @@ export default function TrustGuarantee() {
             left: 0,
             width: 800,
             height: 800,
-            background: "radial-gradient(circle, rgba(33,150,243,0.15) 0%, rgba(0,229,255,0.05) 40%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(21,101,192,0.08) 0%, transparent 70%)",
             borderRadius: "50%",
             pointerEvents: "none",
             zIndex: 0,
@@ -76,7 +76,7 @@ export default function TrustGuarantee() {
         transform: "translate(-50%, -50%)",
         width: "60vw",
         height: "60vw",
-        background: "radial-gradient(circle, rgba(33,150,243,0.08) 0%, transparent 60%)",
+        background: "radial-gradient(circle, rgba(21,101,192,0.04) 0%, transparent 60%)",
         borderRadius: "50%",
         pointerEvents: "none",
         zIndex: 0,
@@ -85,7 +85,7 @@ export default function TrustGuarantee() {
       <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 40px", position: "relative", zIndex: 10 }}>
 
         {/* Fortune 500 Style Header */}
-        <div style={{ textAlign: "center", marginBottom: 100 }}>
+        <div style={{ textAlign: "center", marginBottom: 48 }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ export default function TrustGuarantee() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="font-display" style={{
-              fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
+              fontSize: "clamp(2.2rem, 5vw, 3.8rem)",
               fontWeight: 900,
               color: "#fff",
               textTransform: "uppercase",
@@ -109,11 +109,11 @@ export default function TrustGuarantee() {
             </h2>
             <p style={{
               color: "rgba(255,255,255,0.5)",
-              fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
+              fontSize: "clamp(0.95rem, 1.5vw, 1.1rem)",
               maxWidth: 600,
-              margin: "24px auto 0",
-              fontWeight: 300,
-              letterSpacing: 1
+              margin: "16px auto 0",
+              fontWeight: 500,
+              letterSpacing: 0.5
             }}>
               {header.subtitle}
             </p>
@@ -135,70 +135,76 @@ export default function TrustGuarantee() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: i * 0.1 }}
-                style={{
-                  background: "rgba(255, 255, 255, 0.02)",
-                  backdropFilter: "blur(20px)",
-                  WebkitBackdropFilter: "blur(20px)",
-                  border: "1px solid rgba(255, 255, 255, 0.05)",
-                  borderRadius: 24,
-                  padding: 32,
-                  position: "relative",
-                  overflow: "hidden",
-                  transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
-                  cursor: "crosshair"
-                }}
-                className="glass-card"
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.04)";
-                  e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.1)";
-                  e.currentTarget.style.transform = "translateY(-10px)";
-                  e.currentTarget.style.boxShadow = `0 30px 60px rgba(0,0,0,0.5), 0 0 40px ${item.color}20`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.02)";
-                  e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.05)";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                }}
+                style={{ height: "100%" }}
               >
-                {/* Subtle top border gradient line */}
-                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg, transparent, ${item.color}, transparent)`, opacity: 0.5 }} />
-
-                <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 24 }}>
-                  <div style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: "50%",
-                    background: `linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))`,
-                    border: "1px solid rgba(255,255,255,0.1)",
+                <div
+                  style={{
+                    background: "rgba(255, 255, 255, 0.02)",
+                    backdropFilter: "blur(20px)",
+                    WebkitBackdropFilter: "blur(20px)",
+                    border: "1px solid rgba(255, 255, 255, 0.05)",
+                    borderRadius: 24,
+                    padding: 32,
+                    position: "relative",
+                    overflow: "hidden",
+                    transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+                    cursor: "crosshair",
                     display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    boxShadow: `inset 0 0 20px ${item.color}10`
-                  }}>
-                    <Icon size={24} color={item.color} strokeWidth={1.5} />
-                  </div>
-                  <h3 style={{
-                    fontSize: 18,
-                    fontWeight: 800,
-                    color: "#fff",
-                    letterSpacing: 2,
-                    margin: 0,
-                    textTransform: "uppercase"
-                  }}>
-                    {item.title}
-                  </h3>
-                </div>
+                    flexDirection: "column",
+                    height: "100%"
+                  }}
+                  className="glass-card"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "rgba(255, 255, 255, 0.04)";
+                    e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.1)";
+                    e.currentTarget.style.transform = "translateY(-6px)";
+                    e.currentTarget.style.boxShadow = `0 30px 60px rgba(0,0,0,0.5), 0 0 40px ${item.color}20`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "rgba(255, 255, 255, 0.02)";
+                    e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.05)";
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
+                  {/* Subtle top border gradient line */}
+                  <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg, transparent, ${item.color}, transparent)`, opacity: 0.5 }} />
 
-                <p style={{
-                  fontSize: 14,
-                  color: "rgba(255,255,255,0.6)",
-                  lineHeight: 1.7,
-                  margin: 0,
-                  fontWeight: 300
-                }}>
-                  {item.desc}
-                </p>
+                  <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 24 }}>
+                    <div style={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: "50%",
+                      background: `linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))`,
+                      border: "1px solid rgba(255,255,255,0.1)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      boxShadow: `inset 0 0 20px ${item.color}10`
+                    }}>
+                      <Icon size={24} color={item.color} strokeWidth={1.5} />
+                    </div>
+                    <h3 style={{
+                      fontSize: 18,
+                      fontWeight: 800,
+                      color: "#fff",
+                      letterSpacing: 1.5,
+                      margin: 0,
+                      textTransform: "uppercase"
+                    }}>
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <p style={{
+                    fontSize: 14,
+                    color: "rgba(255,255,255,0.6)",
+                    lineHeight: 1.7,
+                    margin: 0,
+                    fontWeight: 500
+                  }}>
+                    {item.desc}
+                  </p>
 
                 {/* Animated corner accent */}
                 <div className="corner-accent" style={{ position: "absolute", bottom: 24, right: 24, opacity: 0.2, transition: "opacity 0.5s" }}>
@@ -206,9 +212,10 @@ export default function TrustGuarantee() {
                     <path d="M2 22L22 2M22 2H8M22 2V16" stroke={item.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-              </motion.div>
-            );
-          })}
+              </div>
+            </motion.div>
+          );
+        })}
         </div>
       </div>
       <style>{`

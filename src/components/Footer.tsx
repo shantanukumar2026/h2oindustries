@@ -6,40 +6,37 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const productsMenu = [
-  { label: "Manhole Rings & Covers, Extensions", href: "/waterworks-castings" },
-  { label: "Pipe Accessories & Bolt Sets", href: "/waterworks-castings" },
-  { label: "Valve Boxes, Risers & Extensions", href: "/waterworks-castings" },
-  { label: "Meter Boxes & AMR Covers", href: "/waterworks-castings" },
-  { label: "MJ X MJ Restrained Adapters", href: "/waterworks-castings" },
-  { label: "Wedge Action Joint Restraints", href: "/waterworks-castings" },
-  { label: "AWWA Resilient Gate Valves", href: "/waterworks-castings" },
-  { label: "AWWA C153 & C110 DI Fittings", href: "/waterworks-castings" },
-  { label: "Municipal Sewer Cleanouts", href: "/waterworks-castings" },
-  { label: "Storm Drainage Frames & Grates", href: "/waterworks-castings" },
-  { label: "Certified Closeout Deals", href: "/waterworks-castings" },
+  { label: "Wedge Joint Restraints", href: "/waterworks-castings?category=Joint%20Restraints" },
+  { label: "AWWA DI Pipe Fittings", href: "/waterworks-castings?category=AWWA%20DI%20Fittings" },
+  { label: "Resilient Gate Valves", href: "/waterworks-castings?category=Gate%20Valves" },
+  { label: "Pipe Accessories & Bolt Sets", href: "/waterworks-castings?category=Pipe%20Accessories" },
+  { label: "Valve Boxes & Risers", href: "/waterworks-castings?category=Valve%20Boxes" },
+  { label: "Manhole Rings & Covers", href: "/waterworks-castings?category=Manhole%20Rings%20%26%20Covers" },
+  { label: "Municipal Sewer Cleanouts", href: "/waterworks-castings?category=Cleanouts" },
+  { label: "Meter Box Assemblies", href: "/waterworks-castings?category=Meter%20Boxes" },
+  { label: "Frames & Grates", href: "/waterworks-castings?category=Frames%20%26%20Grates" },
+  { label: "Restrained Adapters", href: "/waterworks-castings?category=Accu%20Adapters" },
+  { label: "Extended Range Castings", href: "/waterworks-castings?category=Extended%20Range" },
+  { label: "Closeout Overstock Deals", href: "/waterworks-castings?category=Closeout%20Deals" },
 ];
 
 const generalSubmittalsMenu = [
-  { label: "Generic Castings Submittals", href: "/waterworks-castings#catalog" },
-  { label: "Meter Boxes Specifications", href: "/waterworks-castings#catalog" },
-  { label: "Frames & Grates Submittals", href: "/waterworks-castings#catalog" },
-  { label: "AWWA DI Pipe Fittings Specs", href: "/waterworks-castings#catalog" },
-  { label: "Restrained Adapter Data Sheets", href: "/waterworks-castings#catalog" },
-  { label: "Joint Restraints Technical Specs", href: "/waterworks-castings#catalog" },
-  { label: "Pipe Accessories / Flange Packs", href: "/waterworks-castings#catalog" },
-  { label: "Gate Valves Drawing Sheets", href: "/waterworks-castings#catalog" },
-  { label: "Extended Lines Submittals", href: "/waterworks-castings#catalog" },
+  { label: "ASTM A536 Ductile Iron Specs", href: "/quality#standards" },
+  { label: "AWWA C111 / C153 Standards", href: "/quality#standards" },
+  { label: "AWWA C509 / C515 Valve Specs", href: "/quality#standards" },
+  { label: "H-20 Traffic Rating Certification", href: "/quality#standards" },
+  { label: "ISO 9001:2015 Quality System", href: "/quality" },
+  { label: "Third-Party Test Reports", href: "/quality" },
 ];
 
 const regionalSubmittalsMenu = [
-  { label: "Waco City Approved", href: "/waterworks-castings#catalog" },
-  { label: "Houston City Approved", href: "/waterworks-castings#catalog" },
-  { label: "Dallas Water Utilities (DWU)", href: "/waterworks-castings#catalog" },
-  { label: "Plano Infrastructure Specs", href: "/waterworks-castings#catalog" },
-  { label: "Fort Worth Water Dept", href: "/waterworks-castings#catalog" },
-  { label: "Austin Water APL List", href: "/waterworks-castings#catalog" },
-  { label: "San Antonio SAWS Standards", href: "/waterworks-castings#catalog" },
+  { label: "Waco Distribution Center (HQ)", href: "/waterworks-castings#distribution" },
+  { label: "Houston Distribution Center", href: "/waterworks-castings#distribution" },
+  { label: "Texas Regional Approvals", href: "/waterworks-castings#catalog" },
+  { label: "Waco City Approved Castings", href: "/waterworks-castings#catalog" },
+  { label: "Houston City Approved Castings", href: "/waterworks-castings#catalog" },
 ];
+
 
 const companyMenu = [
   { label: "About H2 Industries", href: "/company" },
@@ -320,11 +317,11 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Column 2: General Submittals */}
+            {/* Column 2: Standards & Compliance */}
             <div>
               <div style={{ borderBottom: "2px solid #2196F3", paddingBottom: 8, marginBottom: 20, width: "fit-content" }}>
                 <h4 style={{ fontSize: 15, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>
-                  General Submittals
+                  Standards & Compliance
                 </h4>
               </div>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
@@ -343,11 +340,11 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Column 3: Regional Submittals */}
+            {/* Column 3: Distribution & Hubs */}
             <div>
               <div style={{ borderBottom: "2px solid #2196F3", paddingBottom: 8, marginBottom: 20, width: "fit-content" }}>
                 <h4 style={{ fontSize: 15, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>
-                  Regional Submittals
+                  Distribution & Hubs
                 </h4>
               </div>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>

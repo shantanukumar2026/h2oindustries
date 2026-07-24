@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence, useInView } from "framer-motion";
@@ -35,6 +35,40 @@ export default function WaterworksCastingsPage() {
   const [selectedCat, setSelectedCat] = useState("All Pipe & Castings");
   const [quickViewProduct, setQuickViewProduct] = useState<(typeof waterworksData.products)[0] | null>(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const searchParams = new URLSearchParams(window.location.search);
+      const cat = searchParams.get("category");
+      if (cat) {
+        const found = waterworksData.categories.find(
+          (c) => c.toLowerCase() === cat.toLowerCase()
+        );
+        if (found) {
+          setSelectedCat(found);
+          setTimeout(() => {
+            const catalogSection = document.getElementById("catalog");
+            if (catalogSection) {
+              catalogSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }, 300);
+        }
+      }
+    }
+  }, []);
+
+  const handleCatChange = (cat: string) => {
+    setSelectedCat(cat);
+    if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      if (cat === "All Pipe & Castings" || cat === "All Castings") {
+        url.searchParams.delete("category");
+      } else {
+        url.searchParams.set("category", cat);
+      }
+      window.history.pushState({}, "", url.toString());
+    }
+  };
 
   const filteredProducts = waterworksData.products.filter((p) => {
     const matchesQuery =
@@ -335,7 +369,7 @@ export default function WaterworksCastingsPage() {
               {waterworksData.categories.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setSelectedCat(cat)}
+                  onClick={() => handleCatChange(cat)}
                   style={{
                     padding: "12px 20px",
                     border: "none",

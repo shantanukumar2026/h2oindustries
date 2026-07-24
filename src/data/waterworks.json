@@ -53,7 +53,7 @@
     "Cleanouts",
     "Meter Boxes",
     "Frames & Grates",
-    "Accu Adapters",
+    "Restrained Adapters",
     "Extended Range",
     "Closeout Deals"
   ],
@@ -222,7 +222,7 @@
       "id": 108,
       "sku": "H2-AA-MJ2",
       "name": "H2 Integrated Restrained Adapter Coupling System",
-      "category": "Accu Adapters",
+      "category": "Restrained Adapters",
       "image": "/images/waterworks/accu-adapter.webp",
       "description": "Innovative integrated mechanical joint adapter allowing rapid, rigid connection of valves and fittings without external thrust blocks or long pipe spools.",
       "features": [

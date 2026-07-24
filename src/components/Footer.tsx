@@ -15,7 +15,7 @@ const productsMenu = [
   { label: "Municipal Sewer Cleanouts", href: "/waterworks-castings?category=Cleanouts" },
   { label: "Meter Box Assemblies", href: "/waterworks-castings?category=Meter%20Boxes" },
   { label: "Frames & Grates", href: "/waterworks-castings?category=Frames%20%26%20Grates" },
-  { label: "Restrained Adapters", href: "/waterworks-castings?category=Accu%20Adapters" },
+  { label: "Restrained Adapters", href: "/waterworks-castings?category=Restrained%20Adapters" },
   { label: "Extended Range Castings", href: "/waterworks-castings?category=Extended%20Range" },
   { label: "Closeout Overstock Deals", href: "/waterworks-castings?category=Closeout%20Deals" },
 ];

@@ -92,7 +92,7 @@
       {
         "id": "why-trust-us",
         "title": "WHY TRUST US",
-        "desc": "Decades of rigorous testing. Our solutions don't just meet standards—they define them. We build partnerships, not just products.",
+        "desc": "Decades of rigorous testing. Our solutions don't just meet standards\u2014they define them. We build partnerships, not just products.",
         "icon": "ShieldCheck",
         "color": "#3F51B5"
       },
@@ -120,7 +120,7 @@
         "specs": {
           "material": "High-Grade Aluminium",
           "rating": "Municipal Class D",
-          "tolerance": "±0.1mm"
+          "tolerance": "\u00b10.1mm"
         },
         "image": "/images/4.jpeg",
         "icon": "Settings"
@@ -191,14 +191,30 @@
       "subtitle": "We don't just manufacture components; we engineer the future of water infrastructure. Our dedicated R&D division constantly explores new polymers, advanced moulding techniques, and sustainable materials to ensure our products outperform industry standards."
     },
     "features": [
-      { "icon": "Microscope", "title": "Advanced Materials Testing", "desc": "Simulating decades of wear in extreme environmental chambers to validate polymer longevity." },
-      { "icon": "Layers", "title": "Structural Optimisation", "desc": "Using finite element analysis (FEA) to reduce material weight without compromising integrity." },
-      { "icon": "Network", "title": "Smart Integration", "desc": "Developing IoT-ready embedded sensors for real-time municipal stormwater network monitoring." },
-      { "icon": "Compass", "title": "Sustainable Prototyping", "desc": "3D printing initial models using recycled composites before finalizing injection molds." }
+      {
+        "icon": "Microscope",
+        "title": "Advanced Materials Testing",
+        "desc": "Simulating decades of wear in extreme environmental chambers to validate polymer longevity."
+      },
+      {
+        "icon": "Layers",
+        "title": "Structural Optimisation",
+        "desc": "Using finite element analysis (FEA) to reduce material weight without compromising integrity."
+      },
+      {
+        "icon": "Network",
+        "title": "Smart Integration",
+        "desc": "Developing IoT-ready embedded sensors for real-time municipal stormwater network monitoring."
+      },
+      {
+        "icon": "Compass",
+        "title": "Sustainable Prototyping",
+        "desc": "3D printing initial models using recycled composites before finalizing injection molds."
+      }
     ],
     "metrics": {
       "tensile": "85.4 MPa",
-      "thermal": "-40°C / +85°C"
+      "thermal": "-40\u00b0C / +85\u00b0C"
     }
   },
   "infrastructure": {
@@ -208,10 +224,34 @@
       "subtitle": "Scale meets precision. Our distributed manufacturing network combines vast production capacity with specialized, highly-controlled operational zones."
     },
     "facilities": [
-      { "title": "Primary Extrusion Facility", "desc": "120,000 sq ft unit dedicated to high-volume polymer processing.", "span": 2, "height": 400, "video": "/portfolio/1.mp4" },
-      { "title": "Quality Assurance Lab", "desc": "Climate-controlled testing environment with advanced spectroscopy.", "span": 1, "height": 400, "video": "/portfolio/2.mp4" },
-      { "title": "Logistics Hub", "desc": "Automated warehousing ensuring rapid dispatch across North America.", "span": 1, "height": 300, "video": "/portfolio/3.mp4" },
-      { "title": "Heavy Fabrication Wing", "desc": "Specialized sector for custom steel reinforcement and structural assembly.", "span": 2, "height": 300, "video": "/portfolio/4.mp4" }
+      {
+        "title": "Primary Extrusion Facility",
+        "desc": "120,000 sq ft unit dedicated to high-volume polymer processing.",
+        "span": 2,
+        "height": 400,
+        "video": "/portfolio/1.mp4"
+      },
+      {
+        "title": "Quality Assurance Lab",
+        "desc": "Climate-controlled testing environment with advanced spectroscopy.",
+        "span": 1,
+        "height": 400,
+        "video": "/portfolio/2.mp4"
+      },
+      {
+        "title": "Logistics Hub",
+        "desc": "Automated warehousing ensuring rapid dispatch across North America.",
+        "span": 1,
+        "height": 300,
+        "video": "/portfolio/3.mp4"
+      },
+      {
+        "title": "Heavy Fabrication Wing",
+        "desc": "Specialized sector for custom steel reinforcement and structural assembly.",
+        "span": 2,
+        "height": 300,
+        "video": "/portfolio/4.mp4"
+      }
     ]
   },
   "capabilities": {
@@ -222,10 +262,26 @@
       "subtitle": "Our facilities are equipped with state-of-the-art machinery capable of processing advanced polymers and metals. We control the entire production cycle to guarantee unparalleled quality."
     },
     "items": [
-      { "title": "Heavy-Duty Injection Moulding", "desc": "High-tonnage moulding capable of producing large structural drainage components with absolute dimensional stability.", "imageColor": "#1565C0" },
-      { "title": "Industrial Fabrication", "desc": "Custom steel and heavy polymer fabrication for specialized municipal and industrial infrastructure projects.", "imageColor": "#0D47A1" },
-      { "title": "Precision Machining", "desc": "CNC milling and turning for critical sealing surfaces and complex valve components.", "imageColor": "#1E88E5" },
-      { "title": "Custom Engineering", "desc": "Bespoke design-to-manufacture services tailoring products to specific environmental and site requirements.", "imageColor": "#0D3A73" }
+      {
+        "title": "Heavy-Duty Injection Moulding",
+        "desc": "High-tonnage moulding capable of producing large structural drainage components with absolute dimensional stability.",
+        "imageColor": "#1565C0"
+      },
+      {
+        "title": "Industrial Fabrication",
+        "desc": "Custom steel and heavy polymer fabrication for specialized municipal and industrial infrastructure projects.",
+        "imageColor": "#0D47A1"
+      },
+      {
+        "title": "Precision Machining",
+        "desc": "CNC milling and turning for critical sealing surfaces and complex valve components.",
+        "imageColor": "#1E88E5"
+      },
+      {
+        "title": "Custom Engineering",
+        "desc": "Bespoke design-to-manufacture services tailoring products to specific environmental and site requirements.",
+        "imageColor": "#0D3A73"
+      }
     ]
   },
   "process": {
@@ -233,14 +289,44 @@
       "tagline": "How We Build",
       "title": "Our Manufacturing",
       "highlight": "Process",
-      "subtitle": "Every H2 Industries product passes through a disciplined five-stage manufacturing process — ensuring precision, reliability, and environmental performance."
+      "subtitle": "Every H2 Industries product passes through a disciplined five-stage manufacturing process \u2014 ensuring precision, reliability, and environmental performance."
     },
     "steps": [
-      { "icon": "Lightbulb", "num": "01", "title": "Design", "desc": "Thorough design process — identifying requirements, environmental impacts, and performance targets before a single part is drawn.", "detail": "CAD modelling · Feasibility studies · Environmental impact assessment" },
-      { "icon": "Ruler", "num": "02", "title": "Engineering", "desc": "Translating design concepts into precision technical specifications. Material selection, structural analysis, and compliance requirements are validated.", "detail": "Material science · Structural analysis · Compliance review" },
-      { "icon": "Cog", "num": "03", "title": "Manufacturing", "desc": "Products are manufactured using precision CNC machining, injection moulding, and polymer forming processes — ensuring exact dimensional accuracy.", "detail": "CNC machining · Injection moulding · Quality-controlled fabrication" },
-      { "icon": "FlaskConical", "num": "04", "title": "Testing", "desc": "Every product undergoes rigorous testing for dimensional accuracy, material performance, and environmental durability before release.", "detail": "Dimensional verification · Load testing · Environmental simulation" },
-      { "icon": "Truck", "num": "05", "title": "Delivery", "desc": "Finished products are quality-checked, packaged, and dispatched — from single units to large-scale infrastructure project orders.", "detail": "Packaging & protection · Project delivery · Customer support" }
+      {
+        "icon": "Lightbulb",
+        "num": "01",
+        "title": "Design",
+        "desc": "Thorough design process \u2014 identifying requirements, environmental impacts, and performance targets before a single part is drawn.",
+        "detail": "CAD modelling \u00b7 Feasibility studies \u00b7 Environmental impact assessment"
+      },
+      {
+        "icon": "Ruler",
+        "num": "02",
+        "title": "Engineering",
+        "desc": "Translating design concepts into precision technical specifications. Material selection, structural analysis, and compliance requirements are validated.",
+        "detail": "Material science \u00b7 Structural analysis \u00b7 Compliance review"
+      },
+      {
+        "icon": "Cog",
+        "num": "03",
+        "title": "Manufacturing",
+        "desc": "Products are manufactured using precision CNC machining, injection moulding, and polymer forming processes \u2014 ensuring exact dimensional accuracy.",
+        "detail": "CNC machining \u00b7 Injection moulding \u00b7 Quality-controlled fabrication"
+      },
+      {
+        "icon": "FlaskConical",
+        "num": "04",
+        "title": "Testing",
+        "desc": "Every product undergoes rigorous testing for dimensional accuracy, material performance, and environmental durability before release.",
+        "detail": "Dimensional verification \u00b7 Load testing \u00b7 Environmental simulation"
+      },
+      {
+        "icon": "Truck",
+        "num": "05",
+        "title": "Delivery",
+        "desc": "Finished products are quality-checked, packaged, and dispatched \u2014 from single units to large-scale infrastructure project orders.",
+        "detail": "Packaging & protection \u00b7 Project delivery \u00b7 Customer support"
+      }
     ]
   },
   "curbbox": {
@@ -257,9 +343,18 @@
       "adaptability": "Adjustable Riser Core"
     },
     "specs": [
-      { "icon": "ShieldCheck", "label": "Cast-iron & HDPE composite body" },
-      { "icon": "Wrench", "label": "Telescoping adjustable riser" },
-      { "icon": "Layers", "label": "Locking lid — traffic-rated" }
+      {
+        "icon": "ShieldCheck",
+        "label": "Cast-iron & HDPE composite body"
+      },
+      {
+        "icon": "Wrench",
+        "label": "Telescoping adjustable riser"
+      },
+      {
+        "icon": "Layers",
+        "label": "Locking lid \u2014 traffic-rated"
+      }
     ],
     "button": "Explore Products"
   },
@@ -268,23 +363,409 @@
       "tagline": "Equipment Range",
       "title": "OUR PRODUCT",
       "highlight": "MARKETPLACE",
-      "subtitle": "Browse the complete H2 Industries range — precision-engineered water management products for heavy industrial, municipal, and environmental applications."
+      "subtitle": "Browse the complete H2 Industries range \u2014 precision-engineered water management products for heavy industrial, municipal, and environmental applications."
     },
-    "searchPlaceholder": "Search by name, category or SKU…",
+    "searchPlaceholder": "Search by name, category or SKU\u2026",
     "emptyMessage": "NO PRODUCTS FOUND MATCHING YOUR SEARCH.",
     "button": "VIEW ALL PRODUCTS",
-    "categories": ["All", "Sampling Stations", "Drainage Infrastructure", "Probe Systems"],
+    "categories": [
+      "All",
+      "Sampling Stations",
+      "Drainage Infrastructure",
+      "Probe Systems",
+      "Waterworks Castings"
+    ],
     "items": [
-      { "id": 1, "image": "/images/2.jpeg", "name": "Modular Sampling Station — Type A", "category": "Sampling Stations", "sku": "H2-SS-A001", "price": "$1,850.00", "description": "Compact dual-door modular sampling enclosure with integrated stainless steel valve and probe assembly. Designed for accessible water sampling in confined stormwater environments.", "features": ["Dual-door access panel", "316 stainless steel valve", "Corrosion-resistant body", "Tamper-resistant fasteners"] },
-      { "id": 2, "image": "/images/3.jpeg", "name": "Modular Sampling Station — Type B", "category": "Sampling Stations", "sku": "H2-SS-B002", "price": "$2,100.00", "description": "Wide-body modular sampling station with optimised dual-compartment layout. Features integrated stainless probe assembly and enhanced interior access for maintenance teams.", "features": ["Wide-body enclosure", "Enhanced access geometry", "Integrated probe mount", "UV-stabilised polymer"] },
-      { "id": 3, "image": "/images/4.jpeg", "name": "Aluminium Inlet Drain — Standard", "category": "Drainage Infrastructure", "sku": "H2-ID-AL003", "price": "$850.00", "description": "Precision-machined aluminium stormwater inlet drain with conical base and segmented barrel sections. Engineered for high-flow municipal drainage applications.", "features": ["Machined aluminium construction", "Segmented modular barrel", "Conical flange base", "H2 Industries branded caps"] },
-      { "id": 4, "image": "/images/5.jpeg", "name": "Polymer Column Drain — Black Series", "category": "Drainage Infrastructure", "sku": "H2-CD-BK004", "price": "$620.00", "description": "High-density polymer column drainage system in matte black finish. Features a stabilising foot plate and removable top cap for secure installation.", "features": ["HDPE moulded construction", "Stabilising foot plate", "Removable top cap", "Matte black coating"] },
-      { "id": 5, "image": "/images/6.jpeg", "name": "Aluminium Inlet Drain — Extended", "category": "Drainage Infrastructure", "sku": "H2-ID-AL005", "price": "$1,050.00", "description": "Extended-barrel variant of the aluminium inlet drain series. Additional barrel section provides greater depth accommodation for deep kerb or road infrastructure.", "features": ["Extended barrel depth", "Precision machined finish", "Screw-fit cap with grating", "Anodised surface treatment"] },
-      { "id": 6, "image": "/images/7.jpeg", "name": "Sampling Station — Concrete Environment", "category": "Sampling Stations", "sku": "H2-SS-CE006", "price": "$2,400.00", "description": "H2 sampling station system shown in a concrete industrial environment — demonstrating fit and finish in real-world structural settings.", "features": ["In-situ installation ready", "Heavy-duty exterior", "Anti-UV coating", "Industrial environment rated"] },
-      { "id": 7, "image": "/images/8.jpeg", "name": "Modular Enclosure Unit — Closed Body", "category": "Sampling Stations", "sku": "H2-ME-CB007", "price": "$1,550.00", "description": "Closed-body modular enclosure for water sampling and monitoring equipment. Features a side-access port, locking lid, and integrated probe outlet.", "features": ["Side-access port", "Integrated probe outlet", "Locking top lid", "Compact profile"] },
-      { "id": 8, "image": "/images/9.jpeg", "name": "Flat-Panel Sampling Station — Open", "category": "Sampling Stations", "sku": "H2-SS-FP008", "price": "$1,950.00", "description": "Flat-panel dual-door sampling station shown open, revealing the full stainless steel probe and valve assembly. Top-mount and bottom-pass configurations available.", "features": ["Full-panel door access", "Bottom probe pass-through", "Top-mount valve", "Dual-latch closure"] },
-      { "id": 9, "image": "/images/WhatsApp Image 2026-07-01 at 10.48.44 AM.jpeg", "name": "Stainless Steel Sampling Probe — Long Reach", "category": "Probe Systems", "sku": "H2-PR-LR009", "price": "$380.00", "description": "Long-reach stainless steel sampling probe with matte black polymer carrier housing. Engineered for deep pipe insertion, maintenance access, and water quality monitoring.", "features": ["Long-reach 316 stainless rod", "Black polymer carrier", "Precision tip fitting", "Drop-in installation"] },
-      { "id": 10, "image": "/images/WhatsApp Image 2026-07-01 at 10.48.48 AM.jpeg", "name": "Polymer Column Drain — Water Series", "category": "Drainage Infrastructure", "sku": "H2-CD-BK010", "price": "$580.00", "description": "Compact black polymer column drain from the H2 Water Series. Engineered with precision top cap detailing and branded barrel rings.", "features": ["Water Series branding", "Precision top cap", "Branded barrel rings", "Compact footprint"] }
+      {
+        "id": 1,
+        "image": "/images/2.webp",
+        "name": "Modular Sampling Station \u2014 Type A",
+        "category": "Sampling Stations",
+        "sku": "H2-SS-A001",
+        "price": "$1,850.00",
+        "description": "Compact dual-door modular sampling enclosure with integrated stainless steel valve and probe assembly. Designed for accessible water sampling in confined stormwater environments.",
+        "features": [
+          "Dual-door access panel",
+          "316 stainless steel valve",
+          "Corrosion-resistant body",
+          "Tamper-resistant fasteners"
+        ]
+      },
+      {
+        "id": 2,
+        "image": "/images/3.webp",
+        "name": "Modular Sampling Station \u2014 Type B",
+        "category": "Sampling Stations",
+        "sku": "H2-SS-B002",
+        "price": "$2,100.00",
+        "description": "Wide-body modular sampling station with optimised dual-compartment layout. Features integrated stainless probe assembly and enhanced interior access for maintenance teams.",
+        "features": [
+          "Wide-body enclosure",
+          "Enhanced access geometry",
+          "Integrated probe mount",
+          "UV-stabilised polymer"
+        ]
+      },
+      {
+        "id": 3,
+        "image": "/images/4.webp",
+        "name": "Aluminium Inlet Drain \u2014 Standard",
+        "category": "Drainage Infrastructure",
+        "sku": "H2-ID-AL003",
+        "price": "$850.00",
+        "description": "Precision-machined aluminium stormwater inlet drain with conical base and segmented barrel sections. Engineered for high-flow municipal drainage applications.",
+        "features": [
+          "Machined aluminium construction",
+          "Segmented modular barrel",
+          "Conical flange base",
+          "H2 Industries branded caps"
+        ]
+      },
+      {
+        "id": 4,
+        "image": "/images/5.webp",
+        "name": "Polymer Column Drain \u2014 Black Series",
+        "category": "Drainage Infrastructure",
+        "sku": "H2-CD-BK004",
+        "price": "$620.00",
+        "description": "High-density polymer column drainage system in matte black finish. Features a stabilising foot plate and removable top cap for secure installation.",
+        "features": [
+          "HDPE moulded construction",
+          "Stabilising foot plate",
+          "Removable top cap",
+          "Matte black coating"
+        ]
+      },
+      {
+        "id": 5,
+        "image": "/images/6.webp",
+        "name": "Aluminium Inlet Drain \u2014 Extended",
+        "category": "Drainage Infrastructure",
+        "sku": "H2-ID-AL005",
+        "price": "$1,050.00",
+        "description": "Extended-barrel variant of the aluminium inlet drain series. Additional barrel section provides greater depth accommodation for deep kerb or road infrastructure.",
+        "features": [
+          "Extended barrel depth",
+          "Precision machined finish",
+          "Screw-fit cap with grating",
+          "Anodised surface treatment"
+        ]
+      },
+      {
+        "id": 6,
+        "image": "/images/7.webp",
+        "name": "Sampling Station \u2014 Concrete Environment",
+        "category": "Sampling Stations",
+        "sku": "H2-SS-CE006",
+        "price": "$2,400.00",
+        "description": "H2 sampling station system shown in a concrete industrial environment \u2014 demonstrating fit and finish in real-world structural settings.",
+        "features": [
+          "In-situ installation ready",
+          "Heavy-duty exterior",
+          "Anti-UV coating",
+          "Industrial environment rated"
+        ]
+      },
+      {
+        "id": 7,
+        "image": "/images/8.webp",
+        "name": "Modular Enclosure Unit \u2014 Closed Body",
+        "category": "Sampling Stations",
+        "sku": "H2-ME-CB007",
+        "price": "$1,550.00",
+        "description": "Closed-body modular enclosure for water sampling and monitoring equipment. Features a side-access port, locking lid, and integrated probe outlet.",
+        "features": [
+          "Side-access port",
+          "Integrated probe outlet",
+          "Locking top lid",
+          "Compact profile"
+        ]
+      },
+      {
+        "id": 8,
+        "image": "/images/9.webp",
+        "name": "Flat-Panel Sampling Station \u2014 Open",
+        "category": "Sampling Stations",
+        "sku": "H2-SS-FP008",
+        "price": "$1,950.00",
+        "description": "Flat-panel dual-door sampling station shown open, revealing the full stainless steel probe and valve assembly. Top-mount and bottom-pass configurations available.",
+        "features": [
+          "Full-panel door access",
+          "Bottom probe pass-through",
+          "Top-mount valve",
+          "Dual-latch closure"
+        ]
+      },
+      {
+        "id": 9,
+        "image": "/images/sampling-probe-lr.webp",
+        "name": "Stainless Steel Sampling Probe \u2014 Long Reach",
+        "category": "Probe Systems",
+        "sku": "H2-PR-LR009",
+        "price": "$380.00",
+        "description": "Long-reach stainless steel sampling probe with matte black polymer carrier housing. Engineered for deep pipe insertion, maintenance access, and water quality monitoring.",
+        "features": [
+          "Long-reach 316 stainless rod",
+          "Black polymer carrier",
+          "Precision tip fitting",
+          "Drop-in installation"
+        ]
+      },
+      {
+        "id": 10,
+        "image": "/images/column-drain-water.webp",
+        "name": "Polymer Column Drain \u2014 Water Series",
+        "category": "Drainage Infrastructure",
+        "sku": "H2-CD-BK010",
+        "price": "$580.00",
+        "description": "Compact black polymer column drain from the H2 Water Series. Engineered with precision top cap detailing and branded barrel rings.",
+        "features": [
+          "Water Series branding",
+          "Precision top cap",
+          "Branded barrel rings",
+          "Compact footprint"
+        ]
+      },
+      {
+        "id": 101,
+        "image": "/images/waterworks/valve-box-525.webp",
+        "name": "H2 Heavy Duty Screw-Type & Slip-Type Valve Boxes (5 1/4\")",
+        "category": "Waterworks Castings",
+        "sku": "H2-VB-525",
+        "price": "Quote on Request",
+        "description": "Cast iron two-piece and three-piece valve boxes designed to provide secure access to underground gate valves. Available in screw-type and slip-type configurations with WATER or SEWER marked drop-in or locking lids.",
+        "features": [
+          "ASTM A48 Class 35B Grey Iron construction",
+          "AASHTO H-20 heavy highway traffic load rated",
+          "Screw-type and slip-type telescoping height adjustment",
+          "TxDOT & regional municipal waterworks approved"
+        ]
+      },
+      {
+        "id": 102,
+        "image": "/images/waterworks/manhole-ring-cover.webp",
+        "name": "H2 Heavy Duty Traffic Manhole Ring & Cover (24\" - 36\" Opening)",
+        "category": "Waterworks Castings",
+        "sku": "H2-MH-2436",
+        "price": "Quote on Request",
+        "description": "Machined bearing seat manhole frames and covers for municipal storm, sewer, and water systems. Delivers non-rocking, heavy traffic support for roads and municipal infrastructure.",
+        "features": [
+          "Ductile Iron ASTM A536 & Grey Iron Class 35B",
+          "Precision machined bearing seats prevent rattling under traffic",
+          "Custom municipal logo & lettering options (City of Houston, Dallas, Austin)",
+          "Available in watertight gasketed and bolt-down configurations"
+        ]
+      },
+      {
+        "id": 103,
+        "image": "/images/waterworks/sewer-cleanout.webp",
+        "name": "H2 Municipal Sewer Cleanout & Access Box",
+        "category": "Waterworks Castings",
+        "sku": "H2-CO-400",
+        "price": "Quote on Request",
+        "description": "Heavy-duty cast iron cleanout housings engineered for residential and municipal lateral line access. Designed to withstand surface traffic while protecting cleanout plugs.",
+        "features": [
+          "Heavy-duty rim and protective cast iron lid",
+          "Compatible with countersunk brass cleanout plugs",
+          "Corrosion-resistant asphaltic dip coating",
+          "Engineered for sub-grade lateral protection"
+        ]
+      },
+      {
+        "id": 104,
+        "image": "/images/waterworks/meter-box.webp",
+        "name": "H2 Cast Iron & Polymer Hybrid Meter Box Assemblies",
+        "category": "Waterworks Castings",
+        "sku": "H2-MB-100",
+        "price": "Quote on Request",
+        "description": "Protective underground enclosures for residential and commercial water meters. Available with heavy cast iron lids featuring touch-read AMR/AMI sensor ports and high-density polymer bodies.",
+        "features": [
+          "Integrated AMR/AMI electronic meter reading probe port",
+          "High-strength UV-stabilised polymer body with cast iron lid",
+          "Pedestrian and light vehicular traffic load capacity",
+          "Locking lid mechanism to prevent unauthorized tampering"
+        ]
+      },
+      {
+        "id": 105,
+        "image": "/images/waterworks/catch-basin-grate-3d.webp",
+        "name": "H2 Storm Drainage Catch Basin Frames & Grates",
+        "category": "Waterworks Castings",
+        "sku": "H2-FG-300",
+        "price": "Quote on Request",
+        "description": "High-capacity storm inlet frames, curb inlet assemblies, and trench grates designed for maximum hydraulic flow and bicycle safety compliance on municipal roadways.",
+        "features": [
+          "ADA compliant & bicycle-safe slot patterns",
+          "AASHTO H-20 / HS-20 heavy highway traffic load certified",
+          "Vandal-resistant bolt-down security options",
+          "Curb inlet & drop inlet frame configurations"
+        ]
+      },
+      {
+        "id": 106,
+        "image": "/images/waterworks/di-pipe-fitting.webp",
+        "name": "H2 AWWA C153 & C110 Ductile Iron Pipe Fittings",
+        "category": "Waterworks Castings",
+        "sku": "H2-DI-C153",
+        "price": "Quote on Request",
+        "description": "Full line of Mechanical Joint (MJ) and Flanged ductile iron fittings including bends, tees, crosses, reducers, and sleeves manufactured to AWWA C153 compact and C110 standards.",
+        "features": [
+          "AWWA C153 compact & AWWA C110 full-body specifications",
+          "NSF/ANSI 61 & NSF 372 certified lead-free for potable water",
+          "Cement mortar lined (AWWA C104) / Fusion bonded epoxy",
+          "350 PSI working pressure rating for high-pressure water mains"
+        ]
+      },
+      {
+        "id": 107,
+        "image": "/images/waterworks/pipe-accessories.webp",
+        "name": "H2 MJ Gasket Packs & Corten T-Head Bolt Sets",
+        "category": "Waterworks Castings",
+        "sku": "H2-PA-MJBP",
+        "price": "Quote on Request",
+        "description": "High-strength Corten low-alloy steel T-head bolts and heavy-duty SBR/EPDM gaskets for Mechanical Joint pipe, valve, and fitting installations.",
+        "features": [
+          "High-strength corrosion-resistant Corten steel (ASTM A242)",
+          "Standard SBR & transition gaskets for Ductile Iron and PVC",
+          "Includes heavy hex nuts meeting ANSI/AWWA C111/A21.11",
+          "Color-coded job site packaging for instant identification"
+        ]
+      },
+      {
+        "id": 108,
+        "image": "/images/waterworks/accu-adapter.webp",
+        "name": "H2 Integrated Restrained Adapter Coupling System",
+        "category": "Waterworks Castings",
+        "sku": "H2-AA-MJ2",
+        "price": "Quote on Request",
+        "description": "Innovative integrated mechanical joint adapter allowing rapid, rigid connection of valves and fittings without external thrust blocks or long pipe spools.",
+        "features": [
+          "Integrates mechanical joint restraint into compact fitting",
+          "Eliminates pipe movement & joint separation under pressure",
+          "Short lay-length ideal for tight vault & valve box installations",
+          "350 PSI pressure rated with full 2:1 safety factor"
+        ]
+      },
+      {
+        "id": 109,
+        "image": "/images/waterworks/pipe-restraint-4000.webp",
+        "name": "H2 Wedge-Action Mechanical Joint Restraint (Series 4000)",
+        "category": "Waterworks Castings",
+        "sku": "H2-JR-4000",
+        "price": "Quote on Request",
+        "description": "Wedge-action restraint glands engineered for plastic pressure pipes, PVC pipe, and ductile iron installations. Features auto-torque twist-off actuating screws for error-free installation.",
+        "features": [
+          "Heat-treated ductile iron gripping wedges for maximum hold",
+          "Torque-limiting twist-off nuts guarantee exact torque without special tools",
+          "Dual compatibility on both Ductile Iron and AWWA C900 PVC pipe",
+          "350 PSI rating with full thrust restraint efficiency"
+        ]
+      },
+      {
+        "id": 110,
+        "image": "/images/waterworks/gate-valve-3d.webp",
+        "name": "H2 AWWA Resilient Wedge Gate Valve (NRS & OS&Y)",
+        "category": "Waterworks Castings",
+        "sku": "H2-GV-RW250",
+        "price": "Quote on Request",
+        "description": "AWWA C515 / C509 resilient wedge gate valves with fusion-bonded epoxy coating inside and out. Delivers bubble-tight shutoff and low operating torque for municipal water mains.",
+        "features": [
+          "AWWA C515 reduced-wall ductile iron resilient wedge design",
+          "EPDM fully encapsulated ductile iron wedge",
+          "250 PSI & 300 PSI working pressure rating",
+          "NSF/ANSI 61 and NSF/ANSI 372 lead-free certified"
+        ]
+      },
+      {
+        "id": 111,
+        "image": "/images/waterworks/specialty-castings.webp",
+        "name": "H2 Municipal Specialty Castings & Extension Rings",
+        "category": "Waterworks Castings",
+        "sku": "H2-EX-MISC",
+        "price": "Quote on Request",
+        "description": "Grade adjustment rings, valve box extensions, riser rings, and specialty municipal castings designed for road resurfacing and utility grade adjustments without excavation.",
+        "features": [
+          "Rapid road grade elevation without costly pavement excavation",
+          "Fits standard valve boxes & manhole frames seamlessly",
+          "Heavy-duty cast iron durability under traffic loads",
+          "Approved under TxDOT and regional road authority specs"
+        ]
+      },
+      {
+        "id": 112,
+        "image": "/images/waterworks/closeout-deals-3d.webp",
+        "name": "H2 Certified Municipal Infrastructure Overstock Deals",
+        "category": "Waterworks Castings",
+        "sku": "H2-CD-STOCK",
+        "price": "Quote on Request",
+        "description": "High-volume surplus and overstock municipal castings and fittings available directly from our Texas warehouses at discounted distributor pricing.",
+        "features": [
+          "100% factory certified brand new inventory",
+          "Immediate dispatch from Waco & Houston distribution hubs",
+          "Deep volume pricing discounts for contractors & municipalities",
+          "Limited availability lot sizes across popular waterworks items"
+        ]
+      },
+      {
+        "id": 113,
+        "image": "/images/waterworks/pipe-restraint-4000.webp",
+        "name": "H2 Mechanical Joint Wedge Restraint for Ductile Iron Pipe (Series 3000)",
+        "category": "Waterworks Castings",
+        "sku": "H2-JR-3000",
+        "price": "Quote on Request",
+        "description": "Heavy-duty mechanical joint wedge restraint gland engineered specifically for ductile iron pipe mains. Features individually moving wedges that increase grip force as line pressure increases.",
+        "features": [
+          "High-strength ductile iron Grade 65-45-12 body construction",
+          "Precision machined heat-treated wedges bite into ductile pipe wall",
+          "Twist-off actuating bolt heads ensure positive visual installation check",
+          "350 PSI water working pressure rating with 2:1 safety factor"
+        ]
+      },
+      {
+        "id": 114,
+        "image": "/images/waterworks/wedge-restraint.webp",
+        "name": "H2 Restraint Harness Assembly for C900 PVC Pipe (Series 1100)",
+        "category": "Waterworks Castings",
+        "sku": "H2-JR-1100",
+        "price": "Quote on Request",
+        "description": "Split serrated restraint ring and tie-rod assembly designed to restrain push-on PVC pipe bell joints and mechanical joint fittings against thrust loads.",
+        "features": [
+          "Full 360-degree contact non-crushing serrated clamping band",
+          "High-strength low-alloy Corten tie rods and hex nuts included",
+          "Prevents joint pull-out on municipal PVC water distribution lines",
+          "Easily retrofitted onto existing C900 PVC pipe installations"
+        ]
+      },
+      {
+        "id": 115,
+        "image": "/images/waterworks/di-pipe-fitting.webp",
+        "name": "H2 AWWA C110 Full-Body Ductile Iron Flanged Fittings",
+        "category": "Waterworks Castings",
+        "sku": "H2-DI-C110",
+        "price": "Quote on Request",
+        "description": "Heavy-duty AWWA C110 full-body flanged ductile iron fittings designed for water treatment plants, pump stations, and exposed vault piping systems.",
+        "features": [
+          "Heavy-wall AWWA C110 full-body pattern for severe duty",
+          "Class 125 & Class 250 flange bolt pattern specifications",
+          "Double-coated asphaltic or NSF 61 epoxy interior lining",
+          "250 PSI / 300 PSI working pressure capability"
+        ]
+      },
+      {
+        "id": 116,
+        "image": "/images/waterworks/gate-valve-3d.webp",
+        "name": "H2 AWWA OS&Y Flanged Resilient Wedge Gate Valve",
+        "category": "Waterworks Castings",
+        "sku": "H2-GV-OSY",
+        "price": "Quote on Request",
+        "description": "Outside Screw and Yoke (OS&Y) rising stem resilient wedge gate valves engineered for fire protection mains, industrial facilities, and indoor vault installations.",
+        "features": [
+          "UL Listed and FM Approved for fire service applications",
+          "Rising bronze stem provides clear visual position indication",
+          "Handwheel operated with low torque bubble-tight seating",
+          "Fusion-bonded epoxy coated to AWWA C550 specifications"
+        ]
+      }
     ]
   },
   "quality": {
@@ -295,10 +776,26 @@
       "subtitle": "Our multi-stage quality assurance protocol guarantees that every product leaving our facility is engineered to last generations."
     },
     "workflow": [
-      { "icon": "Search", "title": "Material Inspection", "desc": "Raw polymer batches are tested for melt flow index and tensile strength before entering production." },
-      { "icon": "ShieldAlert", "title": "In-Process QC", "desc": "Automated optical inspection during injection moulding ensures zero dimensional deviation." },
-      { "icon": "CheckCircle", "title": "Final Verification", "desc": "Assembled units undergo hydrostatic pressure and load-bearing tests mimicking real-world stress." },
-      { "icon": "Award", "title": "Certification", "desc": "Every batch is logged with full traceability, meeting or exceeding national compliance standards." }
+      {
+        "icon": "Search",
+        "title": "Material Inspection",
+        "desc": "Raw polymer batches are tested for melt flow index and tensile strength before entering production."
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "In-Process QC",
+        "desc": "Automated optical inspection during injection moulding ensures zero dimensional deviation."
+      },
+      {
+        "icon": "CheckCircle",
+        "title": "Final Verification",
+        "desc": "Assembled units undergo hydrostatic pressure and load-bearing tests mimicking real-world stress."
+      },
+      {
+        "icon": "Award",
+        "title": "Certification",
+        "desc": "Every batch is logged with full traceability, meeting or exceeding national compliance standards."
+      }
     ]
   },
   "standards": {
@@ -309,10 +806,22 @@
     },
     "button": "Download Spec Sheets",
     "items": [
-      { "name": "AS/NZS 3996", "desc": "Access Covers & Grates" },
-      { "name": "ISO 9001:2015", "desc": "Quality Management Systems" },
-      { "name": "ISO 14001:2015", "desc": "Environmental Management" },
-      { "name": "WSA 137", "desc": "Industry Standards for Water" }
+      {
+        "name": "AS/NZS 3996",
+        "desc": "Access Covers & Grates"
+      },
+      {
+        "name": "ISO 9001:2015",
+        "desc": "Quality Management Systems"
+      },
+      {
+        "name": "ISO 14001:2015",
+        "desc": "Environmental Management"
+      },
+      {
+        "name": "WSA 137",
+        "desc": "Industry Standards for Water"
+      }
     ]
   },
   "industries": {
@@ -320,15 +829,45 @@
       "tagline": "Industries We Serve",
       "title": "BUILT FOR THE INDUSTRIES",
       "highlight": "THAT SHAPE OUR WORLD",
-      "subtitle": "H2 Industries products are deployed across a broad range of sectors — wherever precision water management matters most."
+      "subtitle": "H2 Industries products are deployed across a broad range of sectors \u2014 wherever precision water management matters most."
     },
     "items": [
-      { "icon": "Building2", "title": "MUNICIPAL WATER", "desc": "Stormwater sampling stations and drainage systems for councils and local authorities managing public water infrastructure.", "accent": "#2196F3" },
-      { "icon": "Waves", "title": "MARINE & COASTAL", "desc": "Ocean-focused water quality monitoring products designed to prevent marine pollution at the stormwater source.", "accent": "#0288D1" },
-      { "icon": "Construction", "title": "CIVIL INFRASTRUCTURE", "desc": "Heavy-duty drainage and access solutions for roads, bridges, and major civil construction projects.", "accent": "#607D8B" },
-      { "icon": "Leaf", "title": "ENVIRONMENTAL", "desc": "Precision sampling systems for environmental engineers conducting comprehensive water quality assessments.", "accent": "#43A047" },
-      { "icon": "Flame", "title": "INDUSTRIAL FACILITIES", "desc": "Robust water management infrastructure for industrial sites requiring compliant stormwater management.", "accent": "#EF6C00" },
-      { "icon": "Sprout", "title": "AGRICULTURAL", "desc": "Durable drainage and sampling products engineered to withstand agricultural environments and protect waterways.", "accent": "#558B2F" }
+      {
+        "icon": "Building2",
+        "title": "MUNICIPAL WATER",
+        "desc": "Stormwater sampling stations and drainage systems for councils and local authorities managing public water infrastructure.",
+        "accent": "#2196F3"
+      },
+      {
+        "icon": "Waves",
+        "title": "MARINE & COASTAL",
+        "desc": "Ocean-focused water quality monitoring products designed to prevent marine pollution at the stormwater source.",
+        "accent": "#0288D1"
+      },
+      {
+        "icon": "Construction",
+        "title": "CIVIL INFRASTRUCTURE",
+        "desc": "Heavy-duty drainage and access solutions for roads, bridges, and major civil construction projects.",
+        "accent": "#607D8B"
+      },
+      {
+        "icon": "Leaf",
+        "title": "ENVIRONMENTAL",
+        "desc": "Precision sampling systems for environmental engineers conducting comprehensive water quality assessments.",
+        "accent": "#43A047"
+      },
+      {
+        "icon": "Flame",
+        "title": "INDUSTRIAL FACILITIES",
+        "desc": "Robust water management infrastructure for industrial sites requiring compliant stormwater management.",
+        "accent": "#EF6C00"
+      },
+      {
+        "icon": "Sprout",
+        "title": "AGRICULTURAL",
+        "desc": "Durable drainage and sampling products engineered to withstand agricultural environments and protect waterways.",
+        "accent": "#558B2F"
+      }
     ]
   },
   "globalNetwork": {
@@ -339,14 +878,32 @@
       "subtitle": "Seamlessly delivering heavy industrial infrastructure from our production floors to your site, anywhere in the world. Our integrated logistics network ensures projects stay on schedule, irrespective of geography."
     },
     "stats": [
-      { "value": "40+", "label": "Countries Served" },
-      { "value": "12", "label": "Global Dist. Hubs" },
-      { "value": "24/7", "label": "Logistics Support" }
+      {
+        "value": "40+",
+        "label": "Countries Served"
+      },
+      {
+        "value": "12",
+        "label": "Global Dist. Hubs"
+      },
+      {
+        "value": "24/7",
+        "label": "Logistics Support"
+      }
     ],
     "modes": [
-      { "icon": "Ship", "label": "Ocean Freight" },
-      { "icon": "Plane", "label": "Air Cargo" },
-      { "icon": "Truck", "label": "Ground Transport" }
+      {
+        "icon": "Ship",
+        "label": "Ocean Freight"
+      },
+      {
+        "icon": "Plane",
+        "label": "Air Cargo"
+      },
+      {
+        "icon": "Truck",
+        "label": "Ground Transport"
+      }
     ]
   },
   "sustainability": {
@@ -354,13 +911,33 @@
       "tagline": "Environmental Responsibility",
       "title": "MANUFACTURING",
       "highlight": "TOMORROW",
-      "subtitle": "We build infrastructure to manage the world's most vital resource. That responsibility extends to how we manufacture our products — prioritizing energy efficiency, waste reduction, and sustainable polymers."
+      "subtitle": "We build infrastructure to manage the world's most vital resource. That responsibility extends to how we manufacture our products \u2014 prioritizing energy efficiency, waste reduction, and sustainable polymers."
     },
     "initiatives": [
-      { "icon": "Droplet", "title": "Water Conservation", "value": "100%", "desc": "Closed-loop water cooling systems in our manufacturing facilities." },
-      { "icon": "Recycle", "title": "Material Recovery", "value": "85%", "desc": "Of all manufacturing polymer by-products are reclaimed and re-processed." },
-      { "icon": "Wind", "title": "Emission Reduction", "value": "Zero", "desc": "VOC emissions across all our primary injection moulding lines." },
-      { "icon": "TreePine", "title": "Green Packaging", "value": "100%", "desc": "Biodegradable or fully recyclable transport packaging." }
+      {
+        "icon": "Droplet",
+        "title": "Water Conservation",
+        "value": "100%",
+        "desc": "Closed-loop water cooling systems in our manufacturing facilities."
+      },
+      {
+        "icon": "Recycle",
+        "title": "Material Recovery",
+        "value": "85%",
+        "desc": "Of all manufacturing polymer by-products are reclaimed and re-processed."
+      },
+      {
+        "icon": "Wind",
+        "title": "Emission Reduction",
+        "value": "Zero",
+        "desc": "VOC emissions across all our primary injection moulding lines."
+      },
+      {
+        "icon": "TreePine",
+        "title": "Green Packaging",
+        "value": "100%",
+        "desc": "Biodegradable or fully recyclable transport packaging."
+      }
     ]
   },
   "story": {
@@ -373,8 +950,14 @@
         "For decades, the standard approach to municipal water management was passive. We exist to make it active. We build the physical barriers that stand between industrial pollution and the pristine oceans we rely on."
       ],
       "stats": [
-        { "value": "25+", "label": "Years Engineering" },
-        { "value": "100%", "label": "Commitment to Oceans" }
+        {
+          "value": "25+",
+          "label": "Years Engineering"
+        },
+        {
+          "value": "100%",
+          "label": "Commitment to Oceans"
+        }
       ],
       "image": "/images/2.jpeg"
     },
@@ -387,9 +970,18 @@
         "Our facilities utilize advanced polymer extrusion, precision CNC machining, and rigorous hydrostatic testing. We don't just build parts; we engineer complete, fail-safe systems for the most demanding urban environments."
       ],
       "features": [
-        { "title": "Precision Interception", "desc": "Capturing micro-pollutants at the source." },
-        { "title": "Robust Architecture", "desc": "Infrastructure designed for heavy urban loads." },
-        { "title": "Smart Monitoring", "desc": "Integrated sampling access for real-time data." }
+        {
+          "title": "Precision Interception",
+          "desc": "Capturing micro-pollutants at the source."
+        },
+        {
+          "title": "Robust Architecture",
+          "desc": "Infrastructure designed for heavy urban loads."
+        },
+        {
+          "title": "Smart Monitoring",
+          "desc": "Integrated sampling access for real-time data."
+        }
       ],
       "image": "/images/5.jpeg"
     },
@@ -446,8 +1038,14 @@
       "link": "#careers"
     },
     "offices": [
-      { "address": "105 MAXES ROAD, MELVILLE, NY 11737, USA", "phone": "+1 (512) 782-8880" },
-      { "address": "ONE YOUNGE STREET, TORONTO, ONTARIO M5E 1R4 CANADA", "phone": "+1 (438) 805-9990" }
+      {
+        "address": "105 MAXES ROAD, MELVILLE, NY 11737, USA",
+        "phone": "+1 (512) 782-8880"
+      },
+      {
+        "address": "ONE YOUNGE STREET, TORONTO, ONTARIO M5E 1R4 CANADA",
+        "phone": "+1 (438) 805-9990"
+      }
     ],
     "newsletter": {
       "title": "GET H2 INDUSTRIES NEWS",
@@ -458,29 +1056,73 @@
     },
     "links": {
       "COMPANY": [
-        { "label": "Careers", "href": "/company#careers" },
-        { "label": "About Us", "href": "/company" },
-        { "label": "Capabilities", "href": "/capabilities" }
+        {
+          "label": "Careers",
+          "href": "/company#careers"
+        },
+        {
+          "label": "About Us",
+          "href": "/company"
+        },
+        {
+          "label": "Capabilities",
+          "href": "/capabilities"
+        }
       ],
       "PRODUCTS & SERVICES": [
-        { "label": "View All Products", "href": "/products" },
-        { "label": "Quality Standards", "href": "/quality" },
-        { "label": "Technical Docs", "href": "/quality#standards" }
+        {
+          "label": "View All Products",
+          "href": "/products"
+        },
+        {
+          "label": "Quality Standards",
+          "href": "/quality"
+        },
+        {
+          "label": "Technical Docs",
+          "href": "/quality#standards"
+        }
       ],
       "INDUSTRIES": [
-        { "label": "Municipal Water", "href": "/industries" },
-        { "label": "Marine & Coastal", "href": "/industries" },
-        { "label": "Civil Infrastructure", "href": "/industries" }
+        {
+          "label": "Municipal Water",
+          "href": "/industries"
+        },
+        {
+          "label": "Marine & Coastal",
+          "href": "/industries"
+        },
+        {
+          "label": "Civil Infrastructure",
+          "href": "/industries"
+        }
       ]
     },
     "socials": [
-      { "icon": "Globe", "label": "Website", "href": "#" },
-      { "icon": "MessageCircle", "label": "Contact", "href": "#" },
-      { "icon": "Share2", "label": "Social", "href": "#" }
+      {
+        "icon": "Globe",
+        "label": "Website",
+        "href": "#"
+      },
+      {
+        "icon": "MessageCircle",
+        "label": "Contact",
+        "href": "#"
+      },
+      {
+        "icon": "Share2",
+        "label": "Social",
+        "href": "#"
+      }
     ],
     "legal": {
       "copyright": "All Rights Reserved.",
-      "links": ["Terms of Service", "Privacy Policy", "Mandatory Disclosures", "Cookie Policy"]
+      "links": [
+        "Terms of Service",
+        "Privacy Policy",
+        "Mandatory Disclosures",
+        "Cookie Policy"
+      ]
     }
   }
 }

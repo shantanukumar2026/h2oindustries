@@ -6,16 +6,16 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { X, ZoomIn } from "lucide-react";
 
 const gallery = [
-  { image: "/images/2.jpeg", label: "Sampling Station — Type A" },
-  { image: "/images/7.jpeg", label: "Product in Concrete Environment" },
-  { image: "/images/4.jpeg", label: "Aluminium Inlet Drain" },
-  { image: "/images/5.jpeg", label: "Black Series Column Drain" },
-  { image: "/images/9.jpeg", label: "Flat-Panel Sampling Station" },
-  { image: "/images/3.jpeg", label: "Sampling Station — Type B" },
-  { image: "/images/6.jpeg", label: "Aluminium Inlet Drain — Extended" },
-  { image: "/images/8.jpeg", label: "Closed Body Enclosure Unit" },
-  { image: "/images/WhatsApp Image 2026-07-01 at 10.48.44 AM.jpeg", label: "Long-Reach Sampling Probe" },
-  { image: "/images/WhatsApp Image 2026-07-01 at 10.48.48 AM.jpeg", label: "Water Series Column Drain" },
+  { image: "/images/2.webp", label: "Sampling Station — Type A" },
+  { image: "/images/7.webp", label: "Product in Concrete Environment" },
+  { image: "/images/4.webp", label: "Aluminium Inlet Drain" },
+  { image: "/images/5.webp", label: "Black Series Column Drain" },
+  { image: "/images/9.webp", label: "Flat-Panel Sampling Station" },
+  { image: "/images/3.webp", label: "Sampling Station — Type B" },
+  { image: "/images/6.webp", label: "Aluminium Inlet Drain — Extended" },
+  { image: "/images/8.webp", label: "Closed Body Enclosure Unit" },
+  { image: "/images/sampling-probe-lr.webp", label: "Long-Reach Sampling Probe" },
+  { image: "/images/column-drain-water.webp", label: "Water Series Column Drain" },
 ];
 
 export default function Projects() {

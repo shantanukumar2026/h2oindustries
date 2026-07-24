@@ -1,0 +1,465 @@
+{
+  "hero": {
+    "tagline": "40+ Years of Engineering Excellence",
+    "title": "WATERWORKS & MUNICIPAL",
+    "highlight": "PIPE & CASTINGS PRODUCTS",
+    "subtitle": "High-precision ductile iron pipe fittings, mechanical joint restraints, valves, valve boxes, and municipal castings. Designed to AWWA & ASTM standards with strategic distribution centers in Waco & Houston, Texas.",
+    "stats": [
+      {
+        "value": "40+",
+        "label": "Years in Industry"
+      },
+      {
+        "value": "2",
+        "label": "Texas Distribution Hubs"
+      },
+      {
+        "value": "100%",
+        "label": "ASTM & AWWA Compliant"
+      },
+      {
+        "value": "H-20",
+        "label": "Traffic Rating Certified"
+      }
+    ]
+  },
+  "distributionHubs": [
+    {
+      "city": "Waco, Texas",
+      "name": "Waco Distribution Center & HQ",
+      "address": "415 South 21st Street, Waco, TX 76706",
+      "phone": "(254) 756-3200",
+      "salesPhone": "(800) 433-6885",
+      "email": "sales@h2industries.com",
+      "tag": "Central Texas Hub"
+    },
+    {
+      "city": "Houston, Texas",
+      "name": "Houston Regional Distribution Center",
+      "address": "Houston Warehousing Facility, Houston, TX",
+      "phone": "(800) 433-6885",
+      "email": "houston@h2industries.com",
+      "tag": "Gulf Coast Hub"
+    }
+  ],
+  "categories": [
+    "All Pipe & Castings",
+    "Joint Restraints",
+    "AWWA DI Fittings",
+    "Gate Valves",
+    "Pipe Accessories",
+    "Valve Boxes",
+    "Manhole Rings & Covers",
+    "Cleanouts",
+    "Meter Boxes",
+    "Frames & Grates",
+    "Accu Adapters",
+    "Extended Range",
+    "Closeout Deals"
+  ],
+  "products": [
+    {
+      "id": 109,
+      "sku": "H2-JR-4000",
+      "name": "H2 Wedge-Action Mechanical Joint Restraint (Series 4000)",
+      "category": "Joint Restraints",
+      "image": "/images/waterworks/pipe-restraint-4000.webp",
+      "description": "Wedge-action restraint glands engineered for plastic pressure pipes, PVC pipe, and ductile iron installations. Features auto-torque twist-off actuating screws for error-free installation.",
+      "features": [
+        "Heat-treated ductile iron gripping wedges for maximum hold",
+        "Torque-limiting twist-off nuts guarantee exact torque without special tools",
+        "Dual compatibility on both Ductile Iron and AWWA C900 PVC pipe",
+        "350 PSI rating with full thrust restraint efficiency"
+      ],
+      "specs": {
+        "Material": "Heat-Treated Ductile Iron ASTM A536",
+        "Sizes": "3\" through 24\" Diameter",
+        "Compatibility": "Ductile Iron Pipe & AWWA C900 PVC",
+        "Torque System": "Breakoff Actuating Hex Head Bolts"
+      }
+    },
+    {
+      "id": 113,
+      "sku": "H2-JR-3000",
+      "name": "H2 Mechanical Joint Wedge Restraint for Ductile Iron Pipe (Series 3000)",
+      "category": "Joint Restraints",
+      "image": "/images/waterworks/wedge-restraint-3000.webp",
+      "description": "Heavy-duty mechanical joint wedge restraint gland engineered specifically for ductile iron pipe mains. Features individually moving wedges that increase grip force as line pressure increases.",
+      "features": [
+        "High-strength ductile iron Grade 65-45-12 body construction",
+        "Precision machined heat-treated wedges bite into ductile pipe wall",
+        "Twist-off actuating bolt heads ensure positive visual installation check",
+        "350 PSI water working pressure rating with 2:1 safety factor"
+      ],
+      "specs": {
+        "Material": "ASTM A536 Ductile Iron Grade 65-45-12",
+        "Sizes": "3\" through 36\" Ductile Iron Pipe",
+        "Pressure Rating": "350 PSI Working Pressure",
+        "Standard": "AWWA C111 / ANSI A21.11"
+      }
+    },
+    {
+      "id": 114,
+      "sku": "H2-JR-1100",
+      "name": "H2 Restraint Harness Assembly for C900 PVC Pipe (Series 1100)",
+      "category": "Joint Restraints",
+      "image": "/images/waterworks/mj-gasket.webp",
+      "description": "Split serrated restraint ring and tie-rod assembly designed to restrain push-on PVC pipe bell joints and mechanical joint fittings against thrust loads.",
+      "features": [
+        "Full 360-degree contact non-crushing serrated clamping band",
+        "High-strength low-alloy Corten tie rods and hex nuts included",
+        "Prevents joint pull-out on municipal PVC water distribution lines",
+        "Easily retrofitted onto existing C900 PVC pipe installations"
+      ],
+      "specs": {
+        "Material": "Ductile Iron ASTM A536 & Corten Rods",
+        "Pipe Sizes": "4\" through 12\" AWWA C900 PVC",
+        "Rating": "Full Pressure Rating of Pipe",
+        "Hardware": "Corrosion Resistant Corten Low-Alloy Steel"
+      }
+    },
+    {
+      "id": 106,
+      "sku": "H2-DI-C153",
+      "name": "H2 AWWA C153 Compact Ductile Iron Pipe Fittings",
+      "category": "AWWA DI Fittings",
+      "image": "/images/waterworks/di-pipe-fitting.webp",
+      "description": "Full line of Mechanical Joint (MJ) and Flanged ductile iron fittings including bends, tees, crosses, reducers, and sleeves manufactured to AWWA C153 compact standards.",
+      "features": [
+        "AWWA C153 compact lightweight ductile iron specification",
+        "NSF/ANSI 61 & NSF 372 certified lead-free for potable water",
+        "Cement mortar lined (AWWA C104) or fusion bonded epoxy coated",
+        "350 PSI working pressure rating for high-pressure water mains"
+      ],
+      "specs": {
+        "Material": "Ductile Iron Grade 70-50-05",
+        "Pressure Rating": "350 PSI Working Pressure",
+        "Certifications": "NSF/ANSI 61, NSF 372, AWWA C153",
+        "Size Range": "3\" through 36\" Diameter"
+      }
+    },
+    {
+      "id": 115,
+      "sku": "H2-DI-C110",
+      "name": "H2 AWWA C110 Full-Body Ductile Iron Flanged Fittings",
+      "category": "AWWA DI Fittings",
+      "image": "/images/waterworks/di-flanged-fitting.webp",
+      "description": "Heavy-duty AWWA C110 full-body flanged ductile iron fittings designed for water treatment plants, pump stations, and exposed vault piping systems.",
+      "features": [
+        "Heavy-wall AWWA C110 full-body pattern for severe duty",
+        "Class 125 & Class 250 flange bolt pattern specifications",
+        "Double-coated asphaltic or NSF 61 epoxy interior lining",
+        "250 PSI / 300 PSI working pressure capability"
+      ],
+      "specs": {
+        "Material": "Ductile Iron ASTM A536",
+        "Flange Class": "ANSI B16.1 Class 125 / AWWA C110",
+        "Certification": "NSF 61 Potable Water Certified",
+        "Application": "Water Plants, Pump Stations & Meter Vaults"
+      }
+    },
+    {
+      "id": 110,
+      "sku": "H2-GV-RW250",
+      "name": "H2 AWWA Resilient Wedge Gate Valve (NRS)",
+      "category": "Gate Valves",
+      "image": "/images/waterworks/gate-valve-3d.webp",
+      "description": "AWWA C515 / C509 resilient wedge gate valves with fusion-bonded epoxy coating inside and out. Delivers bubble-tight shutoff and low operating torque for municipal water mains.",
+      "features": [
+        "AWWA C515 reduced-wall ductile iron resilient wedge design",
+        "EPDM fully encapsulated ductile iron wedge",
+        "250 PSI & 300 PSI working pressure rating",
+        "NSF/ANSI 61 and NSF/ANSI 372 lead-free certified"
+      ],
+      "specs": {
+        "Material": "Ductile Iron Body & Bonnet",
+        "Coating": "Fusion-Bonded Epoxy Interior & Exterior (AWWA C550)",
+        "Rating": "250 PSI / 300 PSI Working Pressure",
+        "Ends": "MJ x MJ, Flange x MJ, Flange x Flange"
+      }
+    },
+    {
+      "id": 116,
+      "sku": "H2-GV-OSY",
+      "name": "H2 AWWA OS&Y Flanged Resilient Wedge Gate Valve",
+      "category": "Gate Valves",
+      "image": "/images/waterworks/gate-valve-3d.webp",
+      "description": "Outside Screw and Yoke (OS&Y) rising stem resilient wedge gate valves engineered for fire protection mains, industrial facilities, and indoor vault installations.",
+      "features": [
+        "UL Listed and FM Approved for fire service applications",
+        "Rising bronze stem provides clear visual position indication",
+        "Handwheel operated with low torque bubble-tight seating",
+        "Fusion-bonded epoxy coated to AWWA C550 specifications"
+      ],
+      "specs": {
+        "Material": "Ductile Iron Body with Stainless/Bronze Stem",
+        "Approvals": "UL Listed / FM Approved / AWWA C515",
+        "Ends": "Flanged Class 125 / Class 250",
+        "Rating": "300 PSI Fire Protection Rated"
+      }
+    },
+    {
+      "id": 107,
+      "sku": "H2-PA-MJBP",
+      "name": "H2 MJ Gasket Packs & Corten T-Head Bolt Sets",
+      "category": "Pipe Accessories",
+      "image": "/images/waterworks/thead-bolt-set.webp",
+      "description": "High-strength Corten low-alloy steel T-head bolts and heavy-duty SBR/EPDM gaskets for Mechanical Joint pipe, valve, and fitting installations.",
+      "features": [
+        "High-strength corrosion-resistant Corten steel (ASTM A242)",
+        "Standard SBR & transition gaskets for Ductile Iron and PVC",
+        "Includes heavy hex nuts meeting ANSI/AWWA C111/A21.11",
+        "Color-coded job site packaging for instant identification"
+      ],
+      "specs": {
+        "Bolt Material": "Corten Low-Alloy Steel ASTM A242",
+        "Gasket Material": "SBR / EPDM / NBR Rubber",
+        "Sizes": "2\" through 36\" Pipe Diameters",
+        "Standards": "ANSI/AWWA C111 / A21.11"
+      }
+    },
+    {
+      "id": 108,
+      "sku": "H2-AA-MJ2",
+      "name": "H2 Integrated Restrained Adapter Coupling System",
+      "category": "Accu Adapters",
+      "image": "/images/waterworks/accu-adapter.webp",
+      "description": "Innovative integrated mechanical joint adapter allowing rapid, rigid connection of valves and fittings without external thrust blocks or long pipe spools.",
+      "features": [
+        "Integrates mechanical joint restraint into compact fitting",
+        "Eliminates pipe movement & joint separation under pressure",
+        "Short lay-length ideal for tight vault & valve box installations",
+        "350 PSI pressure rated with full 2:1 safety factor"
+      ],
+      "specs": {
+        "Material": "Ductile Iron ASTM A536 Grade 65-45-12",
+        "Pressure Rating": "350 PSI Water Working Pressure",
+        "Connection": "MJ x MJ Restrained Adapter",
+        "Standards": "AWWA C111 / AWWA C153"
+      }
+    },
+    {
+      "id": 101,
+      "sku": "H2-VB-525",
+      "name": "H2 Heavy Duty Screw-Type & Slip-Type Valve Boxes (5 1/4\")",
+      "category": "Valve Boxes",
+      "image": "/images/waterworks/valve-box-525.webp",
+      "description": "Cast iron two-piece and three-piece valve boxes designed to provide secure access to underground gate valves. Available in screw-type and slip-type configurations with WATER or SEWER marked drop-in or locking lids.",
+      "features": [
+        "ASTM A48 Class 35B Grey Iron construction",
+        "AASHTO H-20 heavy highway traffic load rated",
+        "Screw-type and slip-type telescoping height adjustment",
+        "TxDOT & regional municipal waterworks approved"
+      ],
+      "specs": {
+        "Material": "ASTM A48 Class 35B Grey Iron",
+        "Shaft Size": "5 1/4\" Diameter (Heights 14\" - 36\"+)",
+        "Rating": "AASHTO H-20 Traffic Rated",
+        "Lid Marking": "WATER, SEWER, GAS"
+      }
+    },
+    {
+      "id": 102,
+      "sku": "H2-MH-2436",
+      "name": "H2 Heavy Duty Traffic Manhole Ring & Cover (24\" - 36\" Opening)",
+      "category": "Manhole Rings & Covers",
+      "image": "/images/waterworks/manhole-ring-cover.webp",
+      "description": "Machined bearing seat manhole frames and covers for municipal storm, sewer, and water systems. Delivers non-rocking, heavy traffic support for roads and municipal infrastructure.",
+      "features": [
+        "Ductile Iron ASTM A536 & Grey Iron Class 35B",
+        "Precision machined bearing seats prevent rattling under traffic",
+        "Custom municipal logo & lettering options (City of Houston, Dallas, Austin)",
+        "Available in watertight gasketed and bolt-down configurations"
+      ],
+      "specs": {
+        "Material": "ASTM A536 Ductile / ASTM A48 Class 35B",
+        "Clear Opening": "24\", 30\", 32\", 36\"",
+        "Load Rating": "AASHTO H-20 / HS-20 Traffic Rated",
+        "Options": "Gasketed Watertight / Bolt-down"
+      }
+    },
+    {
+      "id": 103,
+      "sku": "H2-CO-400",
+      "name": "H2 Municipal Sewer Cleanout & Access Box",
+      "category": "Cleanouts",
+      "image": "/images/waterworks/sewer-cleanout.webp",
+      "description": "Heavy-duty cast iron cleanout housings engineered for residential and municipal lateral line access. Designed to withstand surface traffic while protecting cleanout plugs.",
+      "features": [
+        "Heavy-duty rim and protective cast iron lid",
+        "Compatible with countersunk brass cleanout plugs",
+        "Corrosion-resistant asphaltic dip coating",
+        "Engineered for sub-grade lateral protection"
+      ],
+      "specs": {
+        "Material": "ASTM A48 Class 30/35 Grey Iron",
+        "Pipe Sizes": "4\", 6\", 8\" Lateral Lines",
+        "Coating": "Black Asphaltic Protective Coating",
+        "Application": "Municipal & Commercial Cleanouts"
+      }
+    },
+    {
+      "id": 104,
+      "sku": "H2-MB-100",
+      "name": "H2 Cast Iron & Polymer Hybrid Meter Box Assemblies",
+      "category": "Meter Boxes",
+      "image": "/images/waterworks/meter-box.webp",
+      "description": "Protective underground enclosures for residential and commercial water meters. Available with heavy cast iron lids featuring touch-read AMR/AMI sensor ports and high-density polymer bodies.",
+      "features": [
+        "Integrated AMR/AMI electronic meter reading probe port",
+        "High-strength UV-stabilised polymer body with cast iron lid",
+        "Pedestrian and light vehicular traffic load capacity",
+        "Locking lid mechanism to prevent unauthorized tampering"
+      ],
+      "specs": {
+        "Material": "HDPE Body with ASTM A48 Cast Iron Lid",
+        "Dimensions": "Standard 18\"x12\"x12\" & Jumbo 24\"x15\"x12\"",
+        "Read Option": "AMR/AMI Touch-Read Port",
+        "Rating": "Medium Duty Traffic Rated"
+      }
+    },
+    {
+      "id": 105,
+      "sku": "H2-FG-300",
+      "name": "H2 Storm Drainage Catch Basin Frames & Grates",
+      "category": "Frames & Grates",
+      "image": "/images/waterworks/catch-basin-grate-3d.webp",
+      "description": "High-capacity storm inlet frames, curb inlet assemblies, and trench grates designed for maximum hydraulic flow and bicycle safety compliance on municipal roadways.",
+      "features": [
+        "ADA compliant & bicycle-safe slot patterns",
+        "AASHTO H-20 / HS-20 heavy highway traffic load certified",
+        "Vandal-resistant bolt-down security options",
+        "Curb inlet & drop inlet frame configurations"
+      ],
+      "specs": {
+        "Material": "ASTM A536 Ductile Iron / Class 35B Grey Iron",
+        "Rating": "H-20 / HS-20 Heavy Traffic",
+        "Design": "Bicycle Safe Slotted / ADA Compliant",
+        "Coating": "Asphaltic Dip Finish"
+      }
+    },
+    {
+      "id": 111,
+      "sku": "H2-EX-MISC",
+      "name": "H2 Municipal Specialty Castings & Extension Rings",
+      "category": "Extended Range",
+      "image": "/images/waterworks/specialty-castings.webp",
+      "description": "Grade adjustment rings, valve box extensions, riser rings, and specialty municipal castings designed for road resurfacing and utility grade adjustments without excavation.",
+      "features": [
+        "Rapid road grade elevation without costly pavement excavation",
+        "Fits standard valve boxes & manhole frames seamlessly",
+        "Heavy-duty cast iron durability under traffic loads",
+        "Approved under TxDOT and regional road authority specs"
+      ],
+      "specs": {
+        "Material": "ASTM A48 Class 35B Cast Iron",
+        "Rise Heights": "1.5\", 2\", 3\", 4\", 6\"",
+        "Application": "Road Resurfacing & Utility Height Adjustment",
+        "Load Rating": "Heavy Highway H-20 Rated"
+      }
+    },
+    {
+      "id": 112,
+      "sku": "H2-CD-STOCK",
+      "name": "H2 Certified Municipal Infrastructure Overstock Deals",
+      "category": "Closeout Deals",
+      "image": "/images/waterworks/closeout-deals-3d.webp",
+      "description": "High-volume surplus and overstock municipal castings and fittings available directly from our Texas warehouses at discounted distributor pricing.",
+      "features": [
+        "100% factory certified brand new inventory",
+        "Immediate dispatch from Waco & Houston distribution hubs",
+        "Deep volume pricing discounts for contractors & municipalities",
+        "Limited availability lot sizes across popular waterworks items"
+      ],
+      "specs": {
+        "Availability": "Immediate Dispatch (Waco & Houston DC)",
+        "Condition": "100% Certified Brand New Overstock",
+        "Certification": "Full ASTM & AWWA Submittal Docs Provided",
+        "Pricing": "Distributor Closeout Rates"
+      }
+    }
+  ],
+  "submittals": {
+    "general": [
+      {
+        "title": "Generic Waterworks Castings",
+        "code": "SUB-GC-01",
+        "file": "H2_Generic_Castings_Submittal.pdf"
+      },
+      {
+        "title": "Meter Boxes & Covers",
+        "code": "SUB-MB-02",
+        "file": "H2_Meter_Boxes_Submittal.pdf"
+      },
+      {
+        "title": "Frames & Catch Basin Grates",
+        "code": "SUB-FG-03",
+        "file": "H2_Frames_Grates_Submittal.pdf"
+      },
+      {
+        "title": "AWWA DI Pipe Fittings C153/C110",
+        "code": "SUB-DI-04",
+        "file": "H2_AWWA_DI_Fittings_Submittal.pdf"
+      },
+      {
+        "title": "Restrained Adapter Coupling",
+        "code": "SUB-AA-05",
+        "file": "H2_Restrained_Adapter_Submittal.pdf"
+      },
+      {
+        "title": "Wedge Action Joint Restraints",
+        "code": "SUB-JR-06",
+        "file": "H2_Joint_Restraints_Submittal.pdf"
+      },
+      {
+        "title": "Pipe Accessories & Flange Packs",
+        "code": "SUB-PA-07",
+        "file": "H2_Pipe_Accessories_Submittal.pdf"
+      },
+      {
+        "title": "Gate Valves Resilient Wedge",
+        "code": "SUB-GV-08",
+        "file": "H2_Gate_Valves_Submittal.pdf"
+      },
+      {
+        "title": "Extended Product Lines & Risers",
+        "code": "SUB-EX-09",
+        "file": "H2_Extended_Lines_Submittal.pdf"
+      }
+    ],
+    "regional": [
+      {
+        "region": "Waco",
+        "desc": "Waco City Approved Waterworks Submittals"
+      },
+      {
+        "region": "Houston",
+        "desc": "City of Houston Approved Castings & Fittings"
+      },
+      {
+        "region": "Dallas",
+        "desc": "Dallas Water Utilities (DWU) Submittals"
+      },
+      {
+        "region": "Plano",
+        "desc": "City of Plano Infrastructure Specifications"
+      },
+      {
+        "region": "Fort Worth",
+        "desc": "City of Fort Worth Water Department Submittals"
+      },
+      {
+        "region": "Austin",
+        "desc": "Austin Water Approved Product List (APL)"
+      },
+      {
+        "region": "San Antonio",
+        "desc": "SAWS (San Antonio Water System) Submittals"
+      },
+      {
+        "region": "Louisiana",
+        "desc": "LA DOTD & Municipal Utility Standards"
+      }
+    ]
+  }
+}

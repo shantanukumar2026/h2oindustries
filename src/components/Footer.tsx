@@ -1,72 +1,169 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, Phone, Globe, MessageCircle, Share2, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Phone, ShieldCheck, Send, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-const footerLinks = {
-  COMPANY: [
-    { label: "Careers", href: "/company#careers" },
-    { label: "About Us", href: "/company" },
-    { label: "Capabilities", href: "/capabilities" },
-  ],
-  "PRODUCTS & SERVICES": [
-    { label: "View All Products", href: "/products" },
-    { label: "Quality Standards", href: "/quality" },
-    { label: "Technical Docs", href: "/quality#standards" },
-  ],
-  INDUSTRIES: [
-    { label: "Municipal Water", href: "/industries" },
-    { label: "Marine & Coastal", href: "/industries" },
-    { label: "Civil Infrastructure", href: "/industries" },
-  ],
-};
+const productsMenu = [
+  { label: "Manhole Rings & Covers, Extensions", href: "/waterworks-castings" },
+  { label: "Pipe Accessories & Bolt Sets", href: "/waterworks-castings" },
+  { label: "Valve Boxes, Risers & Extensions", href: "/waterworks-castings" },
+  { label: "Meter Boxes & AMR Covers", href: "/waterworks-castings" },
+  { label: "MJ X MJ Restrained Adapters", href: "/waterworks-castings" },
+  { label: "Wedge Action Joint Restraints", href: "/waterworks-castings" },
+  { label: "AWWA Resilient Gate Valves", href: "/waterworks-castings" },
+  { label: "AWWA C153 & C110 DI Fittings", href: "/waterworks-castings" },
+  { label: "Municipal Sewer Cleanouts", href: "/waterworks-castings" },
+  { label: "Storm Drainage Frames & Grates", href: "/waterworks-castings" },
+  { label: "Certified Closeout Deals", href: "/waterworks-castings" },
+];
+
+const generalSubmittalsMenu = [
+  { label: "Generic Castings Submittals", href: "/waterworks-castings#catalog" },
+  { label: "Meter Boxes Specifications", href: "/waterworks-castings#catalog" },
+  { label: "Frames & Grates Submittals", href: "/waterworks-castings#catalog" },
+  { label: "AWWA DI Pipe Fittings Specs", href: "/waterworks-castings#catalog" },
+  { label: "Restrained Adapter Data Sheets", href: "/waterworks-castings#catalog" },
+  { label: "Joint Restraints Technical Specs", href: "/waterworks-castings#catalog" },
+  { label: "Pipe Accessories / Flange Packs", href: "/waterworks-castings#catalog" },
+  { label: "Gate Valves Drawing Sheets", href: "/waterworks-castings#catalog" },
+  { label: "Extended Lines Submittals", href: "/waterworks-castings#catalog" },
+];
+
+const regionalSubmittalsMenu = [
+  { label: "Waco City Approved", href: "/waterworks-castings#catalog" },
+  { label: "Houston City Approved", href: "/waterworks-castings#catalog" },
+  { label: "Dallas Water Utilities (DWU)", href: "/waterworks-castings#catalog" },
+  { label: "Plano Infrastructure Specs", href: "/waterworks-castings#catalog" },
+  { label: "Fort Worth Water Dept", href: "/waterworks-castings#catalog" },
+  { label: "Austin Water APL List", href: "/waterworks-castings#catalog" },
+  { label: "San Antonio SAWS Standards", href: "/waterworks-castings#catalog" },
+];
+
+const companyMenu = [
+  { label: "About H2 Industries", href: "/company" },
+  { label: "Careers & Job Openings", href: "/company#careers" },
+  { label: "Global Capabilities", href: "/capabilities" },
+  { label: "Quality & Compliance", href: "/quality" },
+  { label: "All Products Catalog", href: "/products" },
+];
 
 const socials = [
-  { icon: Globe, label: "Website", href: "#" },
-  { icon: MessageCircle, label: "Contact", href: "#" },
-  { icon: Share2, label: "Social", href: "#" },
+  { label: "FB", href: "#", title: "Facebook" },
+  { label: "IG", href: "#", title: "Instagram" },
+  { label: "X", href: "#", title: "X / Twitter" },
+  { label: "IN", href: "#", title: "LinkedIn" },
+  { label: "YT", href: "#", title: "YouTube" },
 ];
 
 export default function Footer() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Subscribed!");
-    setEmail("");
+    if (email) {
+      setSubscribed(true);
+      setTimeout(() => setSubscribed(false), 5000);
+      setEmail("");
+    }
   };
 
   return (
-    <footer id="contact" style={{ background: "#062347", color: "#42A5F5", fontFamily: "inherit" }}>
+    <footer id="contact" style={{ background: "#050D1A", color: "#90CAF9", fontFamily: "inherit" }}>
       
-      {/* Band 1: Careers CTA */}
-      <div style={{ background: "#0D3A73", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="footer-cta-pad" style={{ maxWidth: 1720, margin: "0 auto", padding: "32px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: 32, textAlign: "center" }}>
-          <h3 style={{ fontSize: 24, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", margin: 0, letterSpacing: "0.02em" }}>
-            ENGINEER YOUR CAREER. <span style={{ color: "#2196F3" }}>APPLY NOW AT H2 INDUSTRIES.</span>
-          </h3>
+      {/* Band 1: Careers Banner */}
+      <div
+        style={{
+          background: "linear-gradient(135deg, #0A2E5C 0%, #0D3A73 60%, #1565C0 100%)",
+          borderBottom: "1px solid rgba(33, 150, 243, 0.3)",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            opacity: 0.1,
+            backgroundImage:
+              "linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px)",
+            backgroundSize: "30px 30px",
+          }}
+        />
+
+        <div
+          className="footer-cta-pad"
+          style={{
+            maxWidth: 1720,
+            margin: "0 auto",
+            padding: "36px 60px",
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 24,
+            position: "relative",
+            zIndex: 2,
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <div
+              style={{
+                width: 48,
+                height: 48,
+                borderRadius: "50%",
+                background: "rgba(255, 255, 255, 0.1)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <ShieldCheck size={26} color="#64B5F6" />
+            </div>
+            <div>
+              <h3
+                style={{
+                  fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
+                  fontWeight: 900,
+                  fontStyle: "italic",
+                  color: "#fff",
+                  textTransform: "uppercase",
+                  margin: 0,
+                  letterSpacing: "0.02em",
+                }}
+              >
+                ENGINEER YOUR CAREER. <span style={{ color: "#64B5F6" }}>APPLY NOW AT H2 INDUSTRIES.</span>
+              </h3>
+            </div>
+          </div>
+
           <a
-            href="#careers"
+            href="/company#careers"
             style={{
-              background: "transparent",
-              border: "2px solid #2196F3",
-              color: "#2196F3",
+              background: "rgba(255,255,255,0.1)",
+              border: "2px solid #64B5F6",
+              color: "#fff",
               padding: "12px 32px",
-              fontSize: 15,
-              fontWeight: 800,
+              fontSize: 14,
+              fontWeight: 900,
               textTransform: "uppercase",
-              letterSpacing: "0.05em",
+              letterSpacing: "0.08em",
               textDecoration: "none",
-              transition: "all 0.2s",
+              borderRadius: 4,
+              transition: "all 0.3s ease",
+              boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#2196F3";
-              e.currentTarget.style.color = "#fff";
+              e.currentTarget.style.background = "#64B5F6";
+              e.currentTarget.style.color = "#0A2E5C";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.color = "#2196F3";
+              e.currentTarget.style.background = "rgba(255,255,255,0.1)";
+              e.currentTarget.style.color = "#fff";
             }}
           >
             SEE JOBS
@@ -74,242 +171,337 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Band 2: Contact Info */}
-      <div style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="footer-contact-band" style={{ maxWidth: 1720, margin: "0 auto", padding: "24px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 32 }}>
-          {/* USA Office */}
-          <div className="footer-office-block" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 24 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <MapPin size={16} color="#2196F3" className="office-icon" />
-              <span className="office-text" style={{ fontSize: 13, fontWeight: 500, color: "#fff", textTransform: "uppercase" }}>105 MAXES ROAD, MELVILLE, NY 11737, USA</span>
-            </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <Phone size={16} color="#2196F3" className="office-icon" />
-              <span className="office-text" style={{ fontSize: 13, fontWeight: 500 }}>+1 (512) 782-8880</span>
-            </div>
-          </div>
+      {/* Band 2: Exact Addresses & Phone Numbers Provided in Image */}
+      <div style={{ borderBottom: "1px solid rgba(255,255,255,0.08)", padding: "36px 0", background: "#061830" }}>
+        <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
           
-          {/* Canada Office */}
-          <div className="footer-office-block" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 24 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <MapPin size={16} color="#2196F3" className="office-icon" />
-              <span className="office-text" style={{ fontSize: 13, fontWeight: 500, color: "#fff", textTransform: "uppercase" }}>ONE YOUNGE STREET, TORONTO, ONTARIO M5E 1R4 CANADA</span>
+          {/* Brand Header & Socials */}
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 24, marginBottom: 28 }}>
+            <div style={{ background: "#fff", padding: "8px 20px", borderRadius: 4 }}>
+              <Image src="/images/logo.png" alt="H2 Industries" width={170} height={40} style={{ objectFit: "contain" }} />
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <Phone size={16} color="#2196F3" className="office-icon" />
-              <span className="office-text" style={{ fontSize: 13, fontWeight: 500 }}>+1 (438) 805-9990</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Band 3: Main Links & Newsletter */}
-      <div style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="footer-main-pad" style={{ maxWidth: 1720, margin: "0 auto", padding: "64px 60px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 32 }} className="footer-main-grid">
-            
-            {/* Newsletter */}
-            <div style={{ maxWidth: 400 }}>
-              <h4 style={{ fontSize: 15, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 16 }}>
-                GET H2 INDUSTRIES NEWS
-              </h4>
-              <p style={{ fontSize: 14, lineHeight: 1.6, marginBottom: 20, fontWeight: 500 }}>
-                Once or twice a month we'll send you H2 news with industry content you can use.
-              </p>
-              <form onSubmit={handleSubscribe} style={{ display: "flex", gap: 12, marginBottom: 16 }}>
-                <input
-                  type="email"
-                  required
-                  placeholder="Enter your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+            {/* Social Links */}
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              {socials.map((s, idx) => (
+                <a
+                  key={idx}
+                  href={s.href}
+                  title={s.title}
                   style={{
-                    flex: 1,
-                    padding: "12px 16px",
-                    background: "rgba(255,255,255,0.05)",
-                    border: "1px solid rgba(255,255,255,0.1)",
-                    color: "#fff",
-                    fontSize: 14,
-                    outline: "none",
-                    transition: "border-color 0.2s",
-                  }}
-                  onFocus={(e) => (e.target.style.borderColor = "#2196F3")}
-                  onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
-                />
-                <button
-                  type="submit"
-                  style={{
-                    background: "transparent",
-                    border: "1px solid rgba(255,255,255,0.2)",
-                    color: "#fff",
-                    padding: "0 24px",
-                    fontSize: 14,
-                    fontWeight: 700,
-                    textTransform: "uppercase",
-                    cursor: "pointer",
-                    transition: "all 0.2s",
+                    width: 36,
+                    height: 36,
+                    borderRadius: "50%",
+                    border: "1px solid rgba(33, 150, 243, 0.3)",
+                    background: "rgba(13, 58, 115, 0.5)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "#90CAF9",
+                    fontSize: 12,
+                    fontWeight: 900,
+                    textDecoration: "none",
+                    transition: "all 0.2s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "#fff";
-                    e.currentTarget.style.color = "#0D3A73";
+                    e.currentTarget.style.background = "#2196F3";
+                    e.currentTarget.style.color = "#fff";
+                    e.currentTarget.style.borderColor = "#2196F3";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "transparent";
-                    e.currentTarget.style.color = "#fff";
+                    e.currentTarget.style.background = "rgba(13, 58, 115, 0.5)";
+                    e.currentTarget.style.color = "#90CAF9";
+                    e.currentTarget.style.borderColor = "rgba(33, 150, 243, 0.3)";
                   }}
                 >
-                  SUBMIT
-                </button>
-              </form>
-              <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", lineHeight: 1.5 }}>
-                By submitting this form, you agree to the processing of your personal data by H2 Industries as described in the <a href="#" style={{ color: "#2196F3", textDecoration: "none" }}>Privacy Statement.</a>
-              </p>
+                  {s.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Exact Address Cards Provided by User */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {/* USA Address & Phone */}
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.03)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                borderLeft: "4px solid #2196F3",
+                padding: "20px 24px",
+                borderRadius: 6,
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 16,
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <MapPin size={18} color="#2196F3" style={{ flexShrink: 0 }} />
+                <span style={{ fontSize: 13, fontWeight: 700, color: "#fff", textTransform: "uppercase", letterSpacing: "0.02em" }}>
+                  105 MAXES ROAD, MELVILLE, NY 11737, USA
+                </span>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 700, color: "#64B5F6" }}>
+                <Phone size={16} color="#2196F3" />
+                <span>+1 (512) 782-8880</span>
+              </div>
             </div>
 
-            {/* Link Columns */}
-            {Object.entries(footerLinks).map(([heading, links]) => (
-              <div key={heading}>
-                <h4 style={{ fontSize: 15, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 20 }}>
-                  {heading}
-                </h4>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
-                  {links.map((link) => (
-                    <li key={link.label}>
-                      <a
-                        href={link.href}
-                        style={{
-                          color: "#42A5F5",
-                          textDecoration: "none",
-                          fontSize: 14,
-                          fontWeight: 500,
-                          transition: "color 0.2s",
-                        }}
-                        onMouseEnter={(e) => (e.currentTarget.style.color = "#2196F3")}
-                        onMouseLeave={(e) => (e.currentTarget.style.color = "#42A5F5")}
-                      >
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+            {/* Canada Address & Phone */}
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.03)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                borderLeft: "4px solid #2196F3",
+                padding: "20px 24px",
+                borderRadius: 6,
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 16,
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <MapPin size={18} color="#2196F3" style={{ flexShrink: 0 }} />
+                <span style={{ fontSize: 13, fontWeight: 700, color: "#fff", textTransform: "uppercase", letterSpacing: "0.02em" }}>
+                  ONE YOUNGE STREET, TORONTO, ONTARIO M5E 1R4 CANADA
+                </span>
               </div>
-            ))}
+              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 700, color: "#64B5F6" }}>
+                <Phone size={16} color="#2196F3" />
+                <span>+1 (438) 805-9990</span>
+              </div>
+            </div>
+          </div>
 
-            {/* Connect Column */}
+        </div>
+      </div>
+
+      {/* Band 3: Rich Organised Menu Columns */}
+      <div style={{ padding: "64px 0", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+        <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1.3fr 1.1fr 1.1fr 1fr 1.2fr",
+              gap: 36,
+            }}
+            className="footer-nav-grid"
+          >
+            {/* Column 1: Products */}
             <div>
-              <h4 style={{ fontSize: 15, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 20 }}>
-                CONNECT WITH US
-              </h4>
-              <a
-                href="#locations"
-                style={{
-                  color: "#42A5F5",
-                  textDecoration: "none",
-                  fontSize: 14,
-                  fontWeight: 500,
-                  display: "block",
-                  marginBottom: 16,
-                  transition: "color 0.2s",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#2196F3")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#42A5F5")}
-              >
-                Locations
-              </a>
-              <div style={{ display: "flex", gap: 12, marginBottom: 24 }}>
-                {socials.map((social) => {
-                  const Icon = social.icon;
-                  return (
+              <div style={{ borderBottom: "2px solid #2196F3", paddingBottom: 8, marginBottom: 20, width: "fit-content" }}>
+                <h4 style={{ fontSize: 15, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>
+                  Products
+                </h4>
+              </div>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                {productsMenu.map((item, idx) => (
+                  <li key={idx}>
                     <a
-                      key={social.label}
-                      href={social.href}
-                      style={{
-                        width: 36,
-                        height: 36,
-                        borderRadius: "50%",
-                        background: "rgba(255,255,255,0.05)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "#fff",
-                        transition: "all 0.2s",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.background = "#2196F3";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.background = "rgba(255,255,255,0.05)";
-                      }}
+                      href={item.href}
+                      style={{ color: "#90CAF9", textDecoration: "none", fontSize: 13, fontWeight: 500, transition: "color 0.2s ease" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "#90CAF9")}
                     >
-                      <Icon size={16} />
+                      {item.label}
                     </a>
-                  );
-                })}
-              </div>
-              
-              {/* Fake Accredited Badge */}
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 12, background: "#0D2B55", padding: "8px 12px", borderLeft: "3px solid #2196F3" }}>
-                <Image src="/images/logo.png" alt="H2 Industries" width={30} height={30} style={{ objectFit: "contain" }} />
-                <span style={{ fontSize: 10, fontWeight: 800, color: "#fff", lineHeight: 1.2 }}>CERTIFIED<br/>ENGINEERING</span>
-              </div>
+                  </li>
+                ))}
+              </ul>
             </div>
 
+            {/* Column 2: General Submittals */}
+            <div>
+              <div style={{ borderBottom: "2px solid #2196F3", paddingBottom: 8, marginBottom: 20, width: "fit-content" }}>
+                <h4 style={{ fontSize: 15, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>
+                  General Submittals
+                </h4>
+              </div>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                {generalSubmittalsMenu.map((item, idx) => (
+                  <li key={idx}>
+                    <a
+                      href={item.href}
+                      style={{ color: "#90CAF9", textDecoration: "none", fontSize: 13, fontWeight: 500, transition: "color 0.2s ease" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "#90CAF9")}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 3: Regional Submittals */}
+            <div>
+              <div style={{ borderBottom: "2px solid #2196F3", paddingBottom: 8, marginBottom: 20, width: "fit-content" }}>
+                <h4 style={{ fontSize: 15, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>
+                  Regional Submittals
+                </h4>
+              </div>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                {regionalSubmittalsMenu.map((item, idx) => (
+                  <li key={idx}>
+                    <a
+                      href={item.href}
+                      style={{ color: "#90CAF9", textDecoration: "none", fontSize: 13, fontWeight: 500, transition: "color 0.2s ease" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "#90CAF9")}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 4: Company & Links */}
+            <div>
+              <div style={{ borderBottom: "2px solid #2196F3", paddingBottom: 8, marginBottom: 20, width: "fit-content" }}>
+                <h4 style={{ fontSize: 15, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>
+                  Company & Links
+                </h4>
+              </div>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                {companyMenu.map((item, idx) => (
+                  <li key={idx}>
+                    <a
+                      href={item.href}
+                      style={{ color: "#90CAF9", textDecoration: "none", fontSize: 13, fontWeight: 500, transition: "color 0.2s ease" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "#90CAF9")}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 5: Newsletter & Certified Badge */}
+            <div>
+              <div style={{ borderBottom: "2px solid #2196F3", paddingBottom: 8, marginBottom: 20, width: "fit-content" }}>
+                <h4 style={{ fontSize: 15, fontWeight: 900, fontStyle: "italic", color: "#fff", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>
+                  Stay Updated
+                </h4>
+              </div>
+              <p style={{ fontSize: 13, color: "#B0BEC5", lineHeight: 1.6, marginBottom: 16 }}>
+                Subscribe to receiving technical spec updates and regional engineering bulletins.
+              </p>
+
+              {subscribed ? (
+                <div style={{ padding: "12px 16px", background: "rgba(76, 175, 80, 0.15)", border: "1px solid #4CAF50", borderRadius: 4, color: "#81C784", fontSize: 13, fontWeight: 700, display: "flex", alignItems: "center", gap: 8 }}>
+                  <CheckCircle2 size={16} /> Subscribed successfully!
+                </div>
+              ) : (
+                <form onSubmit={handleSubscribe} style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20 }}>
+                  <input
+                    type="email"
+                    required
+                    placeholder="Enter business email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    style={{
+                      width: "100%",
+                      padding: "12px 14px",
+                      background: "rgba(255,255,255,0.05)",
+                      border: "1px solid rgba(255,255,255,0.15)",
+                      borderRadius: 4,
+                      color: "#fff",
+                      fontSize: 13,
+                      outline: "none",
+                      transition: "border-color 0.2s",
+                    }}
+                    onFocus={(e) => (e.target.style.borderColor = "#2196F3")}
+                    onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.15)")}
+                  />
+                  <button
+                    type="submit"
+                    style={{
+                      background: "#2196F3",
+                      color: "#fff",
+                      border: "none",
+                      padding: "12px",
+                      fontSize: 13,
+                      fontWeight: 800,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.05em",
+                      borderRadius: 4,
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 8,
+                      transition: "background 0.2s",
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = "#1976D2")}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = "#2196F3")}
+                  >
+                    Subscribe <Send size={14} />
+                  </button>
+                </form>
+              )}
+
+              {/* Certified Quality Badge */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  background: "rgba(13, 58, 115, 0.4)",
+                  border: "1px solid rgba(33, 150, 243, 0.3)",
+                  padding: "12px 16px",
+                  borderRadius: 6,
+                }}
+              >
+                <ShieldCheck size={28} color="#64B5F6" />
+                <div>
+                  <div style={{ fontSize: 11, fontWeight: 900, color: "#fff", textTransform: "uppercase" }}>
+                    ISO 9001:2015 & AWWA
+                  </div>
+                  <div style={{ fontSize: 10, color: "#90CAF9", textTransform: "uppercase", marginTop: 2 }}>
+                    Certified Quality Manufacturing
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Band 4: Legal / Bottom */}
-      <div>
-        <div className="footer-legal-pad" style={{ maxWidth: 1720, margin: "0 auto", padding: "24px 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
-          <p style={{ fontSize: 13, fontWeight: 500, margin: 0 }}>
-            © {new Date().getFullYear()}, All Rights Reserved.
+      {/* Band 4: Legal & Copyright Footer */}
+      <div style={{ padding: "24px 0", background: "#030A14" }}>
+        <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
+          <p style={{ fontSize: 13, color: "#78909C", fontWeight: 500, margin: 0 }}>
+            © {new Date().getFullYear()} H2 Industries. All rights reserved. Precision Municipal & Industrial Solutions.
           </p>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
-            {["Terms of Service", "Privacy Policy", "Mandatory Disclosures", "Cookie Policy"].map((link) => (
-              <a
-                key={link}
-                href="#"
-                style={{
-                  color: "#42A5F5",
-                  textDecoration: "none",
-                  fontSize: 13,
-                  fontWeight: 600,
-                  transition: "color 0.2s",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#42A5F5")}
-              >
-                {link}
-              </a>
-            ))}
+            <a href="#" style={{ color: "#90CAF9", fontSize: 13, textDecoration: "none" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")} onMouseLeave={(e) => (e.currentTarget.style.color = "#90CAF9")}>Privacy Policy</a>
+            <a href="#" style={{ color: "#90CAF9", fontSize: 13, textDecoration: "none" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")} onMouseLeave={(e) => (e.currentTarget.style.color = "#90CAF9")}>Terms of Service</a>
+            <a href="#" style={{ color: "#90CAF9", fontSize: 13, textDecoration: "none" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")} onMouseLeave={(e) => (e.currentTarget.style.color = "#90CAF9")}>Cookie Preferences</a>
           </div>
         </div>
       </div>
 
       <style>{`
-        @media (min-width: 1024px) {
-          .footer-main-grid {
-            grid-template-columns: 1.5fr 1fr 1.2fr 1fr 1fr !important;
-          }
+        @media (max-width: 1280px) {
+          .footer-nav-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 32px !important; }
         }
         @media (max-width: 768px) {
-          .footer-contact-band {
-            flex-direction: column;
-            align-items: flex-start !important;
-            gap: 24px !important;
-            padding: 24px 24px !important;
-          }
-          .footer-office-block {
-            flex-direction: column;
-            align-items: flex-start !important;
-            gap: 12px !important;
-          }
-          .office-text {
-            font-size: 11px !important;
-          }
-          .footer-cta-pad { padding: 32px 24px !important; }
-          .footer-main-pad { padding: 48px 24px !important; }
-          .footer-legal-pad { padding: 24px 24px !important; flex-direction: column; justify-content: center; text-align: center; }
+          .footer-nav-grid { grid-template-columns: 1fr !important; }
+          .footer-cta-pad { flex-direction: column; text-align: center; justify-content: center; }
         }
       `}</style>
     </footer>

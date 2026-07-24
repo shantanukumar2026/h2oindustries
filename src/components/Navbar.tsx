@@ -18,7 +18,7 @@ const mainLinks = [
     label: "Products",
     href: "/products",
     mega: {
-      image: "/images/2.jpeg",
+      image: "/images/2.webp",
       title: "INDUSTRIAL MANUFACTURING",
       desc: "Precision-engineered solutions for high-performance water management.",
       link: "View All Products",
@@ -38,7 +38,7 @@ const mainLinks = [
     label: "Capabilities",
     href: "/capabilities",
     mega: {
-      image: "/images/5.jpeg",
+      image: "/images/5.webp",
       title: "MANUFACTURING EXCELLENCE",
       desc: "From advanced polymer injection moulding to custom heavy industrial fabrication.",
       link: "Our Capabilities",
@@ -54,7 +54,7 @@ const mainLinks = [
     label: "Industries",
     href: "/industries",
     mega: {
-      image: "/images/7.jpeg",
+      image: "/images/7.webp",
       title: "GLOBAL DEPLOYMENT",
       desc: "Protecting marine ecosystems across every major industrial sector.",
       link: "Explore Industries",
@@ -74,7 +74,7 @@ const mainLinks = [
     label: "Quality",
     href: "/quality",
     mega: {
-      image: "/images/3.jpeg",
+      image: "/images/3.webp",
       title: "ZERO COMPROMISE",
       desc: "Stringent quality control protocols exceeding international engineering standards.",
       link: "View Standards",
@@ -90,7 +90,7 @@ const mainLinks = [
     label: "Company",
     href: "/company",
     mega: {
-      image: "/images/4.jpeg",
+      image: "/images/4.webp",
       title: "THE H2 GROUP",
       desc: "Decades of engineering heritage driving the future of water infrastructure.",
       link: "About Us",

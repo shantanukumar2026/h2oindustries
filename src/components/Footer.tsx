@@ -174,8 +174,8 @@ export default function Footer() {
           
           {/* Brand Header & Socials */}
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 24, marginBottom: 28 }}>
-            <div style={{ background: "#fff", padding: "8px 20px", borderRadius: 4 }}>
-              <Image src="/images/logo.png" alt="H2 Industries" width={170} height={40} style={{ objectFit: "contain" }} />
+            <div style={{ background: "#fff", padding: "4px 10px" }}>
+              <Image src="/images/logo.png" alt="Waterworks Industries" width={300} height={64} style={{ objectFit: "contain" }} unoptimized />
             </div>
 
             {/* Social Links */}

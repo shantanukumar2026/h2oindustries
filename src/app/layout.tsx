@@ -16,13 +16,18 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "H2 Industries | Precision Water Management Engineering",
+  title: "Waterworks Industries | Precision Water Management Engineering",
   description:
-    "H2 Industries designs and manufactures precision-engineered water management infrastructure — from modular sampling stations to stormwater inlet systems — dedicated to saving our oceans.",
+    "Waterworks Industries designs and manufactures precision-engineered water management infrastructure — from modular sampling stations to stormwater inlet systems — dedicated to saving our oceans.",
   keywords:
-    "H2 Industries, water management, sampling stations, stormwater drainage, ocean conservation, industrial manufacturing, water infrastructure",
+    "Waterworks Industries, H2 Industries, water management, sampling stations, stormwater drainage, ocean conservation, industrial manufacturing, water infrastructure",
+  icons: {
+    icon: "/Ww_Fevicon.png",
+    shortcut: "/Ww_Fevicon.png",
+    apple: "/Ww_Fevicon.png",
+  },
   openGraph: {
-    title: "H2 Industries | Precision Water Management Engineering",
+    title: "Waterworks Industries | Precision Water Management Engineering",
     description:
       "Precision-engineered water management infrastructure dedicated to saving our oceans.",
     type: "website",

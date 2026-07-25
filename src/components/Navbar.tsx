@@ -188,7 +188,7 @@ export default function Navbar() {
               <div
                 style={{
                   position: "relative",
-                  width: 200,
+                  width: 300,
                   height: 64,
                   background: "#fff",
                   display: "flex",
@@ -198,11 +198,12 @@ export default function Navbar() {
               >
                 <Image
                   src="/images/logo.png"
-                  alt="H2 Industries"
+                  alt="Waterworks Industries"
                   fill
-                  style={{ objectFit: "contain", objectPosition: "center", padding: "8px 20px" }}
+                  style={{ objectFit: "contain", objectPosition: "center", padding: "2px 8px" }}
                   priority
-                  sizes="200px"
+                  sizes="300px"
+                  unoptimized
                 />
               </div>
             </button>

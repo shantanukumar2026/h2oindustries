@@ -32,6 +32,7 @@ const generalSubmittalsMenu = [
 const regionalSubmittalsMenu = [
   { label: "Waco Distribution Center (HQ)", href: "/waterworks-castings#distribution" },
   { label: "Houston Distribution Center", href: "/waterworks-castings#distribution" },
+  { label: "Stuart South Distribution Hub", href: "/waterworks-castings#distribution" },
   { label: "Texas Regional Approvals", href: "/waterworks-castings#catalog" },
   { label: "Waco City Approved Castings", href: "/waterworks-castings#catalog" },
   { label: "Houston City Approved Castings", href: "/waterworks-castings#catalog" },
@@ -249,6 +250,33 @@ export default function Footer() {
               <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 700, color: "#64B5F6" }}>
                 <Phone size={16} color="#2196F3" />
                 <span>+1 (512) 782-8880</span>
+              </div>
+            </div>
+
+            {/* South (Florida) Address & Phone */}
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.03)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                borderLeft: "4px solid #2196F3",
+                padding: "20px 24px",
+                borderRadius: 6,
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 16,
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <MapPin size={18} color="#2196F3" style={{ flexShrink: 0 }} />
+                <span style={{ fontSize: 13, fontWeight: 700, color: "#fff", textTransform: "uppercase", letterSpacing: "0.02em" }}>
+                  SOUTH: 850 NW FEDERAL HWY, STUART, FL 34994
+                </span>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 700, color: "#64B5F6" }}>
+                <Phone size={16} color="#2196F3" />
+                <span>(772) 297-0700</span>
               </div>
             </div>
 

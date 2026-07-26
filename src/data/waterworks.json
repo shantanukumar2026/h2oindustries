@@ -40,6 +40,14 @@
       "phone": "(800) 433-6885",
       "email": "houston@h2industries.com",
       "tag": "Gulf Coast Hub"
+    },
+    {
+      "city": "Stuart, Florida",
+      "name": "South Regional Distribution Center",
+      "address": "850 NW Federal Hwy, Stuart, FL 34994",
+      "phone": "(772) 297-0700",
+      "email": "south@h2industries.com",
+      "tag": "South / Florida Hub"
     }
   ],
   "categories": [

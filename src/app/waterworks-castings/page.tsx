@@ -729,11 +729,11 @@ export default function WaterworksCastingsPage() {
                 margin: 0,
               }}
             >
-              Texas Distribution <span style={{ color: "#2196F3" }}>Centers & Warehouses</span>
+              Regional Distribution <span style={{ color: "#2196F3" }}>Centers & Warehouses</span>
             </h2>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }} className="hub-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 32 }} className="hub-grid">
             {waterworksData.distributionHubs.map((hub, i) => (
               <div
                 key={i}

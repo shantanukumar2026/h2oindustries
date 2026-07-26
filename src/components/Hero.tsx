@@ -29,7 +29,7 @@ export default function Hero() {
       {/* Background Image */}
       <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
         <img
-          src="/images/hero-bg-ai.png"
+          src="/images/istockphoto-2262286008-1024x1024.jpg"
           alt="Hero Background"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
@@ -132,22 +132,22 @@ export default function Hero() {
           <div style={{ display: "flex", gap: "24px", marginTop: "32px", alignItems: "center", flexWrap: "wrap" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <ShieldCheck size={28} color="#fff" strokeWidth={1.5} />
-              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Reliable<br/>Infrastructure</span>
+              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Reliable<br />Infrastructure</span>
             </div>
             <div style={{ width: 1, height: 24, background: "rgba(255,255,255,0.2)" }} className="hide-on-mobile" />
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <Droplet size={28} color="#fff" strokeWidth={1.5} />
-              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Innovative<br/>Solutions</span>
+              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Innovative<br />Solutions</span>
             </div>
             <div style={{ width: 1, height: 24, background: "rgba(255,255,255,0.2)" }} className="hide-on-mobile" />
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <Leaf size={28} color="#fff" strokeWidth={1.5} />
-              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Sustainable<br/>Future</span>
+              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Sustainable<br />Future</span>
             </div>
             <div style={{ width: 1, height: 24, background: "rgba(255,255,255,0.2)" }} className="hide-on-mobile" />
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <Users size={28} color="#fff" strokeWidth={1.5} />
-              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Trusted<br/>Partnerships</span>
+              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Trusted<br />Partnerships</span>
             </div>
           </div>
         </motion.div>
@@ -188,7 +188,7 @@ export default function Hero() {
               COMMAND CENTER
             </h3>
           </div>
-          
+
           <a
             href={data.commandCenter.primaryButton.link}
             style={{
@@ -306,28 +306,28 @@ export default function Hero() {
             </button>
             <div className="icon-tooltip">{isMuted ? "Unmute" : "Mute"}</div>
           </div>
-          
+
           <div className="icon-wrapper">
             <a href="#chat" className="side-btn-filled">
               <MessageSquare size={18} />
             </a>
             <div className="icon-tooltip">Live Chat</div>
           </div>
-          
+
           <div className="icon-wrapper">
             <a href="#call" className="side-btn-filled">
               <Phone size={18} />
             </a>
             <div className="icon-tooltip">Call Us</div>
           </div>
-          
+
           <div className="icon-wrapper">
             <a href="#email" className="side-btn-filled">
               <Mail size={18} />
             </a>
             <div className="icon-tooltip">Email Us</div>
           </div>
-          
+
           <div className="icon-wrapper">
             <a href="#contact" className="side-btn-filled">
               <User size={18} />

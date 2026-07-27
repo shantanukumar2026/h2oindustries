@@ -2,9 +2,9 @@
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { 
-  ShieldCheck, Settings, Waves, Target, Award, ShieldAlert, 
-  Layers, Zap, FileText, Leaf, Droplet, Play, Pause, 
+import {
+  ShieldCheck, Settings, Waves, Target, Award, ShieldAlert,
+  Layers, Zap, FileText, Leaf, Droplet, Play, Pause,
   Volume2, VolumeX, Maximize
 } from "lucide-react";
 
@@ -30,6 +30,7 @@ const portfolioItems = [
     subtitle: "THROUGH ENGINEERING",
     desc: "H2 Industries was founded with a single unwavering mission: to develop industrial water management products that actively reduce environmental harm.",
     media: "/portfolio/1.mp4",
+    bgColor: "#fbfbfbff",
     features: [
       { title: "PURPOSE DRIVEN", desc: "Environmental impact at our core", icon: "ShieldCheck" },
       { title: "ENGINEERING FIRST", desc: "Innovative solutions for real-world challenges", icon: "Settings" },
@@ -42,6 +43,7 @@ const portfolioItems = [
     subtitle: "FOR THE TOUGHEST ENVIRONMENTS",
     desc: "Every product is precision-engineered to meet the most demanding industrial and environmental standards across the USA and global markets.",
     media: "/portfolio/2.mp4",
+    bgColor: "#ffffff",
     features: [
       { title: "EXACT TOLERANCE", desc: "Machined to sub-millimeter precision", icon: "Target" },
       { title: "RUGGED RATING", desc: "Certified for municipal Class D wheel-loads", icon: "Award" },
@@ -54,6 +56,7 @@ const portfolioItems = [
     subtitle: "BUILT TO LAST",
     desc: "We design for compatibility with emerging clean-energy infrastructure, hydrogen utility vaults, and long-term protection of municipal waterways.",
     media: "/portfolio/3.mp4",
+    bgColor: "#0085f4",
     features: [
       { title: "MODULAR SYSTEM", desc: "Adaptable depth and segmented barrels", icon: "Layers" },
       { title: "CLEAN ENERGY", desc: "Ready for green hydrogen vaults", icon: "Zap" },
@@ -66,6 +69,7 @@ const portfolioItems = [
     desc: "We engineer structural stormwater components that reduce pollutant entry into wastewater systems, creating a cleaner planet.",
     subtitle: "ECO-FRIENDLY INFRASTRUCTURE",
     media: "/portfolio/4.mp4",
+    bgColor: "#0085f4",
     features: [
       { title: "ZERO BYPASS", desc: "Engineered catch basin filtration inserts", icon: "Droplet" },
       { title: "EPA COMPLIANT", desc: "Exceeds NPDES water quality guidelines", icon: "FileText" },
@@ -76,10 +80,10 @@ const portfolioItems = [
 
 export default function About() {
   return (
-    <div id="about" style={{ width: "100%", background: "#020f1f", position: "relative" }}>
+    <div id="about" style={{ width: "100%", background: "#003473", position: "relative" }}>
       {/* Topographical background lines */}
       <ContourLinesBackground />
-      
+
       {portfolioItems.map((item, index) => (
         <PortfolioSection key={index} item={item} index={index} />
       ))}
@@ -103,27 +107,27 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
     <section
       ref={containerRef}
       style={{
-        height: "100vh",
+        minHeight: "65vh",
+        padding: "70px 0",
         width: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         position: "relative",
         overflow: "hidden",
-        borderBottom: "1px solid rgba(33, 150, 243, 0.1)"
+        borderBottom: "1px solid rgba(56, 189, 248, 0.12)"
       }}
     >
       <div
         style={{
-          maxWidth: 1720,
+          maxWidth: 1440,
           width: "100%",
           margin: "0 auto",
-          padding: "0 60px",
+          padding: "0 40px",
           display: "grid",
-          gridTemplateColumns: index % 2 === 0 ? "1fr 1.1fr" : "1.1fr 1fr",
-          gap: 60,
+          gridTemplateColumns: index % 2 === 0 ? "1fr 1fr" : "1fr 1fr",
+          gap: 48,
           alignItems: "center",
-          height: "100%",
           zIndex: 1
         }}
         className="portfolio-grid"
@@ -136,48 +140,51 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
             opacity,
             display: "flex",
             flexDirection: "column",
-            gap: 16
+            gap: 14
           }}
           className="portfolio-content"
         >
           {/* Section Pill */}
-          <div 
-            style={{ 
-              display: "inline-flex", 
-              alignItems: "center", 
-              gap: 8, 
-              border: "1px solid rgba(33, 150, 243, 0.3)", 
-              padding: "4px 16px", 
-              borderRadius: "100px", 
-              background: "rgba(21, 101, 192, 0.12)", 
-              width: "fit-content" 
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              border: "1px solid rgba(56, 189, 248, 0.35)",
+              padding: "5px 16px",
+              borderRadius: "100px",
+              background: "rgba(14, 165, 233, 0.12)",
+              width: "fit-content"
             }}
           >
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#2196F3" }} />
-            <span style={{ color: "#90CAF9", fontSize: 11, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
+            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#38BDF8" }} />
+            <span style={{ color: "#38BDF8", fontSize: 11, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>
               OUR PURPOSE
             </span>
           </div>
 
           {/* Heading with highlighted text */}
-          <h2 
-            className="font-display" 
-            style={{ 
-              fontSize: "clamp(2rem, 4vw, 3.6rem)", 
-              fontWeight: 900, 
-              color: "#ffffff", 
-              lineHeight: 1.05, 
+          <h2
+            className="font-display"
+            style={{
+              fontSize: "clamp(2rem, 3.6vw, 3rem)",
+              fontWeight: 900,
+              color: "#ffffff",
+              lineHeight: 1.12,
               textTransform: "uppercase",
-              margin: "12px 0 0 0"
+              margin: "8px 0 0 0",
+              letterSpacing: "-0.01em"
             }}
           >
             {item.mainTitle} <br />
-            <span 
-              style={{ 
-                background: "linear-gradient(135deg, #60AEFF 0%, #2196F3 50%, #1565C0 100%)", 
-                WebkitBackgroundClip: "text", 
-                WebkitTextFillColor: "transparent", 
-                backgroundClip: "text" 
+            <span
+              style={{
+                color: "#38BDF8",
+                display: "inline-block",
+                background: "linear-gradient(135deg, #38BDF8 0%, #0284C7 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text"
               }}
             >
               {item.highlightText}
@@ -185,36 +192,36 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
           </h2>
 
           {/* Subtitle / Engineering Line */}
-          <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "8px 0 16px 0" }}>
-            <span style={{ color: "#2196F3", fontSize: 14, fontWeight: 800, letterSpacing: "0.08em", fontStyle: "italic", textTransform: "uppercase" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "6px 0 14px 0" }}>
+            <span style={{ color: "#38BDF8", fontSize: 13, fontWeight: 800, letterSpacing: "0.09em", fontStyle: "italic", textTransform: "uppercase" }}>
               /// {item.subtitle}
             </span>
-            <div style={{ flex: 1, height: 1, background: "rgba(33, 150, 243, 0.2)", maxWidth: 120 }} />
+            <div style={{ flex: 1, height: 1, background: "rgba(56, 189, 248, 0.2)", maxWidth: 110 }} />
           </div>
 
           {/* Description */}
-          <p style={{ color: "#94A3B8", fontSize: 16, lineHeight: 1.7, fontWeight: 400, marginBottom: 32, maxWidth: 540 }}>
+          <p style={{ color: "#94A3B8", fontSize: 15, lineHeight: 1.65, fontWeight: 400, marginBottom: 24, maxWidth: 520 }}>
             {item.desc}
           </p>
 
           {/* Features Grid Row */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24, marginTop: 12 }} className="features-row">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginTop: 8 }} className="features-row">
             {item.features.map((feat, fIdx) => {
               const FeatIcon = iconMap[feat.icon] || ShieldCheck;
               return (
-                <div key={fIdx} style={{ 
-                  display: "flex", 
-                  flexDirection: "column", 
-                  gap: 12,
-                  borderRight: fIdx < 2 ? "1px solid rgba(33, 150, 243, 0.15)" : "none",
-                  paddingRight: fIdx < 2 ? 16 : 0
+                <div key={fIdx} style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                  borderRight: fIdx < 2 ? "1px solid rgba(56, 189, 248, 0.15)" : "none",
+                  paddingRight: fIdx < 2 ? 14 : 0
                 }} className="feature-col">
-                  <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(33, 150, 243, 0.08)", border: "1px solid rgba(33, 150, 243, 0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#42A5F5" }}>
-                    <FeatIcon size={18} />
+                  <div style={{ width: 38, height: 38, borderRadius: "50%", background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.25)", display: "flex", alignItems: "center", justifyContent: "center", color: "#38BDF8" }}>
+                    <FeatIcon size={17} />
                   </div>
                   <div>
-                    <h4 style={{ color: "#ffffff", fontSize: 12, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 4 }}>{feat.title}</h4>
-                    <p style={{ color: "#64B5F6", fontSize: 11, lineHeight: 1.4, margin: 0, fontWeight: 500 }}>{feat.desc}</p>
+                    <h4 style={{ color: "#ffffff", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 3 }}>{feat.title}</h4>
+                    <p style={{ color: "#94A3B8", fontSize: 11, lineHeight: 1.45, margin: 0, fontWeight: 400 }}>{feat.desc}</p>
                   </div>
                 </div>
               );
@@ -223,7 +230,7 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
         </motion.div>
 
         {/* Right: Media Side (Custom Player Box) */}
-        <div style={{ order: index % 2 === 0 ? 2 : 1, position: "relative", height: "65vh", width: "100%" }} className="portfolio-media">
+        <div style={{ order: index % 2 === 0 ? 2 : 1, position: "relative", height: "380px", width: "100%" }} className="portfolio-media">
           <motion.div
             style={{
               width: "100%",
@@ -232,7 +239,7 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
               y: yVideo
             }}
           >
-            <CustomMediaPlayer src={item.media} title={item.mainTitle} />
+            <CustomMediaPlayer src={item.media} title={item.mainTitle} bgColor={item.bgColor} />
           </motion.div>
         </div>
       </div>
@@ -241,12 +248,12 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
         @media (max-width: 1024px) {
           .portfolio-grid {
             grid-template-columns: 1fr !important;
-            padding: 80px 30px !important;
-            gap: 40px !important;
+            padding: 60px 24px !important;
+            gap: 32px !important;
           }
           .portfolio-content { order: 1 !important; }
-          .portfolio-media { order: 2 !important; height: 45vh !important; }
-          .features-row { grid-template-columns: 1fr !important; gap: 24px !important; }
+          .portfolio-media { order: 2 !important; height: 300px !important; }
+          .features-row { grid-template-columns: 1fr !important; gap: 16px !important; }
           .feature-col { border-right: none !important; padding-right: 0 !important; }
         }
       `}</style>
@@ -255,7 +262,7 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
 }
 
 // Custom player component supporting both mp4 video and static images
-function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
+function CustomMediaPlayer({ src, title, bgColor = "#0085f4" }: { src: string; title: string; bgColor?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
@@ -264,6 +271,7 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
   const [duration, setDuration] = useState("0:15");
 
   const isVideo = src.endsWith(".mp4") || src.endsWith(".webm");
+  const isWhite = bgColor === "#ffffff" || bgColor.toLowerCase() === "#fff";
 
   useEffect(() => {
     const video = videoRef.current;
@@ -348,15 +356,26 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
         height: "100%",
         display: "grid",
         gridTemplateColumns: "1fr 48px",
-        borderRadius: 24,
+        borderRadius: 20,
         overflow: "hidden",
-        border: "2px solid #2196F3",
-        boxShadow: "0 0 30px rgba(33, 150, 243, 0.35)",
-        background: "#05101F"
+        border: isWhite ? "1px solid rgba(226, 232, 240, 0.8)" : "1px solid rgba(33, 150, 243, 0.3)",
+        boxShadow: isWhite ? "0 20px 40px rgba(0, 0, 0, 0.35)" : "0 20px 45px rgba(0, 0, 0, 0.6), 0 0 20px rgba(33, 150, 243, 0.15)",
+        background: bgColor
       }}
     >
       {/* Media Playback View */}
-      <div style={{ position: "relative", height: "100%", width: "100%", overflow: "hidden" }}>
+      <div
+        style={{
+          position: "relative",
+          height: "100%",
+          width: "100%",
+          overflow: "hidden",
+          background: bgColor,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
         {isVideo ? (
           <video
             ref={videoRef}
@@ -366,13 +385,19 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
             muted={isMuted}
             playsInline
             onClick={handlePlayToggle}
-            style={{ width: "100%", height: "100%", objectFit: "cover", cursor: "pointer" }}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              cursor: "pointer",
+              background: bgColor
+            }}
           />
         ) : (
           <img
             src={src}
             alt={title}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            style={{ width: "100%", height: "100%", objectFit: "contain", background: bgColor }}
           />
         )}
 
@@ -380,24 +405,24 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
         <div
           style={{
             position: "absolute",
-            bottom: 20,
-            left: 20,
-            right: 20,
-            height: 48,
-            background: "rgba(5, 13, 28, 0.85)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-            borderRadius: 12,
-            border: "1px solid rgba(255, 255, 255, 0.08)",
+            bottom: 14,
+            left: 14,
+            right: 14,
+            height: 42,
+            background: "rgba(15, 23, 42, 0.9)",
+            backdropFilter: "blur(14px)",
+            WebkitBackdropFilter: "blur(14px)",
+            borderRadius: 10,
+            border: "1px solid rgba(255, 255, 255, 0.15)",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            padding: "0 16px",
+            padding: "0 14px",
             zIndex: 10
           }}
         >
           {/* Play/Pause Button & Time */}
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <button
               onClick={handlePlayToggle}
               style={{
@@ -412,9 +437,9 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
               }}
               disabled={!isVideo}
             >
-              {isPlaying && isVideo ? <Pause size={18} fill="#ffffff" /> : <Play size={18} fill="#ffffff" />}
+              {isPlaying && isVideo ? <Pause size={16} fill="#ffffff" /> : <Play size={16} fill="#ffffff" />}
             </button>
-            <span style={{ fontSize: 13, color: "#94A3B8", fontWeight: 700, fontFamily: "monospace" }}>
+            <span style={{ fontSize: 11, color: "#94A3B8", fontWeight: 700, fontFamily: "monospace" }}>
               {isVideo ? `${currentTime} / ${duration}` : "0:00 / 0:00"}
             </span>
           </div>
@@ -424,7 +449,7 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
             onClick={isVideo ? handleTimelineClick : undefined}
             style={{
               flex: 1,
-              margin: "0 20px",
+              margin: "0 16px",
               height: 4,
               background: "rgba(255, 255, 255, 0.15)",
               borderRadius: 2,
@@ -436,7 +461,7 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
               style={{
                 height: "100%",
                 width: isVideo ? `${progress}%` : "0%",
-                background: "#2196F3",
+                background: "linear-gradient(90deg, #2196F3, #64B5F6)",
                 borderRadius: 2,
                 position: "absolute",
                 top: 0,
@@ -450,8 +475,8 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
                   top: "50%",
                   left: `${progress}%`,
                   transform: "translate(-50%, -50%)",
-                  width: 10,
-                  height: 10,
+                  width: 8,
+                  height: 8,
                   borderRadius: "50%",
                   background: "#ffffff",
                   boxShadow: "0 0 6px rgba(0,0,0,0.5)"
@@ -461,7 +486,7 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
           </div>
 
           {/* Control Triggers */}
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <button
               onClick={handleMuteToggle}
               style={{
@@ -476,7 +501,7 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
               }}
               disabled={!isVideo}
             >
-              {isMuted || !isVideo ? <VolumeX size={18} /> : <Volume2 size={18} />}
+              {isMuted || !isVideo ? <VolumeX size={16} /> : <Volume2 size={16} />}
             </button>
             <button
               onClick={handleFullscreen}
@@ -492,7 +517,7 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
               }}
               disabled={!isVideo}
             >
-              <Maximize size={18} />
+              <Maximize size={16} />
             </button>
           </div>
         </div>
@@ -501,44 +526,43 @@ function CustomMediaPlayer({ src, title }: { src: string; title: string }) {
       {/* Vertical Side Column (Right Side of Frame) */}
       <div
         style={{
-          background: "#051326",
-          borderLeft: "1px solid rgba(33, 150, 243, 0.2)",
+          background: isWhite ? "#ffffff" : "#041122",
+          borderLeft: isWhite ? "1px solid #e2e8f0" : "1px solid rgba(255, 255, 255, 0.08)",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "24px 0"
+          padding: "20px 0"
         }}
       >
         {/* Top Dot Grid Pattern */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 4, opacity: 0.35 }}>
           {[...Array(6)].map((_, idx) => (
-            <div key={idx} style={{ width: 3, height: 3, borderRadius: "50%", background: "#42A5F5" }} />
+            <div key={idx} style={{ width: 3, height: 3, borderRadius: "50%", background: isWhite ? "#1565C0" : "#64B5F6" }} />
           ))}
         </div>
 
         {/* Droplet Indicator Badge */}
         <div
           style={{
-            width: 32,
-            height: 32,
+            width: 28,
+            height: 28,
             borderRadius: "50%",
-            background: "rgba(21, 101, 192, 0.15)",
-            border: "1px solid #2196F3",
+            background: isWhite ? "rgba(21, 101, 192, 0.08)" : "rgba(33, 150, 243, 0.12)",
+            border: isWhite ? "1px solid #1565C0" : "1px solid rgba(33, 150, 243, 0.4)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            color: "#42A5F5",
-            boxShadow: "0 0 10px rgba(33, 150, 243, 0.3)"
+            color: isWhite ? "#1565C0" : "#64B5F6"
           }}
         >
-          <Droplet size={14} fill="#42A5F5" />
+          <Droplet size={13} fill={isWhite ? "#1565C0" : "#64B5F6"} />
         </div>
 
         {/* Bottom Dot Grid Pattern */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 4, opacity: 0.35 }}>
           {[...Array(6)].map((_, idx) => (
-            <div key={idx} style={{ width: 3, height: 3, borderRadius: "50%", background: "#42A5F5" }} />
+            <div key={idx} style={{ width: 3, height: 3, borderRadius: "50%", background: isWhite ? "#1565C0" : "#64B5F6" }} />
           ))}
         </div>
       </div>

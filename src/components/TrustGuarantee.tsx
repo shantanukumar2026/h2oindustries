@@ -39,7 +39,7 @@ export default function TrustGuarantee() {
       ref={containerRef}
       style={{
         position: "relative",
-        background: "#030b17", 
+        background: "#002255",
         padding: "48px 0",
         overflow: "hidden",
         borderTop: "1px solid rgba(255,255,255,0.02)"
@@ -206,16 +206,16 @@ export default function TrustGuarantee() {
                     {item.desc}
                   </p>
 
-                {/* Animated corner accent */}
-                <div className="corner-accent" style={{ position: "absolute", bottom: 24, right: 24, opacity: 0.2, transition: "opacity 0.5s" }}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 22L22 2M22 2H8M22 2V16" stroke={item.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
+                  {/* Animated corner accent */}
+                  <div className="corner-accent" style={{ position: "absolute", bottom: 24, right: 24, opacity: 0.2, transition: "opacity 0.5s" }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 22L22 2M22 2H8M22 2V16" stroke={item.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          );
-        })}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
       <style>{`

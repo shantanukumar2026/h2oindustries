@@ -70,13 +70,13 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contact" style={{ background: "#050D1A", color: "#90CAF9", fontFamily: "inherit" }}>
-      
+    <footer id="contact" style={{ background: "#003473", color: "#90CAF9", fontFamily: "inherit" }}>
+
       {/* Band 1: Careers Banner */}
       <div
         style={{
-          background: "linear-gradient(135deg, #0A2E5C 0%, #0D3A73 60%, #1565C0 100%)",
-          borderBottom: "1px solid rgba(33, 150, 243, 0.3)",
+          background: "linear-gradient(135deg, #002554 0%, #003473 60%, #1565C0 100%)",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.15)",
           position: "relative",
           overflow: "hidden",
         }}
@@ -162,9 +162,9 @@ export default function Footer() {
       </div>
 
       {/* Band 2: Exact Addresses & Phone Numbers Provided in Image */}
-      <div style={{ borderBottom: "1px solid rgba(255,255,255,0.08)", padding: "36px 0", background: "#061830" }}>
+      <div style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", padding: "36px 0", background: "#002859" }}>
         <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
-          
+
           {/* Brand Header & Socials */}
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 24, marginBottom: 28 }}>
             <div style={{ background: "#fff", padding: "4px 10px" }}>
@@ -499,7 +499,7 @@ export default function Footer() {
       </div>
 
       {/* Band 4: Legal & Copyright Footer */}
-      <div style={{ padding: "24px 0", background: "#030A14" }}>
+      <div style={{ padding: "24px 0", background: "#002255" }}>
         <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
           <p style={{ fontSize: 13, color: "#78909C", fontWeight: 500, margin: 0 }}>
             © {new Date().getFullYear()} H2 Industries. All rights reserved. Precision Municipal & Industrial Solutions.

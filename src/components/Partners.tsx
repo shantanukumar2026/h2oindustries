@@ -40,12 +40,12 @@ export default function Partners() {
   const marqueeItems = [...partnersList, ...partnersList];
 
   return (
-    <section ref={ref} style={{ padding: "48px 0", background: "#020B14", position: "relative", overflow: "hidden" }}>
-      
+    <section ref={ref} style={{ padding: "48px 0", background: "#002255", position: "relative", overflow: "hidden" }}>
+
       {/* Left Fade */}
-      <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 150, background: "linear-gradient(90deg, #020B14 0%, transparent 100%)", zIndex: 10, pointerEvents: "none" }} />
+      <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 150, background: "linear-gradient(90deg, #002255 0%, transparent 100%)", zIndex: 10, pointerEvents: "none" }} />
       {/* Right Fade */}
-      <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: 150, background: "linear-gradient(270deg, #020B14 0%, transparent 100%)", zIndex: 10, pointerEvents: "none" }} />
+      <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: 150, background: "linear-gradient(270deg, #002255 0%, transparent 100%)", zIndex: 10, pointerEvents: "none" }} />
 
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px", position: "relative", zIndex: 1 }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
@@ -54,7 +54,7 @@ export default function Partners() {
               Global Network
             </span>
             <h2 style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 900, color: "#fff", textTransform: "uppercase", fontStyle: "italic", lineHeight: 1.1 }}>
-              Trusted <span style={{ color: "#2196F3" }}>By</span><br/>
+              Trusted <span style={{ color: "#2196F3" }}>By</span><br />
               Industry Leaders
             </h2>
           </motion.div>
@@ -62,8 +62,8 @@ export default function Partners() {
 
         {/* Marquee Container */}
         <div className="marquee-container" style={{ position: "relative", width: "100%", overflow: "hidden", padding: "20px 0" }}>
-          
-          <motion.div 
+
+          <motion.div
             className="marquee-track"
             animate={{ x: ["0%", "-50%"] }}
             transition={{
@@ -74,23 +74,23 @@ export default function Partners() {
             style={{ display: "flex", gap: "60px", width: "max-content", alignItems: "center" }}
           >
             {marqueeItems.map((p, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="marquee-item"
-                style={{ 
-                  width: "160px", 
-                  height: "80px", 
-                  position: "relative", 
+                style={{
+                  width: "160px",
+                  height: "80px",
+                  position: "relative",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center"
                 }}
               >
-                <Image 
-                  src={`/partners/${p.file}`} 
-                  alt={p.name} 
-                  fill 
-                  style={{ objectFit: "contain" }} 
+                <Image
+                  src={`/partners/${p.file}`}
+                  alt={p.name}
+                  fill
+                  style={{ objectFit: "contain" }}
                   unoptimized={true}
                 />
               </div>
@@ -99,7 +99,7 @@ export default function Partners() {
 
         </div>
       </div>
-      
+
       <style>{`
         .marquee-item {
           filter: grayscale(100%) brightness(0) invert(1) opacity(0.5);

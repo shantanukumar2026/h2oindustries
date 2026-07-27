@@ -21,7 +21,7 @@ export default function Industries() {
   const { header, items } = homeData.industries;
 
   return (
-    <section id="industries" className="industries-section" style={{ background: "#020B14", position: "relative", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+    <section id="industries" className="industries-section" style={{ background: "#002255", position: "relative", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
       {/* Top Border Accent */}
       <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 4, background: "#1565C0" }} />
 
@@ -54,7 +54,7 @@ export default function Industries() {
                 {header.tagline}
               </span>
             </div>
-            
+
             <h2
               className="font-display"
               style={{
@@ -68,7 +68,7 @@ export default function Industries() {
                 letterSpacing: "0.02em",
               }}
             >
-               {header.title}<br />
+              {header.title}<br />
               <span style={{ color: "#2196F3" }}>{header.highlight}</span>
             </h2>
             <p style={{ color: "#90CAF9", fontSize: 16, maxWidth: 600, margin: "0 auto", lineHeight: 1.6 }}>
@@ -99,7 +99,7 @@ export default function Industries() {
           })}
         </div>
       </div>
-      
+
       <style>{`
         .industries-section { padding: 48px 0; }
         .industries-container { padding: 0 60px; }

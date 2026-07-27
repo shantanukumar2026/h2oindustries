@@ -19,17 +19,17 @@ export default function Sustainability() {
   const { header, initiatives } = homeData.sustainability;
 
   return (
-    <section 
-      id="sustainability" 
-      style={{ 
-        background: "#020B14", 
+    <section
+      id="sustainability"
+      style={{
+        background: "#002255",
         padding: "48px 0",
         position: "relative",
         borderTop: "1px solid rgba(255,255,255,0.05)"
       }}
     >
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
-        
+
         <div ref={ref} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", marginBottom: 48 }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255, 255, 255, 0.05)", padding: "6px 16px", marginBottom: 20, borderLeft: "2px solid #42A5F5" }}>
@@ -37,7 +37,7 @@ export default function Sustainability() {
                 {header.tagline}
               </span>
             </div>
-            
+
             <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.2rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 20, textTransform: "uppercase" }}>
               {header.title} <span style={{ color: "#2196F3" }}>{header.highlight}</span>
             </h2>
@@ -78,7 +78,7 @@ export default function Sustainability() {
                       {item.value}
                     </div>
                   </div>
-                  
+
                   <h3 style={{ color: "#fff", fontSize: 20, fontWeight: 800, marginBottom: 12, textTransform: "uppercase" }}>{item.title}</h3>
                   <p style={{ color: "#64B5F6", fontSize: 14, lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
                 </div>

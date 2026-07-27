@@ -58,7 +58,7 @@ function ProductHero({ product }: { product: any }) {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
   const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-  
+
   return (
     <section ref={containerRef} style={{ paddingTop: 100, position: "relative", background: "#050d1c", overflow: "hidden" }}>
       {/* Blueprint background for Hero only */}
@@ -90,7 +90,7 @@ function ProductHero({ product }: { product: any }) {
             <p style={{ color: "#B0BEC5", fontSize: 18, lineHeight: 1.6, fontWeight: 400, maxWidth: 600, marginBottom: 40 }}>
               {product.description}
             </p>
-            
+
             <div style={{ display: "flex", gap: 16 }}>
               <button style={{ background: "#2196F3", color: "#fff", border: "none", padding: "18px 36px", fontSize: 15, fontWeight: 900, letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", display: "flex", alignItems: "center", gap: 12 }} onClick={() => document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" })}>
                 REQUEST QUOTE <ArrowRight size={18} />
@@ -117,14 +117,14 @@ function TechnicalSpecs({ product }: { product: any }) {
   return (
     <section style={{ padding: "100px 0", background: "#ffffff", borderBottom: "1px solid #E0E0E0" }}>
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80 }}>
-        
+
         {/* Specs Table */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-20%" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>
             <Settings size={28} color="#1565C0" />
             <h2 style={{ fontSize: 32, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>TECHNICAL SPECIFICATIONS</h2>
           </div>
-          
+
           <div style={{ border: "1px solid #E0E0E0", borderRadius: 8, overflow: "hidden" }}>
             {[
               { label: "Material", val: "High-Grade Industrial Composite / 316 Stainless" },
@@ -217,7 +217,7 @@ function ApplicationsAndIndustries() {
           <div style={{ width: 60, height: 4, background: "#1565C0", marginBottom: 32 }} />
           <p style={{ fontSize: 16, color: "#4A6375", lineHeight: 1.7, fontWeight: 500, marginBottom: 40 }}>Our equipment forms the critical backbone of advanced infrastructure projects across multiple sectors globally. Built to adapt, scale, and perform.</p>
         </motion.div>
-        
+
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-20%" }} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
           {industries.map((ind, i) => (
             <div key={i} style={{ background: "#FAFAFA", border: "1px solid #E0E0E0", padding: "24px 32px", borderRadius: 8, display: "flex", alignItems: "center", gap: 16 }}>
@@ -235,7 +235,7 @@ function ResourcesAndContact({ product, router }: { product: any, router: any })
   return (
     <section id="contact-section" style={{ padding: "100px 0", background: "#F0F7FF" }}>
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80 }}>
-        
+
         {/* Resources */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-20%" }}>
           <h2 style={{ fontSize: 24, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", marginBottom: 32 }}>PRODUCT RESOURCES</h2>
@@ -262,7 +262,7 @@ function ResourcesAndContact({ product, router }: { product: any, router: any })
           <div style={{ background: "#ffffff", border: "1px solid #E0E0E0", padding: 48, borderRadius: 16, boxShadow: "0 20px 40px rgba(6,35,71,0.05)" }}>
             <h2 style={{ fontSize: 28, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", marginBottom: 16, fontStyle: "italic" }}>REQUEST A QUOTE</h2>
             <p style={{ fontSize: 15, color: "#4A6375", marginBottom: 32, fontWeight: 500 }}>Submit your details to receive pricing for the <strong>{product.name}</strong>, including volume discounts and custom configurations.</p>
-            
+
             <form style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
                 <input type="text" placeholder="FULL NAME" style={{ padding: "16px 20px", background: "#F5F7FA", border: "1px solid #CFD8DC", borderRadius: 4, fontSize: 14, fontWeight: 600, color: "#0D3A73", outline: "none" }} />

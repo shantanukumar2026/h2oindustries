@@ -80,7 +80,7 @@ const portfolioItems = [
 
 export default function About() {
   return (
-    <div id="about" style={{ width: "100%", background: "#003473", position: "relative" }}>
+    <div id="about" style={{ width: "100%", background: "#004aad", position: "relative" }}>
       {/* Topographical background lines */}
       <ContourLinesBackground />
 
@@ -115,7 +115,7 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
         justifyContent: "center",
         position: "relative",
         overflow: "hidden",
-        borderBottom: "1px solid rgba(56, 189, 248, 0.12)"
+        borderBottom: "1px solid rgba(0, 187, 255, 0.2)"
       }}
     >
       <div
@@ -150,15 +150,15 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              border: "1px solid rgba(56, 189, 248, 0.35)",
+              border: "1px solid #00bbff",
               padding: "5px 16px",
               borderRadius: "100px",
-              background: "rgba(14, 165, 233, 0.12)",
+              background: "rgba(0, 187, 255, 0.15)",
               width: "fit-content"
             }}
           >
-            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#38BDF8" }} />
-            <span style={{ color: "#38BDF8", fontSize: 11, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>
+            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#00bbff" }} />
+            <span style={{ color: "#00bbff", fontSize: 11, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>
               OUR PURPOSE
             </span>
           </div>
@@ -179,9 +179,9 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
             {item.mainTitle} <br />
             <span
               style={{
-                color: "#38BDF8",
+                color: "#00bbff",
                 display: "inline-block",
-                background: "linear-gradient(135deg, #38BDF8 0%, #0284C7 100%)",
+                background: "linear-gradient(135deg, #00bbff 0%, #0085f4 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text"
@@ -193,14 +193,14 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
 
           {/* Subtitle / Engineering Line */}
           <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "6px 0 14px 0" }}>
-            <span style={{ color: "#38BDF8", fontSize: 13, fontWeight: 800, letterSpacing: "0.09em", fontStyle: "italic", textTransform: "uppercase" }}>
+            <span style={{ color: "#00bbff", fontSize: 13, fontWeight: 800, letterSpacing: "0.09em", fontStyle: "italic", textTransform: "uppercase" }}>
               /// {item.subtitle}
             </span>
-            <div style={{ flex: 1, height: 1, background: "rgba(56, 189, 248, 0.2)", maxWidth: 110 }} />
+            <div style={{ flex: 1, height: 1, background: "rgba(0, 187, 255, 0.3)", maxWidth: 110 }} />
           </div>
 
           {/* Description */}
-          <p style={{ color: "#94A3B8", fontSize: 15, lineHeight: 1.65, fontWeight: 400, marginBottom: 24, maxWidth: 520 }}>
+          <p style={{ color: "#E0F2FE", fontSize: 15, lineHeight: 1.65, fontWeight: 400, marginBottom: 24, maxWidth: 520 }}>
             {item.desc}
           </p>
 
@@ -213,15 +213,15 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
                   display: "flex",
                   flexDirection: "column",
                   gap: 8,
-                  borderRight: fIdx < 2 ? "1px solid rgba(56, 189, 248, 0.15)" : "none",
+                  borderRight: fIdx < 2 ? "1px solid rgba(0, 187, 255, 0.2)" : "none",
                   paddingRight: fIdx < 2 ? 14 : 0
                 }} className="feature-col">
-                  <div style={{ width: 38, height: 38, borderRadius: "50%", background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.25)", display: "flex", alignItems: "center", justifyContent: "center", color: "#38BDF8" }}>
+                  <div style={{ width: 38, height: 38, borderRadius: "50%", background: "rgba(0, 187, 255, 0.15)", border: "1px solid #00bbff", display: "flex", alignItems: "center", justifyContent: "center", color: "#00bbff" }}>
                     <FeatIcon size={17} />
                   </div>
                   <div>
                     <h4 style={{ color: "#ffffff", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 3 }}>{feat.title}</h4>
-                    <p style={{ color: "#94A3B8", fontSize: 11, lineHeight: 1.45, margin: 0, fontWeight: 400 }}>{feat.desc}</p>
+                    <p style={{ color: "#BAE6FD", fontSize: 11, lineHeight: 1.45, margin: 0, fontWeight: 400 }}>{feat.desc}</p>
                   </div>
                 </div>
               );
@@ -239,7 +239,7 @@ function PortfolioSection({ item, index }: { item: typeof portfolioItems[0]; ind
               y: yVideo
             }}
           >
-            <CustomMediaPlayer src={item.media} title={item.mainTitle} bgColor={item.bgColor} />
+            <CustomMediaPlayer src={item.media} title={item.mainTitle} bgColor="#004aad" />
           </motion.div>
         </div>
       </div>

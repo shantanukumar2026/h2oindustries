@@ -70,13 +70,13 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contact" style={{ background: "#003473", color: "#90CAF9", fontFamily: "inherit" }}>
+    <footer id="contact" style={{ background: "#004aad", color: "#E0F2FE", fontFamily: "inherit" }}>
 
       {/* Band 1: Careers Banner */}
       <div
         style={{
-          background: "linear-gradient(135deg, #002554 0%, #003473 60%, #1565C0 100%)",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.15)",
+          background: "linear-gradient(135deg, #004aad 0%, #0085f4 100%)",
+          borderBottom: "1px solid rgba(0, 187, 255, 0.3)",
           position: "relative",
           overflow: "hidden",
         }}
@@ -113,14 +113,14 @@ export default function Footer() {
                 width: 48,
                 height: 48,
                 borderRadius: "50%",
-                background: "rgba(255, 255, 255, 0.1)",
-                border: "1px solid rgba(255, 255, 255, 0.2)",
+                background: "rgba(255, 255, 255, 0.15)",
+                border: "1px solid #00bbff",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
-              <ShieldCheck size={26} color="#64B5F6" />
+              <ShieldCheck size={26} color="#00bbff" />
             </div>
             <div>
               <h3
@@ -134,15 +134,15 @@ export default function Footer() {
                   letterSpacing: "0.02em",
                 }}
               >
-                ENGINEER YOUR CAREER. <span style={{ color: "#64B5F6" }}>APPLY NOW AT H2 INDUSTRIES.</span>
+                ENGINEER YOUR CAREER. <span style={{ color: "#00bbff" }}>APPLY NOW AT H2 INDUSTRIES.</span>
               </h3>
             </div>
           </div>
 
           <div
             style={{
-              background: "rgba(255,255,255,0.1)",
-              border: "2px solid #64B5F6",
+              background: "rgba(0, 187, 255, 0.2)",
+              border: "2px solid #00bbff",
               color: "#fff",
               padding: "12px 32px",
               fontSize: 14,
@@ -152,7 +152,7 @@ export default function Footer() {
               textDecoration: "none",
               borderRadius: 4,
               transition: "all 0.3s ease",
-              boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+              boxShadow: "0 4px 15px rgba(0,74,173,0.3)",
               cursor: "default"
             }}
           >
@@ -162,7 +162,7 @@ export default function Footer() {
       </div>
 
       {/* Band 2: Exact Addresses & Phone Numbers Provided in Image */}
-      <div style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", padding: "36px 0", background: "#002859" }}>
+      <div style={{ borderBottom: "1px solid rgba(0,187,255,0.15)", padding: "36px 0", background: "#003c8c" }}>
         <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
 
           {/* Brand Header & Socials */}

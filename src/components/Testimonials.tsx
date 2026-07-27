@@ -68,15 +68,8 @@ export default function Testimonials() {
                   "{item.quote}"
                 </p>
                 
-                <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-                  <div style={{ width: 48, height: 48, borderRadius: "50%", background: "#1565C0", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800, fontSize: 18 }}>
-                    {item.author.charAt(0)}
-                  </div>
-                  <div>
-                    <h4 style={{ color: "#0D3A73", fontSize: 16, fontWeight: 800, margin: 0, textTransform: "uppercase" }}>{item.author}</h4>
-                    <p style={{ color: "#1565C0", fontSize: 12, fontWeight: 700, margin: "2px 0 0 0", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.role}</p>
-                    <p style={{ color: "#4A6375", fontSize: 12, fontWeight: 500, margin: "2px 0 0 0" }}>{item.company}</p>
-                  </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, paddingTop: 16, borderTop: "1px solid rgba(21, 101, 192, 0.1)" }}>
+                  <span style={{ color: "#1565C0", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em" }}>H2 VERIFIED SPECIFICATION</span>
                 </div>
               </div>
             </motion.div>

@@ -228,30 +228,6 @@ export default function BlogListingPage() {
                           {blog.excerpt}
                         </p>
                       </div>
-
-                      {/* Author */}
-                      <div style={{ display: "flex", alignItems: "center", gap: 12, paddingTop: 16, borderTop: "1px solid #F1F5F9" }}>
-                        <div
-                          style={{
-                            width: 36,
-                            height: 36,
-                            borderRadius: "50%",
-                            background: "rgba(21, 101, 192, 0.1)",
-                            color: "#1565C0",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            fontSize: 14,
-                            fontWeight: 800
-                          }}
-                        >
-                          {blog.author.initials}
-                        </div>
-                        <div>
-                          <h4 style={{ fontSize: 13, fontWeight: 800, color: "#0B1929", margin: 0 }}>{blog.author.name}</h4>
-                          <p style={{ fontSize: 11, color: "#1565C0", fontWeight: 600, margin: 0 }}>{blog.author.role}</p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>

@@ -111,29 +111,10 @@ export default function BlogDetailPage() {
               {blog.title}
             </h1>
 
-            {/* Author / Date / Time */}
+            {/* Date / Time */}
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 20, paddingBottom: 24, borderBottom: "1px solid #E2E8F0" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <div
-                  style={{
-                    width: 44,
-                    height: 44,
-                    borderRadius: "50%",
-                    background: "#1565C0",
-                    color: "#fff",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: 16,
-                    fontWeight: 800
-                  }}
-                >
-                  {blog.author.initials}
-                </div>
-                <div>
-                  <h4 style={{ fontSize: 14, fontWeight: 800, color: "#0B1929", margin: 0 }}>{blog.author.name}</h4>
-                  <p style={{ fontSize: 12, color: "#1565C0", fontWeight: 600, margin: 0 }}>{blog.author.role}</p>
-                </div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 800, color: "#1565C0", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+                H2 TECHNICAL BULLETIN
               </div>
 
               <div style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 14, color: "#4A6375", fontWeight: 600 }}>

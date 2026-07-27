@@ -526,7 +526,7 @@ function CustomMediaPlayer({ src, title, bgColor = "#0085f4" }: { src: string; t
       {/* Vertical Side Column (Right Side of Frame) */}
       <div
         style={{
-          background: isWhite ? "#ffffff" : "#041122",
+          background: isWhite ? "#ffffff" : "#004aad",
           borderLeft: isWhite ? "1px solid #e2e8f0" : "1px solid rgba(255, 255, 255, 0.08)",
           display: "flex",
           flexDirection: "column",

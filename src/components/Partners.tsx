@@ -78,19 +78,24 @@ export default function Partners() {
                 key={i}
                 className="marquee-item"
                 style={{
-                  width: "160px",
-                  height: "80px",
+                  width: "150px",
+                  height: "76px",
                   position: "relative",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
+                  background: "#ffffff",
+                  borderRadius: "8px",
+                  padding: "8px 12px",
+                  boxShadow: "0 4px 14px rgba(0,0,0,0.15)",
+                  flexShrink: 0
                 }}
               >
                 <Image
                   src={`/partners/${p.file}`}
                   alt={p.name}
                   fill
-                  style={{ objectFit: "contain" }}
+                  style={{ objectFit: "contain", padding: "8px" }}
                   unoptimized={true}
                 />
               </div>
@@ -102,11 +107,14 @@ export default function Partners() {
 
       <style>{`
         .marquee-item {
-          filter: grayscale(100%) brightness(0) invert(1) opacity(0.5);
+          opacity: 0.9;
+          transform: scale(0.98);
           transition: all 0.3s ease;
         }
         .marquee-item:hover {
-          filter: grayscale(0%) brightness(1) invert(0) opacity(1) !important;
+          opacity: 1 !important;
+          transform: scale(1.05) !important;
+          box-shadow: 0 8px 25px rgba(33, 150, 243, 0.35) !important;
         }
       `}</style>
     </section>

@@ -102,6 +102,14 @@ const mainLinks = [
       ],
     },
   },
+  {
+    label: "Calculator",
+    href: "/calculator"
+  },
+  {
+    label: "Blog",
+    href: "/blog"
+  }
 ];
 
 export default function Navbar() {
@@ -312,7 +320,7 @@ export default function Navbar() {
                 <div
                   key={link.label}
                   style={{ height: "100%", display: "flex", alignItems: "center" }}
-                  onMouseEnter={() => setActiveSubmenu(link.label)}
+                  onMouseEnter={() => link.mega ? setActiveSubmenu(link.label) : setActiveSubmenu(null)}
                 >
                   <button
                     onClick={() => nav(link.href)}
@@ -334,14 +342,16 @@ export default function Navbar() {
                     }}
                   >
                     {link.label}
-                    <ChevronDown
-                      size={16}
-                      color={activeSubmenu === link.label ? "#1565C0" : "#8898AA"}
-                      style={{
-                        transform: activeSubmenu === link.label ? "rotate(180deg)" : "rotate(0deg)",
-                        transition: "transform 0.2s",
-                      }}
-                    />
+                    {link.mega && (
+                      <ChevronDown
+                        size={16}
+                        color={activeSubmenu === link.label ? "#1565C0" : "#8898AA"}
+                        style={{
+                          transform: activeSubmenu === link.label ? "rotate(180deg)" : "rotate(0deg)",
+                          transition: "transform 0.2s",
+                        }}
+                      />
+                    )}
                     <div
                       className="nav-underline"
                       style={{
@@ -422,7 +432,7 @@ export default function Navbar() {
               >
                 {mainLinks.map(
                   (link) =>
-                    activeSubmenu === link.label && (
+                    activeSubmenu === link.label && link.mega && (
                       <div key={link.label} style={{ width: "100%", padding: "0 60px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 2fr" }}>
                         
                         {/* Megamenu Left: Featured Image Block */}
@@ -565,7 +575,13 @@ export default function Navbar() {
                 {mainLinks.map((link) => (
                   <div key={link.label} style={{ marginBottom: 12 }}>
                     <button
-                      onClick={() => setActiveSubmenu(activeSubmenu === link.label ? null : link.label)}
+                      onClick={() => {
+                        if (link.mega) {
+                          setActiveSubmenu(activeSubmenu === link.label ? null : link.label);
+                        } else {
+                          nav(link.href);
+                        }
+                      }}
                       style={{
                         width: "100%",
                         display: "flex",
@@ -582,16 +598,18 @@ export default function Navbar() {
                       }}
                     >
                       {link.label}
-                      <ChevronDown
-                        size={18}
-                        style={{
-                          transform: activeSubmenu === link.label ? "rotate(180deg)" : "rotate(0deg)",
-                          transition: "transform 0.2s",
-                        }}
-                      />
+                      {link.mega && (
+                        <ChevronDown
+                          size={18}
+                          style={{
+                            transform: activeSubmenu === link.label ? "rotate(180deg)" : "rotate(0deg)",
+                            transition: "transform 0.2s",
+                          }}
+                        />
+                      )}
                     </button>
                     <AnimatePresence>
-                      {activeSubmenu === link.label && (
+                      {activeSubmenu === link.label && link.mega && (
                         <motion.div
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}

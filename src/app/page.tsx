@@ -20,6 +20,7 @@ import GlobalSupplyNetwork from "@/components/GlobalSupplyNetwork";
 import Sustainability from "@/components/Sustainability";
 import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
+import BlogSection from "@/components/BlogSection";
 
 import PresentationSlide from "@/components/PresentationSlide";
 import GlobalProgressBar from "@/components/GlobalProgressBar";
@@ -65,6 +66,9 @@ export default function Home() {
         <PresentationSlide><GlobalSupplyNetwork /></PresentationSlide>
         <PresentationSlide><Sustainability /></PresentationSlide>
         <PresentationSlide><Partners /></PresentationSlide>
+        
+        {/* 7. Blog / Insights */}
+        <PresentationSlide><BlogSection /></PresentationSlide>
         
         <PresentationSlide><Footer /></PresentationSlide>
       </main>

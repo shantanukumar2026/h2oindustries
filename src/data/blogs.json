@@ -1,0 +1,47 @@
+[
+  {
+    "id": "innovations-in-stormwater-filtration",
+    "title": "Innovations in Stormwater Filtration: Protecting US Waterways",
+    "excerpt": "Discover how advanced polymer technologies and modular structures are preventing micro-pollutants and heavy metals from entering municipal waterways across the United States.",
+    "content": "<h3>The Crisis of Runoff Pollution</h3><p>As urban impervious surfaces grow across American cities, managing stormwater runoff is no longer just about preventing floods—it is about water quality. Every rainstorm washes heavy metals, petroleum hydrocarbons, microplastics, and silt from roadways and construction sites directly into our rivers, lakes, and oceans. The US EPA estimates that urban runoff is one of the leading sources of water quality impairment in estuaries and coastal areas nationwide.</p><h3>High-Performance Filtration Systems</h3><p>Traditional stormwater management relied on simple retention ponds or concrete catch basins. Today, modern civil engineering demands high-performance, modular filtration systems. By utilizing advanced engineering-grade polymers and custom-configured aluminum chambers, modern catch basins can capture particles down to 50 microns. H2 Industries is at the forefront of this movement, engineering modular filtration inserts that drop directly into standard US catch basins, ensuring zero-bypass performance under high flow rates.</p><h3>Meeting the Future of Green Cities</h3><p>Integrating green infrastructure with structured drainage is key to clean urban environments. Advanced polymer inserts resist corrosion from salt, sewage, and chemical spills, ensuring a service life exceeding 25 years. By using recyclable and highly durable materials, municipal planners in cities like Boston, Seattle, and Miami are successfully cleaning up stormwater, creating a healthier future for communities and local marine life alike.</p>",
+    "category": "Sustainability",
+    "date": "July 24, 2026",
+    "readTime": "4 min read",
+    "image": "/images/2.webp",
+    "author": {
+      "name": "Sarah Jenkins",
+      "role": "Chief Environmental Engineer",
+      "initials": "SJ"
+    }
+  },
+  {
+    "id": "hydrogen-ready-casting-smart-city",
+    "title": "Hydrogen-Ready Casting & The Future of Smart Infrastructure",
+    "excerpt": "How the US energy transition is prompting civil engineers to rethink standard subsurface castings and utility vaults for hydrogen-ready environments.",
+    "content": "<h3>The Infrastructure Demands of Clean Energy</h3><p>The transition toward hydrogen fuel cells and clean energy networks across the United States is prompting a silent revolution beneath our streets. Civil engineers are designing utility corridors and subsurface vaults to accommodate pressurized hydrogen gas lines and hydrogen-water co-transmission. Because hydrogen is the smallest and lightest molecule, standard castings and access enclosures are prone to hydrogen embrittlement or dangerous gas accumulation.</p><h3>Why Custom Subsurface Engineering Matters</h3><p>Subsurface castings for utility vaults in hydrogen-ready environments must satisfy two major criteria: complete pressure containment/sealing and spark-free maintenance access. At H2 Industries, we have engineered a proprietary range of non-conductive, hydrogen-impermeable modular enclosures and cast covers. By using precision-machined heavy industrial polymers, these vaults eliminate the risk of sparks during servicing while withstanding extreme municipal wheel-loads (Class D/E ratings).</p><h3>Re-building for US Standards</h3><p>With major federal funding from the US Bipartisan Infrastructure Law flowing into clean energy hubs in Texas, California, and the Midwest, municipalities are updating their engineering guidelines. Specifying hydrogen-ready, high-durability subsurface enclosures protects investments and guarantees safety for decades, marking a major milestone in modern green infrastructure engineering.</p>",
+    "category": "Engineering",
+    "date": "June 18, 2026",
+    "readTime": "5 min read",
+    "image": "/images/7.webp",
+    "author": {
+      "name": "David Chen",
+      "role": "Director of Infrastructure",
+      "initials": "DC"
+    }
+  },
+  {
+    "id": "navigating-epa-regulations-stormwater",
+    "title": "Navigating EPA Regulations: A Guide for Municipal Water Projects",
+    "excerpt": "A comprehensive breakdown of Clean Water Act compliance, NPDES permits, and testing protocols required for public water infrastructure in the US.",
+    "content": "<h3>The Compliance Landscape of Clean Water</h3><p>Under the US Clean Water Act, municipal separate storm sewer systems (MS4s) must implement stormwater management programs to reduce the discharge of pollutants to the 'maximum extent practicable.' Navigating these EPA guidelines, particularly National Pollutant Discharge Elimination System (NPDES) Phase I and Phase II permits, requires detailed monitoring, certified structural controls, and rigorous documentation.</p><h3>Pollutant Capture & Verification</h3><p>EPA regulations require municipalities to capture specific levels of Total Suspended Solids (TSS), nutrients (phosphorus and nitrogen), and trash. For civil engineers, verifying that a specified product meets these performance metrics is critical before procurement. H2 Industries' Curb Box systems and flat-panel sampling stations are engineered and third-party verified to meet or exceed NPDES stormwater requirements. Integrated sampling ports allow engineers to safely perform water quality testing directly inside the vault, cutting down on-site verification times.</p><h3>Procurement Success under US Standards</h3><p>Choosing waterworks products that come with pre-certified testing reports is essential for smooth civil project approvals. By specifying pre-engineered, compliance-ready drainage solutions, project managers can accelerate local planning permissions, avoid costly EPA regulatory fines, and guarantee clean water compliance for municipal utility systems across all fifty states.</p>",
+    "category": "Compliance",
+    "date": "May 12, 2026",
+    "readTime": "6 min read",
+    "image": "/images/5.webp",
+    "author": {
+      "name": "Marcus Thorne",
+      "role": "Lead Procurement Officer",
+      "initials": "MT"
+    }
+  }
+]

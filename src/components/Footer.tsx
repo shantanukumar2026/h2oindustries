@@ -139,8 +139,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <a
-            href="/company#careers"
+          <div
             style={{
               background: "rgba(255,255,255,0.1)",
               border: "2px solid #64B5F6",
@@ -154,18 +153,11 @@ export default function Footer() {
               borderRadius: 4,
               transition: "all 0.3s ease",
               boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#64B5F6";
-              e.currentTarget.style.color = "#0A2E5C";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-              e.currentTarget.style.color = "#fff";
+              cursor: "default"
             }}
           >
             SEE JOBS
-          </a>
+          </div>
         </div>
       </div>
 

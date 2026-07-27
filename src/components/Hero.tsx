@@ -26,10 +26,12 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
+
+
       {/* Background Image */}
       <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
         <img
-          src="/images/istockphoto-2262286008-1024x1024.jpg"
+          src="/images/hero_bright_usa.png"
           alt="Hero Background"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
@@ -38,7 +40,7 @@ export default function Hero() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to right, rgba(5,13,28,0.9) 0%, rgba(5,13,28,0.2) 100%)",
+            background: "linear-gradient(to right, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 100%)",
           }}
         />
       </div>
@@ -73,16 +75,17 @@ export default function Hero() {
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              border: "1px solid rgba(255, 255, 255, 0.2)",
+              border: "1.5px solid rgba(33, 150, 243, 0.4)",
+              background: "rgba(21, 101, 192, 0.2)",
               padding: "4px 16px",
               borderRadius: "100px",
               width: "fit-content",
             }}
           >
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#42A5F5" }} />
+            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#2196F3" }} />
             <span
               style={{
-                color: "#fff",
+                color: "#90CAF9",
                 fontSize: 11,
                 fontWeight: 800,
                 letterSpacing: "0.15em",
@@ -100,7 +103,7 @@ export default function Hero() {
               fontSize: "clamp(2.5rem, 8vw, 5rem)",
               fontWeight: 900,
               lineHeight: 1.05,
-              color: "#fff",
+              color: "#ffffff",
               textTransform: "uppercase",
               letterSpacing: "-0.01em",
               margin: "12px 0",
@@ -117,9 +120,9 @@ export default function Hero() {
           <div style={{ maxWidth: 600 }}>
             <p
               style={{
-                color: "rgba(255,255,255,0.85)",
+                color: "rgba(255, 255, 255, 0.85)",
                 fontSize: "1.1rem",
-                fontWeight: 400,
+                fontWeight: 500,
                 lineHeight: 1.6,
                 margin: 0,
               }}
@@ -131,23 +134,23 @@ export default function Hero() {
           {/* Features */}
           <div style={{ display: "flex", gap: "24px", marginTop: "32px", alignItems: "center", flexWrap: "wrap" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <ShieldCheck size={28} color="#fff" strokeWidth={1.5} />
-              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Reliable<br />Infrastructure</span>
+              <ShieldCheck size={28} color="#90CAF9" strokeWidth={1.5} />
+              <span style={{ color: "#ffffff", fontSize: 13, lineHeight: 1.2, fontWeight: 700 }}>Reliable<br />Infrastructure</span>
             </div>
-            <div style={{ width: 1, height: 24, background: "rgba(255,255,255,0.2)" }} className="hide-on-mobile" />
+            <div style={{ width: 1, height: 24, background: "rgba(255,255,255,0.15)" }} className="hide-on-mobile" />
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <Droplet size={28} color="#fff" strokeWidth={1.5} />
-              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Innovative<br />Solutions</span>
+              <Droplet size={28} color="#90CAF9" strokeWidth={1.5} />
+              <span style={{ color: "#ffffff", fontSize: 13, lineHeight: 1.2, fontWeight: 700 }}>Innovative<br />Solutions</span>
             </div>
-            <div style={{ width: 1, height: 24, background: "rgba(255,255,255,0.2)" }} className="hide-on-mobile" />
+            <div style={{ width: 1, height: 24, background: "rgba(255,255,255,0.15)" }} className="hide-on-mobile" />
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <Leaf size={28} color="#fff" strokeWidth={1.5} />
-              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Sustainable<br />Future</span>
+              <Leaf size={28} color="#90CAF9" strokeWidth={1.5} />
+              <span style={{ color: "#ffffff", fontSize: 13, lineHeight: 1.2, fontWeight: 700 }}>Sustainable<br />Future</span>
             </div>
-            <div style={{ width: 1, height: 24, background: "rgba(255,255,255,0.2)" }} className="hide-on-mobile" />
+            <div style={{ width: 1, height: 24, background: "rgba(255,255,255,0.15)" }} className="hide-on-mobile" />
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <Users size={28} color="#fff" strokeWidth={1.5} />
-              <span style={{ color: "#fff", fontSize: 13, lineHeight: 1.2 }}>Trusted<br />Partnerships</span>
+              <Users size={28} color="#90CAF9" strokeWidth={1.5} />
+              <span style={{ color: "#ffffff", fontSize: 13, lineHeight: 1.2, fontWeight: 700 }}>Trusted<br />Partnerships</span>
             </div>
           </div>
         </motion.div>
@@ -164,22 +167,23 @@ export default function Hero() {
             alignItems: "stretch",
             gap: 12,
             marginRight: 60, // Space for the side bar
-            background: "rgba(5, 13, 28, 0.75)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-            border: "1px solid rgba(255, 255, 255, 0.05)",
+            background: "rgba(5, 15, 35, 0.72)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            border: "1px solid rgba(33, 150, 243, 0.25)",
+            boxShadow: "0 15px 45px rgba(0,0,0,0.35)",
             borderRadius: "16px",
             padding: "24px",
             width: "360px",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-            <div style={{ width: 6, height: 6, background: "#2196F3", borderRadius: "50%", boxShadow: "0 0 10px #2196F3" }} />
+            <div style={{ width: 6, height: 6, background: "#2196F3", borderRadius: "50%", boxShadow: "0 0 10px rgba(33, 150, 243, 0.8)" }} />
             <h3
               style={{
-                color: "#fff",
+                color: "#ffffff",
                 fontSize: 13,
-                fontWeight: 800,
+                fontWeight: 900,
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",
                 margin: 0,
@@ -191,21 +195,22 @@ export default function Hero() {
 
           <a
             href={data.commandCenter.primaryButton.link}
+            className="explore-btn"
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              background: "rgba(255,255,255,0.05)",
-              color: "#fff",
+              background: "rgba(255, 255, 255, 0.05)",
+              color: "#90CAF9",
               textDecoration: "none",
               padding: "16px 20px",
               borderRadius: "8px",
               fontSize: 13,
-              fontWeight: 700,
+              fontWeight: 800,
               textTransform: "uppercase",
               letterSpacing: "0.05em",
-              border: "1px solid rgba(255,255,255,0.05)",
-              transition: "all 0.2s",
+              border: "1.5px solid #2196F3",
+              transition: "all 0.25s ease",
             }}
           >
             EXPLORE CAPABILITIES
@@ -214,6 +219,7 @@ export default function Hero() {
 
           <a
             href={data.commandCenter.secondaryButton.link}
+            className="work-btn"
             style={{
               display: "flex",
               alignItems: "center",
@@ -224,11 +230,11 @@ export default function Hero() {
               padding: "16px 20px",
               borderRadius: "8px",
               fontSize: 13,
-              fontWeight: 700,
+              fontWeight: 800,
               textTransform: "uppercase",
               letterSpacing: "0.05em",
-              border: "1px solid transparent",
-              transition: "all 0.2s",
+              border: "1.5px solid #1565C0",
+              transition: "all 0.25s ease",
             }}
           >
             WORK WITH US
@@ -258,7 +264,7 @@ export default function Hero() {
             position: "absolute",
             top: 100,
             right: -56,
-            background: "#2196F3",
+            background: "#1565C0",
             color: "#fff",
             padding: "12px 24px",
             fontSize: 12,
@@ -288,19 +294,6 @@ export default function Hero() {
             <button
               onClick={toggleMute}
               className="side-btn"
-              style={{
-                width: 44,
-                height: 44,
-                borderRadius: "50%",
-                background: "transparent",
-                border: "2px solid #2196F3",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-                transition: "all 0.2s",
-              }}
             >
               {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
             </button>
@@ -390,23 +383,54 @@ export default function Hero() {
           opacity: 1;
           transform: translateX(0);
         }
+        .side-btn {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: rgba(5, 15, 35, 0.6);
+          backdrop-filter: blur(8px);
+          border: 2.5px solid #2196F3 !important;
+          color: #90CAF9 !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.25s ease;
+        }
         .side-btn:hover {
           background: #2196F3 !important;
+          color: #fff !important;
+          box-shadow: 0 0 15px rgba(33, 150, 243, 0.5);
         }
         .side-btn-filled {
           width: 44px;
           height: 44px;
           border-radius: 50%;
-          background: #2196F3;
-          color: #fff;
+          background: rgba(5, 15, 35, 0.6);
+          backdrop-filter: blur(8px);
+          border: 2.5px solid #2196F3;
+          color: #90CAF9;
           display: flex;
           align-items: center;
           justify-content: center;
           text-decoration: none;
-          transition: background 0.2s;
+          transition: all 0.25s ease;
         }
         .side-btn-filled:hover {
-          background: #1E88E5;
+          background: #2196F3 !important;
+          color: #fff !important;
+          box-shadow: 0 0 15px rgba(33, 150, 243, 0.5);
+        }
+        .explore-btn:hover {
+          background: #1565C0 !important;
+          color: #ffffff !important;
+          border-color: #1565C0 !important;
+          box-shadow: 0 4px 14px rgba(21, 101, 192, 0.3);
+        }
+        .work-btn:hover {
+          background: #0D47A1 !important;
+          border-color: #0D47A1 !important;
+          box-shadow: 0 4px 14px rgba(13, 71, 161, 0.3);
         }
         .hide-on-mobile {
           display: block;

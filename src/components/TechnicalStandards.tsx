@@ -13,9 +13,9 @@ export default function TechnicalStandards() {
 
   return (
     <section id="standards" className="standards-section" style={{ 
-        background: "#062347", 
+        background: "#F1F5F9", 
         padding: "48px 0",
-        borderTop: "1px solid rgba(255,255,255,0.05)"
+        borderTop: "1px solid #E2E8F0"
       }}>
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
         <div ref={ref} style={{ display: "flex", flexWrap: "wrap", gap: 60, alignItems: "center" }}>
@@ -26,32 +26,38 @@ export default function TechnicalStandards() {
             transition={{ duration: 0.6 }}
             style={{ flex: "1 1 400px" }}
           >
-            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 900, color: "#fff", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
+            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 900, color: "#0B1929", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
               {header.title}<br />
-              <span style={{ color: "#42A5F5" }}>{header.highlight}</span>
+              <span style={{ color: "#1565C0" }}>{header.highlight}</span>
             </h2>
-            <p style={{ color: "#90CAF9", fontSize: 16, lineHeight: 1.6, marginBottom: 32 }}>
+            <p style={{ color: "#4A6375", fontSize: 16, lineHeight: 1.6, marginBottom: 32, fontWeight: 500 }}>
               {header.subtitle}
             </p>
 
             <div style={{ display: "flex", gap: 24, marginBottom: 40 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <BookmarkCheck size={24} color="#2196F3" />
-                <span style={{ color: "#fff", fontWeight: 700, fontSize: 14 }}>Tested & Rated</span>
+                <BookmarkCheck size={24} color="#1565C0" />
+                <span style={{ color: "#0B1929", fontWeight: 800, fontSize: 14 }}>Tested & Rated</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <Anchor size={24} color="#2196F3" />
-                <span style={{ color: "#fff", fontWeight: 700, fontSize: 14 }}>Structural Integrity</span>
+                <Anchor size={24} color="#1565C0" />
+                <span style={{ color: "#0B1929", fontWeight: 800, fontSize: 14 }}>Structural Integrity</span>
               </div>
             </div>
 
             <button 
-              onMouseEnter={(e) => e.currentTarget.style.background = "rgba(33, 150, 243, 0.1)"}
-              onMouseLeave={(e) => e.currentTarget.style.background = "transparent"}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#1565C0";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#1565C0";
+              }}
               style={{ 
                 background: "transparent", 
-                border: "1px solid #2196F3", 
-                color: "#2196F3", 
+                border: "1px solid #1565C0", 
+                color: "#1565C0", 
                 padding: "14px 28px", 
                 fontSize: 14, 
                 fontWeight: 800, 
@@ -77,19 +83,29 @@ export default function TechnicalStandards() {
           >
             {items.map((std, i) => (
               <div key={i} style={{ 
-                background: "rgba(255,255,255,0.03)", 
-                border: "1px solid rgba(255,255,255,0.05)", 
+                background: "#ffffff", 
+                border: "1px solid #E2E8F0", 
                 padding: "32px 24px", 
-                borderRadius: "8px",
+                borderRadius: "12px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
                 transition: "all 0.3s",
-                height: "100%"
-              }}>
+                height: "100%",
+                boxShadow: "0 4px 20px rgba(6,35,71,0.01)"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "rgba(21, 101, 192, 0.25)";
+                e.currentTarget.style.boxShadow = "0 12px 30px rgba(21, 101, 192, 0.05)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "#E2E8F0";
+                e.currentTarget.style.boxShadow = "0 4px 20px rgba(6, 35, 71, 0.01)";
+              }}
+              >
                 <div style={{ width: 12, height: 4, background: "#1565C0", marginBottom: 16 }} />
-                <h4 style={{ color: "#fff", fontSize: 18, fontWeight: 800, marginBottom: 8, letterSpacing: 0.5 }}>{std.name}</h4>
-                <p style={{ color: "#64B5F6", fontSize: 13, margin: 0, fontWeight: 500 }}>{std.desc}</p>
+                <h4 style={{ color: "#0B1929", fontSize: 18, fontWeight: 900, marginBottom: 8, letterSpacing: 0.5, textTransform: "uppercase" }}>{std.name}</h4>
+                <p style={{ color: "#4A6375", fontSize: 13, margin: 0, fontWeight: 500, lineHeight: 1.5 }}>{std.desc}</p>
               </div>
             ))}
           </motion.div>

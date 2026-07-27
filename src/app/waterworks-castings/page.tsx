@@ -98,7 +98,7 @@ export default function WaterworksCastingsPage() {
         style={{
           paddingTop: 160,
           paddingBottom: 80,
-          background: "linear-gradient(135deg, #050D1C 0%, #062347 50%, #0D3A73 100%)",
+          background: "linear-gradient(135deg, #004aad 0%, #062347 50%, #0D3A73 100%)",
           color: "#fff",
           position: "relative",
           overflow: "hidden",

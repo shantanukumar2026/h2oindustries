@@ -60,7 +60,7 @@ function ProductHero({ product }: { product: any }) {
   const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <section ref={containerRef} style={{ paddingTop: 100, position: "relative", background: "#050d1c", overflow: "hidden" }}>
+    <section ref={containerRef} style={{ paddingTop: 100, position: "relative", background: "#004aad", overflow: "hidden" }}>
       {/* Blueprint background for Hero only */}
       <div style={{ position: "absolute", inset: 0, opacity: 0.15, backgroundImage: "linear-gradient(rgba(33, 150, 243, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(33, 150, 243, 0.5) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
       <div style={{ position: "absolute", top: 0, right: 0, width: "50%", height: "100%", background: "radial-gradient(circle at top right, rgba(33, 150, 243, 0.15), transparent 60%)" }} />

@@ -5,9 +5,9 @@ import ManufacturingCapabilities from "@/components/ManufacturingCapabilities";
 
 export default function CapabilitiesPage() {
   return (
-    <main style={{ paddingTop: 64, background: "#050d1c" }}>
+    <main style={{ paddingTop: 64, background: "#004aad" }}>
       <Navbar />
-      
+
       {/* Page Header */}
       <div style={{ padding: "120px 60px 80px", maxWidth: 1720, margin: "0 auto", textAlign: "center" }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(33, 150, 243, 0.1)", border: "1px solid rgba(33, 150, 243, 0.3)", padding: "6px 16px", marginBottom: 24 }}>

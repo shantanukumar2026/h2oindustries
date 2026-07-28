@@ -55,11 +55,11 @@ const storyTimeline = [
 ];
 
 const leadershipTeam = [
-  { name: "John Matthews", role: "Chief Executive Officer", initials: "JM" },
-  { name: "Sarah Johnson", role: "Chief Operating Officer", initials: "SJ" },
-  { name: "Michael Chen", role: "Chief Engineering Officer", initials: "MC" },
-  { name: "David Williams", role: "Chief Financial Officer", initials: "DW" },
-  { name: "Emily Rodriguez", role: "VP of Quality Assurance", initials: "ER" },
+  { name: "Team Member 1", role: "Executive Leadership", initials: "TM1" },
+  { name: "Team Member 2", role: "Operations Lead", initials: "TM2" },
+  { name: "Team Member 3", role: "Engineering Lead", initials: "TM3" },
+  { name: "Team Member 4", role: "Financial Lead", initials: "TM4" },
+  { name: "Team Member 5", role: "Quality Assurance Lead", initials: "TM5" },
 ];
 
 const valuesList = [

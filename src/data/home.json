@@ -92,7 +92,7 @@
       {
         "id": "why-trust-us",
         "title": "WHY TRUST US",
-        "desc": "Decades of rigorous testing. Our solutions don't just meet standards\u2014they define them. We build partnerships, not just products.",
+        "desc": "Decades of rigorous testing. Our solutions don't just meet standards—they define them. We build partnerships, not just products.",
         "icon": "ShieldCheck",
         "color": "#3F51B5"
       },
@@ -120,7 +120,7 @@
         "specs": {
           "material": "High-Grade Aluminium",
           "rating": "Municipal Class D",
-          "tolerance": "\u00b10.1mm"
+          "tolerance": "±0.1mm"
         },
         "image": "/images/4.jpeg",
         "icon": "Settings"
@@ -214,7 +214,7 @@
     ],
     "metrics": {
       "tensile": "85.4 MPa",
-      "thermal": "-40\u00b0C / +85\u00b0C"
+      "thermal": "-40°C / +85°C"
     }
   },
   "infrastructure": {
@@ -265,12 +265,12 @@
       {
         "title": "Heavy-Duty Injection Moulding",
         "desc": "High-tonnage moulding capable of producing large structural drainage components with absolute dimensional stability.",
-        "imageColor": "#1565C0"
+        "imageColor": "#0085f4"
       },
       {
         "title": "Industrial Fabrication",
         "desc": "Custom steel and heavy polymer fabrication for specialized municipal and industrial infrastructure projects.",
-        "imageColor": "#0D47A1"
+        "imageColor": "#004aad"
       },
       {
         "title": "Precision Machining",
@@ -280,7 +280,7 @@
       {
         "title": "Custom Engineering",
         "desc": "Bespoke design-to-manufacture services tailoring products to specific environmental and site requirements.",
-        "imageColor": "#0D3A73"
+        "imageColor": "#004aad"
       }
     ]
   },
@@ -289,43 +289,43 @@
       "tagline": "How We Build",
       "title": "Our Manufacturing",
       "highlight": "Process",
-      "subtitle": "Every H2 Industries product passes through a disciplined five-stage manufacturing process \u2014 ensuring precision, reliability, and environmental performance."
+      "subtitle": "Every H2 Industries product passes through a disciplined five-stage manufacturing process — ensuring precision, reliability, and environmental performance."
     },
     "steps": [
       {
         "icon": "Lightbulb",
         "num": "01",
         "title": "Design",
-        "desc": "Thorough design process \u2014 identifying requirements, environmental impacts, and performance targets before a single part is drawn.",
-        "detail": "CAD modelling \u00b7 Feasibility studies \u00b7 Environmental impact assessment"
+        "desc": "Thorough design process — identifying requirements, environmental impacts, and performance targets before a single part is drawn.",
+        "detail": "CAD modelling · Feasibility studies · Environmental impact assessment"
       },
       {
         "icon": "Ruler",
         "num": "02",
         "title": "Engineering",
         "desc": "Translating design concepts into precision technical specifications. Material selection, structural analysis, and compliance requirements are validated.",
-        "detail": "Material science \u00b7 Structural analysis \u00b7 Compliance review"
+        "detail": "Material science · Structural analysis · Compliance review"
       },
       {
         "icon": "Cog",
         "num": "03",
         "title": "Manufacturing",
-        "desc": "Products are manufactured using precision CNC machining, injection moulding, and polymer forming processes \u2014 ensuring exact dimensional accuracy.",
-        "detail": "CNC machining \u00b7 Injection moulding \u00b7 Quality-controlled fabrication"
+        "desc": "Products are manufactured using precision CNC machining, injection moulding, and polymer forming processes — ensuring exact dimensional accuracy.",
+        "detail": "CNC machining · Injection moulding · Quality-controlled fabrication"
       },
       {
         "icon": "FlaskConical",
         "num": "04",
         "title": "Testing",
         "desc": "Every product undergoes rigorous testing for dimensional accuracy, material performance, and environmental durability before release.",
-        "detail": "Dimensional verification \u00b7 Load testing \u00b7 Environmental simulation"
+        "detail": "Dimensional verification · Load testing · Environmental simulation"
       },
       {
         "icon": "Truck",
         "num": "05",
         "title": "Delivery",
-        "desc": "Finished products are quality-checked, packaged, and dispatched \u2014 from single units to large-scale infrastructure project orders.",
-        "detail": "Packaging & protection \u00b7 Project delivery \u00b7 Customer support"
+        "desc": "Finished products are quality-checked, packaged, and dispatched — from single units to large-scale infrastructure project orders.",
+        "detail": "Packaging & protection · Project delivery · Customer support"
       }
     ]
   },
@@ -353,7 +353,7 @@
       },
       {
         "icon": "Layers",
-        "label": "Locking lid \u2014 traffic-rated"
+        "label": "Locking lid — traffic-rated"
       }
     ],
     "button": "Explore Products"
@@ -363,9 +363,9 @@
       "tagline": "Equipment Range",
       "title": "OUR PRODUCT",
       "highlight": "MARKETPLACE",
-      "subtitle": "Browse the complete H2 Industries range \u2014 precision-engineered water management products for heavy industrial, municipal, and environmental applications."
+      "subtitle": "Browse the complete H2 Industries range — precision-engineered water management products for heavy industrial, municipal, and environmental applications."
     },
-    "searchPlaceholder": "Search by name, category or SKU\u2026",
+    "searchPlaceholder": "Search by name, category or SKU…",
     "emptyMessage": "NO PRODUCTS FOUND MATCHING YOUR SEARCH.",
     "button": "VIEW ALL PRODUCTS",
     "categories": [
@@ -373,13 +373,14 @@
       "Sampling Stations",
       "Drainage Infrastructure",
       "Probe Systems",
-      "Waterworks Castings"
+      "Waterworks Castings",
+      "Waterworks Tools"
     ],
     "items": [
       {
         "id": 1,
         "image": "/images/2.webp",
-        "name": "Modular Sampling Station \u2014 Type A",
+        "name": "Modular Sampling Station — Type A",
         "category": "Sampling Stations",
         "sku": "H2-SS-A001",
         "price": "$1,850.00",
@@ -394,7 +395,7 @@
       {
         "id": 2,
         "image": "/images/3.webp",
-        "name": "Modular Sampling Station \u2014 Type B",
+        "name": "Modular Sampling Station — Type B",
         "category": "Sampling Stations",
         "sku": "H2-SS-B002",
         "price": "$2,100.00",
@@ -409,7 +410,7 @@
       {
         "id": 3,
         "image": "/images/4.webp",
-        "name": "Aluminium Inlet Drain \u2014 Standard",
+        "name": "Aluminium Inlet Drain — Standard",
         "category": "Drainage Infrastructure",
         "sku": "H2-ID-AL003",
         "price": "$850.00",
@@ -424,7 +425,7 @@
       {
         "id": 4,
         "image": "/images/5.webp",
-        "name": "Polymer Column Drain \u2014 Black Series",
+        "name": "Polymer Column Drain — Black Series",
         "category": "Drainage Infrastructure",
         "sku": "H2-CD-BK004",
         "price": "$620.00",
@@ -439,7 +440,7 @@
       {
         "id": 5,
         "image": "/images/6.webp",
-        "name": "Aluminium Inlet Drain \u2014 Extended",
+        "name": "Aluminium Inlet Drain — Extended",
         "category": "Drainage Infrastructure",
         "sku": "H2-ID-AL005",
         "price": "$1,050.00",
@@ -454,11 +455,11 @@
       {
         "id": 6,
         "image": "/images/7.webp",
-        "name": "Sampling Station \u2014 Concrete Environment",
+        "name": "Sampling Station — Concrete Environment",
         "category": "Sampling Stations",
         "sku": "H2-SS-CE006",
         "price": "$2,400.00",
-        "description": "H2 sampling station system shown in a concrete industrial environment \u2014 demonstrating fit and finish in real-world structural settings.",
+        "description": "H2 sampling station system shown in a concrete industrial environment — demonstrating fit and finish in real-world structural settings.",
         "features": [
           "In-situ installation ready",
           "Heavy-duty exterior",
@@ -469,7 +470,7 @@
       {
         "id": 7,
         "image": "/images/8.webp",
-        "name": "Modular Enclosure Unit \u2014 Closed Body",
+        "name": "Modular Enclosure Unit — Closed Body",
         "category": "Sampling Stations",
         "sku": "H2-ME-CB007",
         "price": "$1,550.00",
@@ -484,7 +485,7 @@
       {
         "id": 8,
         "image": "/images/9.webp",
-        "name": "Flat-Panel Sampling Station \u2014 Open",
+        "name": "Flat-Panel Sampling Station — Open",
         "category": "Sampling Stations",
         "sku": "H2-SS-FP008",
         "price": "$1,950.00",
@@ -499,7 +500,7 @@
       {
         "id": 9,
         "image": "/images/sampling-probe-lr.webp",
-        "name": "Stainless Steel Sampling Probe \u2014 Long Reach",
+        "name": "Stainless Steel Sampling Probe — Long Reach",
         "category": "Probe Systems",
         "sku": "H2-PR-LR009",
         "price": "$380.00",
@@ -514,7 +515,7 @@
       {
         "id": 10,
         "image": "/images/column-drain-water.webp",
-        "name": "Polymer Column Drain \u2014 Water Series",
+        "name": "Polymer Column Drain — Water Series",
         "category": "Drainage Infrastructure",
         "sku": "H2-CD-BK010",
         "price": "$580.00",
@@ -765,6 +766,36 @@
           "Handwheel operated with low torque bubble-tight seating",
           "Fusion-bonded epoxy coated to AWWA C550 specifications"
         ]
+      },
+      {
+        "id": 117,
+        "image": "/images/ring-gate-wrench-3d.png",
+        "name": "H2 Heavy Duty Ring Style Gate Wrench",
+        "category": "Waterworks Tools",
+        "sku": "H2-WT-GW001",
+        "price": "Quote on Request",
+        "description": "Heavy-duty epoxy-coated blue steel ring style gate valve wrench designed for operating deep municipal valve boxes and subsurface gate valves. Features a reinforced top ring handle and a 2-inch square operating nut socket.",
+        "features": [
+          "Reinforced top ring handle for multi-angle leverage",
+          "Precision-welded 2-inch AWWA square operating nut socket",
+          "Corrosion-resistant epoxy-coated heavy-duty tubular steel",
+          "Ideal for municipal water main & valve box operations"
+        ]
+      },
+      {
+        "id": 118,
+        "image": "/images/valve-nut-adapter-3d.png",
+        "name": "H2 Heavy Duty Valve Operating Nut Adapter",
+        "category": "Waterworks Tools",
+        "sku": "H2-WT-VA002",
+        "price": "Quote on Request",
+        "description": "Heavy-duty blue epoxy-coated valve operating nut adapter socket with dual stainless steel set bolts. Designed for secure attachment to municipal gate valves, extension stems, and valve operating keys.",
+        "features": [
+          "2-inch AWWA standard square operating nut socket",
+          "Dual heavy-duty stainless steel locking set bolts",
+          "Precision cast ductile iron / steel construction",
+          "Universal fitment on municipal valve stems & extensions"
+        ]
       }
     ]
   },
@@ -829,7 +860,7 @@
       "tagline": "Industries We Serve",
       "title": "BUILT FOR THE INDUSTRIES",
       "highlight": "THAT SHAPE OUR WORLD",
-      "subtitle": "H2 Industries products are deployed across a broad range of sectors \u2014 wherever precision water management matters most."
+      "subtitle": "H2 Industries products are deployed across a broad range of sectors — wherever precision water management matters most."
     },
     "items": [
       {
@@ -911,7 +942,7 @@
       "tagline": "Environmental Responsibility",
       "title": "MANUFACTURING",
       "highlight": "TOMORROW",
-      "subtitle": "We build infrastructure to manage the world's most vital resource. That responsibility extends to how we manufacture our products \u2014 prioritizing energy efficiency, waste reduction, and sustainable polymers."
+      "subtitle": "We build infrastructure to manage the world's most vital resource. That responsibility extends to how we manufacture our products — prioritizing energy efficiency, waste reduction, and sustainable polymers."
     },
     "initiatives": [
       {

@@ -87,7 +87,7 @@ export default function Partners() {
                   background: "#ffffff",
                   borderRadius: "8px",
                   padding: "8px 12px",
-                  boxShadow: "0 4px 14px rgba(0,0,0,0.15)",
+                  boxShadow: "0 4px 14px rgba(0, 133, 244, 0.15)",
                   flexShrink: 0
                 }}
               >

@@ -141,7 +141,7 @@ export default function CurbBoxFeature() {
               {/* Outer ring */}
               <div style={{ position: "absolute", bottom: -4, left: "50%", transform: "translateX(-50%)", width: "105%", height: 50, background: "linear-gradient(180deg, rgba(22,101,193,0.15), rgba(22,101,193,0.05))", borderRadius: "50%" }} />
               {/* Main disc */}
-              <div style={{ position: "relative", width: "100%", height: 55, background: "linear-gradient(180deg, #2185d0, #1565C0)", borderRadius: "50%", boxShadow: "0 8px 32px rgba(22,101,193,0.35), inset 0 2px 8px rgba(255,255,255,0.2), inset 0 -4px 0 rgba(0,0,0,0.15)" }} />
+              <div style={{ position: "relative", width: "100%", height: 55, background: "linear-gradient(180deg, #2185d0, #0085f4)", borderRadius: "50%", boxShadow: "0 8px 32px rgba(22,101,193,0.35), inset 0 2px 8px rgba(255,255,255,0.2), inset 0 -4px 0 rgba(0, 133, 244, 0.15)" }} />
             </div>
 
             {/* Product Image */}
@@ -174,16 +174,16 @@ export default function CurbBoxFeature() {
                 alignItems: "center",
                 gap: 10
               }}>
-                <div style={{ background: "linear-gradient(135deg, #1565C0, #0D47A1)", borderRadius: 6, width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 4px 12px rgba(13,71,161,0.3)" }}>
+                <div style={{ background: "linear-gradient(135deg, #0085f4, #004aad)", borderRadius: 6, width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 4px 12px rgba(13,71,161,0.3)" }}>
                   <ShieldCheck size={15} color="#fff" />
                 </div>
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                  <span style={{ color: "#1565C0", fontSize: 8, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 1 }}>MATERIAL SPEC</span>
+                  <span style={{ color: "#0085f4", fontSize: 8, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 1 }}>MATERIAL SPEC</span>
                   <span style={{ color: "#063773", fontSize: 11, fontWeight: 800, textTransform: "uppercase", lineHeight: 1.15 }}>HIGH-YIELD<br />CAST IRON</span>
                 </div>
               </div>
-              <div style={{ width: "3vw", maxWidth: 40, height: 1, background: "linear-gradient(90deg, #1565C0, transparent)" }} />
-              <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#1565C0", boxShadow: "0 0 8px rgba(21,101,192,0.4)" }} />
+              <div style={{ width: "3vw", maxWidth: 40, height: 1, background: "linear-gradient(90deg, #0085f4, transparent)" }} />
+              <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#0085f4", boxShadow: "0 0 8px rgba(21,101,192,0.4)" }} />
             </motion.div>
 
             {/* Right Callout Badge — Glassmorphism */}
@@ -193,8 +193,8 @@ export default function CurbBoxFeature() {
               transition={{ duration: 0.6, delay: 0.6 }}
               style={{ position: "absolute", bottom: "36%", right: 0, zIndex: 10, display: "flex", alignItems: "center", transform: "translateX(12%)" }}
             >
-              <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#1565C0", boxShadow: "0 0 8px rgba(21,101,192,0.4)" }} />
-              <div style={{ width: "3vw", maxWidth: 40, height: 1, background: "linear-gradient(90deg, transparent, #1565C0)" }} />
+              <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#0085f4", boxShadow: "0 0 8px rgba(21,101,192,0.4)" }} />
+              <div style={{ width: "3vw", maxWidth: 40, height: 1, background: "linear-gradient(90deg, transparent, #0085f4)" }} />
               <div style={{
                 background: "rgba(255,255,255,0.85)",
                 backdropFilter: "blur(12px)",
@@ -207,11 +207,11 @@ export default function CurbBoxFeature() {
                 alignItems: "center",
                 gap: 10
               }}>
-                <div style={{ background: "linear-gradient(135deg, #1565C0, #0D47A1)", borderRadius: 6, width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 4px 12px rgba(13,71,161,0.3)" }}>
+                <div style={{ background: "linear-gradient(135deg, #0085f4, #004aad)", borderRadius: 6, width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 4px 12px rgba(13,71,161,0.3)" }}>
                   <Settings size={15} color="#fff" />
                 </div>
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                  <span style={{ color: "#1565C0", fontSize: 8, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 1 }}>ADAPTABILITY</span>
+                  <span style={{ color: "#0085f4", fontSize: 8, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 1 }}>ADAPTABILITY</span>
                   <span style={{ color: "#063773", fontSize: 11, fontWeight: 800, textTransform: "uppercase", lineHeight: 1.15 }}>ADJUSTABLE<br />RISER CORE</span>
                 </div>
               </div>
@@ -234,13 +234,13 @@ export default function CurbBoxFeature() {
               style={{
                 fontSize: "clamp(2.4rem, 4vw, 4rem)",
                 fontWeight: 950,
-                color: "#0D47A1",
+                color: "#004aad",
                 lineHeight: 0.92,
                 textTransform: "uppercase",
                 fontStyle: "italic",
                 letterSpacing: "-0.03em",
                 marginBottom: "1.2vh",
-                background: "linear-gradient(135deg, #0D47A1 0%, #1565C0 50%, #1976D2 100%)",
+                background: "linear-gradient(135deg, #004aad 0%, #0085f4 50%, #1976D2 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -252,7 +252,7 @@ export default function CurbBoxFeature() {
               initial={{ width: 0 }}
               animate={inView ? { width: 70 } : {}}
               transition={{ duration: 0.8, delay: 0.5 }}
-              style={{ height: 3, background: "linear-gradient(90deg, #1565C0, #42A5F5)", marginBottom: "2vh", borderRadius: 2 }}
+              style={{ height: 3, background: "linear-gradient(90deg, #0085f4, #42A5F5)", marginBottom: "2vh", borderRadius: 2 }}
             />
 
             {/* Description */}
@@ -289,11 +289,11 @@ export default function CurbBoxFeature() {
                       display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
                       boxShadow: "0 2px 8px rgba(6,55,115,0.06)"
                     }}>
-                      <Icon size={16} color="#0D47A1" strokeWidth={2} />
+                      <Icon size={16} color="#004aad" strokeWidth={2} />
                     </div>
                     <div style={{ display: "flex", flexDirection: "column" }}>
-                      <span style={{ color: "#0D3A73", fontWeight: 800, fontSize: "clamp(10px, 1.2vh, 12px)", textTransform: "uppercase", letterSpacing: "0.03em" }}>{feat.title}</span>
-                      <span style={{ color: "#78909C", fontSize: "clamp(9px, 1vh, 11px)", fontWeight: 500 }}>{feat.desc}</span>
+                      <span style={{ color: "#004aad", fontWeight: 800, fontSize: "clamp(10px, 1.2vh, 12px)", textTransform: "uppercase", letterSpacing: "0.03em" }}>{feat.title}</span>
+                      <span style={{ color: "#0085f4", fontSize: "clamp(9px, 1vh, 11px)", fontWeight: 500 }}>{feat.desc}</span>
                     </div>
                   </motion.div>
                 );
@@ -312,7 +312,7 @@ export default function CurbBoxFeature() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 10,
-                background: "linear-gradient(135deg, #0D47A1, #1565C0)",
+                background: "linear-gradient(135deg, #004aad, #0085f4)",
                 color: "#fff",
                 textDecoration: "none",
                 padding: "14px 28px",

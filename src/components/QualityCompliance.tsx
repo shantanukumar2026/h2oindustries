@@ -28,7 +28,7 @@ export default function QualityCompliance() {
       }}
     >
       {/* Decorative Top Border */}
-      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 4, background: "#1565C0" }} />
+      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 4, background: "#0085f4" }} />
 
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
 
@@ -94,7 +94,7 @@ export default function QualityCompliance() {
                       color: "#fff",
                       fontWeight: 800,
                       fontSize: 12,
-                      boxShadow: "0 0 0 4px #062347"
+                      boxShadow: "0 0 0 4px #004aad"
                     }}>
                       {i + 1}
                     </div>

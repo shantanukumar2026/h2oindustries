@@ -98,7 +98,7 @@ export default function WaterworksCastingsPage() {
         style={{
           paddingTop: 160,
           paddingBottom: 80,
-          background: "linear-gradient(135deg, #004aad 0%, #062347 50%, #0D3A73 100%)",
+          background: "linear-gradient(135deg, #004aad 0%, #004aad 50%, #004aad 100%)",
           color: "#fff",
           position: "relative",
           overflow: "hidden",
@@ -295,7 +295,7 @@ export default function WaterworksCastingsPage() {
           <div style={{ textAlign: "left", marginBottom: 48 }}>
             <span
               style={{
-                color: "#1565C0",
+                color: "#0085f4",
                 fontSize: 12,
                 fontWeight: 800,
                 letterSpacing: "0.15em",
@@ -310,13 +310,13 @@ export default function WaterworksCastingsPage() {
               style={{
                 fontSize: "clamp(2rem, 4vw, 3rem)",
                 fontWeight: 900,
-                color: "#062347",
+                color: "#004aad",
                 textTransform: "uppercase",
                 fontStyle: "italic",
                 margin: 0,
               }}
             >
-              Product <span style={{ color: "#1565C0" }}>Series & Specifications</span>
+              Product <span style={{ color: "#0085f4" }}>Series & Specifications</span>
             </h2>
           </div>
 
@@ -332,7 +332,7 @@ export default function WaterworksCastingsPage() {
                     left: 16,
                     top: "50%",
                     transform: "translateY(-50%)",
-                    color: "#1565C0",
+                    color: "#0085f4",
                   }}
                 />
                 <input
@@ -347,18 +347,18 @@ export default function WaterworksCastingsPage() {
                     border: "2px solid #E0E0E0",
                     fontSize: 15,
                     fontWeight: 600,
-                    color: "#062347",
+                    color: "#004aad",
                     outline: "none",
                     transition: "border-color 0.2s",
                   }}
-                  onFocus={(e) => (e.target.style.borderColor = "#1565C0")}
+                  onFocus={(e) => (e.target.style.borderColor = "#0085f4")}
                   onBlur={(e) => (e.target.style.borderColor = "#E0E0E0")}
                 />
               </div>
 
               {/* Counter */}
               <div style={{ display: "flex", alignItems: "center", padding: "0 16px", background: "#E3F2FD", border: "1px solid #90CAF9" }}>
-                <span style={{ fontSize: 13, fontWeight: 800, color: "#0D3A73", textTransform: "uppercase" }}>
+                <span style={{ fontSize: 13, fontWeight: 800, color: "#004aad", textTransform: "uppercase" }}>
                   Showing {filteredProducts.length} of {waterworksData.products.length} Products
                 </span>
               </div>
@@ -373,8 +373,8 @@ export default function WaterworksCastingsPage() {
                   style={{
                     padding: "12px 20px",
                     border: "none",
-                    background: selectedCat === cat ? "#0D3A73" : "#fff",
-                    color: selectedCat === cat ? "#fff" : "#0D3A73",
+                    background: selectedCat === cat ? "#004aad" : "#fff",
+                    color: selectedCat === cat ? "#fff" : "#004aad",
                     borderTop: selectedCat === cat ? "3px solid #2196F3" : "3px solid #CFD8DC",
                     fontSize: 13,
                     fontWeight: 800,
@@ -428,7 +428,7 @@ export default function WaterworksCastingsPage() {
                         position: "absolute",
                         top: 16,
                         left: 16,
-                        background: "#1565C0",
+                        background: "#0085f4",
                         color: "#fff",
                         padding: "6px 12px",
                         fontSize: 11,
@@ -446,7 +446,7 @@ export default function WaterworksCastingsPage() {
                       style={{
                         position: "relative",
                         aspectRatio: "1.1",
-                        background: "#062347",
+                        background: "#004aad",
                         overflow: "hidden",
                         borderBottom: "1px solid #E0E0E0",
                       }}
@@ -493,7 +493,7 @@ export default function WaterworksCastingsPage() {
                           fontSize: 18,
                           fontWeight: 900,
                           fontStyle: "italic",
-                          color: "#0D3A73",
+                          color: "#004aad",
                           textTransform: "uppercase",
                           lineHeight: 1.3,
                           marginBottom: 16,
@@ -524,7 +524,7 @@ export default function WaterworksCastingsPage() {
                           style={{
                             padding: "12px",
                             background: "#E3F2FD",
-                            color: "#1565C0",
+                            color: "#0085f4",
                             border: "1px solid #90CAF9",
                             fontSize: 13,
                             fontWeight: 800,
@@ -547,7 +547,7 @@ export default function WaterworksCastingsPage() {
                           onClick={() => router.push(`/products/${product.id}`)}
                           style={{
                             padding: "12px",
-                            background: "#1565C0",
+                            background: "#0085f4",
                             color: "#fff",
                             border: "none",
                             fontSize: 13,
@@ -561,8 +561,8 @@ export default function WaterworksCastingsPage() {
                             gap: 6,
                             transition: "background 0.2s",
                           }}
-                          onMouseEnter={(e) => (e.currentTarget.style.background = "#0D47A1")}
-                          onMouseLeave={(e) => (e.currentTarget.style.background = "#1565C0")}
+                          onMouseEnter={(e) => (e.currentTarget.style.background = "#004aad")}
+                          onMouseLeave={(e) => (e.currentTarget.style.background = "#0085f4")}
                         >
                           Full Specs <ArrowRight size={15} />
                         </button>
@@ -591,9 +591,9 @@ export default function WaterworksCastingsPage() {
             {/* General Submittals */}
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
-                <FileText size={28} color="#1565C0" />
+                <FileText size={28} color="#0085f4" />
                 <div>
-                  <h3 style={{ fontSize: 24, fontWeight: 900, fontStyle: "italic", color: "#062347", textTransform: "uppercase", margin: 0 }}>
+                  <h3 style={{ fontSize: 24, fontWeight: 900, fontStyle: "italic", color: "#004aad", textTransform: "uppercase", margin: 0 }}>
                     General Submittals & MSDS
                   </h3>
                   <p style={{ fontSize: 14, color: "#546E7A", margin: 0, marginTop: 4 }}>
@@ -618,13 +618,13 @@ export default function WaterworksCastingsPage() {
                     }}
                   >
                     <div>
-                      <div style={{ fontSize: 15, fontWeight: 800, color: "#0D3A73" }}>{sub.title}</div>
+                      <div style={{ fontSize: 15, fontWeight: 800, color: "#004aad" }}>{sub.title}</div>
                       <div style={{ fontSize: 12, fontWeight: 700, color: "#1976D2", fontFamily: "monospace" }}>{sub.code}</div>
                     </div>
                     <button
                       onClick={() => alert(`Downloading submittal sheet: ${sub.file}`)}
                       style={{
-                        background: "#1565C0",
+                        background: "#0085f4",
                         color: "#fff",
                         border: "none",
                         padding: "8px 16px",
@@ -647,9 +647,9 @@ export default function WaterworksCastingsPage() {
             {/* Regional Submittals */}
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
-                <Building2 size={28} color="#1565C0" />
+                <Building2 size={28} color="#0085f4" />
                 <div>
-                  <h3 style={{ fontSize: 24, fontWeight: 900, fontStyle: "italic", color: "#062347", textTransform: "uppercase", margin: 0 }}>
+                  <h3 style={{ fontSize: 24, fontWeight: 900, fontStyle: "italic", color: "#004aad", textTransform: "uppercase", margin: 0 }}>
                     Regional City Approvals
                   </h3>
                   <p style={{ fontSize: 14, color: "#546E7A", margin: 0, marginTop: 4 }}>
@@ -667,10 +667,10 @@ export default function WaterworksCastingsPage() {
                       background: "#F8FAFC",
                       border: "1px solid #E0E0E0",
                       borderRadius: 4,
-                      borderLeft: "4px solid #1565C0",
+                      borderLeft: "4px solid #0085f4",
                     }}
                   >
-                    <div style={{ fontSize: 16, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", marginBottom: 4 }}>
+                    <div style={{ fontSize: 16, fontWeight: 900, color: "#004aad", textTransform: "uppercase", marginBottom: 4 }}>
                       {reg.region}
                     </div>
                     <div style={{ fontSize: 13, color: "#546E7A", fontWeight: 500, marginBottom: 12 }}>
@@ -680,7 +680,7 @@ export default function WaterworksCastingsPage() {
                       onClick={() => alert(`Downloading ${reg.region} municipal submittal docs...`)}
                       style={{
                         background: "transparent",
-                        color: "#1565C0",
+                        color: "#0085f4",
                         border: "none",
                         padding: 0,
                         fontSize: 13,
@@ -703,7 +703,7 @@ export default function WaterworksCastingsPage() {
       </section>
 
       {/* Texas Distribution Network & Hubs */}
-      <section style={{ padding: "80px 0", background: "#062347", color: "#fff" }}>
+      <section style={{ padding: "80px 0", background: "#004aad", color: "#fff" }}>
         <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <span
@@ -799,7 +799,7 @@ export default function WaterworksCastingsPage() {
             }}
           >
             <div style={{ textAlign: "center", marginBottom: 32 }}>
-              <h2 style={{ fontSize: 28, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
+              <h2 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
                 Request Waterworks Pricing & Submittals
               </h2>
               <p style={{ fontSize: 15, color: "#546E7A", marginTop: 8 }}>
@@ -817,7 +817,7 @@ export default function WaterworksCastingsPage() {
               <form onSubmit={handleQuoteSubmit} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="form-row">
                   <div>
-                    <label style={{ fontSize: 12, fontWeight: 800, color: "#0D3A73", textTransform: "uppercase", display: "block", marginBottom: 6 }}>
+                    <label style={{ fontSize: 12, fontWeight: 800, color: "#004aad", textTransform: "uppercase", display: "block", marginBottom: 6 }}>
                       Contact Name *
                     </label>
                     <input
@@ -835,7 +835,7 @@ export default function WaterworksCastingsPage() {
                     />
                   </div>
                   <div>
-                    <label style={{ fontSize: 12, fontWeight: 800, color: "#0D3A73", textTransform: "uppercase", display: "block", marginBottom: 6 }}>
+                    <label style={{ fontSize: 12, fontWeight: 800, color: "#004aad", textTransform: "uppercase", display: "block", marginBottom: 6 }}>
                       Company / Municipality *
                     </label>
                     <input
@@ -856,7 +856,7 @@ export default function WaterworksCastingsPage() {
 
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="form-row">
                   <div>
-                    <label style={{ fontSize: 12, fontWeight: 800, color: "#0D3A73", textTransform: "uppercase", display: "block", marginBottom: 6 }}>
+                    <label style={{ fontSize: 12, fontWeight: 800, color: "#004aad", textTransform: "uppercase", display: "block", marginBottom: 6 }}>
                       Work Email *
                     </label>
                     <input
@@ -874,7 +874,7 @@ export default function WaterworksCastingsPage() {
                     />
                   </div>
                   <div>
-                    <label style={{ fontSize: 12, fontWeight: 800, color: "#0D3A73", textTransform: "uppercase", display: "block", marginBottom: 6 }}>
+                    <label style={{ fontSize: 12, fontWeight: 800, color: "#004aad", textTransform: "uppercase", display: "block", marginBottom: 6 }}>
                       Phone Number *
                     </label>
                     <input
@@ -894,7 +894,7 @@ export default function WaterworksCastingsPage() {
                 </div>
 
                 <div>
-                  <label style={{ fontSize: 12, fontWeight: 800, color: "#0D3A73", textTransform: "uppercase", display: "block", marginBottom: 6 }}>
+                  <label style={{ fontSize: 12, fontWeight: 800, color: "#004aad", textTransform: "uppercase", display: "block", marginBottom: 6 }}>
                     Product Items / Project Requirements
                   </label>
                   <textarea
@@ -915,7 +915,7 @@ export default function WaterworksCastingsPage() {
                 <button
                   type="submit"
                   style={{
-                    background: "#1565C0",
+                    background: "#0085f4",
                     color: "#fff",
                     border: "none",
                     padding: "18px",
@@ -926,8 +926,8 @@ export default function WaterworksCastingsPage() {
                     cursor: "pointer",
                     transition: "background 0.2s",
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = "#0D47A1")}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = "#1565C0")}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "#004aad")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "#0085f4")}
                 >
                   Submit Quote Request
                 </button>
@@ -989,7 +989,7 @@ export default function WaterworksCastingsPage() {
                     style={{
                       display: "inline-block",
                       padding: "4px 10px",
-                      background: "#1565C0",
+                      background: "#0085f4",
                       color: "#fff",
                       fontSize: 10,
                       fontWeight: 800,
@@ -1000,7 +1000,7 @@ export default function WaterworksCastingsPage() {
                   >
                     {quickViewProduct.category}
                   </span>
-                  <h3 style={{ fontSize: 22, fontWeight: 900, fontStyle: "italic", color: "#062347", textTransform: "uppercase", margin: 0 }}>
+                  <h3 style={{ fontSize: 22, fontWeight: 900, fontStyle: "italic", color: "#004aad", textTransform: "uppercase", margin: 0 }}>
                     {quickViewProduct.name}
                   </h3>
                   <div style={{ fontSize: 12, fontWeight: 700, color: "#1976D2", fontFamily: "monospace", marginTop: 4 }}>
@@ -1012,13 +1012,13 @@ export default function WaterworksCastingsPage() {
                   onClick={() => setQuickViewProduct(null)}
                   style={{ background: "transparent", border: "2px solid #E0E0E0", padding: 8, cursor: "pointer" }}
                 >
-                  <X size={20} color="#062347" />
+                  <X size={20} color="#004aad" />
                 </button>
               </div>
 
               {/* Modal Body */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", maxHeight: "calc(90vh - 120px)", overflowY: "auto" }} className="modal-grid">
-                <div style={{ background: "#062347", position: "relative", minHeight: 300 }}>
+                <div style={{ background: "#004aad", position: "relative", minHeight: 300 }}>
                   <Image
                     src={quickViewProduct.image}
                     alt={quickViewProduct.name}
@@ -1028,14 +1028,14 @@ export default function WaterworksCastingsPage() {
                 </div>
 
                 <div style={{ padding: 32 }}>
-                  <h4 style={{ fontSize: 13, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", marginBottom: 12 }}>
+                  <h4 style={{ fontSize: 13, fontWeight: 900, color: "#004aad", textTransform: "uppercase", marginBottom: 12 }}>
                     Product Description
                   </h4>
                   <p style={{ fontSize: 14, color: "#37474F", lineHeight: 1.6, marginBottom: 24 }}>
                     {quickViewProduct.description}
                   </p>
 
-                  <h4 style={{ fontSize: 13, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", marginBottom: 12 }}>
+                  <h4 style={{ fontSize: 13, fontWeight: 900, color: "#004aad", textTransform: "uppercase", marginBottom: 12 }}>
                     Technical Specifications
                   </h4>
                   <div style={{ border: "1px solid #E0E0E0", marginBottom: 24 }}>
@@ -1052,7 +1052,7 @@ export default function WaterworksCastingsPage() {
                         }}
                       >
                         <span style={{ fontWeight: 800, color: "#546E7A" }}>{key}</span>
-                        <span style={{ fontWeight: 600, color: "#0D3A73" }}>{val}</span>
+                        <span style={{ fontWeight: 600, color: "#004aad" }}>{val}</span>
                       </div>
                     ))}
                   </div>
@@ -1065,7 +1065,7 @@ export default function WaterworksCastingsPage() {
                     style={{
                       width: "100%",
                       padding: "14px",
-                      background: "#1565C0",
+                      background: "#0085f4",
                       color: "#fff",
                       border: "none",
                       fontSize: 13,

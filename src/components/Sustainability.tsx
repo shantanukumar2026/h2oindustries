@@ -62,7 +62,7 @@ export default function Sustainability() {
                   style={{
                     background: "rgba(255, 255, 255, 0.02)",
                     border: "1px solid rgba(255, 255, 255, 0.05)",
-                    borderTop: "4px solid #1565C0",
+                    borderTop: "4px solid #0085f4",
                     padding: "40px 32px",
                     position: "relative",
                     display: "flex",

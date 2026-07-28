@@ -19,12 +19,12 @@ export default function BlogDetailPage() {
       <main style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#F8FAFC" }}>
         <Navbar />
         <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingTop: 140 }}>
-          <h2 style={{ fontSize: 24, fontWeight: 900, color: "#0B1929", marginBottom: 16 }}>ARTICLE NOT FOUND</h2>
-          <p style={{ color: "#4A6375", marginBottom: 24 }}>The article you are looking for does not exist or has been moved.</p>
+          <h2 style={{ fontSize: 24, fontWeight: 900, color: "#004aad", marginBottom: 16 }}>ARTICLE NOT FOUND</h2>
+          <p style={{ color: "#0085f4", marginBottom: 24 }}>The article you are looking for does not exist or has been moved.</p>
           <button
             onClick={() => router.push("/blog")}
             style={{
-              background: "#1565C0",
+              background: "#0085f4",
               color: "#fff",
               border: "none",
               padding: "12px 24px",
@@ -57,7 +57,7 @@ export default function BlogDetailPage() {
             style={{
               background: "none",
               border: "none",
-              color: "#1565C0",
+              color: "#0085f4",
               display: "flex",
               alignItems: "center",
               gap: 8,
@@ -70,8 +70,8 @@ export default function BlogDetailPage() {
               padding: 0,
               transition: "color 0.2s"
             }}
-            onMouseEnter={(e) => e.currentTarget.style.color = "#0D47A1"}
-            onMouseLeave={(e) => e.currentTarget.style.color = "#1565C0"}
+            onMouseEnter={(e) => e.currentTarget.style.color = "#004aad"}
+            onMouseLeave={(e) => e.currentTarget.style.color = "#0085f4"}
           >
             <ArrowLeft size={16} /> Back to Insights
           </button>
@@ -82,7 +82,7 @@ export default function BlogDetailPage() {
               style={{
                 display: "inline-block",
                 background: "rgba(21, 101, 192, 0.08)",
-                color: "#1565C0",
+                color: "#0085f4",
                 fontSize: 11,
                 fontWeight: 800,
                 textTransform: "uppercase",
@@ -101,7 +101,7 @@ export default function BlogDetailPage() {
               style={{
                 fontSize: "clamp(2rem, 6vw, 3.8rem)",
                 fontWeight: 900,
-                color: "#0B1929",
+                color: "#004aad",
                 lineHeight: 1.1,
                 textTransform: "uppercase",
                 fontStyle: "italic",
@@ -113,11 +113,11 @@ export default function BlogDetailPage() {
 
             {/* Date / Time */}
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 20, paddingBottom: 24, borderBottom: "1px solid #E2E8F0" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 800, color: "#1565C0", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 800, color: "#0085f4", textTransform: "uppercase", letterSpacing: "0.08em" }}>
                 H2 TECHNICAL BULLETIN
               </div>
 
-              <div style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 14, color: "#4A6375", fontWeight: 600 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 14, color: "#0085f4", fontWeight: 600 }}>
                 <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
                   <Calendar size={16} /> {blog.date}
                 </span>
@@ -144,7 +144,7 @@ export default function BlogDetailPage() {
                 style={{
                   fontSize: 17,
                   lineHeight: 1.85,
-                  color: "#334155",
+                  color: "#0085f4",
                   fontWeight: 500
                 }}
               />
@@ -154,7 +154,7 @@ export default function BlogDetailPage() {
                   font-family: var(--font-barlow), 'Barlow Condensed', 'Impact', sans-serif;
                   font-size: 26px;
                   font-weight: 900;
-                  color: #0B1929;
+                  color: #004aad;
                   text-transform: uppercase;
                   margin-top: 36px;
                   margin-bottom: 16px;
@@ -168,15 +168,15 @@ export default function BlogDetailPage() {
 
               {/* Share block */}
               <div style={{ marginTop: 40, paddingTop: 24, borderTop: "1px solid #E2E8F0", display: "flex", alignItems: "center", gap: 16 }}>
-                <span style={{ fontSize: 14, fontWeight: 800, color: "#0B1929", textTransform: "uppercase", letterSpacing: "0.05em" }}>Share Article:</span>
+                <span style={{ fontSize: 14, fontWeight: 800, color: "#004aad", textTransform: "uppercase", letterSpacing: "0.05em" }}>Share Article:</span>
                 <div style={{ display: "flex", gap: 12 }}>
-                  <button aria-label="Share on LinkedIn" style={{ cursor: "pointer", border: "1px solid #E2E8F0", background: "#fff", width: 40, height: 40, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#1565C0", transition: "all 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#1565C0"; e.currentTarget.style.background = "#F0F7FF"; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#E2E8F0"; e.currentTarget.style.background = "#fff"; }}>
+                  <button aria-label="Share on LinkedIn" style={{ cursor: "pointer", border: "1px solid #E2E8F0", background: "#fff", width: 40, height: 40, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#0085f4", transition: "all 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#0085f4"; e.currentTarget.style.background = "#F0F7FF"; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#E2E8F0"; e.currentTarget.style.background = "#fff"; }}>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ margin: "auto" }}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                   </button>
-                  <button aria-label="Share on Twitter" style={{ cursor: "pointer", border: "1px solid #E2E8F0", background: "#fff", width: 40, height: 40, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#1565C0", transition: "all 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#1565C0"; e.currentTarget.style.background = "#F0F7FF"; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#E2E8F0"; e.currentTarget.style.background = "#fff"; }}>
+                  <button aria-label="Share on Twitter" style={{ cursor: "pointer", border: "1px solid #E2E8F0", background: "#fff", width: 40, height: 40, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#0085f4", transition: "all 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#0085f4"; e.currentTarget.style.background = "#F0F7FF"; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#E2E8F0"; e.currentTarget.style.background = "#fff"; }}>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ margin: "auto" }}><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
                   </button>
-                  <button aria-label="Share on Facebook" style={{ cursor: "pointer", border: "1px solid #E2E8F0", background: "#fff", width: 40, height: 40, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#1565C0", transition: "all 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#1565C0"; e.currentTarget.style.background = "#F0F7FF"; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#E2E8F0"; e.currentTarget.style.background = "#fff"; }}>
+                  <button aria-label="Share on Facebook" style={{ cursor: "pointer", border: "1px solid #E2E8F0", background: "#fff", width: 40, height: 40, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#0085f4", transition: "all 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#0085f4"; e.currentTarget.style.background = "#F0F7FF"; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#E2E8F0"; e.currentTarget.style.background = "#fff"; }}>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ margin: "auto" }}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                   </button>
                 </div>
@@ -196,10 +196,10 @@ export default function BlogDetailPage() {
                   boxShadow: "0 4px 20px rgba(6,35,71,0.02)" 
                 }}
               >
-                <h3 style={{ fontFamily: "var(--font-barlow), 'Barlow Condensed', sans-serif", fontSize: 20, fontWeight: 900, color: "#0B1929", textTransform: "uppercase", fontStyle: "italic", marginBottom: 12 }}>
+                <h3 style={{ fontFamily: "var(--font-barlow), 'Barlow Condensed', sans-serif", fontSize: 20, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 12 }}>
                   Stay Informed
                 </h3>
-                <p style={{ fontSize: 13, color: "#4A6375", lineHeight: 1.5, marginBottom: 20, fontWeight: 500 }}>
+                <p style={{ fontSize: 13, color: "#0085f4", lineHeight: 1.5, marginBottom: 20, fontWeight: 500 }}>
                   Subscribe to our monthly newsletter and get US EPA policy updates, engineering guidelines, and stormwater research delivered directly to your inbox.
                 </p>
                 <form onSubmit={(e) => { e.preventDefault(); alert("Thank you for subscribing!"); }} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -220,7 +220,7 @@ export default function BlogDetailPage() {
                   <button
                     type="submit"
                     style={{
-                      background: "#1565C0",
+                      background: "#0085f4",
                       color: "#fff",
                       border: "none",
                       padding: "10px 14px",
@@ -231,8 +231,8 @@ export default function BlogDetailPage() {
                       cursor: "pointer",
                       transition: "background 0.2s"
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.background = "#0D47A1"}
-                    onMouseLeave={(e) => e.currentTarget.style.background = "#1565C0"}
+                    onMouseEnter={(e) => e.currentTarget.style.background = "#004aad"}
+                    onMouseLeave={(e) => e.currentTarget.style.background = "#0085f4"}
                   >
                     Subscribe
                   </button>
@@ -241,7 +241,7 @@ export default function BlogDetailPage() {
 
               {/* Related posts */}
               <div>
-                <h3 style={{ fontFamily: "var(--font-barlow), 'Barlow Condensed', sans-serif", fontSize: 20, fontWeight: 900, color: "#0B1929", textTransform: "uppercase", fontStyle: "italic", marginBottom: 20, paddingBottom: 12, borderBottom: "2px solid #90CAF9" }}>
+                <h3 style={{ fontFamily: "var(--font-barlow), 'Barlow Condensed', sans-serif", fontSize: 20, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 20, paddingBottom: 12, borderBottom: "2px solid #90CAF9" }}>
                   Related Articles
                 </h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
@@ -256,8 +256,8 @@ export default function BlogDetailPage() {
                         <img src={art.image} alt={art.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                       </div>
                       <div>
-                        <span style={{ fontSize: 10, fontWeight: 800, textTransform: "uppercase", color: "#1565C0", letterSpacing: "0.05em" }}>{art.category}</span>
-                        <h4 style={{ fontSize: 13, fontWeight: 800, color: "#0B1929", margin: "2px 0 0 0", lineHeight: 1.3, textTransform: "uppercase" }}>{art.title}</h4>
+                        <span style={{ fontSize: 10, fontWeight: 800, textTransform: "uppercase", color: "#0085f4", letterSpacing: "0.05em" }}>{art.category}</span>
+                        <h4 style={{ fontSize: 13, fontWeight: 800, color: "#004aad", margin: "2px 0 0 0", lineHeight: 1.3, textTransform: "uppercase" }}>{art.title}</h4>
                       </div>
                     </div>
                   ))}

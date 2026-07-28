@@ -51,16 +51,16 @@ export default function BlogSection() {
               style={{
                 fontSize: "clamp(2rem, 6vw, 3.2rem)",
                 fontWeight: 900,
-                color: "#0B1929",
+                color: "#004aad",
                 lineHeight: 1.1,
                 textTransform: "uppercase",
                 fontStyle: "italic",
                 margin: 0
               }}
             >
-              H2 Knowledge <span style={{ color: "#1565C0" }}>Hub</span>
+              H2 Knowledge <span style={{ color: "#0085f4" }}>Hub</span>
             </h2>
-            <p style={{ color: "#4A6375", fontSize: 16, maxWidth: 600, marginTop: 12, lineHeight: 1.6, fontWeight: 500 }}>
+            <p style={{ color: "#0085f4", fontSize: 16, maxWidth: 600, marginTop: 12, lineHeight: 1.6, fontWeight: 500 }}>
               Stay updated with the latest in smart water management, green infrastructure standards, and US EPA compliance guides.
             </p>
           </motion.div>
@@ -73,7 +73,7 @@ export default function BlogSection() {
             <button
               onClick={() => router.push("/blog")}
               style={{
-                background: "#1565C0",
+                background: "#0085f4",
                 color: "#fff",
                 border: "none",
                 padding: "14px 28px",
@@ -89,11 +89,11 @@ export default function BlogSection() {
                 transition: "all 0.3s ease"
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#0D47A1";
+                e.currentTarget.style.background = "#004aad";
                 e.currentTarget.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#1565C0";
+                e.currentTarget.style.background = "#0085f4";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
@@ -138,7 +138,7 @@ export default function BlogSection() {
                 }}
               >
                 {/* Image / Category Aspect Header */}
-                <div style={{ position: "relative", height: 200, width: "100%", background: "#0F2942" }}>
+                <div style={{ position: "relative", height: 200, width: "100%", background: "#004aad" }}>
                   <img
                     src={blog.image}
                     alt={blog.title}
@@ -149,7 +149,7 @@ export default function BlogSection() {
                       position: "absolute",
                       top: 16,
                       left: 16,
-                      background: "#1565C0",
+                      background: "#0085f4",
                       color: "#fff",
                       fontSize: 11,
                       fontWeight: 800,
@@ -157,7 +157,7 @@ export default function BlogSection() {
                       letterSpacing: "0.08em",
                       padding: "4px 12px",
                       borderRadius: 4,
-                      boxShadow: "0 2px 8px rgba(0,0,0,0.15)"
+                      boxShadow: "0 2px 8px rgba(0, 133, 244, 0.15)"
                     }}
                   >
                     {blog.category}
@@ -168,7 +168,7 @@ export default function BlogSection() {
                 <div style={{ padding: 24, display: "flex", flexDirection: "column", flex: 1, justifyContent: "space-between" }}>
                   <div>
                     {/* Date / Time */}
-                    <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 13, color: "#4A6375", fontWeight: 600, marginBottom: 12 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 13, color: "#0085f4", fontWeight: 600, marginBottom: 12 }}>
                       <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
                         <Calendar size={14} /> {blog.date}
                       </span>
@@ -182,7 +182,7 @@ export default function BlogSection() {
                       style={{
                         fontSize: 20,
                         fontWeight: 900,
-                        color: "#0B1929",
+                        color: "#004aad",
                         lineHeight: 1.3,
                         marginBottom: 12,
                         textTransform: "uppercase",
@@ -195,7 +195,7 @@ export default function BlogSection() {
                     </h3>
 
                     {/* Excerpt */}
-                    <p style={{ color: "#4A6375", fontSize: 14, lineHeight: 1.6, fontWeight: 500, marginBottom: 24 }}>
+                    <p style={{ color: "#0085f4", fontSize: 14, lineHeight: 1.6, fontWeight: 500, marginBottom: 24 }}>
                       {blog.excerpt}
                     </p>
                   </div>

@@ -26,38 +26,38 @@ export default function TechnicalStandards() {
             transition={{ duration: 0.6 }}
             style={{ flex: "1 1 400px" }}
           >
-            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 900, color: "#0B1929", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
+            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 900, color: "#004aad", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
               {header.title}<br />
-              <span style={{ color: "#1565C0" }}>{header.highlight}</span>
+              <span style={{ color: "#0085f4" }}>{header.highlight}</span>
             </h2>
-            <p style={{ color: "#4A6375", fontSize: 16, lineHeight: 1.6, marginBottom: 32, fontWeight: 500 }}>
+            <p style={{ color: "#0085f4", fontSize: 16, lineHeight: 1.6, marginBottom: 32, fontWeight: 500 }}>
               {header.subtitle}
             </p>
 
             <div style={{ display: "flex", gap: 24, marginBottom: 40 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <BookmarkCheck size={24} color="#1565C0" />
-                <span style={{ color: "#0B1929", fontWeight: 800, fontSize: 14 }}>Tested & Rated</span>
+                <BookmarkCheck size={24} color="#0085f4" />
+                <span style={{ color: "#004aad", fontWeight: 800, fontSize: 14 }}>Tested & Rated</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <Anchor size={24} color="#1565C0" />
-                <span style={{ color: "#0B1929", fontWeight: 800, fontSize: 14 }}>Structural Integrity</span>
+                <Anchor size={24} color="#0085f4" />
+                <span style={{ color: "#004aad", fontWeight: 800, fontSize: 14 }}>Structural Integrity</span>
               </div>
             </div>
 
             <button 
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#1565C0";
+                e.currentTarget.style.background = "#0085f4";
                 e.currentTarget.style.color = "#ffffff";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "#1565C0";
+                e.currentTarget.style.color = "#0085f4";
               }}
               style={{ 
                 background: "transparent", 
-                border: "1px solid #1565C0", 
-                color: "#1565C0", 
+                border: "1px solid #0085f4", 
+                color: "#0085f4", 
                 padding: "14px 28px", 
                 fontSize: 14, 
                 fontWeight: 800, 
@@ -103,9 +103,9 @@ export default function TechnicalStandards() {
                 e.currentTarget.style.boxShadow = "0 4px 20px rgba(6, 35, 71, 0.01)";
               }}
               >
-                <div style={{ width: 12, height: 4, background: "#1565C0", marginBottom: 16 }} />
-                <h4 style={{ color: "#0B1929", fontSize: 18, fontWeight: 900, marginBottom: 8, letterSpacing: 0.5, textTransform: "uppercase" }}>{std.name}</h4>
-                <p style={{ color: "#4A6375", fontSize: 13, margin: 0, fontWeight: 500, lineHeight: 1.5 }}>{std.desc}</p>
+                <div style={{ width: 12, height: 4, background: "#0085f4", marginBottom: 16 }} />
+                <h4 style={{ color: "#004aad", fontSize: 18, fontWeight: 900, marginBottom: 8, letterSpacing: 0.5, textTransform: "uppercase" }}>{std.name}</h4>
+                <p style={{ color: "#0085f4", fontSize: 13, margin: 0, fontWeight: 500, lineHeight: 1.5 }}>{std.desc}</p>
               </div>
             ))}
           </motion.div>

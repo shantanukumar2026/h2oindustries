@@ -36,9 +36,9 @@ export default function Solutions() {
               {header.tagline}
             </div>
             
-            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.2rem)", fontWeight: 900, color: "#0B1929", lineHeight: 1.1, textTransform: "uppercase", fontStyle: "italic" }}>
+            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.2rem)", fontWeight: 900, color: "#004aad", lineHeight: 1.1, textTransform: "uppercase", fontStyle: "italic" }}>
               {header.title}<br />
-              <span style={{ color: "#1565C0" }}>
+              <span style={{ color: "#0085f4" }}>
                 {header.highlight}
               </span>
             </h2>
@@ -89,14 +89,14 @@ export default function Solutions() {
                     }
                   }}
                 >
-                  <div style={{ width: 40, height: 40, background: isActive ? "#1565C0" : "rgba(21,101,192,0.06)", borderRadius: "6px", display: "flex", alignItems: "center", justifyContent: "center", transition: "background 0.3s" }}>
-                    <Icon size={20} color={isActive ? "#ffffff" : "#1565C0"} />
+                  <div style={{ width: 40, height: 40, background: isActive ? "#0085f4" : "rgba(21,101,192,0.06)", borderRadius: "6px", display: "flex", alignItems: "center", justifyContent: "center", transition: "background 0.3s" }}>
+                    <Icon size={20} color={isActive ? "#ffffff" : "#0085f4"} />
                   </div>
                   <div>
-                    <div style={{ fontSize: 11, fontWeight: 800, color: isActive ? "#1565C0" : "#4A6375", textTransform: "uppercase", letterSpacing: 1, marginBottom: 4 }}>
+                    <div style={{ fontSize: 11, fontWeight: 800, color: isActive ? "#0085f4" : "#0085f4", textTransform: "uppercase", letterSpacing: 1, marginBottom: 4 }}>
                       {sol.category}
                     </div>
-                    <div style={{ fontSize: 16, fontWeight: 800, color: "#0B1929" }}>
+                    <div style={{ fontSize: 16, fontWeight: 800, color: "#004aad" }}>
                       {sol.title}
                     </div>
                   </div>
@@ -126,12 +126,12 @@ export default function Solutions() {
                   <div style={{ display: "flex", gap: 24 }}>
                     {Object.entries(activeSolution.specs).map(([key, val]) => (
                       <div key={key}>
-                        <div style={{ fontSize: 10, color: "#1565C0", textTransform: "uppercase", letterSpacing: 1, marginBottom: 4, fontWeight: 800 }}>{key}</div>
-                        <div style={{ fontSize: 14, color: "#0B1929", fontWeight: 700 }}>{val}</div>
+                        <div style={{ fontSize: 10, color: "#0085f4", textTransform: "uppercase", letterSpacing: 1, marginBottom: 4, fontWeight: 800 }}>{key}</div>
+                        <div style={{ fontSize: 14, color: "#004aad", fontWeight: 700 }}>{val}</div>
                       </div>
                     ))}
                   </div>
-                  <div style={{ fontSize: 12, color: "#1565C0", fontWeight: 800, letterSpacing: 2, textTransform: "uppercase" }}>
+                  <div style={{ fontSize: 12, color: "#0085f4", fontWeight: 800, letterSpacing: 2, textTransform: "uppercase" }}>
                     SYS-0{solutions.findIndex(s => s.id === activeTab) + 1}
                   </div>
                 </div>
@@ -139,10 +139,10 @@ export default function Solutions() {
                 <div style={{ flex: 1, display: "flex" }} className="solution-content-split">
                   {/* Info Box */}
                   <div style={{ flex: 1, padding: 40, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                    <h3 style={{ fontSize: 32, fontWeight: 900, color: "#0B1929", textTransform: "uppercase", marginBottom: 24, fontStyle: "italic", lineHeight: 1.1 }}>
+                    <h3 style={{ fontSize: 32, fontWeight: 900, color: "#004aad", textTransform: "uppercase", marginBottom: 24, fontStyle: "italic", lineHeight: 1.1 }}>
                       {activeSolution.title}
                     </h3>
-                    <p style={{ fontSize: 16, color: "#4A6375", lineHeight: 1.7, marginBottom: 40, fontWeight: 500 }}>
+                    <p style={{ fontSize: 16, color: "#0085f4", lineHeight: 1.7, marginBottom: 40, fontWeight: 500 }}>
                       {activeSolution.desc}
                     </p>
                     <button style={{ 
@@ -150,7 +150,7 @@ export default function Solutions() {
                       display: "inline-flex", 
                       alignItems: "center", 
                       gap: 8, 
-                      background: "#1565C0", 
+                      background: "#0085f4", 
                       color: "#fff", 
                       padding: "14px 28px", 
                       fontSize: 14, 
@@ -161,8 +161,8 @@ export default function Solutions() {
                       cursor: "pointer",
                       transition: "all 0.2s"
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.background = "#0D47A1"}
-                    onMouseLeave={(e) => e.currentTarget.style.background = "#1565C0"}
+                    onMouseEnter={(e) => e.currentTarget.style.background = "#004aad"}
+                    onMouseLeave={(e) => e.currentTarget.style.background = "#0085f4"}
                     >
                       View Technical Specs <ArrowRight size={16} />
                     </button>
@@ -172,7 +172,7 @@ export default function Solutions() {
                   <div style={{ flex: 1, position: "relative", background: "rgba(21, 101, 192, 0.01)", borderLeft: "1px solid #E2E8F0" }}>
                     <div style={{ position: "absolute", top: 20, right: 20, zIndex: 10 }}>
                       <div style={{ width: 40, height: 40, border: "2px solid rgba(21, 101, 192, 0.2)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <div style={{ width: 4, height: 4, background: "#1565C0", borderRadius: "50%" }} />
+                        <div style={{ width: 4, height: 4, background: "#0085f4", borderRadius: "50%" }} />
                       </div>
                     </div>
                     <Image 

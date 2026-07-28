@@ -23,14 +23,14 @@ export default function InfrastructureFacilities() {
         
         <div ref={ref} style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 40, marginBottom: 64 }}>
           <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6 }}>
-            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.1, textTransform: "uppercase" }}>
+            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900, color: "#004aad", lineHeight: 1.1, textTransform: "uppercase" }}>
               {header.title}<br />
-              <span style={{ color: "#1565C0" }}>{header.highlight}</span>
+              <span style={{ color: "#0085f4" }}>{header.highlight}</span>
             </h2>
           </motion.div>
           
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }} style={{ maxWidth: 460 }}>
-            <p style={{ color: "#4A6375", fontSize: 16, lineHeight: 1.6, margin: 0 }}>
+            <p style={{ color: "#0085f4", fontSize: 16, lineHeight: 1.6, margin: 0 }}>
               {header.subtitle}
             </p>
           </motion.div>
@@ -52,7 +52,7 @@ export default function InfrastructureFacilities() {
               style={{
                 gridColumn: `span ${fac.span}`,
                 height: 360,
-                background: "#062347",
+                background: "#004aad",
                 position: "relative",
                 overflow: "hidden",
                 borderRadius: "8px",

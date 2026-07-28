@@ -501,7 +501,7 @@ export default function Footer() {
       {/* Band 4: Legal & Copyright Footer */}
       <div style={{ padding: "24px 0", background: "#002255" }}>
         <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
-          <p style={{ fontSize: 13, color: "#78909C", fontWeight: 500, margin: 0 }}>
+          <p style={{ fontSize: 13, color: "#0085f4", fontWeight: 500, margin: 0 }}>
             © {new Date().getFullYear()} H2 Industries. All rights reserved. Precision Municipal & Industrial Solutions.
           </p>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>

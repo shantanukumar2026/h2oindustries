@@ -58,12 +58,12 @@ export default function ResearchDevelopment() {
               {header.tagline}
             </div>
             
-            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 900, color: "#0B1929", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
+            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 900, color: "#004aad", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase" }}>
               {header.title}<br />
-              <span style={{ color: "#1565C0" }}>{header.highlight}</span>
+              <span style={{ color: "#0085f4" }}>{header.highlight}</span>
             </h2>
             
-            <p style={{ color: "#4A6375", fontSize: 16, lineHeight: 1.7, marginBottom: 32, maxWidth: 540, fontWeight: 500 }}>
+            <p style={{ color: "#0085f4", fontSize: 16, lineHeight: 1.7, marginBottom: 32, maxWidth: 540, fontWeight: 500 }}>
               {header.subtitle}
             </p>
 
@@ -73,11 +73,11 @@ export default function ResearchDevelopment() {
                 return (
                   <div key={i} style={{ display: "flex", gap: 16 }}>
                     <div style={{ width: 40, height: 40, borderRadius: "8px", background: "rgba(21, 101, 192, 0.06)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, border: "1px solid rgba(21, 101, 192, 0.15)" }}>
-                      <Icon size={20} color="#1565C0" />
+                      <Icon size={20} color="#0085f4" />
                     </div>
                     <div>
-                      <h4 style={{ color: "#0B1929", fontSize: 14, fontWeight: 800, marginBottom: 6 }}>{feature.title}</h4>
-                      <p style={{ color: "#4A6375", fontSize: 13, lineHeight: 1.5, margin: 0, fontWeight: 500 }}>{feature.desc}</p>
+                      <h4 style={{ color: "#004aad", fontSize: 14, fontWeight: 800, marginBottom: 6 }}>{feature.title}</h4>
+                      <p style={{ color: "#0085f4", fontSize: 13, lineHeight: 1.5, margin: 0, fontWeight: 500 }}>{feature.desc}</p>
                     </div>
                   </div>
                 );
@@ -95,25 +95,25 @@ export default function ResearchDevelopment() {
             <div style={{ position: "relative", width: "100%", maxWidth: 600, aspectRatio: "1/1" }}>
               {/* Abstract blueprint visual */}
               <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="200" cy="200" r="180" stroke="#1565C0" strokeWidth="1" strokeDasharray="4 4" />
+                <circle cx="200" cy="200" r="180" stroke="#0085f4" strokeWidth="1" strokeDasharray="4 4" />
                 <circle cx="200" cy="200" r="140" stroke="#2196F3" strokeWidth="2" />
                 <circle cx="200" cy="200" r="100" stroke="#2196F3" strokeWidth="1" strokeDasharray="2 6" />
                 
-                <path d="M200 20 L200 380" stroke="#1565C0" strokeWidth="1" />
-                <path d="M20 200 L380 200" stroke="#1565C0" strokeWidth="1" />
+                <path d="M200 20 L200 380" stroke="#0085f4" strokeWidth="1" />
+                <path d="M20 200 L380 200" stroke="#0085f4" strokeWidth="1" />
                 
-                <path d="M72.7 72.7 L327.3 327.3" stroke="#1565C0" strokeWidth="1" />
-                <path d="M72.7 327.3 L327.3 72.7" stroke="#1565C0" strokeWidth="1" />
+                <path d="M72.7 72.7 L327.3 327.3" stroke="#0085f4" strokeWidth="1" />
+                <path d="M72.7 327.3 L327.3 72.7" stroke="#0085f4" strokeWidth="1" />
                 
                 {/* Tech node points */}
-                <circle cx="200" cy="60" r="6" fill="#1565C0" />
-                <circle cx="340" cy="200" r="6" fill="#1565C0" />
-                <circle cx="200" cy="340" r="6" fill="#1565C0" />
-                <circle cx="60" cy="200" r="6" fill="#1565C0" />
+                <circle cx="200" cy="60" r="6" fill="#0085f4" />
+                <circle cx="340" cy="200" r="6" fill="#0085f4" />
+                <circle cx="200" cy="340" r="6" fill="#0085f4" />
+                <circle cx="60" cy="200" r="6" fill="#0085f4" />
 
                 {/* Inner structure drawing */}
                 <path d="M160 140 L240 140 L260 260 L140 260 Z" stroke="#2196F3" strokeWidth="2" fill="rgba(33, 150, 243, 0.08)" />
-                <path d="M180 160 L220 160 L230 240 L170 240 Z" stroke="#1565C0" strokeWidth="1" />
+                <path d="M180 160 L220 160 L230 240 L170 240 Z" stroke="#0085f4" strokeWidth="1" />
               </svg>
               
               {/* Floating metrics */}
@@ -122,8 +122,8 @@ export default function ResearchDevelopment() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 style={{ position: "absolute", top: "15%", left: "5%", background: "rgba(255, 255, 255, 0.9)", backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)", padding: "12px 16px", border: "1px solid rgba(21, 101, 192, 0.2)", borderRadius: 8, boxShadow: "0 10px 30px rgba(6,35,71,0.05)" }}
               >
-                <div style={{ color: "#1565C0", fontSize: 10, textTransform: "uppercase", letterSpacing: 1, marginBottom: 4, fontWeight: 800 }}>Tensile Strength</div>
-                <div style={{ color: "#0B1929", fontSize: 18, fontWeight: 900 }}>{metrics.tensile}</div>
+                <div style={{ color: "#0085f4", fontSize: 10, textTransform: "uppercase", letterSpacing: 1, marginBottom: 4, fontWeight: 800 }}>Tensile Strength</div>
+                <div style={{ color: "#004aad", fontSize: 18, fontWeight: 900 }}>{metrics.tensile}</div>
               </motion.div>
 
               <motion.div 
@@ -131,8 +131,8 @@ export default function ResearchDevelopment() {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 style={{ position: "absolute", bottom: "20%", right: "-5%", background: "rgba(255, 255, 255, 0.9)", backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)", padding: "12px 16px", border: "1px solid rgba(21, 101, 192, 0.2)", borderRadius: 8, boxShadow: "0 10px 30px rgba(6,35,71,0.05)" }}
               >
-                <div style={{ color: "#1565C0", fontSize: 10, textTransform: "uppercase", letterSpacing: 1, marginBottom: 4, fontWeight: 800 }}>Thermal Tolerance</div>
-                <div style={{ color: "#0B1929", fontSize: 18, fontWeight: 900 }}>{metrics.thermal}</div>
+                <div style={{ color: "#0085f4", fontSize: 10, textTransform: "uppercase", letterSpacing: 1, marginBottom: 4, fontWeight: 800 }}>Thermal Tolerance</div>
+                <div style={{ color: "#004aad", fontSize: 18, fontWeight: 900 }}>{metrics.thermal}</div>
               </motion.div>
             </div>
           </motion.div>

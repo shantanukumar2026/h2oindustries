@@ -158,15 +158,15 @@ export default function CalculatorPage() {
           {/* Breadcrumb */}
           <nav style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 24 }}>
             <span 
-              style={{ color: "#1565C0", cursor: "pointer", transition: "color 0.2s" }} 
+              style={{ color: "#0085f4", cursor: "pointer", transition: "color 0.2s" }} 
               onClick={() => router.push("/")}
-              onMouseEnter={(e) => e.currentTarget.style.color = "#0D47A1"}
-              onMouseLeave={(e) => e.currentTarget.style.color = "#1565C0"}
+              onMouseEnter={(e) => e.currentTarget.style.color = "#004aad"}
+              onMouseLeave={(e) => e.currentTarget.style.color = "#0085f4"}
             >
               Home
             </span>
             <span style={{ color: "#90CAF9" }}>/</span>
-            <span style={{ color: "#0B1929" }}>US Stormwater Calculator</span>
+            <span style={{ color: "#004aad" }}>US Stormwater Calculator</span>
           </nav>
 
           {/* Page Heading */}
@@ -174,17 +174,17 @@ export default function CalculatorPage() {
             <div className="pill-tag" style={{ marginBottom: 16 }}>
               <span className="dot" /> USDA NRCS TR-55 Hydrology Engine
             </div>
-            <h1 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.8rem)", fontWeight: 900, color: "#0B1929", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
-              US EPA Stormwater & <span style={{ color: "#1565C0" }}>Compliance Calculator</span>
+            <h1 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.8rem)", fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
+              US EPA Stormwater & <span style={{ color: "#0085f4" }}>Compliance Calculator</span>
             </h1>
-            <p style={{ color: "#4A6375", fontSize: 17, marginTop: 12, maxWidth: 900, lineHeight: 1.6, fontWeight: 500 }}>
+            <p style={{ color: "#0085f4", fontSize: 17, marginTop: 12, maxWidth: 900, lineHeight: 1.6, fontWeight: 500 }}>
               Analyze runoff volumes and EPA Water Quality Volumes using standard US civil engineering methods (NRCS TR-55 Curve Number). Choose actual US cities and hydrologic soil groups to generate realistic compliant drainage evaluations.
             </p>
           </div>
 
           {/* Preset Selector */}
           <div style={{ marginBottom: 32, background: "#ffffff", border: "1px solid #E2E8F0", padding: "20px 24px", borderRadius: 12, boxShadow: "0 4px 20px rgba(6,35,71,0.01)" }}>
-            <span style={{ fontSize: 12, fontWeight: 900, color: "#0B1929", textTransform: "uppercase", display: "block", marginBottom: 12, letterSpacing: 0.5 }}>
+            <span style={{ fontSize: 12, fontWeight: 900, color: "#004aad", textTransform: "uppercase", display: "block", marginBottom: 12, letterSpacing: 0.5 }}>
               Apply Real US Project Presets:
             </span>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -197,20 +197,20 @@ export default function CalculatorPage() {
                     borderRadius: 6,
                     border: "1.5px solid #E2E8F0",
                     background: "#F8FAFC",
-                    color: "#4A6375",
+                    color: "#0085f4",
                     fontSize: 12,
                     fontWeight: 800,
                     cursor: "pointer",
                     transition: "all 0.2s"
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = "#1565C0";
-                    e.currentTarget.style.color = "#1565C0";
+                    e.currentTarget.style.borderColor = "#0085f4";
+                    e.currentTarget.style.color = "#0085f4";
                     e.currentTarget.style.background = "#fff";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.borderColor = "#E2E8F0";
-                    e.currentTarget.style.color = "#4A6375";
+                    e.currentTarget.style.color = "#0085f4";
                     e.currentTarget.style.background = "#F8FAFC";
                   }}
                 >
@@ -228,7 +228,7 @@ export default function CalculatorPage() {
               
               {/* Form Card */}
               <div style={{ background: "#ffffff", border: "1px solid #E2E8F0", borderRadius: 20, padding: 36, boxShadow: "0 4px 20px rgba(6,35,71,0.02)" }}>
-                <h3 style={{ fontSize: 20, fontWeight: 900, color: "#0B1929", textTransform: "uppercase", fontStyle: "italic", marginBottom: 24, paddingBottom: 12, borderBottom: "1px solid #E2E8F0" }}>
+                <h3 style={{ fontSize: 20, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 24, paddingBottom: 12, borderBottom: "1px solid #E2E8F0" }}>
                   1. Hydrologic Parameters
                 </h3>
 
@@ -236,7 +236,7 @@ export default function CalculatorPage() {
                   
                   {/* City Select */}
                   <div>
-                    <label style={{ fontSize: 13, fontWeight: 800, color: "#0B1929", textTransform: "uppercase", display: "block", marginBottom: 8 }}>
+                    <label style={{ fontSize: 13, fontWeight: 800, color: "#004aad", textTransform: "uppercase", display: "block", marginBottom: 8 }}>
                       US Location Climate Profile:
                     </label>
                     <select
@@ -253,7 +253,7 @@ export default function CalculatorPage() {
                         background: "#F8FAFC",
                         fontSize: 14,
                         fontWeight: 700,
-                        color: "#0B1929",
+                        color: "#004aad",
                         outline: "none"
                       }}
                     >
@@ -263,14 +263,14 @@ export default function CalculatorPage() {
                         </option>
                       ))}
                     </select>
-                    <p style={{ fontSize: 11, color: "#4A6375", marginTop: 6, fontWeight: 500 }}>
+                    <p style={{ fontSize: 11, color: "#0085f4", marginTop: 6, fontWeight: 500 }}>
                       * {selectedCity.description}
                     </p>
                   </div>
 
                   {/* Hydrologic Soil Group */}
                   <div>
-                    <label style={{ fontSize: 13, fontWeight: 800, color: "#0B1929", textTransform: "uppercase", display: "block", marginBottom: 8 }}>
+                    <label style={{ fontSize: 13, fontWeight: 800, color: "#004aad", textTransform: "uppercase", display: "block", marginBottom: 8 }}>
                       USDA NRCS Hydrologic Soil Group (HSG):
                     </label>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12 }} className="soil-grid">
@@ -284,27 +284,27 @@ export default function CalculatorPage() {
                               padding: "12px",
                               borderRadius: 8,
                               border: "1.5px solid",
-                              borderColor: isActive ? "#1565C0" : "#E2E8F0",
+                              borderColor: isActive ? "#0085f4" : "#E2E8F0",
                               background: isActive ? "rgba(21, 101, 192, 0.08)" : "#ffffff",
-                              color: "#0B1929",
+                              color: "#004aad",
                               cursor: "pointer",
                               transition: "all 0.2s"
                             }}
                           >
-                            <div style={{ fontSize: 16, fontWeight: 900, color: isActive ? "#1565C0" : "#0B1929" }}>Group {g.group}</div>
-                            <div style={{ fontSize: 9, color: "#4A6375", marginTop: 4, fontWeight: 600, lineHeight: 1.2 }}>{g.group === "A" ? "Sand" : g.group === "B" ? "Loam" : g.group === "C" ? "Sandy Clay" : "Clay"}</div>
+                            <div style={{ fontSize: 16, fontWeight: 900, color: isActive ? "#0085f4" : "#004aad" }}>Group {g.group}</div>
+                            <div style={{ fontSize: 9, color: "#0085f4", marginTop: 4, fontWeight: 600, lineHeight: 1.2 }}>{g.group === "A" ? "Sand" : g.group === "B" ? "Loam" : g.group === "C" ? "Sandy Clay" : "Clay"}</div>
                           </button>
                         );
                       })}
                     </div>
-                    <p style={{ fontSize: 11, color: "#4A6375", marginTop: 6, fontWeight: 500 }}>
+                    <p style={{ fontSize: 11, color: "#0085f4", marginTop: 6, fontWeight: 500 }}>
                       * {SOIL_GROUPS.find(g => g.group === soilGroup)?.desc}
                     </p>
                   </div>
 
                   {/* Land Cover Type */}
                   <div>
-                    <label style={{ fontSize: 13, fontWeight: 800, color: "#0B1929", textTransform: "uppercase", display: "block", marginBottom: 8 }}>
+                    <label style={{ fontSize: 13, fontWeight: 800, color: "#004aad", textTransform: "uppercase", display: "block", marginBottom: 8 }}>
                       Land Use / Ground Cover Type:
                     </label>
                     <select
@@ -318,7 +318,7 @@ export default function CalculatorPage() {
                         background: "#F8FAFC",
                         fontSize: 14,
                         fontWeight: 700,
-                        color: "#0B1929",
+                        color: "#004aad",
                         outline: "none"
                       }}
                     >
@@ -328,7 +328,7 @@ export default function CalculatorPage() {
                         </option>
                       ))}
                     </select>
-                    <p style={{ fontSize: 11, color: "#4A6375", marginTop: 6, fontWeight: 500 }}>
+                    <p style={{ fontSize: 11, color: "#0085f4", marginTop: 6, fontWeight: 500 }}>
                       * {currentLandUse.desc}
                     </p>
                   </div>
@@ -336,7 +336,7 @@ export default function CalculatorPage() {
                   {/* Drainage Area */}
                   <div>
                     <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8, alignItems: "center" }}>
-                      <label style={{ fontSize: 13, fontWeight: 800, color: "#0B1929", textTransform: "uppercase" }}>Total Drainage Watershed Area:</label>
+                      <label style={{ fontSize: 13, fontWeight: 800, color: "#004aad", textTransform: "uppercase" }}>Total Drainage Watershed Area:</label>
                       <div style={{ display: "flex", background: "#F1F5F9", borderRadius: 6, padding: 2 }}>
                         <button
                           onClick={() => { setAreaUnit("sqft"); setArea(areaUnit === "acres" ? Math.round(area * 43560) : area); }}
@@ -364,7 +364,7 @@ export default function CalculatorPage() {
                         background: "#F8FAFC",
                         fontSize: 14,
                         fontWeight: 700,
-                        color: "#0B1929",
+                        color: "#004aad",
                         outline: "none"
                       }}
                     />
@@ -373,8 +373,8 @@ export default function CalculatorPage() {
                   {/* Design Storm Depth Slider */}
                   <div>
                     <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-                      <label style={{ fontSize: 13, fontWeight: 800, color: "#0B1929", textTransform: "uppercase" }}>Design Storm Precipitation Depth (P):</label>
-                      <span style={{ fontSize: 14, fontWeight: 900, color: "#1565C0" }}>{designPrecip.toFixed(1)} inches</span>
+                      <label style={{ fontSize: 13, fontWeight: 800, color: "#004aad", textTransform: "uppercase" }}>Design Storm Precipitation Depth (P):</label>
+                      <span style={{ fontSize: 14, fontWeight: 900, color: "#0085f4" }}>{designPrecip.toFixed(1)} inches</span>
                     </div>
                     <input
                       type="range"
@@ -383,9 +383,9 @@ export default function CalculatorPage() {
                       step="0.1"
                       value={designPrecip}
                       onChange={(e) => setDesignPrecip(parseFloat(e.target.value))}
-                      style={{ width: "100%", height: 6, borderRadius: 3, outline: "none", accentColor: "#1565C0", cursor: "pointer" }}
+                      style={{ width: "100%", height: 6, borderRadius: 3, outline: "none", accentColor: "#0085f4", cursor: "pointer" }}
                     />
-                    <p style={{ fontSize: 11, color: "#4A6375", marginTop: 4, fontWeight: 500 }}>
+                    <p style={{ fontSize: 11, color: "#0085f4", marginTop: 4, fontWeight: 500 }}>
                       Precipitation depth for a standard 24-hr design storm event. EISA Sec 438 compliance threshold is 1.2" (95th percentile).
                     </p>
                   </div>
@@ -396,12 +396,12 @@ export default function CalculatorPage() {
               {/* Engineering Method / Formula Card */}
               <div style={{ background: "#ffffff", border: "1px solid #E2E8F0", borderRadius: 20, padding: 36, boxShadow: "0 4px 20px rgba(6,35,71,0.02)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
-                  <Info size={18} color="#1565C0" />
-                  <h4 style={{ fontSize: 14, fontWeight: 900, color: "#0B1929", textTransform: "uppercase", letterSpacing: 0.5, margin: 0 }}>
+                  <Info size={18} color="#0085f4" />
+                  <h4 style={{ fontSize: 14, fontWeight: 900, color: "#004aad", textTransform: "uppercase", letterSpacing: 0.5, margin: 0 }}>
                     USDA NRCS TR-55 Hydrology Equations Used:
                   </h4>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: 13, color: "#4A6375", fontFamily: "monospace", lineHeight: 1.5 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: 13, color: "#0085f4", fontFamily: "monospace", lineHeight: 1.5 }}>
                   <div>
                     <strong>1. Runoff Curve Number (CN)</strong> = {curveNumber}
                     <div style={{ color: "#8898AA", paddingLeft: 12 }}>Determined from USDA Soil Group {soilGroup} and {currentLandUse.label} type.</div>
@@ -429,11 +429,11 @@ export default function CalculatorPage() {
               {/* Report Card */}
               <div 
                 style={{ 
-                  background: "#0A1929", 
+                  background: "#004aad", 
                   color: "#ffffff", 
                   borderRadius: 20, 
                   padding: 36, 
-                  border: "2px solid #1565C0",
+                  border: "2px solid #0085f4",
                   boxShadow: "0 20px 40px rgba(21,101,192,0.12)",
                   position: "relative",
                   overflow: "hidden"
@@ -524,13 +524,13 @@ export default function CalculatorPage() {
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <FileText size={18} color="#1565C0" />
-                  <h4 style={{ fontSize: 13, fontWeight: 900, color: "#0B1929", textTransform: "uppercase", letterSpacing: 0.5, margin: 0 }}>
+                  <FileText size={18} color="#0085f4" />
+                  <h4 style={{ fontSize: 13, fontWeight: 900, color: "#004aad", textTransform: "uppercase", letterSpacing: 0.5, margin: 0 }}>
                     US Regulatory Guidelines:
                   </h4>
                 </div>
                 
-                <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: 13, color: "#4A6375", fontWeight: 500, lineHeight: 1.45 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: 13, color: "#0085f4", fontWeight: 500, lineHeight: 1.45 }}>
                   <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                     <div style={{ width: 6, height: 6, borderRadius: "50%", background: isEISAPassed ? "#00E5FF" : "#FFB300", marginTop: 6 }} />
                     <div>
@@ -551,7 +551,7 @@ export default function CalculatorPage() {
                     onClick={() => router.push("/#contact")}
                     style={{
                       flex: 1,
-                      background: "#1565C0",
+                      background: "#0085f4",
                       color: "#fff",
                       border: "none",
                       padding: "12px 20px",
@@ -566,8 +566,8 @@ export default function CalculatorPage() {
                       cursor: "pointer",
                       transition: "background 0.2s"
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.background = "#0D47A1"}
-                    onMouseLeave={(e) => e.currentTarget.style.background = "#1565C0"}
+                    onMouseEnter={(e) => e.currentTarget.style.background = "#004aad"}
+                    onMouseLeave={(e) => e.currentTarget.style.background = "#0085f4"}
                   >
                     Request Stamp drawing
                   </button>
@@ -576,8 +576,8 @@ export default function CalculatorPage() {
                     onClick={() => { alert("Exporting certified hydrologic calculations..."); }}
                     style={{
                       background: "transparent",
-                      border: "1px solid #1565C0",
-                      color: "#1565C0",
+                      border: "1px solid #0085f4",
+                      color: "#0085f4",
                       padding: "12px 20px",
                       borderRadius: 6,
                       fontSize: 12,

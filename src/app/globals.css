@@ -2,16 +2,16 @@
 
 /* ─── H2 Industries Brand Tokens ─── */
 :root {
-  --h2-blue: #1565C0;
-  --h2-blue-light: #2196F3;
-  --h2-blue-dark: #0D47A1;
-  --h2-navy: #0A1929;
-  --h2-navy-mid: #0D2137;
+  --h2-blue: #0085f4;
+  --h2-blue-light: #00bbff;
+  --h2-blue-dark: #004aad;
+  --h2-navy: #004aad;
+  --h2-navy-mid: #004aad;
   --h2-white: #FFFFFF;
   --h2-grey: #F5F7FA;
   --h2-grey-mid: #E2E8F0;
-  --h2-text: #0B1929;
-  --h2-text-muted: #4A6375;
+  --h2-text: #004aad;
+  --h2-text-muted: #0085f4;
 }
 
 /* ─── Base Reset ─── */
@@ -71,7 +71,7 @@ body {
 
 /* ─── Gradient Heading ─── */
 .text-gradient {
-  background: linear-gradient(135deg, #60AEFF 0%, #2196F3 40%, #1565C0 100%);
+  background: linear-gradient(135deg, #60AEFF 0%, #2196F3 40%, #0085f4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -121,13 +121,13 @@ img { transition: opacity 0.3s ease; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #1565C0;
+  color: #0085f4;
 }
 .pill-tag .dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #1565C0;
+  background: #0085f4;
 }
 .pill-tag-dark {
   background: rgba(33, 150, 243, 0.12);

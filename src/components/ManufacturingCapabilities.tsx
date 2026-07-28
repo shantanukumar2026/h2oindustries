@@ -22,20 +22,20 @@ export default function ManufacturingCapabilities() {
         <div ref={ref} style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 32, marginBottom: 64 }}>
           <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", border: "1px solid #E0E0E0", padding: "6px 16px", marginBottom: 20 }}>
-              <span style={{ width: 8, height: 8, background: "#1565C0", borderRadius: "50%" }} />
-              <span style={{ color: "#4A6375", fontSize: 12, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" }}>
+              <span style={{ width: 8, height: 8, background: "#0085f4", borderRadius: "50%" }} />
+              <span style={{ color: "#0085f4", fontSize: 12, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" }}>
                 {header.tagline}
               </span>
             </div>
             
-            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.1, textTransform: "uppercase" }}>
+            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 900, color: "#004aad", lineHeight: 1.1, textTransform: "uppercase" }}>
               {header.title}<br />
-              <span style={{ color: "#1565C0" }}>{header.highlight}</span>
+              <span style={{ color: "#0085f4" }}>{header.highlight}</span>
             </h2>
           </motion.div>
           
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }} style={{ maxWidth: 500 }}>
-            <p style={{ color: "#4A6375", fontSize: 16, lineHeight: 1.6, margin: 0 }}>
+            <p style={{ color: "#0085f4", fontSize: 16, lineHeight: 1.6, margin: 0 }}>
               {header.subtitle}
             </p>
           </motion.div>
@@ -105,11 +105,11 @@ function CapabilityCard({ cap }: { cap: any }) {
 
       {/* Content */}
       <div style={{ padding: 32, flex: 1, display: "flex", flexDirection: "column" }}>
-        <h3 style={{ fontSize: 20, fontWeight: 800, color: "#0D3A73", marginBottom: 16, textTransform: "uppercase" }}>{cap.title}</h3>
-        <p style={{ fontSize: 15, color: "#4A6375", lineHeight: 1.6, margin: 0 }}>{cap.desc}</p>
+        <h3 style={{ fontSize: 20, fontWeight: 800, color: "#004aad", marginBottom: 16, textTransform: "uppercase" }}>{cap.title}</h3>
+        <p style={{ fontSize: 15, color: "#0085f4", lineHeight: 1.6, margin: 0 }}>{cap.desc}</p>
         
         <div style={{ marginTop: "auto", paddingTop: 24 }}>
-          <div style={{ width: 40, height: 2, background: hovered ? "#1565C0" : "#E0E0E0", transition: "all 0.3s" }} />
+          <div style={{ width: 40, height: 2, background: hovered ? "#0085f4" : "#E0E0E0", transition: "all 0.3s" }} />
         </div>
       </div>
     </div>

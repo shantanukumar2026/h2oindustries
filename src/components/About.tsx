@@ -359,7 +359,7 @@ function CustomMediaPlayer({ src, title, bgColor = "#0085f4" }: { src: string; t
         borderRadius: 20,
         overflow: "hidden",
         border: isWhite ? "1px solid rgba(226, 232, 240, 0.8)" : "1px solid rgba(33, 150, 243, 0.3)",
-        boxShadow: isWhite ? "0 20px 40px rgba(0, 0, 0, 0.35)" : "0 20px 45px rgba(0, 0, 0, 0.6), 0 0 20px rgba(33, 150, 243, 0.15)",
+        boxShadow: isWhite ? "0 20px 40px rgba(0, 74, 173, 0.35)" : "0 20px 45px rgba(0, 74, 173, 0.6), 0 0 20px rgba(33, 150, 243, 0.15)",
         background: bgColor
       }}
     >
@@ -538,7 +538,7 @@ function CustomMediaPlayer({ src, title, bgColor = "#0085f4" }: { src: string; t
         {/* Top Dot Grid Pattern */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 4, opacity: 0.35 }}>
           {[...Array(6)].map((_, idx) => (
-            <div key={idx} style={{ width: 3, height: 3, borderRadius: "50%", background: isWhite ? "#1565C0" : "#64B5F6" }} />
+            <div key={idx} style={{ width: 3, height: 3, borderRadius: "50%", background: isWhite ? "#0085f4" : "#64B5F6" }} />
           ))}
         </div>
 
@@ -549,20 +549,20 @@ function CustomMediaPlayer({ src, title, bgColor = "#0085f4" }: { src: string; t
             height: 28,
             borderRadius: "50%",
             background: isWhite ? "rgba(21, 101, 192, 0.08)" : "rgba(33, 150, 243, 0.12)",
-            border: isWhite ? "1px solid #1565C0" : "1px solid rgba(33, 150, 243, 0.4)",
+            border: isWhite ? "1px solid #0085f4" : "1px solid rgba(33, 150, 243, 0.4)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            color: isWhite ? "#1565C0" : "#64B5F6"
+            color: isWhite ? "#0085f4" : "#64B5F6"
           }}
         >
-          <Droplet size={13} fill={isWhite ? "#1565C0" : "#64B5F6"} />
+          <Droplet size={13} fill={isWhite ? "#0085f4" : "#64B5F6"} />
         </div>
 
         {/* Bottom Dot Grid Pattern */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 4, opacity: 0.35 }}>
           {[...Array(6)].map((_, idx) => (
-            <div key={idx} style={{ width: 3, height: 3, borderRadius: "50%", background: isWhite ? "#1565C0" : "#64B5F6" }} />
+            <div key={idx} style={{ width: 3, height: 3, borderRadius: "50%", background: isWhite ? "#0085f4" : "#64B5F6" }} />
           ))}
         </div>
       </div>

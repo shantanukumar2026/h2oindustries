@@ -40,7 +40,7 @@ export default function Hero() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to right, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 100%)",
+            background: "linear-gradient(to right, rgba(0, 74, 173, 0.45) 0%, rgba(0, 133, 244, 0.15) 100%)",
           }}
         />
       </div>
@@ -171,7 +171,7 @@ export default function Hero() {
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
             border: "1px solid rgba(33, 150, 243, 0.25)",
-            boxShadow: "0 15px 45px rgba(0,0,0,0.35)",
+            boxShadow: "0 15px 45px rgba(0, 74, 173, 0.35)",
             borderRadius: "16px",
             padding: "24px",
             width: "360px",
@@ -224,7 +224,7 @@ export default function Hero() {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              background: "#1565C0",
+              background: "#0085f4",
               color: "#fff",
               textDecoration: "none",
               padding: "16px 20px",
@@ -233,7 +233,7 @@ export default function Hero() {
               fontWeight: 800,
               textTransform: "uppercase",
               letterSpacing: "0.05em",
-              border: "1.5px solid #1565C0",
+              border: "1.5px solid #0085f4",
               transition: "all 0.25s ease",
             }}
           >
@@ -264,7 +264,7 @@ export default function Hero() {
             position: "absolute",
             top: 100,
             right: -56,
-            background: "#1565C0",
+            background: "#0085f4",
             color: "#fff",
             padding: "12px 24px",
             fontSize: 12,
@@ -340,7 +340,7 @@ export default function Hero() {
           left: 0,
           right: 0,
           height: 12,
-          background: "#0D47A1",
+          background: "#004aad",
           zIndex: 20,
         }}
       />
@@ -422,14 +422,14 @@ export default function Hero() {
           box-shadow: 0 0 15px rgba(33, 150, 243, 0.5);
         }
         .explore-btn:hover {
-          background: #1565C0 !important;
+          background: #0085f4 !important;
           color: #ffffff !important;
-          border-color: #1565C0 !important;
+          border-color: #0085f4 !important;
           box-shadow: 0 4px 14px rgba(21, 101, 192, 0.3);
         }
         .work-btn:hover {
-          background: #0D47A1 !important;
-          border-color: #0D47A1 !important;
+          background: #004aad !important;
+          border-color: #004aad !important;
           box-shadow: 0 4px 14px rgba(13, 71, 161, 0.3);
         }
         .hide-on-mobile {

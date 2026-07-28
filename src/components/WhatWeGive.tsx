@@ -15,7 +15,7 @@ export default function WhatWeGive() {
     <section 
       id="what-we-give" 
       style={{ 
-        background: "#0D3A73", 
+        background: "#004aad", 
         color: "#fff", 
         padding: "48px 0",
         position: "relative",

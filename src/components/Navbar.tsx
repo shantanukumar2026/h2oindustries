@@ -161,7 +161,7 @@ export default function Navbar() {
         <motion.div
           initial={{ height: 64, opacity: 1 }}
           animate={{ height: scrolled ? 0 : 64, opacity: scrolled ? 0 : 1 }}
-          style={{ background: "#1565C0", overflow: "hidden" }}
+          style={{ background: "#0085f4", overflow: "hidden" }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           <div
@@ -238,12 +238,12 @@ export default function Navbar() {
                   onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.2)")}
                   onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
                 >
-                  <option value="en" style={{ color: "#000" }}>EN</option>
-                  <option value="es" style={{ color: "#000" }}>ES</option>
-                  <option value="fr" style={{ color: "#000" }}>FR</option>
-                  <option value="de" style={{ color: "#000" }}>DE</option>
-                  <option value="zh" style={{ color: "#000" }}>ZH</option>
-                  <option value="ar" style={{ color: "#000" }}>AR</option>
+                  <option value="en" style={{ color: "#004aad" }}>EN</option>
+                  <option value="es" style={{ color: "#004aad" }}>ES</option>
+                  <option value="fr" style={{ color: "#004aad" }}>FR</option>
+                  <option value="de" style={{ color: "#004aad" }}>DE</option>
+                  <option value="zh" style={{ color: "#004aad" }}>ZH</option>
+                  <option value="ar" style={{ color: "#004aad" }}>AR</option>
                 </select>
                 <ChevronDown size={12} color="#fff" style={{ position: "absolute", right: 10, pointerEvents: "none" }} />
               </div>
@@ -331,7 +331,7 @@ export default function Navbar() {
                       display: "flex",
                       alignItems: "center",
                       gap: 6,
-                      color: activeSubmenu === link.label ? "#1565C0" : "#0D3A73",
+                      color: activeSubmenu === link.label ? "#0085f4" : "#004aad",
                       fontSize: 15,
                       fontWeight: 800,
                       fontFamily: "inherit",
@@ -345,7 +345,7 @@ export default function Navbar() {
                     {link.mega && (
                       <ChevronDown
                         size={16}
-                        color={activeSubmenu === link.label ? "#1565C0" : "#8898AA"}
+                        color={activeSubmenu === link.label ? "#0085f4" : "#8898AA"}
                         style={{
                           transform: activeSubmenu === link.label ? "rotate(180deg)" : "rotate(0deg)",
                           transition: "transform 0.2s",
@@ -360,7 +360,7 @@ export default function Navbar() {
                         left: "50%",
                         transform: "translateX(-50%)",
                         height: 3,
-                        background: "#1565C0",
+                        background: "#0085f4",
                         width: activeSubmenu === link.label ? "100%" : "0%",
                         transition: "width 0.3s ease",
                       }}
@@ -393,13 +393,13 @@ export default function Navbar() {
                   borderRadius: 4,
                   fontSize: 14,
                   fontWeight: 500,
-                  color: "#0D3A73",
+                  color: "#004aad",
                   fontFamily: "inherit",
                   outline: "none",
                   transition: "border-color 0.2s, background 0.2s",
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = "#1565C0";
+                  e.target.style.borderColor = "#0085f4";
                   e.target.style.background = "#fff";
                 }}
                 onBlur={(e) => {
@@ -440,7 +440,7 @@ export default function Navbar() {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.1 }}
-                          style={{ position: "relative", padding: "48px 60px", background: "#062347", color: "#fff", display: "flex", flexDirection: "column", justifyContent: "center" }}
+                          style={{ position: "relative", padding: "48px 60px", background: "#004aad", color: "#fff", display: "flex", flexDirection: "column", justifyContent: "center" }}
                         >
                           <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
                             <Image src={link.mega.image} alt={link.mega.title} fill style={{ objectFit: "cover", opacity: 0.3 }} />
@@ -449,7 +449,7 @@ export default function Navbar() {
                             <h3 style={{ fontSize: 24, fontWeight: 900, fontStyle: "italic", textTransform: "uppercase", marginBottom: 12 }}>
                               {link.mega.title}
                             </h3>
-                            <p style={{ fontSize: 15, color: "#42A5F5", lineHeight: 1.6, marginBottom: 24, fontWeight: 500, maxWidth: 320 }}>
+                            <p style={{ fontSize: 15, color: "#ffffff", lineHeight: 1.6, marginBottom: 24, fontWeight: 500, maxWidth: 320 }}>
                               {link.mega.desc}
                             </p>
                             <button
@@ -458,7 +458,7 @@ export default function Navbar() {
                                 display: "inline-flex",
                                 alignItems: "center",
                                 gap: 8,
-                                background: "#1565C0",
+                                background: "#0085f4",
                                 color: "#fff",
                                 border: "none",
                                 padding: "12px 24px",
@@ -468,8 +468,8 @@ export default function Navbar() {
                                 cursor: "pointer",
                                 transition: "background 0.2s",
                               }}
-                              onMouseEnter={(e) => (e.currentTarget.style.background = "#0D47A1")}
-                              onMouseLeave={(e) => (e.currentTarget.style.background = "#1565C0")}
+                              onMouseEnter={(e) => (e.currentTarget.style.background = "#004aad")}
+                              onMouseLeave={(e) => (e.currentTarget.style.background = "#0085f4")}
                             >
                               {link.mega.link} <ArrowRight size={16} />
                             </button>
@@ -485,7 +485,7 @@ export default function Navbar() {
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ delay: 0.15 + (idx * 0.1) }}
                             >
-                              <h4 style={{ fontSize: 14, fontWeight: 900, fontStyle: "italic", color: "#0D3A73", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 20, paddingBottom: 12, borderBottom: "2px solid #90CAF9" }}>
+                              <h4 style={{ fontSize: 14, fontWeight: 900, fontStyle: "italic", color: "#004aad", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 20, paddingBottom: 12, borderBottom: "2px solid #0085f4" }}>
                                 {col.title}
                               </h4>
                               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
@@ -498,14 +498,14 @@ export default function Navbar() {
                                         border: "none",
                                         padding: 0,
                                         fontSize: 15,
-                                        fontWeight: 600,
-                                        color: "#1565C0",
+                                        fontWeight: 700,
+                                        color: "#004aad",
                                         cursor: "pointer",
                                         textAlign: "left",
                                         transition: "color 0.2s",
                                       }}
-                                      onMouseEnter={(e) => (e.currentTarget.style.color = "#1565C0")}
-                                      onMouseLeave={(e) => (e.currentTarget.style.color = "#1565C0")}
+                                      onMouseEnter={(e) => (e.currentTarget.style.color = "#0085f4")}
+                                      onMouseLeave={(e) => (e.currentTarget.style.color = "#004aad")}
                                     >
                                       {item}
                                     </button>
@@ -593,7 +593,7 @@ export default function Navbar() {
                         fontSize: 16,
                         fontWeight: 800,
                         textTransform: "uppercase",
-                        color: "#0D3A73",
+                        color: "#004aad",
                         fontFamily: "inherit",
                       }}
                     >
@@ -633,7 +633,7 @@ export default function Navbar() {
                                       padding: "8px 16px",
                                       fontSize: 14,
                                       fontWeight: 600,
-                                      color: "#1565C0",
+                                      color: "#0085f4",
                                       fontFamily: "inherit",
                                     }}
                                   >
@@ -667,7 +667,7 @@ export default function Navbar() {
                         fontSize: 14,
                         fontWeight: 700,
                         textTransform: "uppercase",
-                        color: "#1565C0",
+                        color: "#0085f4",
                         display: "flex",
                         alignItems: "center",
                         gap: 12,

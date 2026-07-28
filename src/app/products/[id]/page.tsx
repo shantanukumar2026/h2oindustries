@@ -21,8 +21,8 @@ export default function ProductDetailPage() {
       <main style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#FAFAFA" }}>
         <Navbar />
         <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingTop: 120 }}>
-          <h2 style={{ color: "#0D3A73", fontWeight: 900, marginBottom: 16 }}>PRODUCT NOT FOUND</h2>
-          <button onClick={() => router.push("/products")} style={{ background: "#1565C0", color: "#fff", border: "none", padding: "16px 32px", cursor: "pointer", fontWeight: 800, textTransform: "uppercase" }}>RETURN TO MARKETPLACE</button>
+          <h2 style={{ color: "#004aad", fontWeight: 900, marginBottom: 16 }}>PRODUCT NOT FOUND</h2>
+          <button onClick={() => router.push("/products")} style={{ background: "#0085f4", color: "#fff", border: "none", padding: "16px 32px", cursor: "pointer", fontWeight: 800, textTransform: "uppercase" }}>RETURN TO MARKETPLACE</button>
         </div>
         <Footer />
       </main>
@@ -121,8 +121,8 @@ function TechnicalSpecs({ product }: { product: any }) {
         {/* Specs Table */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-20%" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>
-            <Settings size={28} color="#1565C0" />
-            <h2 style={{ fontSize: 32, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>TECHNICAL SPECIFICATIONS</h2>
+            <Settings size={28} color="#0085f4" />
+            <h2 style={{ fontSize: 32, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>TECHNICAL SPECIFICATIONS</h2>
           </div>
 
           <div style={{ border: "1px solid #E0E0E0", borderRadius: 8, overflow: "hidden" }}>
@@ -134,8 +134,8 @@ function TechnicalSpecs({ product }: { product: any }) {
               { label: "Compliance", val: "ISO 9001, ASTM International Standards" }
             ].map((row, i) => (
               <div key={i} style={{ display: "grid", gridTemplateColumns: "1fr 2fr", padding: "20px 24px", background: i % 2 === 0 ? "#FAFAFA" : "#fff", borderBottom: i === 4 ? "none" : "1px solid #E0E0E0" }}>
-                <span style={{ fontSize: 14, fontWeight: 800, color: "#4A6375", textTransform: "uppercase", letterSpacing: "0.05em" }}>{row.label}</span>
-                <span style={{ fontSize: 15, fontWeight: 600, color: "#0D3A73" }}>{row.val}</span>
+                <span style={{ fontSize: 14, fontWeight: 800, color: "#0085f4", textTransform: "uppercase", letterSpacing: "0.05em" }}>{row.label}</span>
+                <span style={{ fontSize: 15, fontWeight: 600, color: "#004aad" }}>{row.val}</span>
               </div>
             ))}
           </div>
@@ -144,19 +144,19 @@ function TechnicalSpecs({ product }: { product: any }) {
         {/* Key Features */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-20%" }} transition={{ delay: 0.2 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>
-            <Activity size={28} color="#1565C0" />
-            <h2 style={{ fontSize: 32, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>CORE ADVANTAGES</h2>
+            <Activity size={28} color="#0085f4" />
+            <h2 style={{ fontSize: 32, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>CORE ADVANTAGES</h2>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             {product.features.map((feat: string, i: number) => (
               <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 20 }}>
                 <div style={{ width: 48, height: 48, borderRadius: 8, background: "#F0F7FF", border: "1px solid #90CAF9", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <Check size={24} color="#1565C0" strokeWidth={3} />
+                  <Check size={24} color="#0085f4" strokeWidth={3} />
                 </div>
                 <div>
-                  <h4 style={{ fontSize: 18, fontWeight: 800, color: "#0D3A73", textTransform: "uppercase", marginBottom: 8 }}>{feat}</h4>
-                  <p style={{ fontSize: 15, color: "#4A6375", lineHeight: 1.6, margin: 0, fontWeight: 500 }}>Engineered to provide maximum reliability and lifecycle value in rigorous industrial environments.</p>
+                  <h4 style={{ fontSize: 18, fontWeight: 800, color: "#004aad", textTransform: "uppercase", marginBottom: 8 }}>{feat}</h4>
+                  <p style={{ fontSize: 15, color: "#0085f4", lineHeight: 1.6, margin: 0, fontWeight: 500 }}>Engineered to provide maximum reliability and lifecycle value in rigorous industrial environments.</p>
                 </div>
               </div>
             ))}
@@ -173,8 +173,8 @@ function ManufacturingAndQuality() {
     <section style={{ background: "#FAFAFA", padding: "100px 0", borderBottom: "1px solid #E0E0E0" }}>
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px" }}>
         <div style={{ textAlign: "center", marginBottom: 60 }}>
-          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", fontStyle: "italic", marginBottom: 16 }}>PRECISION AT EVERY STEP</h2>
-          <p style={{ fontSize: 18, color: "#4A6375", maxWidth: 700, margin: "0 auto", fontWeight: 500 }}>From raw material to final inspection, our state-of-the-art facilities ensure flawless execution.</p>
+          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 16 }}>PRECISION AT EVERY STEP</h2>
+          <p style={{ fontSize: 18, color: "#0085f4", maxWidth: 700, margin: "0 auto", fontWeight: 500 }}>From raw material to final inspection, our state-of-the-art facilities ensure flawless execution.</p>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }}>
@@ -213,16 +213,16 @@ function ApplicationsAndIndustries() {
     <section style={{ padding: "100px 0", background: "#ffffff", borderBottom: "1px solid #E0E0E0" }}>
       <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px", display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: 80, alignItems: "center" }}>
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-20%" }}>
-          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", fontStyle: "italic", marginBottom: 24, lineHeight: 1.1 }}>INDUSTRIES & <br /><span style={{ color: "#2196F3" }}>APPLICATIONS</span></h2>
-          <div style={{ width: 60, height: 4, background: "#1565C0", marginBottom: 32 }} />
-          <p style={{ fontSize: 16, color: "#4A6375", lineHeight: 1.7, fontWeight: 500, marginBottom: 40 }}>Our equipment forms the critical backbone of advanced infrastructure projects across multiple sectors globally. Built to adapt, scale, and perform.</p>
+          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 24, lineHeight: 1.1 }}>INDUSTRIES & <br /><span style={{ color: "#2196F3" }}>APPLICATIONS</span></h2>
+          <div style={{ width: 60, height: 4, background: "#0085f4", marginBottom: 32 }} />
+          <p style={{ fontSize: 16, color: "#0085f4", lineHeight: 1.7, fontWeight: 500, marginBottom: 40 }}>Our equipment forms the critical backbone of advanced infrastructure projects across multiple sectors globally. Built to adapt, scale, and perform.</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-20%" }} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
           {industries.map((ind, i) => (
             <div key={i} style={{ background: "#FAFAFA", border: "1px solid #E0E0E0", padding: "24px 32px", borderRadius: 8, display: "flex", alignItems: "center", gap: 16 }}>
               <div style={{ width: 8, height: 8, background: "#2196F3", borderRadius: "50%" }} />
-              <span style={{ fontSize: 15, fontWeight: 800, color: "#0D3A73", textTransform: "uppercase" }}>{ind}</span>
+              <span style={{ fontSize: 15, fontWeight: 800, color: "#004aad", textTransform: "uppercase" }}>{ind}</span>
             </div>
           ))}
         </motion.div>
@@ -238,7 +238,7 @@ function ResourcesAndContact({ product, router }: { product: any, router: any })
 
         {/* Resources */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-20%" }}>
-          <h2 style={{ fontSize: 24, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", marginBottom: 32 }}>PRODUCT RESOURCES</h2>
+          <h2 style={{ fontSize: 24, fontWeight: 900, color: "#004aad", textTransform: "uppercase", marginBottom: 32 }}>PRODUCT RESOURCES</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {[
               { icon: FileText, title: "Product Spec Sheet (PDF)" },
@@ -248,8 +248,8 @@ function ResourcesAndContact({ product, router }: { product: any, router: any })
             ].map((res, i) => (
               <div key={i} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: "#ffffff", border: "1px solid #90CAF9", padding: "20px 24px", borderRadius: 8, cursor: "pointer", transition: "all 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#2196F3"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(21,101,192,0.1)"; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#90CAF9"; e.currentTarget.style.boxShadow = "none"; }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-                  <res.icon size={24} color="#1565C0" />
-                  <span style={{ fontSize: 15, fontWeight: 800, color: "#0D3A73", textTransform: "uppercase" }}>{res.title}</span>
+                  <res.icon size={24} color="#0085f4" />
+                  <span style={{ fontSize: 15, fontWeight: 800, color: "#004aad", textTransform: "uppercase" }}>{res.title}</span>
                 </div>
                 <Download size={20} color="#42A5F5" />
               </div>
@@ -260,16 +260,16 @@ function ResourcesAndContact({ product, router }: { product: any, router: any })
         {/* Contact CTA */}
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-20%" }} transition={{ delay: 0.2 }}>
           <div style={{ background: "#ffffff", border: "1px solid #E0E0E0", padding: 48, borderRadius: 16, boxShadow: "0 20px 40px rgba(6,35,71,0.05)" }}>
-            <h2 style={{ fontSize: 28, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase", marginBottom: 16, fontStyle: "italic" }}>REQUEST A QUOTE</h2>
-            <p style={{ fontSize: 15, color: "#4A6375", marginBottom: 32, fontWeight: 500 }}>Submit your details to receive pricing for the <strong>{product.name}</strong>, including volume discounts and custom configurations.</p>
+            <h2 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", marginBottom: 16, fontStyle: "italic" }}>REQUEST A QUOTE</h2>
+            <p style={{ fontSize: 15, color: "#0085f4", marginBottom: 32, fontWeight: 500 }}>Submit your details to receive pricing for the <strong>{product.name}</strong>, including volume discounts and custom configurations.</p>
 
             <form style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                <input type="text" placeholder="FULL NAME" style={{ padding: "16px 20px", background: "#F5F7FA", border: "1px solid #CFD8DC", borderRadius: 4, fontSize: 14, fontWeight: 600, color: "#0D3A73", outline: "none" }} />
-                <input type="email" placeholder="COMPANY EMAIL" style={{ padding: "16px 20px", background: "#F5F7FA", border: "1px solid #CFD8DC", borderRadius: 4, fontSize: 14, fontWeight: 600, color: "#0D3A73", outline: "none" }} />
+                <input type="text" placeholder="FULL NAME" style={{ padding: "16px 20px", background: "#F5F7FA", border: "1px solid #CFD8DC", borderRadius: 4, fontSize: 14, fontWeight: 600, color: "#004aad", outline: "none" }} />
+                <input type="email" placeholder="COMPANY EMAIL" style={{ padding: "16px 20px", background: "#F5F7FA", border: "1px solid #CFD8DC", borderRadius: 4, fontSize: 14, fontWeight: 600, color: "#004aad", outline: "none" }} />
               </div>
-              <input type="text" placeholder="PROJECT DETAILS / VOLUME REQUIRED" style={{ padding: "16px 20px", background: "#F5F7FA", border: "1px solid #CFD8DC", borderRadius: 4, fontSize: 14, fontWeight: 600, color: "#0D3A73", outline: "none" }} />
-              <button type="button" style={{ background: "#1565C0", color: "#fff", border: "none", padding: 20, fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.1em", cursor: "pointer", borderRadius: 4, marginTop: 12 }}>
+              <input type="text" placeholder="PROJECT DETAILS / VOLUME REQUIRED" style={{ padding: "16px 20px", background: "#F5F7FA", border: "1px solid #CFD8DC", borderRadius: 4, fontSize: 14, fontWeight: 600, color: "#004aad", outline: "none" }} />
+              <button type="button" style={{ background: "#0085f4", color: "#fff", border: "none", padding: 20, fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.1em", cursor: "pointer", borderRadius: 4, marginTop: 12 }}>
                 SUBMIT INQUIRY
               </button>
             </form>

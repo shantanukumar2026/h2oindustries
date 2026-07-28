@@ -30,12 +30,12 @@ export default function ManufacturingProcess() {
             </div>
             <h2
               className="font-display"
-              style={{ fontSize: "clamp(1.8rem, 8vw, 3.2rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.0, marginBottom: 16, textTransform: "uppercase" }}
+              style={{ fontSize: "clamp(1.8rem, 8vw, 3.2rem)", fontWeight: 900, color: "#004aad", lineHeight: 1.0, marginBottom: 16, textTransform: "uppercase" }}
             >
               {header.title}<br />
-              <span style={{ color: "#1565C0" }}>{header.highlight}</span>
+              <span style={{ color: "#0085f4" }}>{header.highlight}</span>
             </h2>
-            <p style={{ color: "#4A6375", fontSize: 17, maxWidth: 560, margin: "0 auto", lineHeight: 1.65 }}>
+            <p style={{ color: "#0085f4", fontSize: 17, maxWidth: 560, margin: "0 auto", lineHeight: 1.65 }}>
               {header.subtitle}
             </p>
           </motion.div>
@@ -50,7 +50,7 @@ export default function ManufacturingProcess() {
             left: "calc(10% + 40px)",
             right: "calc(10% + 40px)",
             height: 2,
-            background: "linear-gradient(90deg, #1565C0 0%, #2196F3 50%, #1565C0 100%)",
+            background: "linear-gradient(90deg, #0085f4 0%, #2196F3 50%, #0085f4 100%)",
           }} />
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 16 }}>
             {steps.map((step, i) => {
@@ -82,7 +82,7 @@ export default function ManufacturingProcess() {
                       width: 52,
                       height: 52,
                       borderRadius: "50%",
-                      background: "linear-gradient(135deg, #1565C0, #2196F3)",
+                      background: "linear-gradient(135deg, #0085f4, #2196F3)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -97,7 +97,7 @@ export default function ManufacturingProcess() {
                       width: 24,
                       height: 24,
                       borderRadius: "50%",
-                      background: "#0D47A1",
+                      background: "#004aad",
                       color: "#fff",
                       fontSize: 9,
                       fontWeight: 800,
@@ -110,12 +110,12 @@ export default function ManufacturingProcess() {
                   </div>
                   <h3
                     className="font-display"
-                    style={{ fontSize: 20, fontWeight: 900, color: "#0D3A73", marginBottom: 10, textTransform: "uppercase" }}
+                    style={{ fontSize: 20, fontWeight: 900, color: "#004aad", marginBottom: 10, textTransform: "uppercase" }}
                   >
                     {step.title}
                   </h3>
-                  <p style={{ fontSize: 13, color: "#4A6375", lineHeight: 1.65, marginBottom: 10 }}>{step.desc}</p>
-                  <p style={{ fontSize: 11, color: "#1565C0", fontWeight: 600 }}>{step.detail}</p>
+                  <p style={{ fontSize: 13, color: "#0085f4", lineHeight: 1.65, marginBottom: 10 }}>{step.desc}</p>
+                  <p style={{ fontSize: 11, color: "#0085f4", fontWeight: 600 }}>{step.detail}</p>
                 </motion.div>
               );
             })}
@@ -140,7 +140,7 @@ export default function ManufacturingProcess() {
                     width: 56,
                     height: 56,
                     borderRadius: "50%",
-                    background: "linear-gradient(135deg, #1565C0, #2196F3)",
+                    background: "linear-gradient(135deg, #0085f4, #2196F3)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -154,7 +154,7 @@ export default function ManufacturingProcess() {
                       width: 2,
                       flex: 1,
                       minHeight: 32,
-                      background: "linear-gradient(to bottom, #1565C0, #2196F3)",
+                      background: "linear-gradient(to bottom, #0085f4, #2196F3)",
                       margin: "8px 0",
                     }} />
                   )}
@@ -162,16 +162,16 @@ export default function ManufacturingProcess() {
                 {/* Content */}
                 <div style={{ paddingBottom: i < 4 ? 32 : 0, paddingTop: 10 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                    <span style={{ fontSize: 11, fontWeight: 800, color: "#1565C0", letterSpacing: "0.1em" }}>{step.num}</span>
+                    <span style={{ fontSize: 11, fontWeight: 800, color: "#0085f4", letterSpacing: "0.1em" }}>{step.num}</span>
                     <h3
                       className="font-display"
-                      style={{ fontSize: 22, fontWeight: 900, color: "#0D3A73", textTransform: "uppercase" }}
+                      style={{ fontSize: 22, fontWeight: 900, color: "#004aad", textTransform: "uppercase" }}
                     >
                       {step.title}
                     </h3>
                   </div>
-                  <p style={{ fontSize: 14, color: "#4A6375", lineHeight: 1.65, marginBottom: 8 }}>{step.desc}</p>
-                  <p style={{ fontSize: 12, color: "#1565C0", fontWeight: 600 }}>{step.detail}</p>
+                  <p style={{ fontSize: 14, color: "#0085f4", lineHeight: 1.65, marginBottom: 8 }}>{step.desc}</p>
+                  <p style={{ fontSize: 12, color: "#0085f4", fontWeight: 600 }}>{step.detail}</p>
                 </div>
               </motion.div>
             );

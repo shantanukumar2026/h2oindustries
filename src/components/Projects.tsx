@@ -34,12 +34,12 @@ export default function Projects() {
             </div>
             <h2
               className="font-display"
-              style={{ fontSize: "clamp(1.8rem, 8vw, 3.2rem)", fontWeight: 900, color: "#0D3A73", lineHeight: 1.0, marginBottom: 16, textTransform: "uppercase" }}
+              style={{ fontSize: "clamp(1.8rem, 8vw, 3.2rem)", fontWeight: 900, color: "#004aad", lineHeight: 1.0, marginBottom: 16, textTransform: "uppercase" }}
             >
               Our Products<br />
-              <span style={{ color: "#1565C0" }}>In Action</span>
+              <span style={{ color: "#0085f4" }}>In Action</span>
             </h2>
-            <p style={{ color: "#4A6375", fontSize: 17, maxWidth: 520, margin: "0 auto", lineHeight: 1.65 }}>
+            <p style={{ color: "#0085f4", fontSize: 17, maxWidth: 520, margin: "0 auto", lineHeight: 1.65 }}>
               A visual showcase of the H2 Industries product range — precision-engineered components built for real-world water management challenges.
             </p>
           </motion.div>
@@ -97,11 +97,11 @@ export default function Projects() {
               </div>
               <div style={{ padding: "16px 24px", background: "#fff", borderTop: "1px solid #90CAF9", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div>
-                  <p style={{ fontSize: 15, fontWeight: 700, color: "#0D3A73" }}>{lb.label}</p>
-                  <p style={{ fontSize: 11, color: "#1565C0", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>H2 Industries™</p>
+                  <p style={{ fontSize: 15, fontWeight: 700, color: "#004aad" }}>{lb.label}</p>
+                  <p style={{ fontSize: 11, color: "#0085f4", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>H2 Industries™</p>
                 </div>
                 <button onClick={() => setLb(null)} style={{ background: "#F5F7FA", border: "none", borderRadius: 8, padding: 8, cursor: "pointer" }}>
-                  <X size={18} color="#4A6375" />
+                  <X size={18} color="#0085f4" />
                 </button>
               </div>
             </motion.div>

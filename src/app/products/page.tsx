@@ -15,9 +15,9 @@ export default function ProductsPage() {
         <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 60px", marginBottom: 16 }}>
           {/* Breadcrumb Navigation */}
           <nav style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em" }}>
-            <span style={{ color: "#1565C0", cursor: "pointer", transition: "color 0.2s" }} onClick={() => router.push("/")} onMouseEnter={(e) => e.currentTarget.style.color = "#0D47A1"} onMouseLeave={(e) => e.currentTarget.style.color = "#1565C0"}>Home</span>
+            <span style={{ color: "#0085f4", cursor: "pointer", transition: "color 0.2s" }} onClick={() => router.push("/")} onMouseEnter={(e) => e.currentTarget.style.color = "#004aad"} onMouseLeave={(e) => e.currentTarget.style.color = "#0085f4"}>Home</span>
             <span style={{ color: "#90CAF9" }}>/</span>
-            <span style={{ color: "#0D3A73" }}>Products</span>
+            <span style={{ color: "#004aad" }}>Products</span>
           </nav>
         </div>
         <Products />

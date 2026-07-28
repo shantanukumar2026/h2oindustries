@@ -35,15 +35,15 @@ export default function BlogListingPage() {
           {/* Breadcrumb */}
           <nav style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 24 }}>
             <span 
-              style={{ color: "#1565C0", cursor: "pointer", transition: "color 0.2s" }} 
+              style={{ color: "#0085f4", cursor: "pointer", transition: "color 0.2s" }} 
               onClick={() => router.push("/")}
-              onMouseEnter={(e) => e.currentTarget.style.color = "#0D47A1"}
-              onMouseLeave={(e) => e.currentTarget.style.color = "#1565C0"}
+              onMouseEnter={(e) => e.currentTarget.style.color = "#004aad"}
+              onMouseLeave={(e) => e.currentTarget.style.color = "#0085f4"}
             >
               Home
             </span>
             <span style={{ color: "#90CAF9" }}>/</span>
-            <span style={{ color: "#0B1929" }}>Insights Hub</span>
+            <span style={{ color: "#004aad" }}>Insights Hub</span>
           </nav>
 
           {/* Heading */}
@@ -51,10 +51,10 @@ export default function BlogListingPage() {
             <div className="pill-tag" style={{ marginBottom: 16 }}>
               <span className="dot" /> Knowledge Center
             </div>
-            <h1 className="font-display" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: 900, color: "#0B1929", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
-              H2 Industries <span style={{ color: "#1565C0" }}>Insights</span>
+            <h1 className="font-display" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
+              H2 Industries <span style={{ color: "#0085f4" }}>Insights</span>
             </h1>
-            <p style={{ color: "#4A6375", fontSize: 18, marginTop: 12, maxWidth: 640, lineHeight: 1.6, fontWeight: 500 }}>
+            <p style={{ color: "#0085f4", fontSize: 18, marginTop: 12, maxWidth: 640, lineHeight: 1.6, fontWeight: 500 }}>
               Deep dives into advanced stormwater engineering, environmental compliance guidelines, and infrastructure innovations across the USA.
             </p>
           </div>
@@ -92,21 +92,21 @@ export default function BlogListingPage() {
                       letterSpacing: "0.05em",
                       cursor: "pointer",
                       border: "1px solid",
-                      borderColor: isActive ? "#1565C0" : "#E2E8F0",
-                      background: isActive ? "#1565C0" : "#ffffff",
-                      color: isActive ? "#ffffff" : "#0B1929",
+                      borderColor: isActive ? "#0085f4" : "#E2E8F0",
+                      background: isActive ? "#0085f4" : "#ffffff",
+                      color: isActive ? "#ffffff" : "#004aad",
                       transition: "all 0.25s ease"
                     }}
                     onMouseEnter={(e) => {
                       if (!isActive) {
-                        e.currentTarget.style.borderColor = "#1565C0";
-                        e.currentTarget.style.color = "#1565C0";
+                        e.currentTarget.style.borderColor = "#0085f4";
+                        e.currentTarget.style.color = "#0085f4";
                       }
                     }}
                     onMouseLeave={(e) => {
                       if (!isActive) {
                         e.currentTarget.style.borderColor = "#E2E8F0";
-                        e.currentTarget.style.color = "#0B1929";
+                        e.currentTarget.style.color = "#004aad";
                       }
                     }}
                   >
@@ -120,7 +120,7 @@ export default function BlogListingPage() {
             <div style={{ position: "relative", minWidth: 300, flex: "0 1 360px" }}>
               <Search
                 size={18}
-                color="#4A6375"
+                color="#0085f4"
                 style={{ position: "absolute", left: 16, top: "50%", transform: "translateY(-50%)" }}
               />
               <input
@@ -136,12 +136,12 @@ export default function BlogListingPage() {
                   borderRadius: 8,
                   fontSize: 14,
                   fontWeight: 500,
-                  color: "#0B1929",
+                  color: "#004aad",
                   outline: "none",
                   transition: "all 0.2s"
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = "#1565C0";
+                  e.target.style.borderColor = "#0085f4";
                   e.target.style.background = "#fff";
                 }}
                 onBlur={(e) => {
@@ -192,7 +192,7 @@ export default function BlogListingPage() {
                           position: "absolute",
                           top: 16,
                           left: 16,
-                          background: "#1565C0",
+                          background: "#0085f4",
                           color: "#fff",
                           fontSize: 11,
                           fontWeight: 800,
@@ -209,7 +209,7 @@ export default function BlogListingPage() {
                     <div style={{ padding: 28, display: "flex", flexDirection: "column", flex: 1, justifyContent: "space-between" }}>
                       <div>
                         {/* Meta info */}
-                        <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 13, color: "#4A6375", fontWeight: 600, marginBottom: 12 }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 13, color: "#0085f4", fontWeight: 600, marginBottom: 12 }}>
                           <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
                             <Calendar size={14} /> {blog.date}
                           </span>
@@ -219,12 +219,12 @@ export default function BlogListingPage() {
                         </div>
 
                         {/* Title */}
-                        <h2 style={{ fontSize: 20, fontWeight: 900, color: "#0B1929", textTransform: "uppercase", fontStyle: "italic", lineHeight: 1.3, marginBottom: 12 }}>
+                        <h2 style={{ fontSize: 20, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", lineHeight: 1.3, marginBottom: 12 }}>
                           {blog.title}
                         </h2>
 
                         {/* Excerpt */}
-                        <p style={{ color: "#4A6375", fontSize: 14, lineHeight: 1.6, fontWeight: 500, marginBottom: 24 }}>
+                        <p style={{ color: "#0085f4", fontSize: 14, lineHeight: 1.6, fontWeight: 500, marginBottom: 24 }}>
                           {blog.excerpt}
                         </p>
                       </div>
@@ -236,8 +236,8 @@ export default function BlogListingPage() {
           ) : (
             <div style={{ textAlign: "center", padding: "80px 20px", background: "#fff", border: "1px solid #E2E8F0", borderRadius: 16 }}>
               <BookOpen size={48} color="#90CAF9" style={{ margin: "0 auto 16px auto" }} />
-              <h3 style={{ fontSize: 20, color: "#0B1929", fontWeight: 800, marginBottom: 8, textTransform: "uppercase" }}>No articles found</h3>
-              <p style={{ color: "#4A6375", fontSize: 15, margin: 0 }}>Try adjusting your search terms or selecting another category.</p>
+              <h3 style={{ fontSize: 20, color: "#004aad", fontWeight: 800, marginBottom: 8, textTransform: "uppercase" }}>No articles found</h3>
+              <p style={{ color: "#0085f4", fontSize: 15, margin: 0 }}>Try adjusting your search terms or selecting another category.</p>
             </div>
           )}
 

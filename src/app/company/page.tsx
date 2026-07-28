@@ -15,8 +15,8 @@ export default function CompanyPage() {
           <span className="dot" />
           The H2 Group
         </div>
-        <h1 className="font-display" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 900, color: "#0B1929", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
-          OUR <span style={{ color: "#1565C0" }}>COMPANY</span>
+        <h1 className="font-display" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
+          OUR <span style={{ color: "#0085f4" }}>COMPANY</span>
         </h1>
       </div>
 

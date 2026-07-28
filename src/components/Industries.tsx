@@ -23,7 +23,7 @@ export default function Industries() {
   return (
     <section id="industries" className="industries-section" style={{ background: "#002255", position: "relative", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
       {/* Top Border Accent */}
-      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 4, background: "#1565C0" }} />
+      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 4, background: "#0085f4" }} />
 
       <div className="industries-container" style={{ maxWidth: 1720, margin: "0 auto", position: "relative" }}>
         {/* Header */}

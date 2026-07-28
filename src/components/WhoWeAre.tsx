@@ -14,7 +14,7 @@ export default function WhoWeAre() {
     <section 
       id="who-we-are" 
       style={{ 
-        background: "#062347", 
+        background: "#004aad", 
         color: "#fff", 
         padding: "48px 0",
         position: "relative",
@@ -59,13 +59,13 @@ export default function WhoWeAre() {
           >
             <div style={{ position: "relative", width: "100%", height: 500, borderRadius: 8, overflow: "hidden" }}>
               <Image src={data.image} alt={data.title} fill style={{ objectFit: "cover" }} />
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #062347 0%, transparent 50%)" }} />
+              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, #004aad 0%, transparent 50%)" }} />
             </div>
             
             {/* Stats Overlay */}
             <div style={{ position: "absolute", bottom: -24, left: 24, right: 24, display: "flex", gap: 16 }}>
               {data.stats.map((stat, i) => (
-                <div key={i} style={{ flex: 1, background: "#0D3A73", padding: "24px", borderLeft: "4px solid #2196F3", boxShadow: "0 20px 40px rgba(0,0,0,0.2)" }}>
+                <div key={i} style={{ flex: 1, background: "#004aad", padding: "24px", borderLeft: "4px solid #2196F3", boxShadow: "0 20px 40px rgba(0,0,0,0.2)" }}>
                   <div style={{ fontSize: 32, fontWeight: 900, color: "#fff", marginBottom: 8 }}>{stat.value}</div>
                   <div style={{ fontSize: 13, color: "#90CAF9", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em" }}>{stat.label}</div>
                 </div>

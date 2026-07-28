@@ -16,7 +16,7 @@ export default function WhatWeDo() {
       id="what-we-do" 
       style={{ 
         background: "#F5F7FA", 
-        color: "#062347", 
+        color: "#004aad", 
         padding: "48px 0",
         position: "relative",
         overflow: "hidden"
@@ -32,17 +32,17 @@ export default function WhatWeDo() {
             transition={{ duration: 0.8 }}
             style={{ position: "relative", order: 2 }} // Changed order for layout alternation
           >
-            <div style={{ position: "relative", width: "100%", height: 600, borderRadius: 8, overflow: "hidden", boxShadow: "0 30px 60px rgba(0,0,0,0.1)" }}>
+            <div style={{ position: "relative", width: "100%", height: 600, borderRadius: 8, overflow: "hidden", boxShadow: "0 30px 60px rgba(0, 133, 244, 0.1)" }}>
               <Image src={data.image} alt={data.title} fill style={{ objectFit: "cover" }} />
             </div>
             
-            <div style={{ position: "absolute", top: 40, left: -40, background: "#fff", padding: "32px", borderRadius: 8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)", maxWidth: 300 }}>
+            <div style={{ position: "absolute", top: 40, left: -40, background: "#fff", padding: "32px", borderRadius: 8, boxShadow: "0 20px 40px rgba(0, 133, 244, 0.1)", maxWidth: 300 }}>
               <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
                 {data.features.map((feature, i) => (
                   <div key={i} style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
                     <CheckCircle2 color="#2196F3" size={20} style={{ flexShrink: 0, marginTop: 2 }} />
                     <div>
-                      <h4 style={{ margin: 0, fontSize: 15, fontWeight: 800, textTransform: "uppercase", color: "#0D3A73", marginBottom: 4 }}>{feature.title}</h4>
+                      <h4 style={{ margin: 0, fontSize: 15, fontWeight: 800, textTransform: "uppercase", color: "#004aad", marginBottom: 4 }}>{feature.title}</h4>
                       <p style={{ margin: 0, fontSize: 14, color: "#607D8B", lineHeight: 1.5 }}>{feature.desc}</p>
                     </div>
                   </div>
@@ -59,7 +59,7 @@ export default function WhatWeDo() {
             style={{ order: 1 }}
           >
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(33, 150, 243, 0.1)", padding: "8px 16px", marginBottom: 24, borderRadius: 4, borderLeft: "2px solid #2196F3" }}>
-              <span style={{ color: "#1565C0", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
+              <span style={{ color: "#0085f4", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
                 {data.tagline}
               </span>
             </div>

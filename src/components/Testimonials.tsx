@@ -20,21 +20,21 @@ export default function Testimonials() {
       }}
     >
       {/* Background Accent */}
-      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 4, background: "linear-gradient(90deg, #1565C0 0%, #42A5F5 100%)" }} />
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 4, background: "linear-gradient(90deg, #0085f4 0%, #42A5F5 100%)" }} />
       
       <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px", position: "relative", zIndex: 10 }}>
         <div ref={ref} style={{ textAlign: "center", marginBottom: 40 }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(21, 101, 192, 0.1)", padding: "6px 16px", marginBottom: 20, borderRadius: 20 }}>
-              <span style={{ color: "#1565C0", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
+              <span style={{ color: "#0085f4", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
                 {header.tagline}
               </span>
             </div>
             
-            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.2rem)", fontWeight: 900, color: "#0B1929", lineHeight: 1.1, marginBottom: 20, textTransform: "uppercase", fontStyle: "italic" }}>
-              {header.title} <span style={{ color: "#1565C0" }}>{header.highlight}</span>
+            <h2 className="font-display" style={{ fontSize: "clamp(2rem, 6vw, 3.2rem)", fontWeight: 900, color: "#004aad", lineHeight: 1.1, marginBottom: 20, textTransform: "uppercase", fontStyle: "italic" }}>
+              {header.title} <span style={{ color: "#0085f4" }}>{header.highlight}</span>
             </h2>
-            <p style={{ color: "#4A6375", fontSize: 16, maxWidth: 680, margin: "0 auto", lineHeight: 1.6, fontWeight: 500 }}>
+            <p style={{ color: "#0085f4", fontSize: 16, maxWidth: 680, margin: "0 auto", lineHeight: 1.6, fontWeight: 500 }}>
               {header.subtitle}
             </p>
           </motion.div>
@@ -64,12 +64,12 @@ export default function Testimonials() {
               >
                 <Quote size={40} color="rgba(21, 101, 192, 0.1)" style={{ position: "absolute", top: 32, right: 32 }} />
                 
-                <p style={{ color: "#0B1929", fontSize: 16, lineHeight: 1.7, fontWeight: 600, fontStyle: "italic", marginBottom: 32, position: "relative", zIndex: 1 }}>
+                <p style={{ color: "#004aad", fontSize: 16, lineHeight: 1.7, fontWeight: 600, fontStyle: "italic", marginBottom: 32, position: "relative", zIndex: 1 }}>
                   "{item.quote}"
                 </p>
                 
                 <div style={{ display: "flex", alignItems: "center", gap: 8, paddingTop: 16, borderTop: "1px solid rgba(21, 101, 192, 0.1)" }}>
-                  <span style={{ color: "#1565C0", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em" }}>H2 VERIFIED SPECIFICATION</span>
+                  <span style={{ color: "#0085f4", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em" }}>H2 VERIFIED SPECIFICATION</span>
                 </div>
               </div>
             </motion.div>

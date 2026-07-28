@@ -35,7 +35,11 @@ body {
 
 /* ─── Typography ─── */
 .font-display {
-  font-family: var(--font-barlow), 'Barlow Condensed', 'Impact', sans-serif;
+  font-family: 'Futura', 'Futura PT', 'Century Gothic', var(--font-barlow), 'Barlow Condensed', sans-serif;
+}
+
+.font-futura {
+  font-family: 'Futura', 'Futura PT', 'Century Gothic', system-ui, sans-serif;
 }
 
 .font-corporate {

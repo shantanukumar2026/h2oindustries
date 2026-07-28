@@ -65,7 +65,7 @@ export default function WhoWeAre() {
             {/* Stats Overlay */}
             <div style={{ position: "absolute", bottom: -24, left: 24, right: 24, display: "flex", gap: 16 }}>
               {data.stats.map((stat, i) => (
-                <div key={i} style={{ flex: 1, background: "#004aad", padding: "24px", borderLeft: "4px solid #2196F3", boxShadow: "0 20px 40px rgba(0,0,0,0.2)" }}>
+                <div key={i} style={{ flex: 1, background: "#004aad", padding: "24px", borderLeft: "4px solid #2196F3", boxShadow: "0 20px 40px rgba(0, 74, 173,0.2)" }}>
                   <div style={{ fontSize: 32, fontWeight: 900, color: "#fff", marginBottom: 8 }}>{stat.value}</div>
                   <div style={{ fontSize: 13, color: "#90CAF9", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em" }}>{stat.label}</div>
                 </div>

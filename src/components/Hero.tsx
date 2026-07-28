@@ -377,7 +377,7 @@ export default function Hero() {
           transform: translateX(10px);
           transition: all 0.2s ease;
           border: 1px solid rgba(255, 255, 255, 0.1);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+          box-shadow: 0 4px 12px rgba(0, 74, 173,0.3);
         }
         .icon-wrapper:hover .icon-tooltip {
           opacity: 1;

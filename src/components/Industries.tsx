@@ -130,7 +130,7 @@ function IndustryCard({ ind, Icon }: { ind: any; Icon: React.ElementType }) {
         display: "flex",
         flexDirection: "column",
         height: "100%",
-        boxShadow: hovered ? "0 20px 40px rgba(0, 0, 0, 0.5)" : "none"
+        boxShadow: hovered ? "0 20px 40px rgba(0, 74, 173, 0.5)" : "none"
       }}
     >
       <div style={{

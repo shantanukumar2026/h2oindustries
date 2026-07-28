@@ -237,7 +237,7 @@ export default function WaterworksCastingsPage() {
                 border: "1px solid rgba(33, 150, 243, 0.3)",
                 padding: 40,
                 borderRadius: 16,
-                boxShadow: "0 24px 60px rgba(0, 0, 0, 0.4)",
+                boxShadow: "0 24px 60px rgba(0, 74, 173, 0.4)",
                 backdropFilter: "blur(10px)",
               }}
             >
@@ -246,7 +246,7 @@ export default function WaterworksCastingsPage() {
                   src="/images/waterworks/valve-box-525.webp"
                   alt="H2 Municipal Valve Boxes & Castings"
                   fill
-                  style={{ objectFit: "contain", filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.5))" }}
+                  style={{ objectFit: "contain", filter: "drop-shadow(0 20px 30px rgba(0, 74, 173,0.5))" }}
                   priority
                 />
               </div>
@@ -382,7 +382,7 @@ export default function WaterworksCastingsPage() {
                     letterSpacing: "0.04em",
                     cursor: "pointer",
                     transition: "all 0.2s",
-                    boxShadow: "0 2px 6px rgba(0,0,0,0.04)",
+                    boxShadow: "0 2px 6px rgba(0, 74, 173,0.04)",
                   }}
                 >
                   {cat}
@@ -468,7 +468,7 @@ export default function WaterworksCastingsPage() {
                         style={{
                           objectFit: "contain",
                           padding: 32,
-                          filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.5))",
+                          filter: "drop-shadow(0 10px 20px rgba(0, 74, 173,0.5))",
                           zIndex: 2,
                         }}
                       />
@@ -970,7 +970,7 @@ export default function WaterworksCastingsPage() {
                 width: "100%",
                 maxHeight: "90vh",
                 overflow: "hidden",
-                boxShadow: "0 32px 80px rgba(0,0,0,0.4)",
+                boxShadow: "0 32px 80px rgba(0, 74, 173,0.4)",
               }}
             >
               {/* Modal Header */}

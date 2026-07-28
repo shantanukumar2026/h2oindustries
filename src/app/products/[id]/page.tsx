@@ -104,7 +104,7 @@ function ProductHero({ product }: { product: any }) {
           {/* Hero Image */}
           <div style={{ position: "relative", height: "100%", minHeight: 600, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <motion.div style={{ position: "relative", width: "100%", height: "100%", y: yImage }}>
-              <Image src={product.image} alt={product.name} fill style={{ objectFit: "contain", filter: "drop-shadow(0 40px 80px rgba(0,0,0,0.8))" }} priority />
+              <Image src={product.image} alt={product.name} fill style={{ objectFit: "contain", filter: "drop-shadow(0 40px 80px rgba(0, 74, 173,0.8))" }} priority />
             </motion.div>
           </div>
         </div>

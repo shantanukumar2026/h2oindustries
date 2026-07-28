@@ -113,7 +113,7 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
                 padding: "16px 16px 16px 48px",
                 background: "#fff",
                 border: "2px solid #ffffff",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                boxShadow: "0 4px 20px rgba(0, 74, 173,0.1)",
                 fontSize: 15,
                 fontWeight: 600,
                 color: "#004aad",
@@ -214,7 +214,7 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
-                boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
+                boxShadow: "0 8px 24px rgba(0, 74, 173,0.15)",
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "#00bbff"; e.currentTarget.style.color = "#004aad"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "#ffffff"; e.currentTarget.style.color = "#004aad"; }}
@@ -258,7 +258,7 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
                 width: "100%",
                 maxHeight: "90vh",
                 overflow: "hidden",
-                boxShadow: "0 32px 80px rgba(0,0,0,0.4)",
+                boxShadow: "0 32px 80px rgba(0, 74, 173,0.4)",
               }}
             >
               {/* Header */}
@@ -380,7 +380,7 @@ function ProductCard({ product, onQuickView, catColor }: {
         position: "relative",
         transition: "all 0.3s ease",
         transform: hovered ? "translateY(-6px)" : "translateY(0)",
-        boxShadow: hovered ? "0 24px 48px rgba(0,0,0,0.2)" : "0 4px 12px rgba(0,0,0,0.06)",
+        boxShadow: hovered ? "0 24px 48px rgba(0, 74, 173,0.2)" : "0 4px 12px rgba(0, 74, 173,0.06)",
         cursor: "default",
         display: "flex",
         flexDirection: "column",
@@ -450,7 +450,7 @@ function ProductCard({ product, onQuickView, catColor }: {
               cursor: "pointer",
               fontFamily: "inherit",
               transition: "all 0.2s",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+              boxShadow: "0 4px 12px rgba(0, 74, 173,0.2)",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = "#ffffff";

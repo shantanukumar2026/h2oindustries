@@ -479,7 +479,7 @@ function CustomMediaPlayer({ src, title, bgColor = "#0085f4" }: { src: string; t
                   height: 8,
                   borderRadius: "50%",
                   background: "#ffffff",
-                  boxShadow: "0 0 6px rgba(0,0,0,0.5)"
+                  boxShadow: "0 0 6px rgba(0, 74, 173,0.5)"
                 }}
               />
             )}

@@ -158,7 +158,7 @@ export default function TrustGuarantee() {
                     e.currentTarget.style.background = "rgba(255, 255, 255, 0.04)";
                     e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.1)";
                     e.currentTarget.style.transform = "translateY(-6px)";
-                    e.currentTarget.style.boxShadow = `0 30px 60px rgba(0,0,0,0.5), 0 0 40px ${item.color}20`;
+                    e.currentTarget.style.boxShadow = `0 30px 60px rgba(0, 74, 173,0.5), 0 0 40px ${item.color}20`;
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = "rgba(255, 255, 255, 0.02)";

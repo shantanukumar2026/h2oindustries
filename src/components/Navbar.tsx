@@ -7,8 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Info, Mail, MapPin, User, FileText, ChevronDown, Search, ArrowRight, Globe } from "lucide-react";
 
 const topLinks = [
-  { label: "History", href: "#history", icon: Info },
-  { label: "Our Values", href: "#values", icon: User },
   { label: "Locations", href: "#locations", icon: MapPin },
   { label: "Contact", href: "#contact", icon: Mail },
 ];

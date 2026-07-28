@@ -38,6 +38,14 @@ body {
   font-family: var(--font-barlow), 'Barlow Condensed', 'Impact', sans-serif;
 }
 
+.font-corporate {
+  font-family: var(--font-jakarta), 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-outfit {
+  font-family: var(--font-outfit), 'Outfit', system-ui, sans-serif;
+}
+
 /* ─── Scrollbar ─── */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--h2-grey); }

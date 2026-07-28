@@ -20,7 +20,7 @@ export default function ProductsPage() {
             <span style={{ color: "#004aad" }}>Products</span>
           </nav>
         </div>
-        <Products />
+        <Products isFullPage={true} />
       </div>
       <Footer />
     </main>

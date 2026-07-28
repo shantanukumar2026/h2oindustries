@@ -19,13 +19,13 @@ const catColors: Record<string, string> = {
   "Waterworks Tools": "#0085f4",
 };
 
-export default function Products() {
+export default function Products({ isFullPage = false }: { isFullPage?: boolean }) {
   const router = useRouter();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [search, setSearch] = useState("");
   const [cat, setCat] = useState("All");
-  const [count, setCount] = useState(4);
+  const [count, setCount] = useState(isFullPage ? 12 : 6);
   const [qv, setQv] = useState<(typeof allProducts)[0] | null>(null);
 
   const filtered = allProducts.filter((p) => {
@@ -191,7 +191,13 @@ export default function Products() {
         {hasMore && (
           <div style={{ textAlign: "center", marginTop: 48 }}>
             <button
-              onClick={() => router.push("/products")}
+              onClick={() => {
+                if (isFullPage) {
+                  setCount((prev) => prev + 12);
+                } else {
+                  router.push("/products");
+                }
+              }}
               style={{
                 background: "#ffffff",
                 color: "#004aad",
@@ -213,7 +219,7 @@ export default function Products() {
               onMouseEnter={(e) => { e.currentTarget.style.background = "#00bbff"; e.currentTarget.style.color = "#004aad"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "#ffffff"; e.currentTarget.style.color = "#004aad"; }}
             >
-              {button} <ArrowRight size={16} />
+              {isFullPage ? "LOAD MORE PRODUCTS" : button} <ArrowRight size={16} />
             </button>
           </div>
         )}

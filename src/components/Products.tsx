@@ -95,70 +95,74 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
           </motion.div>
         </div>
 
-        {/* Search + Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.1 }}
-          style={{ display: "flex", flexWrap: "wrap", gap: 16, marginBottom: 32 }}
-        >
-          {/* Search */}
-          <div style={{ position: "relative", flex: "1 1 320px", minWidth: 200 }}>
-            <Search size={18} style={{ position: "absolute", left: 16, top: "50%", transform: "translateY(-50%)", color: "#004aad" }} />
-            <input
-              type="text"
-              placeholder={searchPlaceholder}
-              value={search}
-              onChange={(e) => { setSearch(e.target.value); setCount(4); }}
-              style={{
-                width: "100%",
-                padding: "16px 16px 16px 48px",
-                background: "#fff",
-                border: "2px solid #ffffff",
-                boxShadow: "0 4px 20px rgba(0, 74, 173,0.1)",
-                fontSize: 15,
-                fontWeight: 600,
-                color: "#004aad",
-                fontFamily: "inherit",
-                outline: "none",
-                borderRadius: "8px",
-                transition: "border-color 0.2s, box-shadow 0.2s",
-              }}
-              onFocus={(e) => { e.target.style.borderColor = "#00bbff"; }}
-              onBlur={(e) => { e.target.style.borderColor = "#ffffff"; }}
-            />
-          </div>
-
-          {/* Category tabs */}
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            {cats.map((c) => (
-              <button
-                key={c}
-                onClick={() => { setCat(c); setCount(4); }}
+        {/* Search + Filters (Only visible on full /products page for clean corporate homepage layout) */}
+        {isFullPage && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.1 }}
+            style={{ display: "flex", flexWrap: "wrap", gap: 16, marginBottom: 32 }}
+          >
+            {/* Search */}
+            <div style={{ position: "relative", flex: "1 1 320px", minWidth: 200 }}>
+              <Search size={18} style={{ position: "absolute", left: 16, top: "50%", transform: "translateY(-50%)", color: "#004aad" }} />
+              <input
+                type="text"
+                placeholder={searchPlaceholder}
+                value={search}
+                onChange={(e) => { setSearch(e.target.value); setCount(4); }}
                 style={{
-                  padding: "16px 24px",
-                  border: "none",
-                  borderRadius: "8px",
-                  background: cat === c ? "#ffffff" : "rgba(255, 255, 255, 0.15)",
-                  color: cat === c ? "#004aad" : "#ffffff",
-                  fontSize: 14,
-                  fontWeight: 800,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.05em",
-                  cursor: "pointer",
+                  width: "100%",
+                  padding: "16px 16px 16px 48px",
+                  background: "#fff",
+                  border: "2px solid #ffffff",
+                  boxShadow: "0 4px 20px rgba(0, 74, 173,0.1)",
+                  fontSize: 15,
+                  fontWeight: 600,
+                  color: "#004aad",
                   fontFamily: "inherit",
-                  transition: "all 0.2s",
-                  backdropFilter: "blur(10px)",
+                  outline: "none",
+                  borderRadius: "8px",
+                  transition: "border-color 0.2s, box-shadow 0.2s",
                 }}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
-        </motion.div>
+                onFocus={(e) => { e.target.style.borderColor = "#00bbff"; }}
+                onBlur={(e) => { e.target.style.borderColor = "#ffffff"; }}
+              />
+            </div>
 
-        {/* Count */}
-        <p style={{ color: "rgba(255, 255, 255, 0.85)", fontSize: 14, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 24 }}>
-          SHOWING <strong style={{ color: "#ffffff" }}>{Math.min(count, filtered.length)}</strong> OF <strong style={{ color: "#ffffff" }}>{filtered.length}</strong> PRODUCTS
-        </p>
+            {/* Category tabs */}
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              {cats.map((c) => (
+                <button
+                  key={c}
+                  onClick={() => { setCat(c); setCount(4); }}
+                  style={{
+                    padding: "16px 24px",
+                    border: "none",
+                    borderRadius: "8px",
+                    background: cat === c ? "#ffffff" : "rgba(255, 255, 255, 0.15)",
+                    color: cat === c ? "#004aad" : "#ffffff",
+                    fontSize: 14,
+                    fontWeight: 800,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                    cursor: "pointer",
+                    fontFamily: "inherit",
+                    transition: "all 0.2s",
+                    backdropFilter: "blur(10px)",
+                  }}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
+        {/* Count / Tag */}
+        {isFullPage && (
+          <p style={{ color: "rgba(255, 255, 255, 0.85)", fontSize: 14, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 24 }}>
+            SHOWING <strong style={{ color: "#ffffff" }}>{Math.min(count, filtered.length)}</strong> OF <strong style={{ color: "#ffffff" }}>{filtered.length}</strong> PRODUCTS
+          </p>
+        )}
 
         {/* Grid */}
         <div style={{
@@ -219,7 +223,7 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
               onMouseEnter={(e) => { e.currentTarget.style.background = "#00bbff"; e.currentTarget.style.color = "#004aad"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "#ffffff"; e.currentTarget.style.color = "#004aad"; }}
             >
-              {isFullPage ? "LOAD MORE PRODUCTS" : button} <ArrowRight size={16} />
+              {isFullPage ? "LOAD MORE PRODUCTS" : "EXPLORE ALL PRODUCTS & CATEGORIES"} <ArrowRight size={16} />
             </button>
           </div>
         )}

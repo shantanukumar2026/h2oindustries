@@ -864,36 +864,42 @@
     },
     "items": [
       {
+        "slug": "municipal-water",
         "icon": "Building2",
         "title": "MUNICIPAL WATER",
         "desc": "Stormwater sampling stations and drainage systems for councils and local authorities managing public water infrastructure.",
         "accent": "#2196F3"
       },
       {
+        "slug": "marine-coastal",
         "icon": "Waves",
         "title": "MARINE & COASTAL",
         "desc": "Ocean-focused water quality monitoring products designed to prevent marine pollution at the stormwater source.",
         "accent": "#0288D1"
       },
       {
+        "slug": "civil-infrastructure",
         "icon": "Construction",
         "title": "CIVIL INFRASTRUCTURE",
         "desc": "Heavy-duty drainage and access solutions for roads, bridges, and major civil construction projects.",
         "accent": "#607D8B"
       },
       {
+        "slug": "environmental",
         "icon": "Leaf",
         "title": "ENVIRONMENTAL",
         "desc": "Precision sampling systems for environmental engineers conducting comprehensive water quality assessments.",
         "accent": "#43A047"
       },
       {
+        "slug": "industrial-facilities",
         "icon": "Flame",
         "title": "INDUSTRIAL FACILITIES",
         "desc": "Robust water management infrastructure for industrial sites requiring compliant stormwater management.",
         "accent": "#EF6C00"
       },
       {
+        "slug": "agricultural",
         "icon": "Sprout",
         "title": "AGRICULTURAL",
         "desc": "Durable drainage and sampling products engineered to withstand agricultural environments and protect waterways.",
@@ -1091,10 +1097,6 @@
     },
     "links": {
       "COMPANY": [
-        {
-          "label": "Careers",
-          "href": "/company#careers"
-        },
         {
           "label": "About Us",
           "href": "/company"

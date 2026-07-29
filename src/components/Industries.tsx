@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
-import { Building2, Waves, Construction, Leaf, Flame, Sprout } from "lucide-react";
+import { Building2, Waves, Construction, Leaf, Flame, Sprout, ArrowRight } from "lucide-react";
 import homeData from "../data/home.json";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -114,34 +115,38 @@ export default function Industries() {
 
 function IndustryCard({ ind, Icon }: { ind: any; Icon: React.ElementType }) {
   const [hovered, setHovered] = useState(false);
+  const href = ind.slug ? `/industries/${ind.slug}` : "/industries";
 
   return (
-    <div
+    <Link
+      href={href}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
         position: "relative",
         padding: "32px",
-        background: hovered ? "rgba(33, 150, 243, 0.08)" : "rgba(255, 255, 255, 0.03)",
-        border: "1px solid rgba(255, 255, 255, 0.05)",
+        background: hovered ? "rgba(33, 150, 243, 0.12)" : "rgba(255, 255, 255, 0.03)",
+        border: "1px solid rgba(255, 255, 255, 0.08)",
         borderTop: `4px solid ${ind.accent}`,
-        transition: "all 0.2s ease",
-        cursor: "default",
+        transition: "all 0.25s ease",
+        cursor: "pointer",
         display: "flex",
         flexDirection: "column",
         height: "100%",
-        boxShadow: hovered ? "0 20px 40px rgba(0, 74, 173, 0.5)" : "none"
+        textDecoration: "none",
+        boxShadow: hovered ? "0 20px 40px rgba(0, 74, 173, 0.5)" : "none",
+        transform: hovered ? "translateY(-4px)" : "none"
       }}
     >
       <div style={{
         width: 48,
         height: 48,
-        background: "rgba(33, 150, 243, 0.1)",
+        background: "rgba(33, 150, 243, 0.15)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         marginBottom: 20,
-        border: "1px solid rgba(33, 150, 243, 0.2)",
+        border: "1px solid rgba(33, 150, 243, 0.3)",
       }}>
         <Icon size={24} color={ind.accent} />
       </div>
@@ -149,9 +154,23 @@ function IndustryCard({ ind, Icon }: { ind: any; Icon: React.ElementType }) {
       <h3 style={{ fontSize: 18, fontWeight: 900, fontStyle: "italic", color: "#fff", marginBottom: 12, letterSpacing: "0.02em" }}>
         {ind.title}
       </h3>
-      <p style={{ fontSize: 15, color: "#64B5F6", lineHeight: 1.6, margin: 0 }}>
+      <p style={{ fontSize: 14, color: "#90CAF9", lineHeight: 1.6, marginBottom: 24, flex: 1 }}>
         {ind.desc}
       </p>
-    </div>
+
+      <div style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+        fontSize: 12,
+        fontWeight: 800,
+        color: ind.accent,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase"
+      }}>
+        <span>Explore Industry Page</span>
+        <ArrowRight size={14} style={{ transition: "transform 0.2s", transform: hovered ? "translateX(4px)" : "none" }} />
+      </div>
+    </Link>
   );
 }

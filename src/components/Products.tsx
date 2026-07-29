@@ -33,7 +33,7 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
     const ok = p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q) || p.sku.toLowerCase().includes(q);
     return ok && (cat === "All" || p.category === cat);
   });
-  const visible = isFullPage ? filtered.slice(0, count) : filtered.slice(0, 6);
+  const visible = isFullPage ? filtered.slice(0, count) : filtered.slice(0, 5);
   const hasMore = isFullPage ? count < filtered.length : true;
   const { header, searchPlaceholder, emptyMessage, button } = homeData.products;
 
@@ -165,11 +165,14 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
         )}
 
         {/* Grid */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: isFullPage ? "repeat(auto-fill, minmax(280px, 1fr))" : "repeat(auto-fill, minmax(230px, 1fr))",
-          gap: isFullPage ? 24 : 20,
-        }}>
+        <div 
+          className={!isFullPage ? "five-card-grid" : ""}
+          style={{
+            display: "grid",
+            gridTemplateColumns: isFullPage ? "repeat(auto-fill, minmax(280px, 1fr))" : "repeat(5, minmax(0, 1fr))",
+            gap: isFullPage ? 24 : 16,
+          }}
+        >
           <AnimatePresence mode="popLayout">
             {visible.map((p, i) => (
               <motion.div
@@ -207,11 +210,11 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
                 color: "#004aad",
                 border: "none",
                 borderRadius: "8px",
-                padding: "16px 32px",
+                padding: "16px 36px",
                 fontSize: 15,
-                fontWeight: 800,
+                fontWeight: 900,
                 textTransform: "uppercase",
-                letterSpacing: "0.05em",
+                letterSpacing: "0.08em",
                 cursor: "pointer",
                 fontFamily: "inherit",
                 transition: "all 0.2s",
@@ -223,7 +226,7 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
               onMouseEnter={(e) => { e.currentTarget.style.background = "#00bbff"; e.currentTarget.style.color = "#004aad"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "#ffffff"; e.currentTarget.style.color = "#004aad"; }}
             >
-              {isFullPage ? "LOAD MORE PRODUCTS" : "EXPLORE ALL PRODUCTS & CATEGORIES"} <ArrowRight size={16} />
+              {isFullPage ? "LOAD MORE PRODUCTS" : "SHOW MORE"} <ArrowRight size={16} />
             </button>
           </div>
         )}
@@ -504,3 +507,21 @@ function ProductCard({ product, onQuickView, catColor, isCompact = false }: {
     </div>
   );
 }
+
+<style>{`
+  @media (max-width: 1280px) {
+    .five-card-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .five-card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+  @media (max-width: 480px) {
+    .five-card-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+`}</style>

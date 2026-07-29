@@ -576,7 +576,7 @@ export default function WaterworksCastingsClient() {
 
           {filteredProducts.length === 0 && (
             <div style={{ textAlign: "center", padding: "80px 0", background: "#fff", border: "2px dashed #CFD8DC", marginTop: 32 }}>
-              <p style={{ color: "#455A64", fontSize: 16, fontWeight: 700, textTransform: "uppercase" }}>
+              <p style={{ color: "#0085f4", fontSize: 16, fontWeight: 700, textTransform: "uppercase" }}>
                 No waterworks products found matching your search.
               </p>
             </div>
@@ -769,7 +769,7 @@ export default function WaterworksCastingsClient() {
                   zIndex: 10,
                 }}
               >
-                <X size={20} color="#455A64" />
+                <X size={20} color="#0085f4" />
               </button>
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 32, padding: 32 }} className="modal-grid">

@@ -147,15 +147,15 @@ export default function CurbBoxFeature() {
             {/* Product Image */}
             <div style={{ position: "absolute", bottom: "6%", width: "100%", height: "88%", zIndex: 2 }}>
               <Image
-                src={image}
+                src="/images/curb-box.webp"
                 alt={header.title}
                 fill
-                style={{ objectFit: "contain", filter: "drop-shadow(0 16px 32px rgba(6,55,115,0.2))" }}
+                style={{ objectFit: "contain", filter: "drop-shadow(0 20px 40px rgba(0,74,173,0.18))" }}
                 priority
               />
             </div>
 
-            {/* Left Callout Badge — Glassmorphism */}
+            {/* Left Callout Badge — Glassmorphism with Blur */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -163,56 +163,56 @@ export default function CurbBoxFeature() {
               style={{ position: "absolute", top: "28%", left: 0, zIndex: 10, display: "flex", alignItems: "center", transform: "translateX(-12%)" }}
             >
               <div style={{
-                background: "rgba(255,255,255,0.85)",
-                backdropFilter: "blur(12px)",
-                WebkitBackdropFilter: "blur(12px)",
-                padding: "10px 14px",
-                borderRadius: 10,
-                border: "1px solid rgba(22,101,193,0.12)",
-                boxShadow: "0 8px 32px rgba(6,55,115,0.08)",
+                background: "rgba(255,255,255,0.88)",
+                backdropFilter: "blur(16px)",
+                WebkitBackdropFilter: "blur(16px)",
+                padding: "12px 16px",
+                borderRadius: 12,
+                border: "1.5px solid rgba(0, 133, 244, 0.2)",
+                boxShadow: "0 10px 32px rgba(0,74,173,0.12)",
                 display: "flex",
                 alignItems: "center",
-                gap: 10
+                gap: 12
               }}>
-                <div style={{ background: "linear-gradient(135deg, #0085f4, #004aad)", borderRadius: 6, width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 4px 12px rgba(13,71,161,0.3)" }}>
-                  <ShieldCheck size={15} color="#fff" />
+                <div style={{ background: "linear-gradient(135deg, #0085f4, #004aad)", borderRadius: 8, width: 34, height: 34, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 4px 12px rgba(0,74,173,0.3)" }}>
+                  <ShieldCheck size={18} color="#fff" />
                 </div>
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                  <span style={{ color: "#0085f4", fontSize: 8, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 1 }}>MATERIAL SPEC</span>
-                  <span style={{ color: "#063773", fontSize: 11, fontWeight: 800, textTransform: "uppercase", lineHeight: 1.15 }}>HIGH-YIELD<br />CAST IRON</span>
+                  <span style={{ color: "#0085f4", fontSize: 9, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 2 }}>MATERIAL SPEC</span>
+                  <span style={{ color: "#004aad", fontSize: 12, fontWeight: 900, textTransform: "uppercase", lineHeight: 1.15 }}>HIGH-YIELD<br />CAST IRON</span>
                 </div>
               </div>
-              <div style={{ width: "3vw", maxWidth: 40, height: 1, background: "linear-gradient(90deg, #0085f4, transparent)" }} />
-              <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#0085f4", boxShadow: "0 0 8px rgba(21,101,192,0.4)" }} />
+              <div style={{ width: "3vw", maxWidth: 40, height: 2, background: "linear-gradient(90deg, #0085f4, transparent)" }} />
+              <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#0085f4", boxShadow: "0 0 10px rgba(0,133,244,0.6)" }} />
             </motion.div>
 
-            {/* Right Callout Badge — Glassmorphism */}
+            {/* Right Callout Badge — Glassmorphism with Blur */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
               style={{ position: "absolute", bottom: "36%", right: 0, zIndex: 10, display: "flex", alignItems: "center", transform: "translateX(12%)" }}
             >
-              <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#0085f4", boxShadow: "0 0 8px rgba(21,101,192,0.4)" }} />
-              <div style={{ width: "3vw", maxWidth: 40, height: 1, background: "linear-gradient(90deg, transparent, #0085f4)" }} />
+              <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#0085f4", boxShadow: "0 0 10px rgba(0,133,244,0.6)" }} />
+              <div style={{ width: "3vw", maxWidth: 40, height: 2, background: "linear-gradient(90deg, transparent, #0085f4)" }} />
               <div style={{
-                background: "rgba(255,255,255,0.85)",
-                backdropFilter: "blur(12px)",
-                WebkitBackdropFilter: "blur(12px)",
-                padding: "10px 14px",
-                borderRadius: 10,
-                border: "1px solid rgba(22,101,193,0.12)",
-                boxShadow: "0 8px 32px rgba(6,55,115,0.08)",
+                background: "rgba(255,255,255,0.88)",
+                backdropFilter: "blur(16px)",
+                WebkitBackdropFilter: "blur(16px)",
+                padding: "12px 16px",
+                borderRadius: 12,
+                border: "1.5px solid rgba(0, 133, 244, 0.2)",
+                boxShadow: "0 10px 32px rgba(0,74,173,0.12)",
                 display: "flex",
                 alignItems: "center",
-                gap: 10
+                gap: 12
               }}>
-                <div style={{ background: "linear-gradient(135deg, #0085f4, #004aad)", borderRadius: 6, width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 4px 12px rgba(13,71,161,0.3)" }}>
-                  <Settings size={15} color="#fff" />
+                <div style={{ background: "linear-gradient(135deg, #0085f4, #004aad)", borderRadius: 8, width: 34, height: 34, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 4px 12px rgba(0,74,173,0.3)" }}>
+                  <Settings size={18} color="#fff" />
                 </div>
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                  <span style={{ color: "#0085f4", fontSize: 8, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 1 }}>ADAPTABILITY</span>
-                  <span style={{ color: "#063773", fontSize: 11, fontWeight: 800, textTransform: "uppercase", lineHeight: 1.15 }}>ADJUSTABLE<br />RISER CORE</span>
+                  <span style={{ color: "#0085f4", fontSize: 9, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 2 }}>ADAPTABILITY</span>
+                  <span style={{ color: "#004aad", fontSize: 12, fontWeight: 900, textTransform: "uppercase", lineHeight: 1.15 }}>ADJUSTABLE<br />RISER CORE</span>
                 </div>
               </div>
             </motion.div>
@@ -256,7 +256,7 @@ export default function CurbBoxFeature() {
             />
 
             {/* Description */}
-            <p style={{ color: "#455A64", fontSize: "clamp(12px, 1.5vh, 15px)", lineHeight: 1.6, marginBottom: "2.5vh", fontWeight: 500, maxWidth: 440, letterSpacing: "0.01em" }}>
+            <p style={{ color: "#0085f4", fontSize: "clamp(12px, 1.5vh, 15px)", lineHeight: 1.6, marginBottom: "2.5vh", fontWeight: 500, maxWidth: 440, letterSpacing: "0.01em" }}>
               Designed for maximum durability in harsh environments, the H2 Curb Box sets the standard for municipal water infrastructure reliability.
             </p>
 
@@ -265,7 +265,7 @@ export default function CurbBoxFeature() {
               {[
                 { icon: ShieldCheck, title: "CAST-IRON & HDPE COMPOSITE BODY", desc: "Engineered for absolute reliability." },
                 { icon: ArrowUpDown, title: "TELESCOPING ADJUSTABLE RISER", desc: "Precision height adjustment system." },
-                { icon: Lock,        title: "LOCKING LID — TRAFFIC-RATED", desc: "Heavy-duty tamper-proof security." },
+                { icon: Lock, title: "LOCKING LID — TRAFFIC-RATED", desc: "Heavy-duty tamper-proof security." },
               ].map((feat, i) => {
                 const Icon = feat.icon;
                 return (

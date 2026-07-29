@@ -12,11 +12,11 @@ export default function WhatWeDo() {
   const data = homeData.story.whatWeDo;
 
   return (
-    <section 
-      id="what-we-do" 
-      style={{ 
-        background: "#F5F7FA", 
-        color: "#004aad", 
+    <section
+      id="what-we-do"
+      style={{
+        background: "#F5F7FA",
+        color: "#004aad",
         padding: "48px 0",
         position: "relative",
         overflow: "hidden"
@@ -24,9 +24,9 @@ export default function WhatWeDo() {
     >
       <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px", position: "relative", zIndex: 10 }}>
         <div ref={ref} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: 80, alignItems: "center" }}>
-          
+
           {/* Image & Features */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8 }}
@@ -35,7 +35,7 @@ export default function WhatWeDo() {
             <div style={{ position: "relative", width: "100%", height: 600, borderRadius: 8, overflow: "hidden", boxShadow: "0 30px 60px rgba(0, 133, 244, 0.1)" }}>
               <Image src={data.image} alt={data.title} fill style={{ objectFit: "cover" }} />
             </div>
-            
+
             <div style={{ position: "absolute", top: 40, left: -40, background: "#fff", padding: "32px", borderRadius: 8, boxShadow: "0 20px 40px rgba(0, 133, 244, 0.1)", maxWidth: 300 }}>
               <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
                 {data.features.map((feature, i) => (
@@ -52,7 +52,7 @@ export default function WhatWeDo() {
           </motion.div>
 
           {/* Text Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -63,15 +63,15 @@ export default function WhatWeDo() {
                 {data.tagline}
               </span>
             </div>
-            
+
             <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 900, lineHeight: 1.1, marginBottom: 32, textTransform: "uppercase" }}>
-              {data.title} <br/>
+              {data.title} <br />
               <span style={{ color: "#2196F3" }}>{data.highlight}</span>
             </h2>
-            
+
             <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
               {data.paragraphs.map((p, i) => (
-                <p key={i} style={{ color: "#455A64", fontSize: 18, lineHeight: 1.7, fontWeight: 400, margin: 0 }}>
+                <p key={i} style={{ color: "#0085f4", fontSize: 18, lineHeight: 1.7, fontWeight: 400, margin: 0 }}>
                   {p}
                 </p>
               ))}

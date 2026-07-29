@@ -64,7 +64,7 @@ export default function Solutions() {
 
         <div style={{ display: "grid", gridTemplateColumns: "360px 1fr", gap: 32 }} className="solutions-layout">
           
-          {/* ────── LEFT SIDEBAR: Interactive Tabs (Matching Image 2 light active state) ────── */}
+          {/* ────── LEFT SIDEBAR: Interactive Category Tabs (Clean Blue Aesthetic) ────── */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }} 
             animate={inView ? { opacity: 1, x: 0 } : {}} 
@@ -96,7 +96,7 @@ export default function Solutions() {
                   onMouseEnter={(e) => {
                     if (!isActive) {
                       e.currentTarget.style.background = "#F8FAFC";
-                      e.currentTarget.style.borderColor = "#CBD5E1";
+                      e.currentTarget.style.borderColor = "#90CAF9";
                     }
                   }}
                   onMouseLeave={(e) => {
@@ -142,10 +142,10 @@ export default function Solutions() {
                     <div style={{ fontSize: 10, fontWeight: 800, color: "#2563EB", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>
                       {sol.category}
                     </div>
-                    <div style={{ fontSize: 17, fontWeight: 900, color: "#1E3A8A", marginBottom: 6, letterSpacing: "-0.01em" }}>
+                    <div style={{ fontSize: 17, fontWeight: 900, color: "#004aad", marginBottom: 6, letterSpacing: "-0.01em" }}>
                       {sol.title}
                     </div>
-                    <div style={{ fontSize: 12, color: "#475569", lineHeight: 1.45, fontWeight: 500 }}>
+                    <div style={{ fontSize: 12, color: "#0085f4", lineHeight: 1.45, fontWeight: 500 }}>
                       {sol.tabSubtitle || sol.desc.slice(0, 60) + "..."}
                     </div>
                   </div>
@@ -154,7 +154,7 @@ export default function Solutions() {
             })}
           </motion.div>
 
-          {/* ────── RIGHT MAIN CONTAINER (Exact Matching Image 2) ────── */}
+          {/* ────── RIGHT MAIN CONTAINER (Pure Vibrant Blue Theme) ────── */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.98 }} 
             animate={inView ? { opacity: 1, scale: 1 } : {}} 
@@ -191,7 +191,7 @@ export default function Solutions() {
                     {Object.entries(activeSolution.specs).map(([key, val]) => (
                       <div key={key}>
                         <div style={{ fontSize: 10, color: "#2563EB", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 3, fontWeight: 800 }}>{key}</div>
-                        <div style={{ fontSize: 14, color: "#1E3A8A", fontWeight: 800 }}>{val}</div>
+                        <div style={{ fontSize: 14, color: "#004aad", fontWeight: 800 }}>{val}</div>
                       </div>
                     ))}
                   </div>
@@ -209,10 +209,10 @@ export default function Solutions() {
                     
                     {/* Title & Description */}
                     <div>
-                      <h3 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 900, color: "#1E3A8A", textTransform: "uppercase", marginBottom: 14, fontStyle: "italic", lineHeight: 1.08 }}>
+                      <h3 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 900, color: "#004aad", textTransform: "uppercase", marginBottom: 14, fontStyle: "italic", lineHeight: 1.08 }}>
                         {activeSolution.title}
                       </h3>
-                      <p style={{ fontSize: 14, color: "#2563EB", lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
+                      <p style={{ fontSize: 14, color: "#0085f4", lineHeight: 1.65, margin: 0, fontWeight: 500 }}>
                         {activeSolution.desc}
                       </p>
                     </div>
@@ -267,7 +267,7 @@ export default function Solutions() {
                               </div>
 
                               {/* Description Text */}
-                              <div style={{ fontSize: 11, color: "#475569", lineHeight: 1.35, fontWeight: 500, background: "transparent" }}>
+                              <div style={{ fontSize: 11, color: "#0085f4", lineHeight: 1.35, fontWeight: 500, background: "transparent" }}>
                                 {st.text}
                               </div>
 
@@ -308,10 +308,10 @@ export default function Solutions() {
                                 }}>
                                   <BenIcon size={18} color="#2563EB" />
                                 </div>
-                                <div style={{ fontSize: 13, fontWeight: 900, color: "#1E3A8A", lineHeight: 1.2 }}>
+                                <div style={{ fontSize: 13, fontWeight: 900, color: "#004aad", lineHeight: 1.2 }}>
                                   {ben.title}
                                 </div>
-                                <div style={{ fontSize: 11, color: "#64748B", lineHeight: 1.35, fontWeight: 500 }}>
+                                <div style={{ fontSize: 11, color: "#0085f4", lineHeight: 1.35, fontWeight: 500 }}>
                                   {ben.desc}
                                 </div>
                               </div>
@@ -408,10 +408,10 @@ export default function Solutions() {
                                 </div>
 
                                 <div>
-                                  <div style={{ fontSize: 11, fontWeight: 900, color: "#1E3A8A", textTransform: "uppercase", letterSpacing: "0.04em", lineHeight: 1.2 }}>
+                                  <div style={{ fontSize: 11, fontWeight: 900, color: "#004aad", textTransform: "uppercase", letterSpacing: "0.04em", lineHeight: 1.2 }}>
                                     {call.title}
                                   </div>
-                                  <div style={{ fontSize: 11, color: "#475569", lineHeight: 1.35, marginTop: 2, fontWeight: 500 }}>
+                                  <div style={{ fontSize: 11, color: "#0085f4", lineHeight: 1.35, marginTop: 2, fontWeight: 500 }}>
                                     {call.desc}
                                   </div>
                                 </div>
@@ -451,7 +451,7 @@ export default function Solutions() {
                         <div style={{ fontSize: 10, fontWeight: 900, color: "#2563EB", textTransform: "uppercase", letterSpacing: "0.09em", marginBottom: 2 }}>
                           IDEAL FOR
                         </div>
-                        <div style={{ fontSize: 12, color: "#1E3A8A", fontWeight: 800, lineHeight: 1.45 }}>
+                        <div style={{ fontSize: 12, color: "#004aad", fontWeight: 800, lineHeight: 1.45 }}>
                           {activeSolution.idealFor || "Municipal drainage systems, roadway catch basins, industrial sites, parks, and urban infrastructure projects."}
                         </div>
                       </div>
@@ -486,14 +486,14 @@ export default function Solutions() {
   );
 }
 
-// ────── Step Diagram Component (Crisp technical SVG illustrations) ──────
+// ────── Step Diagram Component (Pure Blue & White SVG graphics) ──────
 function StepSvgDiagram({ step }: { step: number }) {
   if (step === 1) {
     return (
       <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="15" y="10" width="30" height="40" rx="3" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1.5"/>
-        <rect x="22" y="14" width="16" height="32" rx="2" fill="#2563EB" opacity="0.8"/>
-        <path d="M10 20H50" stroke="#64748B" strokeWidth="2" strokeDasharray="3 3"/>
+        <rect x="15" y="10" width="30" height="40" rx="3" fill="#EFF6FF" stroke="#93C5FD" strokeWidth="1.5"/>
+        <rect x="22" y="14" width="16" height="32" rx="2" fill="#2563EB" opacity="0.85"/>
+        <path d="M10 20H50" stroke="#60A5FA" strokeWidth="2" strokeDasharray="3 3"/>
         <path d="M20 5L30 14L40 5" stroke="#2563EB" strokeWidth="2" strokeLinecap="round"/>
       </svg>
     );
@@ -501,7 +501,7 @@ function StepSvgDiagram({ step }: { step: number }) {
   if (step === 2) {
     return (
       <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="20" y="10" width="20" height="40" rx="3" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1.5"/>
+        <rect x="20" y="10" width="20" height="40" rx="3" fill="#EFF6FF" stroke="#93C5FD" strokeWidth="1.5"/>
         <path d="M30 15V45" stroke="#2563EB" strokeWidth="3" strokeLinecap="round"/>
         <path d="M25 35L30 42L35 35" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M15 25C20 30 25 25 30 30" stroke="#60A5FA" strokeWidth="2"/>
@@ -521,7 +521,7 @@ function StepSvgDiagram({ step }: { step: number }) {
   return (
     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="20" y="10" width="20" height="34" rx="3" fill="#2563EB"/>
-      <path d="M10 44H50V52H10V44Z" fill="#64748B"/>
+      <path d="M10 44H50V52H10V44Z" fill="#93C5FD"/>
       <circle cx="30" cy="48" r="3" fill="#60A5FA"/>
       <path d="M15 36L30 44L45 36" stroke="#38BDF8" strokeWidth="2" strokeDasharray="2 2"/>
     </svg>

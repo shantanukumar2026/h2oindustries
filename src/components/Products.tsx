@@ -33,8 +33,8 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
     const ok = p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q) || p.sku.toLowerCase().includes(q);
     return ok && (cat === "All" || p.category === cat);
   });
-  const visible = filtered.slice(0, count);
-  const hasMore = count < filtered.length;
+  const visible = isFullPage ? filtered.slice(0, count) : filtered.slice(0, 6);
+  const hasMore = isFullPage ? count < filtered.length : true;
   const { header, searchPlaceholder, emptyMessage, button } = homeData.products;
 
   return (
@@ -167,8 +167,8 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
         {/* Grid */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-          gap: 24,
+          gridTemplateColumns: isFullPage ? "repeat(auto-fill, minmax(280px, 1fr))" : "repeat(auto-fill, minmax(230px, 1fr))",
+          gap: isFullPage ? 24 : 20,
         }}>
           <AnimatePresence mode="popLayout">
             {visible.map((p, i) => (
@@ -180,7 +180,7 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
                 transition={{ duration: 0.35, delay: i < 8 ? i * 0.04 : 0 }}
                 style={{ height: "100%" }}
               >
-                <ProductCard product={p} onQuickView={() => setQv(p)} catColor={catColors[p.category] ?? "#0085f4"} />
+                <ProductCard product={p} onQuickView={() => setQv(p)} catColor={catColors[p.category] ?? "#0085f4"} isCompact={!isFullPage} />
               </motion.div>
             ))}
           </AnimatePresence>
@@ -364,10 +364,11 @@ export default function Products({ isFullPage = false }: { isFullPage?: boolean 
   );
 }
 
-function ProductCard({ product, onQuickView, catColor }: {
+function ProductCard({ product, onQuickView, catColor, isCompact = false }: {
   product: typeof allProducts[0];
   onQuickView: () => void;
   catColor: string;
+  isCompact?: boolean;
 }) {
   const [hovered, setHovered] = useState(false);
   const router = useRouter();
@@ -379,28 +380,29 @@ function ProductCard({ product, onQuickView, catColor }: {
       style={{
         background: "#fff",
         border: "1px solid #E0E0E0",
-        borderRadius: "12px",
+        borderRadius: isCompact ? "10px" : "12px",
         overflow: "hidden",
         position: "relative",
         transition: "all 0.3s ease",
-        transform: hovered ? "translateY(-6px)" : "translateY(0)",
-        boxShadow: hovered ? "0 24px 48px rgba(0, 74, 173,0.2)" : "0 4px 12px rgba(0, 74, 173,0.06)",
+        transform: hovered ? "translateY(-4px)" : "translateY(0)",
+        boxShadow: hovered ? "0 16px 36px rgba(0, 74, 173,0.18)" : "0 4px 12px rgba(0, 74, 173,0.06)",
         cursor: "default",
         display: "flex",
         flexDirection: "column",
+        height: "100%",
       }}
     >
       {/* Category badge */}
       <div style={{
         position: "absolute",
-        top: 16,
-        left: 16,
+        top: isCompact ? 10 : 16,
+        left: isCompact ? 10 : 16,
         background: catColor,
         color: "#fff",
-        padding: "6px 12px",
-        fontSize: 10,
+        padding: isCompact ? "4px 8px" : "6px 12px",
+        fontSize: isCompact ? 9 : 10,
         fontWeight: 800,
-        letterSpacing: "0.1em",
+        letterSpacing: "0.08em",
         textTransform: "uppercase",
         borderRadius: "4px",
         zIndex: 10,
@@ -409,15 +411,15 @@ function ProductCard({ product, onQuickView, catColor }: {
         {product.category}
       </div>
 
-      {/* Image Block (Original Clean Background - No distortion) */}
-      <div style={{ position: "relative", aspectRatio: "1", background: "#F8FAFC", borderBottom: "1px solid #E0E0E0", overflow: "hidden" }}>
+      {/* Image Block */}
+      <div style={{ position: "relative", aspectRatio: isCompact ? "1.2" : "1", background: "#F8FAFC", borderBottom: "1px solid #E0E0E0", overflow: "hidden" }}>
         <Image
           src={product.image}
           alt={product.name}
           fill
           style={{
             objectFit: "contain",
-            padding: 32,
+            padding: isCompact ? 18 : 32,
             transform: hovered ? "scale(1.08)" : "scale(1)",
             transition: "transform 0.4s ease",
           }}
@@ -441,13 +443,13 @@ function ProductCard({ product, onQuickView, catColor }: {
             style={{
               display: "inline-flex",
               alignItems: "center",
-              gap: 8,
+              gap: 6,
               background: "#0085f4",
               color: "#fff",
               border: "none",
               borderRadius: "6px",
-              padding: "12px 20px",
-              fontSize: 13,
+              padding: isCompact ? "8px 14px" : "12px 20px",
+              fontSize: isCompact ? 11 : 13,
               fontWeight: 900,
               textTransform: "uppercase",
               letterSpacing: "0.05em",
@@ -465,27 +467,27 @@ function ProductCard({ product, onQuickView, catColor }: {
               e.currentTarget.style.color = "#ffffff";
             }}
           >
-            <Eye size={16} /> QUICK VIEW
+            <Eye size={isCompact ? 14 : 16} /> QUICK VIEW
           </button>
         </div>
       </div>
 
       {/* Info Block */}
-      <div style={{ padding: "20px", flex: 1, display: "flex", flexDirection: "column", background: "#fff" }}>
-        <p style={{ fontSize: 12, fontWeight: 700, color: "#0085f4", letterSpacing: "0.05em", marginBottom: 8, fontFamily: "monospace" }}>SKU: {product.sku}</p>
-        <h3 style={{ fontSize: 16, fontWeight: 900, fontStyle: "italic", color: "#004aad", textTransform: "uppercase", lineHeight: 1.3, marginBottom: 20, flex: 1 }}>
+      <div style={{ padding: isCompact ? "14px" : "20px", flex: 1, display: "flex", flexDirection: "column", background: "#fff" }}>
+        <p style={{ fontSize: isCompact ? 11 : 12, fontWeight: 700, color: "#0085f4", letterSpacing: "0.05em", marginBottom: 6, fontFamily: "monospace" }}>SKU: {product.sku}</p>
+        <h3 style={{ fontSize: isCompact ? 14 : 16, fontWeight: 900, fontStyle: "italic", color: "#004aad", textTransform: "uppercase", lineHeight: 1.3, marginBottom: isCompact ? 12 : 20, flex: 1 }}>
           {product.name}
         </h3>
         <button
           onClick={() => router.push(`/products/${product.id}`)}
           style={{
             width: "100%",
-            padding: "12px",
+            padding: isCompact ? "9px 12px" : "12px",
             background: "transparent",
             color: "#0085f4",
             border: "1.5px solid #0085f4",
             borderRadius: "6px",
-            fontSize: 14,
+            fontSize: isCompact ? 12 : 14,
             fontWeight: 800,
             textTransform: "uppercase",
             letterSpacing: "0.05em",

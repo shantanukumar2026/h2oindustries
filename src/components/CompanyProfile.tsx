@@ -35,7 +35,6 @@ import {
 const sidebarNav = [
   { id: "overview", label: "Company Overview", icon: Building2, href: "/company#overview" },
   { id: "who-we-are", label: "Who We Are", icon: FileText, href: "/company#who-we-are" },
-  { id: "at-a-glance", label: "At a Glance", icon: BarChart3, href: "/company#at-a-glance" },
   { id: "our-journey", label: "Our Journey", icon: Clock, href: "/company#our-journey" },
   { id: "what-we-do", label: "What We Do", icon: Wrench, href: "/capabilities" },
   { id: "footprint", label: "Manufacturing Footprint", icon: Factory, href: "/capabilities#manufacturing" },
@@ -45,15 +44,6 @@ const sidebarNav = [
   { id: "markets", label: "Markets We Serve", icon: Globe2, href: "/industries" },
   { id: "why-h2", label: "Why H2 Industries", icon: ShieldCheck, href: "/company#why-h2" },
   { id: "resources", label: "Company Resources", icon: Download, href: "/quality#resources" },
-];
-
-const companyAtGlance = [
-  { metric: "25+", label: "Years of Excellence", desc: "Serving US & Canadian infrastructure since 1998." },
-  { metric: "500+", label: "AWWA & ASTM Products", desc: "Full catalog of valve boxes, fittings & sampling enclosures." },
-  { metric: "12,000+", label: "Completed Projects", desc: "Deployed across 50 US States & 10 Canadian Provinces." },
-  { metric: "3", label: "Regional Hubs", desc: "Melville NY (HQ), Stuart FL, and Toronto ON." },
-  { metric: "50,000", label: "Tons Annual Capacity", desc: "State-of-the-art foundry & polymer molding capacity." },
-  { metric: "99.8%", label: "On-Time Jobsite Delivery", desc: "Dedicated logistics for urgent municipal field timelines." },
 ];
 
 const storyTimeline = [
@@ -358,34 +348,7 @@ export default function CompanyProfile() {
             </div>
           </section>
 
-          {/* 3. COMPANY AT A GLANCE */}
-          <section id="at-a-glance" style={{ scrollMarginTop: 140 }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", alignSelf: "flex-start" }}>
-                <BarChart3 size={14} color="#0085f4" />
-                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>COMPANY AT A GLANCE</span>
-              </div>
-              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
-                Key Operational Metrics
-              </h3>
 
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
-                {companyAtGlance.map((item, idx) => (
-                  <div key={idx} style={{ background: "#ffffff", borderRadius: "16px", padding: "28px", border: "1px solid #E2E8F0", boxShadow: "0 8px 24px rgba(0, 74, 173, 0.03)" }}>
-                    <div style={{ fontSize: 36, fontWeight: 950, color: "#004aad", fontStyle: "italic", lineHeight: 1, marginBottom: 8 }}>
-                      {item.metric}
-                    </div>
-                    <div style={{ fontSize: 15, fontWeight: 900, color: "#0085f4", marginBottom: 6 }}>
-                      {item.label}
-                    </div>
-                    <div style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.45 }}>
-                      {item.desc}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
 
           {/* 4. OUR JOURNEY (Timeline) */}
           <section id="our-journey" style={{ scrollMarginTop: 140 }}>

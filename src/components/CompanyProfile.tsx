@@ -245,31 +245,11 @@ export default function CompanyProfile() {
                 <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>ABOUT H2 INDUSTRIES</span>
               </div>
               <h2 style={{ fontSize: 32, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 20 }}>
-                North America's Precision Waterworks Authority
+                H2 INDUSTRIES COMPANY OVERVIEW
               </h2>
-              <p style={{ fontSize: 15, color: "#0085f4", lineHeight: 1.7, marginBottom: 24, fontWeight: 500 }}>
-                H2 Industries is a premier North American manufacturer of precision-engineered hydro-infrastructure products. Headquartered in Melville, New York, with regional manufacturing and distribution operations in Florida and Ontario, H2 Industries engineers fail-safe municipal waterworks castings, valve access boxes, modular sampling enclosures, and stormwater column drainage systems.
+              <p style={{ fontSize: 15, color: "#0085f4", lineHeight: 1.7, margin: 0, fontWeight: 500 }}>
+                H2 Industries is a premier manufacturer of precision-engineered hydro-infrastructure products. Headquartered in Melville, New York, with regional manufacturing and distribution operations in Florida and Ontario, H2 Industries engineers municipal waterworks castings, valve access boxes, modular sampling enclosures, and stormwater column drainage systems.
               </p>
-
-              {/* Key Facts Bar */}
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, background: "#F8FAFC", padding: "20px", borderRadius: "12px", border: "1px solid #E2E8F0" }}>
-                <div>
-                  <div style={{ fontSize: 10, fontWeight: 800, color: "#0085f4", textTransform: "uppercase" }}>COMPANY TYPE</div>
-                  <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", marginTop: 2 }}>Private OEM & Foundry</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: 10, fontWeight: 800, color: "#0085f4", textTransform: "uppercase" }}>HEADQUARTERS</div>
-                  <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", marginTop: 2 }}>Melville, NY, USA</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: 10, fontWeight: 800, color: "#0085f4", textTransform: "uppercase" }}>MARKETS SERVED</div>
-                  <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", marginTop: 2 }}>USA & Canada (All 50 States + 10 Provinces)</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: 10, fontWeight: 800, color: "#0085f4", textTransform: "uppercase" }}>PRIMARY STANDARDS</div>
-                  <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", marginTop: 2 }}>AWWA, ASTM, NSF/ANSI 61</div>
-                </div>
-              </div>
             </div>
           </section>
 

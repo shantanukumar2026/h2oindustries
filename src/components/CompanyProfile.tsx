@@ -33,18 +33,18 @@ import {
 } from "lucide-react";
 
 const sidebarNav = [
-  { id: "overview", label: "Company Overview", icon: Building2 },
-  { id: "who-we-are", label: "Who We Are", icon: FileText },
-  { id: "at-a-glance", label: "At a Glance", icon: BarChart3 },
-  { id: "our-journey", label: "Our Journey", icon: Clock },
-  { id: "what-we-do", label: "What We Do", icon: Wrench },
-  { id: "footprint", label: "Manufacturing Footprint", icon: Factory },
-  { id: "quality", label: "Quality & Standards", icon: Award },
-  { id: "leadership", label: "Leadership", icon: Users },
-  { id: "mission-values", label: "Mission & Values", icon: Compass },
-  { id: "markets", label: "Markets We Serve", icon: Globe2 },
-  { id: "why-h2", label: "Why H2 Industries", icon: ShieldCheck },
-  { id: "resources", label: "Company Resources", icon: Download },
+  { id: "overview", label: "Company Overview", icon: Building2, href: "/company#overview" },
+  { id: "who-we-are", label: "Who We Are", icon: FileText, href: "/company#who-we-are" },
+  { id: "at-a-glance", label: "At a Glance", icon: BarChart3, href: "/company#at-a-glance" },
+  { id: "our-journey", label: "Our Journey", icon: Clock, href: "/company#our-journey" },
+  { id: "what-we-do", label: "What We Do", icon: Wrench, href: "/capabilities" },
+  { id: "footprint", label: "Manufacturing Footprint", icon: Factory, href: "/capabilities#manufacturing" },
+  { id: "quality", label: "Quality & Standards", icon: Award, href: "/quality" },
+  { id: "leadership", label: "Leadership", icon: Users, href: "/company#leadership" },
+  { id: "mission-values", label: "Mission & Values", icon: Compass, href: "/company#mission-values" },
+  { id: "markets", label: "Markets We Serve", icon: Globe2, href: "/industries" },
+  { id: "why-h2", label: "Why H2 Industries", icon: ShieldCheck, href: "/company#why-h2" },
+  { id: "resources", label: "Company Resources", icon: Download, href: "/quality#resources" },
 ];
 
 const companyAtGlance = [
@@ -172,8 +172,9 @@ export default function CompanyProfile() {
                 const Icon = item.icon;
                 const isActive = activeSection === item.id;
                 return (
-                  <button
+                  <Link
                     key={item.id}
+                    href={item.href}
                     onClick={() => scrollToSection(item.id)}
                     style={{
                       display: "flex",
@@ -189,6 +190,7 @@ export default function CompanyProfile() {
                       fontSize: 13,
                       cursor: "pointer",
                       textAlign: "left",
+                      textDecoration: "none",
                       transition: "all 0.2s ease"
                     }}
                     onMouseEnter={(e) => {
@@ -207,7 +209,7 @@ export default function CompanyProfile() {
                     <Icon size={16} color={isActive ? "#0085f4" : "#90CAF9"} />
                     <span style={{ flex: 1 }}>{item.label}</span>
                     {isActive && <ChevronRight size={14} color="#0085f4" />}
-                  </button>
+                  </Link>
                 );
               })}
             </nav>

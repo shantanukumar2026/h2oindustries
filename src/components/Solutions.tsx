@@ -267,7 +267,7 @@ export default function Solutions() {
                               </div>
 
                               {/* Description Text */}
-                              <div style={{ fontSize: 11, color: "#475569", lineHeight: 1.35, fontWeight: 500 }}>
+                              <div style={{ fontSize: 11, color: "#475569", lineHeight: 1.35, fontWeight: 500, background: "transparent" }}>
                                 {st.text}
                               </div>
 

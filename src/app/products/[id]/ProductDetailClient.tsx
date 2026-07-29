@@ -137,7 +137,7 @@ function TechnicalSpecs({ product }: { product: any }) {
             <div style={{ border: "1px solid #E2E8F0", borderRadius: 8, overflow: "hidden" }}>
               {Object.entries(product.specs || {}).map(([key, val], idx) => (
                 <div key={key} style={{ display: "flex", justifyContent: "space-between", padding: "16px 24px", background: idx % 2 === 0 ? "#F8FAFC" : "#fff", borderBottom: "1px solid #E2E8F0" }}>
-                  <span style={{ fontSize: 14, fontWeight: 800, color: "#546E7A" }}>{key}</span>
+                  <span style={{ fontSize: 14, fontWeight: 800, color: "#004aad" }}>{key}</span>
                   <span style={{ fontSize: 14, fontWeight: 700, color: "#004aad" }}>{val as string}</span>
                 </div>
               ))}
@@ -159,7 +159,7 @@ function ManufacturingAndQuality() {
             <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 24 }}>
               RIGOROUS <span style={{ color: "#2196F3" }}>TESTING LAB</span>
             </h2>
-            <p style={{ color: "#546E7A", fontSize: 16, lineHeight: 1.7, marginBottom: 32 }}>
+            <p style={{ color: "#004aad", fontSize: 16, lineHeight: 1.7, marginBottom: 32 }}>
               Every H2 Industries component undergoes 100% quality inspection, hydrostatic pressure testing, and load-cell stress verification prior to job site delivery.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
@@ -205,7 +205,7 @@ function ApplicationsAndIndustries() {
             <div key={i} style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", padding: 32, borderRadius: 12 }}>
               <Activity size={24} color="#2196F3" style={{ marginBottom: 16 }} />
               <h3 style={{ fontSize: 18, fontWeight: 900, color: "#004aad", fontStyle: "italic", marginBottom: 8 }}>{app.title}</h3>
-              <p style={{ fontSize: 14, color: "#546E7A", lineHeight: 1.6, margin: 0 }}>{app.desc}</p>
+              <p style={{ fontSize: 14, color: "#004aad", lineHeight: 1.6, margin: 0 }}>{app.desc}</p>
             </div>
           ))}
         </div>

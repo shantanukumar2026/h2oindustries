@@ -506,7 +506,7 @@ export default function WaterworksCastingsClient() {
                       <p
                         style={{
                           fontSize: 14,
-                          color: "#546E7A",
+                          color: "#004aad",
                           lineHeight: 1.6,
                           marginBottom: 24,
                           display: "-webkit-box",
@@ -595,7 +595,7 @@ export default function WaterworksCastingsClient() {
                   <h3 style={{ fontSize: 24, fontWeight: 900, fontStyle: "italic", color: "#004aad", textTransform: "uppercase", margin: 0 }}>
                     General Submittals & MSDS
                   </h3>
-                  <p style={{ fontSize: 14, color: "#546E7A", margin: 0, marginTop: 4 }}>
+                  <p style={{ fontSize: 14, color: "#004aad", margin: 0, marginTop: 4 }}>
                     Download official technical specification sheets and material certificates
                   </p>
                 </div>
@@ -794,7 +794,7 @@ export default function WaterworksCastingsClient() {
                     {quickViewProduct.name}
                   </h3>
 
-                  <p style={{ fontSize: 14, color: "#546E7A", lineHeight: 1.6, marginBottom: 24 }}>
+                  <p style={{ fontSize: 14, color: "#004aad", lineHeight: 1.6, marginBottom: 24 }}>
                     {quickViewProduct.description}
                   </p>
 
@@ -825,7 +825,7 @@ export default function WaterworksCastingsClient() {
                           borderBottom: idx === Object.keys(quickViewProduct.specs).length - 1 ? "none" : "1px solid #E0E0E0",
                         }}
                       >
-                        <span style={{ fontWeight: 800, color: "#546E7A" }}>{key}</span>
+                        <span style={{ fontWeight: 800, color: "#004aad" }}>{key}</span>
                         <span style={{ fontWeight: 600, color: "#004aad" }}>{val}</span>
                       </div>
                     ))}

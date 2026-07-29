@@ -28,7 +28,6 @@ import {
   ChevronRight,
   Truck,
   Wrench,
-  BarChart3,
   MapPin
 } from "lucide-react";
 
@@ -39,7 +38,6 @@ const sidebarNav = [
   { id: "what-we-do", label: "What We Do", icon: Wrench, href: "/capabilities" },
   { id: "footprint", label: "Manufacturing Footprint", icon: Factory, href: "/capabilities#manufacturing" },
   { id: "quality", label: "Quality & Standards", icon: Award, href: "/quality" },
-  { id: "leadership", label: "Leadership", icon: Users, href: "/company#leadership" },
   { id: "mission-values", label: "Mission & Values", icon: Compass, href: "/company#mission-values" },
   { id: "markets", label: "Markets We Serve", icon: Globe2, href: "/industries" },
   { id: "why-h2", label: "Why H2 Industries", icon: ShieldCheck, href: "/company#why-h2" },
@@ -89,35 +87,14 @@ const whatWeDoPillars = [
 ];
 
 const certificationBadges = [
-  { name: "ISO 9001:2015", sub: "QUALITY MANAGEMENT CERTIFIED", doc: "ISO-9001-Certificate.pdf" },
-  { name: "AWWA COMPLIANT", sub: "AMERICAN WATER WORKS ASSOC.", doc: "AWWA-Compliance-Doc.pdf" },
-  { name: "ASTM INTERNATIONAL", sub: "METALLURGICAL STANDARDS", doc: "ASTM-Testing-Report.pdf" },
-  { name: "NSF/ANSI 61 & 372", sub: "POTABLE WATER LEAD-FREE", doc: "NSF-61-Certification.pdf" },
-  { name: "AASHTO H-20 / HS-20", sub: "HIGHWAY TRAFFIC LOAD RATED", doc: "AASHTO-Load-Report.pdf" },
-  { name: "UL / FM APPROVED", sub: "FIRE MAINS & UTILITIES", doc: "UL-FM-Approval.pdf" },
-  { name: "MADE IN USA / CANADA", sub: "BUY AMERICAN ACT COMPLIANT", doc: "Buy-American-Compliance.pdf" },
-  { name: "CSA INTERNATIONAL", sub: "CANADIAN STANDARDS ASSOC.", doc: "CSA-Compliance-Doc.pdf" },
-];
-
-const leadershipTeam = [
-  {
-    name: "Robert M. Vance",
-    role: "CHIEF EXECUTIVE OFFICER",
-    experience: "28+ Years in Waterworks Manufacturing",
-    bio: "Pioneered H2's expansion across North American municipal markets with a relentless commitment to public safety and engineering integrity."
-  },
-  {
-    name: "Elena Rostova, P.Eng.",
-    role: "VICE PRESIDENT OF ENGINEERING",
-    experience: "20+ Years Hydro-Infrastructure CAD & FEA",
-    bio: "Leads H2's R&D division, overseeing advanced FEA stress modeling and ASTM metallurgical compliance for heavy-duty municipal castings."
-  },
-  {
-    name: "Marcus Sterling",
-    role: "DIRECTOR OF QUALITY ASSURANCE",
-    experience: "18+ Years ISO & AWWA Testing",
-    bio: "Manages 100% batch testing, hydrostatic pressure chambers, and chemical spectrometry across all US and Canadian manufacturing plants."
-  },
+  { name: "ISO 9001:2015", sub: "QUALITY MANAGEMENT CERTIFIED", href: "/quality#standards" },
+  { name: "AWWA COMPLIANT", sub: "AMERICAN WATER WORKS ASSOC.", href: "/quality#standards" },
+  { name: "ASTM INTERNATIONAL", sub: "METALLURGICAL STANDARDS", href: "/quality#standards" },
+  { name: "NSF/ANSI 61 & 372", sub: "POTABLE WATER LEAD-FREE", href: "/quality#standards" },
+  { name: "AASHTO H-20 / HS-20", sub: "HIGHWAY TRAFFIC LOAD RATED", href: "/quality#standards" },
+  { name: "UL / FM APPROVED", sub: "FIRE MAINS & UTILITIES", href: "/quality#standards" },
+  { name: "MADE IN USA / CANADA", sub: "BUY AMERICAN ACT COMPLIANT", href: "/quality#standards" },
+  { name: "CSA INTERNATIONAL", sub: "CANADIAN STANDARDS ASSOC.", href: "/quality#standards" },
 ];
 
 const marketsServed = [
@@ -139,10 +116,6 @@ export default function CompanyProfile() {
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
-  };
-
-  const handleDownload = (docName: string) => {
-    alert(`Downloading ${docName}... (Technical document submittal generated)`);
   };
 
   return (
@@ -175,7 +148,7 @@ export default function CompanyProfile() {
                       borderRadius: "10px",
                       border: "none",
                       background: isActive ? "#EBF3FF" : "transparent",
-                      color: isActive ? "#004aad" : "#546E7A",
+                      color: isActive ? "#004aad" : "#0085f4",
                       fontWeight: isActive ? 900 : 600,
                       fontSize: 13,
                       cursor: "pointer",
@@ -186,13 +159,13 @@ export default function CompanyProfile() {
                     onMouseEnter={(e) => {
                       if (!isActive) {
                         e.currentTarget.style.background = "#F8FAFC";
-                        e.currentTarget.style.color = "#0085f4";
+                        e.currentTarget.style.color = "#004aad";
                       }
                     }}
                     onMouseLeave={(e) => {
                       if (!isActive) {
                         e.currentTarget.style.background = "transparent";
-                        e.currentTarget.style.color = "#546E7A";
+                        e.currentTarget.style.color = "#0085f4";
                       }
                     }}
                   >
@@ -274,7 +247,7 @@ export default function CompanyProfile() {
               <h2 style={{ fontSize: 32, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 20 }}>
                 North America's Precision Waterworks Authority
               </h2>
-              <p style={{ fontSize: 15, color: "#475569", lineHeight: 1.7, marginBottom: 24 }}>
+              <p style={{ fontSize: 15, color: "#0085f4", lineHeight: 1.7, marginBottom: 24, fontWeight: 500 }}>
                 H2 Industries is a premier North American manufacturer of precision-engineered hydro-infrastructure products. Headquartered in Melville, New York, with regional manufacturing and distribution operations in Florida and Ontario, H2 Industries engineers fail-safe municipal waterworks castings, valve access boxes, modular sampling enclosures, and stormwater column drainage systems.
               </p>
 
@@ -312,10 +285,10 @@ export default function CompanyProfile() {
                   <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 16 }}>
                     Engineered for Multi-Decade Field Reliability
                   </h3>
-                  <p style={{ fontSize: 14, color: "#475569", lineHeight: 1.65, marginBottom: 16 }}>
+                  <p style={{ fontSize: 14, color: "#0085f4", lineHeight: 1.65, marginBottom: 16, fontWeight: 500 }}>
                     Founded in 1998, H2 Industries was forged on a commitment to solve complex municipal water challenges through metallurgical precision and rigorous quality control. Our products are installed in major metropolitan water systems, roadway catch basins, and industrial water plants across North America.
                   </p>
-                  <p style={{ fontSize: 14, color: "#475569", lineHeight: 1.65, marginBottom: 24 }}>
+                  <p style={{ fontSize: 14, color: "#0085f4", lineHeight: 1.65, marginBottom: 24, fontWeight: 500 }}>
                     We combine old-world foundry expertise with 21st-century CAD modeling, finite element analysis (FEA), and automated polymer injection molding to create infrastructure built for 50+ year service lifespans.
                   </p>
 
@@ -348,9 +321,7 @@ export default function CompanyProfile() {
             </div>
           </section>
 
-
-
-          {/* 4. OUR JOURNEY (Timeline) */}
+          {/* 3. OUR JOURNEY (Timeline) */}
           <section id="our-journey" style={{ scrollMarginTop: 140 }}>
             <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
@@ -370,7 +341,7 @@ export default function CompanyProfile() {
                     <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", marginBottom: 8 }}>
                       {item.title}
                     </div>
-                    <div style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.5 }}>
+                    <div style={{ fontSize: 12, color: "#0085f4", lineHeight: 1.5, fontWeight: 500 }}>
                       {item.text}
                     </div>
                   </div>
@@ -379,7 +350,7 @@ export default function CompanyProfile() {
             </div>
           </section>
 
-          {/* 5. WHAT WE DO */}
+          {/* 4. WHAT WE DO */}
           <section id="what-we-do" style={{ scrollMarginTop: 140 }}>
             <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", alignSelf: "flex-start" }}>
@@ -401,7 +372,7 @@ export default function CompanyProfile() {
                       <h4 style={{ fontSize: 15, fontWeight: 900, color: "#004aad", marginBottom: 8, letterSpacing: "0.02em" }}>
                         {pil.title}
                       </h4>
-                      <p style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.5, marginBottom: 16 }}>
+                      <p style={{ fontSize: 12, color: "#0085f4", lineHeight: 1.5, marginBottom: 16, fontWeight: 500 }}>
                         {pil.desc}
                       </p>
                       <div style={{ borderTop: "1px solid #E2E8F0", paddingTop: 12, display: "flex", flexDirection: "column", gap: 6 }}>
@@ -418,7 +389,7 @@ export default function CompanyProfile() {
             </div>
           </section>
 
-          {/* 6. MANUFACTURING FOOTPRINT */}
+          {/* 5. MANUFACTURING FOOTPRINT */}
           <section id="footprint" style={{ scrollMarginTop: 140 }}>
             <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
@@ -438,7 +409,7 @@ export default function CompanyProfile() {
                   <div style={{ padding: "20px" }}>
                     <div style={{ fontSize: 10, fontWeight: 900, color: "#0085f4", textTransform: "uppercase" }}>HEADQUARTERS & FOUNDRY</div>
                     <div style={{ fontSize: 16, fontWeight: 900, color: "#004aad", margin: "4px 0 8px" }}>Melville, New York, USA</div>
-                    <p style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.45, margin: 0 }}>
+                    <p style={{ fontSize: 12, color: "#0085f4", lineHeight: 1.45, margin: 0, fontWeight: 500 }}>
                       120,000 sq. ft. primary casting, CNC machining, metallurgical testing lab, and corporate HQ.
                     </p>
                   </div>
@@ -452,7 +423,7 @@ export default function CompanyProfile() {
                   <div style={{ padding: "20px" }}>
                     <div style={{ fontSize: 10, fontWeight: 900, color: "#0085f4", textTransform: "uppercase" }}>SOUTHERN OPERATIONS</div>
                     <div style={{ fontSize: 16, fontWeight: 900, color: "#004aad", margin: "4px 0 8px" }}>Stuart, Florida, USA</div>
-                    <p style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.45, margin: 0 }}>
+                    <p style={{ fontSize: 12, color: "#0085f4", lineHeight: 1.45, margin: 0, fontWeight: 500 }}>
                       Specialized polymer molding, hydrostatic burst testing, and Southeast US logistics distribution hub.
                     </p>
                   </div>
@@ -466,7 +437,7 @@ export default function CompanyProfile() {
                   <div style={{ padding: "20px" }}>
                     <div style={{ fontSize: 10, fontWeight: 900, color: "#0085f4", textTransform: "uppercase" }}>CANADIAN OPERATIONS</div>
                     <div style={{ fontSize: 16, fontWeight: 900, color: "#004aad", margin: "4px 0 8px" }}>Toronto, Ontario, Canada</div>
-                    <p style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.45, margin: 0 }}>
+                    <p style={{ fontSize: 12, color: "#0085f4", lineHeight: 1.45, margin: 0, fontWeight: 500 }}>
                       Canadian head office, CSA compliance laboratory, and nationwide provincial distribution center.
                     </p>
                   </div>
@@ -475,7 +446,7 @@ export default function CompanyProfile() {
             </div>
           </section>
 
-          {/* 7. QUALITY & STANDARDS */}
+          {/* 6. QUALITY & STANDARDS */}
           <section id="quality" style={{ scrollMarginTop: 140 }}>
             <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
@@ -494,13 +465,13 @@ export default function CompanyProfile() {
                         <Award size={18} color="#0085f4" />
                         <span style={{ fontSize: 14, fontWeight: 900, color: "#004aad" }}>{badge.name}</span>
                       </div>
-                      <div style={{ fontSize: 10, fontWeight: 800, color: "#546E7A", textTransform: "uppercase" }}>
+                      <div style={{ fontSize: 10, fontWeight: 800, color: "#0085f4", textTransform: "uppercase" }}>
                         {badge.sub}
                       </div>
                     </div>
 
-                    <button
-                      onClick={() => handleDownload(badge.doc)}
+                    <Link
+                      href={badge.href}
                       style={{
                         marginTop: 16,
                         display: "inline-flex",
@@ -513,49 +484,19 @@ export default function CompanyProfile() {
                         borderRadius: "6px",
                         fontSize: 11,
                         fontWeight: 800,
-                        cursor: "pointer"
+                        textDecoration: "none",
+                        width: "fit-content"
                       }}
                     >
-                      <Download size={12} /> CERTIFICATE
-                    </button>
+                      <Download size={12} /> VIEW SPEC
+                    </Link>
                   </div>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* 8. LEADERSHIP */}
-          <section id="leadership" style={{ scrollMarginTop: 140 }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", alignSelf: "flex-start" }}>
-                <Users size={14} color="#0085f4" />
-                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>EXECUTIVE LEADERSHIP</span>
-              </div>
-              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
-                Experienced Management Team
-              </h3>
-
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
-                {leadershipTeam.map((leader, i) => (
-                  <div key={i} style={{ background: "#ffffff", borderRadius: "16px", padding: "28px", border: "1px solid #E2E8F0", boxShadow: "0 8px 24px rgba(0,74,173,0.03)" }}>
-                    <div style={{ width: 44, height: 44, borderRadius: "50%", background: "linear-gradient(135deg, #0085f4, #004aad)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, fontWeight: 900, marginBottom: 16 }}>
-                      {leader.name.split(" ").map(n => n[0]).join("")}
-                    </div>
-                    <div style={{ fontSize: 18, fontWeight: 900, color: "#004aad" }}>{leader.name}</div>
-                    <div style={{ fontSize: 11, fontWeight: 800, color: "#0085f4", textTransform: "uppercase", margin: "2px 0 8px" }}>{leader.role}</div>
-                    <div style={{ fontSize: 11, fontWeight: 700, color: "#004aad", background: "#EBF3FF", padding: "4px 8px", borderRadius: "4px", display: "inline-block", marginBottom: 12 }}>
-                      {leader.experience}
-                    </div>
-                    <div style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.5 }}>
-                      {leader.bio}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* 9. MISSION, VISION & VALUES */}
+          {/* 7. MISSION, VISION & VALUES */}
           <section id="mission-values" style={{ scrollMarginTop: 140 }}>
             <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
@@ -597,7 +538,7 @@ export default function CompanyProfile() {
                         <VIcon size={16} />
                       </div>
                       <div style={{ fontSize: 12, fontWeight: 900, color: "#004aad" }}>{v.title}</div>
-                      <div style={{ fontSize: 10, color: "#546E7A", marginTop: 2 }}>{v.desc}</div>
+                      <div style={{ fontSize: 10, color: "#0085f4", marginTop: 2, fontWeight: 500 }}>{v.desc}</div>
                     </div>
                   );
                 })}
@@ -605,7 +546,7 @@ export default function CompanyProfile() {
             </div>
           </section>
 
-          {/* 10. MARKETS WE SERVE */}
+          {/* 8. MARKETS WE SERVE */}
           <section id="markets" style={{ scrollMarginTop: 140 }}>
             <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", alignSelf: "flex-start" }}>
@@ -625,7 +566,7 @@ export default function CompanyProfile() {
                         <MIcon size={20} color="#0085f4" />
                       </div>
                       <h4 style={{ fontSize: 16, fontWeight: 900, color: "#004aad", marginBottom: 8 }}>{m.title}</h4>
-                      <p style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.5, margin: 0 }}>{m.desc}</p>
+                      <p style={{ fontSize: 12, color: "#0085f4", lineHeight: 1.5, margin: 0, fontWeight: 500 }}>{m.desc}</p>
                     </div>
                   );
                 })}
@@ -633,7 +574,7 @@ export default function CompanyProfile() {
             </div>
           </section>
 
-          {/* 11. WHY H2 INDUSTRIES */}
+          {/* 9. WHY H2 INDUSTRIES */}
           <section id="why-h2" style={{ scrollMarginTop: 140 }}>
             <div style={{ background: "linear-gradient(135deg, #004aad 0%, #0085f4 100%)", borderRadius: "20px", padding: "40px", color: "#ffffff", boxShadow: "0 12px 36px rgba(0,74,173,0.2)" }}>
               <div style={{ fontSize: 11, fontWeight: 900, letterSpacing: "0.15em", textTransform: "uppercase", color: "#90CAF9", marginBottom: 8 }}>
@@ -659,7 +600,7 @@ export default function CompanyProfile() {
             </div>
           </section>
 
-          {/* 12. COMPANY RESOURCES */}
+          {/* 10. COMPANY RESOURCES */}
           <section id="resources" style={{ scrollMarginTop: 140 }}>
             <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
@@ -672,19 +613,19 @@ export default function CompanyProfile() {
 
               <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
                 {[
-                  { name: "H2 Company Profile", size: "PDF • 4.8 MB", doc: "H2-Company-Profile-2026.pdf" },
-                  { name: "Quality Certifications Pack", size: "PDF • 8.2 MB", doc: "H2-Certifications-Pack.pdf" },
-                  { name: "Master Product Catalog", size: "PDF • 14.5 MB", doc: "H2-Master-Catalog-2026.pdf" },
-                  { name: "Submittals & CAD Library", size: "ZIP • 32.0 MB", doc: "H2-Submittals-CAD-Library.zip" },
+                  { name: "H2 Company Profile", size: "PDF • Technical Spec Sheet", href: "/quality#standards" },
+                  { name: "Quality Certifications Pack", size: "PDF • AWWA & ASTM Approvals", href: "/quality#standards" },
+                  { name: "Master Product Catalog", size: "PDF • Complete Line Specs", href: "/products" },
+                  { name: "Submittals & CAD Library", size: "ZIP • Engineering Drawings", href: "/quality#standards" },
                 ].map((res, i) => (
                   <div key={i} style={{ background: "#F8FAFC", padding: "20px", borderRadius: "12px", border: "1px solid #E2E8F0", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                     <div>
                       <FileCheck size={24} color="#0085f4" style={{ marginBottom: 10 }} />
                       <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad" }}>{res.name}</div>
-                      <div style={{ fontSize: 11, color: "#546E7A", marginTop: 2 }}>{res.size}</div>
+                      <div style={{ fontSize: 11, color: "#0085f4", marginTop: 2, fontWeight: 500 }}>{res.size}</div>
                     </div>
-                    <button
-                      onClick={() => handleDownload(res.doc)}
+                    <Link
+                      href={res.href}
                       style={{
                         marginTop: 16,
                         display: "inline-flex",
@@ -698,18 +639,18 @@ export default function CompanyProfile() {
                         borderRadius: "8px",
                         fontSize: 11,
                         fontWeight: 900,
-                        cursor: "pointer"
+                        textDecoration: "none"
                       }}
                     >
-                      <Download size={14} /> DOWNLOAD
-                    </button>
+                      <Download size={14} /> VIEW SPEC
+                    </Link>
                   </div>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* 13. CONTACT / PARTNERSHIP CTA */}
+          {/* 11. CONTACT / PARTNERSHIP CTA */}
           <section id="contact-cta" style={{ scrollMarginTop: 140 }}>
             <div style={{ background: "#ffffff", borderRadius: "20px", padding: "48px", border: "2px solid #0085f4", boxShadow: "0 16px 40px rgba(0, 85, 244, 0.08)", textAlign: "center" }}>
               <div style={{ fontSize: 11, fontWeight: 900, letterSpacing: "0.15em", textTransform: "uppercase", color: "#0085f4", marginBottom: 8 }}>
@@ -718,7 +659,7 @@ export default function CompanyProfile() {
               <h2 style={{ fontSize: 36, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 16 }}>
                 Work With H2 Industries
               </h2>
-              <p style={{ fontSize: 15, color: "#546E7A", maxWidth: 640, margin: "0 auto 32px", lineHeight: 1.6 }}>
+              <p style={{ fontSize: 15, color: "#0085f4", maxWidth: 640, margin: "0 auto 32px", lineHeight: 1.6, fontWeight: 500 }}>
                 Whether you are specifying an upcoming AWWA municipal project, requesting custom CAD submittals, or establishing a regional distribution partnership, our engineering sales team is ready to assist.
               </p>
               <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>

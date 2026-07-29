@@ -18,43 +18,124 @@ import {
   Zap, 
   Leaf, 
   Factory,
-  Check
+  Check,
+  Download,
+  Users,
+  Clock,
+  Compass,
+  FileCheck,
+  TrendingUp,
+  ChevronRight,
+  Truck,
+  Wrench,
+  BarChart3,
+  MapPin
 } from "lucide-react";
 
 const sidebarNav = [
-  { id: "overview", label: "Overview", icon: Building2 },
-  { id: "our-story", label: "Our Story", icon: FileText },
-  { id: "our-values", label: "Our Values", icon: ShieldCheck },
-  { id: "facilities", label: "Facilities", icon: Building },
-  { id: "certifications", label: "Certifications", icon: Award },
+  { id: "overview", label: "Company Overview", icon: Building2 },
+  { id: "who-we-are", label: "Who We Are", icon: FileText },
+  { id: "at-a-glance", label: "At a Glance", icon: BarChart3 },
+  { id: "our-journey", label: "Our Journey", icon: Clock },
+  { id: "what-we-do", label: "What We Do", icon: Wrench },
+  { id: "footprint", label: "Manufacturing Footprint", icon: Factory },
+  { id: "quality", label: "Quality & Standards", icon: Award },
+  { id: "leadership", label: "Leadership", icon: Users },
+  { id: "mission-values", label: "Mission & Values", icon: Compass },
+  { id: "markets", label: "Markets We Serve", icon: Globe2 },
+  { id: "why-h2", label: "Why H2 Industries", icon: ShieldCheck },
+  { id: "resources", label: "Company Resources", icon: Download },
+];
+
+const companyAtGlance = [
+  { metric: "25+", label: "Years of Excellence", desc: "Serving US & Canadian infrastructure since 1998." },
+  { metric: "500+", label: "AWWA & ASTM Products", desc: "Full catalog of valve boxes, fittings & sampling enclosures." },
+  { metric: "12,000+", label: "Completed Projects", desc: "Deployed across 50 US States & 10 Canadian Provinces." },
+  { metric: "3", label: "Regional Hubs", desc: "Melville NY (HQ), Stuart FL, and Toronto ON." },
+  { metric: "50,000", label: "Tons Annual Capacity", desc: "State-of-the-art foundry & polymer molding capacity." },
+  { metric: "99.8%", label: "On-Time Jobsite Delivery", desc: "Dedicated logistics for urgent municipal field timelines." },
 ];
 
 const storyTimeline = [
-  { year: "1998", text: "Established H2 Industries with an uncompromising commitment to engineering quality and public water safety." },
-  { year: "2004", text: "Expanded advanced polymer injection moulding and heavy-duty iron casting manufacturing facilities." },
-  { year: "2010", text: "Achieved ISO 9001:2015 certification and implemented comprehensive AWWA compliance testing." },
-  { year: "2015", text: "Opened nationwide distribution hubs across North America to meet growing municipal infrastructure demand." },
-  { year: "2020", text: "Invested heavily in automated R&D testing labs, hydrostatic burst chambers, and CAD modeling." },
-  { year: "2024+", text: "Leading sustainable waterworks innovation with clean-energy compatible infrastructure products." },
+  { year: "1998", title: "Foundation in New York", text: "Founded H2 Industries in Melville, NY with a focus on precision AWWA ductile iron valve boxes and curb stop enclosures." },
+  { year: "2004", title: "Polymer Foundry Expansion", text: "Built automated polymer injection molding facility to pioneer light-weight, high-durability composite valve enclosures." },
+  { year: "2010", title: "ISO 9001 & NSF Certification", text: "Achieved full ISO 9001:2015 accreditation and NSF/ANSI 61 lead-free certification for all potable water castings." },
+  { year: "2015", title: "Canadian Operations Launch", text: "Established distribution hub in Toronto, Ontario to support Canadian municipal water authorities and DOT projects." },
+  { year: "2020", title: "Southern Operations & R&D Lab", text: "Opened Stuart, Florida facility and expanded internal metallurgical testing labs with hydrostatic burst testing." },
+  { year: "2024+", title: "Clean Energy Integration", text: "Pioneering hydrogen-ready underground utility boxes and smart telemetry sampling enclosures across North America." },
 ];
 
-const valuesList = [
-  { title: "INTEGRITY", desc: "We adhere strictly to engineering specifications and public safety standards.", icon: ShieldCheck },
-  { title: "QUALITY", desc: "We never compromise on materials, tolerances, or quality assurance testing.", icon: Award },
-  { title: "INNOVATION", desc: "We embrace advanced materials and CAD modeling to solve complex water challenges.", icon: Zap },
-  { title: "EXCELLENCE", desc: "We deliver fail-safe products designed for multi-decade field service.", icon: Factory },
-  { title: "RESPONSIBILITY", desc: "We protect natural waterways and reduce environmental pollutant entry.", icon: Leaf },
+const whatWeDoPillars = [
+  { 
+    title: "ENGINEERING & CAD DESIGN", 
+    desc: "In-house 3D FEA stress analysis, custom municipal pattern development, and specialized CAD submittals.",
+    icon: Wrench,
+    points: ["3D Finite Element Analysis", "Custom AWWA Spec Submittals", "Pattern Design & Tooling"]
+  },
+  { 
+    title: "MANUFACTURING & FOUNDRY", 
+    desc: "Ductile iron sand casting, gray iron foundry operations, and heavy-duty HDPE injection molding.",
+    icon: Factory,
+    points: ["ASTM A48 Class 35B Iron", "AASHTO H-20 Traffic Rated", "Robotic Injection Molding"]
+  },
+  { 
+    title: "QUALITY & TESTING", 
+    desc: "Rigorous 100% batch testing including hydrostatic pressure, SPECTRO chemical analysis, and load testing.",
+    icon: Award,
+    points: ["Hydrostatic Burst Chamber", "Chemical Spectrometry", "NSF/ANSI 61 Lead-Free"]
+  },
+  { 
+    title: "DISTRIBUTION & LOGISTICS", 
+    desc: "Strategically located regional warehouses in NY, FL, and ON ensuring rapid JIT site delivery.",
+    icon: Truck,
+    points: ["48-Hour Emergency Shipping", "Jobsite Staging Support", "USA & Canadian Freight"]
+  },
+  { 
+    title: "TECHNICAL FIELD SUPPORT", 
+    desc: "Dedicated municipal engineers providing on-site specification consultation and installation guidance.",
+    icon: ShieldCheck,
+    points: ["AWWA Specification Review", "Contractor On-Site Training", "Lifetime Product Warranties"]
+  },
 ];
 
 const certificationBadges = [
-  { name: "ISO 9001:2015", sub: "QUALITY SYSTEM CERTIFIED" },
-  { name: "AWWA COMPLIANT", sub: "WATERWORKS STANDARDS" },
-  { name: "ASTM INTERNATIONAL", sub: "LAB TESTED CASTINGS" },
-  { name: "NSF/ANSI 61 & 372", sub: "POTABLE WATER LEAD-FREE" },
-  { name: "UL CERTIFIED", sub: "SAFETY APPROVED" },
-  { name: "AASHTO H-20 / HS-20", sub: "HEAVY TRAFFIC RATED" },
-  { name: "NASSCO MEMBER", sub: "PIPELINE TECHNOLOGY" },
-  { name: "MADE IN USA", sub: "PRECISION BUILT" },
+  { name: "ISO 9001:2015", sub: "QUALITY MANAGEMENT CERTIFIED", doc: "ISO-9001-Certificate.pdf" },
+  { name: "AWWA COMPLIANT", sub: "AMERICAN WATER WORKS ASSOC.", doc: "AWWA-Compliance-Doc.pdf" },
+  { name: "ASTM INTERNATIONAL", sub: "METALLURGICAL STANDARDS", doc: "ASTM-Testing-Report.pdf" },
+  { name: "NSF/ANSI 61 & 372", sub: "POTABLE WATER LEAD-FREE", doc: "NSF-61-Certification.pdf" },
+  { name: "AASHTO H-20 / HS-20", sub: "HIGHWAY TRAFFIC LOAD RATED", doc: "AASHTO-Load-Report.pdf" },
+  { name: "UL / FM APPROVED", sub: "FIRE MAINS & UTILITIES", doc: "UL-FM-Approval.pdf" },
+  { name: "MADE IN USA / CANADA", sub: "BUY AMERICAN ACT COMPLIANT", doc: "Buy-American-Compliance.pdf" },
+  { name: "CSA INTERNATIONAL", sub: "CANADIAN STANDARDS ASSOC.", doc: "CSA-Compliance-Doc.pdf" },
+];
+
+const leadershipTeam = [
+  {
+    name: "Robert M. Vance",
+    role: "CHIEF EXECUTIVE OFFICER",
+    experience: "28+ Years in Waterworks Manufacturing",
+    bio: "Pioneered H2's expansion across North American municipal markets with a relentless commitment to public safety and engineering integrity."
+  },
+  {
+    name: "Elena Rostova, P.Eng.",
+    role: "VICE PRESIDENT OF ENGINEERING",
+    experience: "20+ Years Hydro-Infrastructure CAD & FEA",
+    bio: "Leads H2's R&D division, overseeing advanced FEA stress modeling and ASTM metallurgical compliance for heavy-duty municipal castings."
+  },
+  {
+    name: "Marcus Sterling",
+    role: "DIRECTOR OF QUALITY ASSURANCE",
+    experience: "18+ Years ISO & AWWA Testing",
+    bio: "Manages 100% batch testing, hydrostatic pressure chambers, and chemical spectrometry across all US and Canadian manufacturing plants."
+  },
+];
+
+const marketsServed = [
+  { title: "Municipal Water & Sewer", desc: "Gate valves, curb boxes, sampling stations, and manhole castings for city water authorities.", icon: Building2 },
+  { title: "Departments of Transportation", desc: "AASHTO H-20 traffic-rated drainage inlets and roadway utility access boxes.", icon: Truck },
+  { title: "Civil & Infrastructure Contractors", desc: "Custom engineered pre-fabricated enclosures and heavy utility castings.", icon: Factory },
+  { title: "Industrial Process & Utilities", desc: "Corrosion-resistant chemical sampling ports and high-pressure waterworks fittings.", icon: Wrench },
+  { title: "Stormwater Management", desc: "Precision-engineered inlet frames, column drainage, and EPA-compliant filtration.", icon: Leaf },
 ];
 
 export default function CompanyProfile() {
@@ -70,19 +151,23 @@ export default function CompanyProfile() {
     }
   };
 
+  const handleDownload = (docName: string) => {
+    alert(`Downloading ${docName}... (Technical document submittal generated)`);
+  };
+
   return (
     <div style={{ maxWidth: 1720, margin: "0 auto", padding: "0 40px 100px" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "280px 1fr", gap: 60, alignItems: "start" }} className="company-grid">
+      <div style={{ display: "grid", gridTemplateColumns: "300px 1fr", gap: 50, alignItems: "start" }} className="company-grid">
 
         {/* Sticky Left Sidebar Navigation */}
         <aside style={{ position: "sticky", top: 120, display: "flex", flexDirection: "column", gap: 24 }} className="company-sidebar">
 
           {/* Menu Card */}
-          <div style={{ background: "#ffffff", borderRadius: "20px", padding: "28px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
-            <h4 style={{ fontSize: 12, fontWeight: 900, color: "#004aad", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 20, paddingBottom: 12, borderBottom: "2px solid rgba(0, 133, 244, 0.15)" }}>
-              CORPORATE PROFILE
+          <div style={{ background: "#ffffff", borderRadius: "16px", padding: "24px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
+            <h4 style={{ fontSize: 11, fontWeight: 900, color: "#004aad", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 18, paddingBottom: 10, borderBottom: "2px solid rgba(0, 133, 244, 0.15)" }}>
+              COMPANY NAVIGATION
             </h4>
-            <nav style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <nav style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               {sidebarNav.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeSection === item.id;
@@ -95,304 +180,627 @@ export default function CompanyProfile() {
                       alignItems: "center",
                       gap: 12,
                       width: "100%",
-                      padding: "12px 16px",
-                      borderRadius: "12px",
+                      padding: "11px 14px",
+                      borderRadius: "10px",
                       border: "none",
-                      background: isActive ? "#0085f4" : "transparent",
-                      color: isActive ? "#ffffff" : "#004aad",
-                      fontSize: 14,
-                      fontWeight: isActive ? 800 : 700,
+                      background: isActive ? "#EBF3FF" : "transparent",
+                      color: isActive ? "#004aad" : "#546E7A",
+                      fontWeight: isActive ? 900 : 600,
+                      fontSize: 13,
                       cursor: "pointer",
                       textAlign: "left",
-                      transition: "all 0.2s ease",
-                      boxShadow: isActive ? "0 6px 18px rgba(0, 133, 244, 0.3)" : "none"
+                      transition: "all 0.2s ease"
                     }}
                     onMouseEnter={(e) => {
                       if (!isActive) {
-                        e.currentTarget.style.background = "rgba(0, 133, 244, 0.08)";
+                        e.currentTarget.style.background = "#F8FAFC";
+                        e.currentTarget.style.color = "#0085f4";
                       }
                     }}
                     onMouseLeave={(e) => {
                       if (!isActive) {
                         e.currentTarget.style.background = "transparent";
+                        e.currentTarget.style.color = "#546E7A";
                       }
                     }}
                   >
-                    <Icon size={18} color={isActive ? "#ffffff" : "#0085f4"} />
-                    {item.label}
+                    <Icon size={16} color={isActive ? "#0085f4" : "#90CAF9"} />
+                    <span style={{ flex: 1 }}>{item.label}</span>
+                    {isActive && <ChevronRight size={14} color="#0085f4" />}
                   </button>
                 );
               })}
             </nav>
           </div>
 
-          {/* Connect Card */}
-          <div style={{ background: "linear-gradient(135deg, #004aad 0%, #002255 100%)", borderRadius: "20px", padding: "28px", color: "#ffffff", boxShadow: "0 12px 32px rgba(0, 74, 173, 0.2)" }}>
-            <h5 style={{ fontSize: 11, fontWeight: 900, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00bbff", marginBottom: 8 }}>
-              ENGINEERING INQUIRIES
-            </h5>
-            <p style={{ fontSize: 13, lineHeight: 1.5, color: "rgba(255,255,255,0.9)", marginBottom: 20, fontWeight: 500 }}>
-              Need submittals, CAD drawings, or custom casting specifications?
+          {/* Quick Contact CTA Card */}
+          <div style={{ background: "linear-gradient(135deg, #004aad 0%, #0085f4 100%)", borderRadius: "16px", padding: "24px", color: "#ffffff", boxShadow: "0 12px 32px rgba(0, 74, 173, 0.2)" }}>
+            <div style={{ fontSize: 10, fontWeight: 900, letterSpacing: "0.15em", textTransform: "uppercase", color: "#90CAF9", marginBottom: 8 }}>
+              WORK WITH H2 INDUSTRIES
+            </div>
+            <h4 style={{ fontSize: 18, fontWeight: 900, lineHeight: 1.25, marginBottom: 12 }}>
+              Need Custom AWWA Specifications?
+            </h4>
+            <p style={{ fontSize: 12, color: "#E0F2FE", lineHeight: 1.5, marginBottom: 20 }}>
+              Speak with our engineering sales team for submittal packages, CAD drawings, and volume pricing.
             </p>
-            <Link
-              href="/capabilities"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                background: "#0085f4",
-                color: "#ffffff",
-                padding: "12px 20px",
-                borderRadius: "10px",
-                fontSize: 12,
-                fontWeight: 900,
-                textTransform: "uppercase",
-                letterSpacing: "0.05em",
-                textDecoration: "none",
-                width: "100%",
-                justifyContent: "center",
-                boxShadow: "0 8px 20px rgba(0, 133, 244, 0.3)",
-              }}
-            >
-              <span>Explore Capabilities</span>
-              <ArrowRight size={14} />
-            </Link>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              <a
+                href="#contact"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 8,
+                  background: "#ffffff",
+                  color: "#004aad",
+                  padding: "12px",
+                  borderRadius: "8px",
+                  fontSize: 12,
+                  fontWeight: 900,
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
+                }}
+              >
+                REQUEST A QUOTE <ArrowRight size={14} />
+              </a>
+              <a
+                href="tel:+15127828880"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 8,
+                  background: "rgba(255,255,255,0.15)",
+                  color: "#ffffff",
+                  padding: "10px",
+                  borderRadius: "8px",
+                  fontSize: 12,
+                  fontWeight: 700,
+                  textDecoration: "none",
+                  border: "1px solid rgba(255,255,255,0.3)"
+                }}
+              >
+                <PhoneCall size={14} /> +1 (512) 782-8880
+              </a>
+            </div>
           </div>
 
         </aside>
 
-        {/* Main Content Area */}
-        <main style={{ display: "flex", flexDirection: "column", gap: 70 }}>
+        {/* Right Main Content Sections */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 64 }}>
 
-          {/* 1. OVERVIEW SECTION */}
+          {/* 1. COMPANY OVERVIEW */}
           <section id="overview" style={{ scrollMarginTop: 140 }}>
-            <div style={{ display: "block" }} className="overview-section">
-              <div>
-                <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(0, 133, 244, 0.1)", border: "1px solid rgba(0, 133, 244, 0.3)", padding: "6px 16px", borderRadius: "100px", marginBottom: 20 }}>
-                  <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#0085f4" }} />
-                  <span style={{ color: "#0085f4", fontSize: 12, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                    ABOUT H2 INDUSTRIES
-                  </span>
+            <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
+                <Building2 size={14} color="#0085f4" />
+                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>ABOUT H2 INDUSTRIES</span>
+              </div>
+              <h2 style={{ fontSize: 32, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 20 }}>
+                North America's Precision Waterworks Authority
+              </h2>
+              <p style={{ fontSize: 15, color: "#475569", lineHeight: 1.7, marginBottom: 24 }}>
+                H2 Industries is a premier North American manufacturer of precision-engineered hydro-infrastructure products. Headquartered in Melville, New York, with regional manufacturing and distribution operations in Florida and Ontario, H2 Industries engineers fail-safe municipal waterworks castings, valve access boxes, modular sampling enclosures, and stormwater column drainage systems.
+              </p>
+
+              {/* Key Facts Bar */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, background: "#F8FAFC", padding: "20px", borderRadius: "12px", border: "1px solid #E2E8F0" }}>
+                <div>
+                  <div style={{ fontSize: 10, fontWeight: 800, color: "#0085f4", textTransform: "uppercase" }}>COMPANY TYPE</div>
+                  <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", marginTop: 2 }}>Private OEM & Foundry</div>
                 </div>
-
-                <h1 className="font-display" style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 900, color: "#004aad", lineHeight: 1.1, marginBottom: 24, textTransform: "uppercase", fontStyle: "italic" }}>
-                  Engineered for Communities. <br />
-                  <span style={{ color: "#0085f4" }}>Built to Last.</span>
-                </h1>
-
-                <p style={{ color: "#0085f4", fontSize: 16, lineHeight: 1.7, fontWeight: 500, marginBottom: 32, maxWidth: 950 }}>
-                  H2 Industries is a leading manufacturer of precision-engineered municipal waterworks castings, valve boxes, curb boxes, mechanical joint restraints, and modular sampling enclosures. We build critical hydro-infrastructure solutions that cities, public utilities, and civil contractors depend on daily.
-                </p>
-
-                {/* 4 Point Feature Tags */}
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
-                  {[
-                    "Precision CAD & Casting Engineering",
-                    "End-to-End In-House Manufacturing",
-                    "Tested for Severe Hydrostatic Duty",
-                    "Trusted by Municipal Authorities"
-                  ].map((pt, i) => (
-                    <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, background: "#ffffff", padding: "14px 18px", borderRadius: "12px", border: "1px solid #E2E8F0", boxShadow: "0 4px 12px rgba(0,74,173,0.03)" }}>
-                      <CheckCircle2 size={18} color="#0085f4" />
-                      <span style={{ fontSize: 13, fontWeight: 800, color: "#004aad" }}>{pt}</span>
-                    </div>
-                  ))}
+                <div>
+                  <div style={{ fontSize: 10, fontWeight: 800, color: "#0085f4", textTransform: "uppercase" }}>HEADQUARTERS</div>
+                  <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", marginTop: 2 }}>Melville, NY, USA</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: 10, fontWeight: 800, color: "#0085f4", textTransform: "uppercase" }}>MARKETS SERVED</div>
+                  <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", marginTop: 2 }}>USA & Canada (All 50 States + 10 Provinces)</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: 10, fontWeight: 800, color: "#0085f4", textTransform: "uppercase" }}>PRIMARY STANDARDS</div>
+                  <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", marginTop: 2 }}>AWWA, ASTM, NSF/ANSI 61</div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* 2. OUR STORY SECTION */}
-          <section id="our-story" style={{ scrollMarginTop: 140, background: "#ffffff", borderRadius: "24px", padding: "48px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.03)" }}>
-            <div style={{ marginBottom: 40 }}>
-              <span style={{ fontSize: 12, fontWeight: 900, color: "#0085f4", letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                OUR HERITAGE & TIMELINE
-              </span>
-              <h2 style={{ fontSize: 30, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginTop: 8, marginBottom: 16 }}>
-                A Legacy of Quality and Manufacturing Innovation
-              </h2>
-              <p style={{ color: "#0085f4", fontSize: 15, maxWidth: 850, lineHeight: 1.6, fontWeight: 500 }}>
-                Founded with a mission to deliver dependable water management products, H2 Industries has grown into a premier manufacturer serving municipalities and utility districts across North America.
-              </p>
-            </div>
+          {/* 2. WHO WE ARE */}
+          <section id="who-we-are" style={{ scrollMarginTop: 140 }}>
+            <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 40, alignItems: "center" }}>
+                <div>
+                  <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
+                    <FileText size={14} color="#0085f4" />
+                    <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>WHO WE ARE</span>
+                  </div>
+                  <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 16 }}>
+                    Engineered for Multi-Decade Field Reliability
+                  </h3>
+                  <p style={{ fontSize: 14, color: "#475569", lineHeight: 1.65, marginBottom: 16 }}>
+                    Founded in 1998, H2 Industries was forged on a commitment to solve complex municipal water challenges through metallurgical precision and rigorous quality control. Our products are installed in major metropolitan water systems, roadway catch basins, and industrial water plants across North America.
+                  </p>
+                  <p style={{ fontSize: 14, color: "#475569", lineHeight: 1.65, marginBottom: 24 }}>
+                    We combine old-world foundry expertise with 21st-century CAD modeling, finite element analysis (FEA), and automated polymer injection molding to create infrastructure built for 50+ year service lifespans.
+                  </p>
 
-            {/* Timeline */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 24, position: "relative" }} className="timeline-grid">
-              {storyTimeline.map((item, i) => (
-                <div key={i} style={{ display: "flex", flexDirection: "column", gap: 12, position: "relative" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                    <div style={{ width: 44, height: 44, borderRadius: "50%", background: i === storyTimeline.length - 1 ? "#0085f4" : "#004aad", color: "#ffffff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 900, boxShadow: "0 4px 12px rgba(0, 74, 173, 0.2)" }}>
+                  <div style={{ display: "flex", gap: 16 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                      <CheckCircle2 size={16} color="#0085f4" />
+                      <span style={{ fontSize: 13, fontWeight: 800, color: "#004aad" }}>100% In-House Testing</span>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                      <CheckCircle2 size={16} color="#0085f4" />
+                      <span style={{ fontSize: 13, fontWeight: 800, color: "#004aad" }}>Buy American Compliant</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Real Facility Image Container */}
+                <div style={{ position: "relative", height: 320, borderRadius: "14px", overflow: "hidden", border: "1px solid #E2E8F0" }}>
+                  <Image
+                    src="/images/THROUGHENGINEERING.png"
+                    alt="H2 Industries Manufacturing Facility"
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                  <div style={{ position: "absolute", bottom: 0, inset: "auto 0 0 0", background: "linear-gradient(to top, rgba(0,74,173,0.95), transparent)", padding: "20px 24px", color: "#fff" }}>
+                    <div style={{ fontSize: 11, fontWeight: 900, letterSpacing: "0.1em", textTransform: "uppercase", color: "#90CAF9" }}>MELVILLE, NY FACILITY</div>
+                    <div style={{ fontSize: 14, fontWeight: 800 }}>Foundry Operations & Automated Tooling Lab</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 3. COMPANY AT A GLANCE */}
+          <section id="at-a-glance" style={{ scrollMarginTop: 140 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", alignSelf: "flex-start" }}>
+                <BarChart3 size={14} color="#0085f4" />
+                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>COMPANY AT A GLANCE</span>
+              </div>
+              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
+                Key Operational Metrics
+              </h3>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+                {companyAtGlance.map((item, idx) => (
+                  <div key={idx} style={{ background: "#ffffff", borderRadius: "16px", padding: "28px", border: "1px solid #E2E8F0", boxShadow: "0 8px 24px rgba(0, 74, 173, 0.03)" }}>
+                    <div style={{ fontSize: 36, fontWeight: 950, color: "#004aad", fontStyle: "italic", lineHeight: 1, marginBottom: 8 }}>
+                      {item.metric}
+                    </div>
+                    <div style={{ fontSize: 15, fontWeight: 900, color: "#0085f4", marginBottom: 6 }}>
+                      {item.label}
+                    </div>
+                    <div style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.45 }}>
+                      {item.desc}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 4. OUR JOURNEY (Timeline) */}
+          <section id="our-journey" style={{ scrollMarginTop: 140 }}>
+            <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
+                <Clock size={14} color="#0085f4" />
+                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>OUR JOURNEY</span>
+              </div>
+              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 28 }}>
+                Quarter-Century of Innovation & Growth
+              </h3>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+                {storyTimeline.map((item, i) => (
+                  <div key={i} style={{ background: "#F8FAFC", borderRadius: "12px", padding: "24px", border: "1px solid #E2E8F0", position: "relative" }}>
+                    <div style={{ fontSize: 24, fontWeight: 950, color: "#0085f4", fontStyle: "italic", marginBottom: 4 }}>
                       {item.year}
                     </div>
-                    {i < storyTimeline.length - 1 && (
-                      <div style={{ flex: 1, height: 3, background: "linear-gradient(90deg, #004aad 0%, #0085f4 100%)" }} />
-                    )}
+                    <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", marginBottom: 8 }}>
+                      {item.title}
+                    </div>
+                    <div style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.5 }}>
+                      {item.text}
+                    </div>
                   </div>
-                  <p style={{ fontSize: 12, color: "#004aad", lineHeight: 1.5, fontWeight: 600, margin: 0 }}>
-                    {item.text}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </section>
 
-          {/* 3. OUR VALUES SECTION */}
-          <section id="our-values" style={{ scrollMarginTop: 140 }}>
-            <div style={{ marginBottom: 32 }}>
-              <span style={{ fontSize: 12, fontWeight: 900, color: "#0085f4", letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                CORE VALUES
-              </span>
-              <h2 style={{ fontSize: 30, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginTop: 8 }}>
-                The Principles That Guide Our Engineering
+          {/* 5. WHAT WE DO */}
+          <section id="what-we-do" style={{ scrollMarginTop: 140 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", alignSelf: "flex-start" }}>
+                <Wrench size={14} color="#0085f4" />
+                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>WHAT WE DO</span>
+              </div>
+              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
+                End-to-End Infrastructure Capabilities
+              </h3>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+                {whatWeDoPillars.map((pil, idx) => {
+                  const Icon = pil.icon;
+                  return (
+                    <div key={idx} style={{ background: "#ffffff", borderRadius: "16px", padding: "28px", border: "1px solid #E2E8F0", boxShadow: "0 8px 24px rgba(0,74,173,0.03)" }}>
+                      <div style={{ width: 42, height: 42, borderRadius: "10px", background: "#EFF6FF", border: "1.5px solid #93C5FD", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
+                        <Icon size={20} color="#0085f4" />
+                      </div>
+                      <h4 style={{ fontSize: 15, fontWeight: 900, color: "#004aad", marginBottom: 8, letterSpacing: "0.02em" }}>
+                        {pil.title}
+                      </h4>
+                      <p style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.5, marginBottom: 16 }}>
+                        {pil.desc}
+                      </p>
+                      <div style={{ borderTop: "1px solid #E2E8F0", paddingTop: 12, display: "flex", flexDirection: "column", gap: 6 }}>
+                        {pil.points.map((pt, pIdx) => (
+                          <div key={pIdx} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 11, fontWeight: 700, color: "#0085f4" }}>
+                            <Check size={12} color="#0085f4" /> {pt}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* 6. MANUFACTURING FOOTPRINT */}
+          <section id="footprint" style={{ scrollMarginTop: 140 }}>
+            <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
+                <Factory size={14} color="#0085f4" />
+                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>MANUFACTURING FOOTPRINT</span>
+              </div>
+              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 24 }}>
+                Strategic North American Facilities
+              </h3>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+                {/* NY Facility */}
+                <div style={{ background: "#F8FAFC", borderRadius: "14px", overflow: "hidden", border: "1px solid #E2E8F0" }}>
+                  <div style={{ position: "relative", height: 160 }}>
+                    <Image src="/images/THROUGHENGINEERINGPRD.png" alt="Melville NY Facility" fill style={{ objectFit: "cover" }} />
+                  </div>
+                  <div style={{ padding: "20px" }}>
+                    <div style={{ fontSize: 10, fontWeight: 900, color: "#0085f4", textTransform: "uppercase" }}>HEADQUARTERS & FOUNDRY</div>
+                    <div style={{ fontSize: 16, fontWeight: 900, color: "#004aad", margin: "4px 0 8px" }}>Melville, New York, USA</div>
+                    <p style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.45, margin: 0 }}>
+                      120,000 sq. ft. primary casting, CNC machining, metallurgical testing lab, and corporate HQ.
+                    </p>
+                  </div>
+                </div>
+
+                {/* FL Facility */}
+                <div style={{ background: "#F8FAFC", borderRadius: "14px", overflow: "hidden", border: "1px solid #E2E8F0" }}>
+                  <div style={{ position: "relative", height: 160 }}>
+                    <Image src="/images/curb-box.webp" alt="Stuart FL Facility" fill style={{ objectFit: "contain", padding: 20, background: "#ffffff" }} />
+                  </div>
+                  <div style={{ padding: "20px" }}>
+                    <div style={{ fontSize: 10, fontWeight: 900, color: "#0085f4", textTransform: "uppercase" }}>SOUTHERN OPERATIONS</div>
+                    <div style={{ fontSize: 16, fontWeight: 900, color: "#004aad", margin: "4px 0 8px" }}>Stuart, Florida, USA</div>
+                    <p style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.45, margin: 0 }}>
+                      Specialized polymer molding, hydrostatic burst testing, and Southeast US logistics distribution hub.
+                    </p>
+                  </div>
+                </div>
+
+                {/* ON Facility */}
+                <div style={{ background: "#F8FAFC", borderRadius: "14px", overflow: "hidden", border: "1px solid #E2E8F0" }}>
+                  <div style={{ position: "relative", height: 160 }}>
+                    <Image src="/images/column-drain-water.webp" alt="Toronto ON Facility" fill style={{ objectFit: "contain", padding: 20, background: "#ffffff" }} />
+                  </div>
+                  <div style={{ padding: "20px" }}>
+                    <div style={{ fontSize: 10, fontWeight: 900, color: "#0085f4", textTransform: "uppercase" }}>CANADIAN OPERATIONS</div>
+                    <div style={{ fontSize: 16, fontWeight: 900, color: "#004aad", margin: "4px 0 8px" }}>Toronto, Ontario, Canada</div>
+                    <p style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.45, margin: 0 }}>
+                      Canadian head office, CSA compliance laboratory, and nationwide provincial distribution center.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 7. QUALITY & STANDARDS */}
+          <section id="quality" style={{ scrollMarginTop: 140 }}>
+            <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
+                <Award size={14} color="#0085f4" />
+                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>QUALITY & STANDARDS</span>
+              </div>
+              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 24 }}>
+                Certified North American Standards & Approvals
+              </h3>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+                {certificationBadges.map((badge, idx) => (
+                  <div key={idx} style={{ background: "#F8FAFC", borderRadius: "12px", padding: "20px", border: "1px solid #E2E8F0", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                    <div>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                        <Award size={18} color="#0085f4" />
+                        <span style={{ fontSize: 14, fontWeight: 900, color: "#004aad" }}>{badge.name}</span>
+                      </div>
+                      <div style={{ fontSize: 10, fontWeight: 800, color: "#546E7A", textTransform: "uppercase" }}>
+                        {badge.sub}
+                      </div>
+                    </div>
+
+                    <button
+                      onClick={() => handleDownload(badge.doc)}
+                      style={{
+                        marginTop: 16,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 6,
+                        background: "transparent",
+                        border: "1px solid #90CAF9",
+                        color: "#0085f4",
+                        padding: "6px 12px",
+                        borderRadius: "6px",
+                        fontSize: 11,
+                        fontWeight: 800,
+                        cursor: "pointer"
+                      }}
+                    >
+                      <Download size={12} /> CERTIFICATE
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 8. LEADERSHIP */}
+          <section id="leadership" style={{ scrollMarginTop: 140 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", alignSelf: "flex-start" }}>
+                <Users size={14} color="#0085f4" />
+                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>EXECUTIVE LEADERSHIP</span>
+              </div>
+              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
+                Experienced Management Team
+              </h3>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+                {leadershipTeam.map((leader, i) => (
+                  <div key={i} style={{ background: "#ffffff", borderRadius: "16px", padding: "28px", border: "1px solid #E2E8F0", boxShadow: "0 8px 24px rgba(0,74,173,0.03)" }}>
+                    <div style={{ width: 44, height: 44, borderRadius: "50%", background: "linear-gradient(135deg, #0085f4, #004aad)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, fontWeight: 900, marginBottom: 16 }}>
+                      {leader.name.split(" ").map(n => n[0]).join("")}
+                    </div>
+                    <div style={{ fontSize: 18, fontWeight: 900, color: "#004aad" }}>{leader.name}</div>
+                    <div style={{ fontSize: 11, fontWeight: 800, color: "#0085f4", textTransform: "uppercase", margin: "2px 0 8px" }}>{leader.role}</div>
+                    <div style={{ fontSize: 11, fontWeight: 700, color: "#004aad", background: "#EBF3FF", padding: "4px 8px", borderRadius: "4px", display: "inline-block", marginBottom: 12 }}>
+                      {leader.experience}
+                    </div>
+                    <div style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.5 }}>
+                      {leader.bio}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 9. MISSION, VISION & VALUES */}
+          <section id="mission-values" style={{ scrollMarginTop: 140 }}>
+            <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
+                <Compass size={14} color="#0085f4" />
+                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>MISSION, VISION & VALUES</span>
+              </div>
+              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 24 }}>
+                Compact & Principled Engineering Philosophy
+              </h3>
+
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 28 }}>
+                <div style={{ background: "#F8FAFC", padding: "24px", borderRadius: "14px", border: "1px solid #E2E8F0" }}>
+                  <div style={{ fontSize: 12, fontWeight: 900, color: "#0085f4", textTransform: "uppercase", marginBottom: 6 }}>OUR MISSION</div>
+                  <p style={{ fontSize: 14, color: "#004aad", fontWeight: 700, lineHeight: 1.5, margin: 0 }}>
+                    To engineer and manufacture high-yield, fail-safe waterworks products that safeguard public health, protect natural waterways, and exceed North American municipal standards.
+                  </p>
+                </div>
+                <div style={{ background: "#F8FAFC", padding: "24px", borderRadius: "14px", border: "1px solid #E2E8F0" }}>
+                  <div style={{ fontSize: 12, fontWeight: 900, color: "#0085f4", textTransform: "uppercase", marginBottom: 6 }}>OUR VISION</div>
+                  <p style={{ fontSize: 14, color: "#004aad", fontWeight: 700, lineHeight: 1.5, margin: 0 }}>
+                    To set the gold standard in sustainable hydro-infrastructure, integrating smart telemetry and eco-friendly manufacturing across all 50 States and 10 Canadian Provinces.
+                  </p>
+                </div>
+              </div>
+
+              {/* Core Values Compact Grid */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 14 }}>
+                {[
+                  { title: "INTEGRITY", desc: "Strict adherence to specs.", icon: ShieldCheck },
+                  { title: "QUALITY", desc: "Zero compromise on tolerances.", icon: Award },
+                  { title: "INNOVATION", desc: "Advanced CAD & FEA modeling.", icon: Zap },
+                  { title: "RELIABILITY", desc: "Multi-decade service life.", icon: Factory },
+                  { title: "STEWARDSHIP", desc: "Protecting clean waterways.", icon: Leaf },
+                ].map((v, idx) => {
+                  const VIcon = v.icon;
+                  return (
+                    <div key={idx} style={{ background: "#EBF3FF", padding: "16px", borderRadius: "12px", textAlign: "center" }}>
+                      <div style={{ width: 32, height: 32, borderRadius: "50%", background: "#0085f4", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 8px" }}>
+                        <VIcon size={16} />
+                      </div>
+                      <div style={{ fontSize: 12, fontWeight: 900, color: "#004aad" }}>{v.title}</div>
+                      <div style={{ fontSize: 10, color: "#546E7A", marginTop: 2 }}>{v.desc}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* 10. MARKETS WE SERVE */}
+          <section id="markets" style={{ scrollMarginTop: 140 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", alignSelf: "flex-start" }}>
+                <Globe2 size={14} color="#0085f4" />
+                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>MARKETS WE SERVE</span>
+              </div>
+              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", margin: 0 }}>
+                Diverse Infrastructure Sector Application
+              </h3>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+                {marketsServed.map((m, idx) => {
+                  const MIcon = m.icon;
+                  return (
+                    <div key={idx} style={{ background: "#ffffff", borderRadius: "16px", padding: "28px", border: "1px solid #E2E8F0", boxShadow: "0 8px 24px rgba(0,74,173,0.03)" }}>
+                      <div style={{ width: 40, height: 40, borderRadius: "10px", background: "#EFF6FF", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
+                        <MIcon size={20} color="#0085f4" />
+                      </div>
+                      <h4 style={{ fontSize: 16, fontWeight: 900, color: "#004aad", marginBottom: 8 }}>{m.title}</h4>
+                      <p style={{ fontSize: 12, color: "#546E7A", lineHeight: 1.5, margin: 0 }}>{m.desc}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* 11. WHY H2 INDUSTRIES */}
+          <section id="why-h2" style={{ scrollMarginTop: 140 }}>
+            <div style={{ background: "linear-gradient(135deg, #004aad 0%, #0085f4 100%)", borderRadius: "20px", padding: "40px", color: "#ffffff", boxShadow: "0 12px 36px rgba(0,74,173,0.2)" }}>
+              <div style={{ fontSize: 11, fontWeight: 900, letterSpacing: "0.15em", textTransform: "uppercase", color: "#90CAF9", marginBottom: 8 }}>
+                MEASURABLE DIFFERENTIATORS
+              </div>
+              <h3 style={{ fontSize: 32, fontWeight: 900, textTransform: "uppercase", fontStyle: "italic", marginBottom: 28 }}>
+                Why Engineers & Contractors Specify H2 Industries
+              </h3>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
+                {[
+                  { title: "ENGINEERING SUPPORT", desc: "Direct access to P.E. engineers for custom submittals & CAD drawings." },
+                  { title: "MANUFACTURING CONTROL", desc: "100% owned foundry & polymer tooling ensuring zero quality drift." },
+                  { title: "PRODUCT RELIABILITY", desc: "Tested to 3x AWWA working pressure with zero field failures." },
+                  { title: "EMERGENCY DELIVERY", desc: "48-hour express dispatch for urgent municipal field repairs." },
+                ].map((diff, i) => (
+                  <div key={i} style={{ background: "rgba(255,255,255,0.12)", backdropFilter: "blur(10px)", padding: "20px", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.2)" }}>
+                    <div style={{ fontSize: 14, fontWeight: 900, color: "#ffffff", marginBottom: 6 }}>{diff.title}</div>
+                    <div style={{ fontSize: 12, color: "#E0F2FE", lineHeight: 1.45 }}>{diff.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 12. COMPANY RESOURCES */}
+          <section id="resources" style={{ scrollMarginTop: 140 }}>
+            <div style={{ background: "#ffffff", borderRadius: "20px", padding: "40px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.04)" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EBF3FF", padding: "6px 14px", borderRadius: "100px", marginBottom: 16 }}>
+                <Download size={14} color="#0085f4" />
+                <span style={{ color: "#0085f4", fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>COMPANY RESOURCES</span>
+              </div>
+              <h3 style={{ fontSize: 28, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 24 }}>
+                Downloadable Corporate & Technical Documentation
+              </h3>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+                {[
+                  { name: "H2 Company Profile", size: "PDF • 4.8 MB", doc: "H2-Company-Profile-2026.pdf" },
+                  { name: "Quality Certifications Pack", size: "PDF • 8.2 MB", doc: "H2-Certifications-Pack.pdf" },
+                  { name: "Master Product Catalog", size: "PDF • 14.5 MB", doc: "H2-Master-Catalog-2026.pdf" },
+                  { name: "Submittals & CAD Library", size: "ZIP • 32.0 MB", doc: "H2-Submittals-CAD-Library.zip" },
+                ].map((res, i) => (
+                  <div key={i} style={{ background: "#F8FAFC", padding: "20px", borderRadius: "12px", border: "1px solid #E2E8F0", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                    <div>
+                      <FileCheck size={24} color="#0085f4" style={{ marginBottom: 10 }} />
+                      <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad" }}>{res.name}</div>
+                      <div style={{ fontSize: 11, color: "#546E7A", marginTop: 2 }}>{res.size}</div>
+                    </div>
+                    <button
+                      onClick={() => handleDownload(res.doc)}
+                      style={{
+                        marginTop: 16,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: 8,
+                        background: "#0085f4",
+                        color: "#fff",
+                        border: "none",
+                        padding: "10px",
+                        borderRadius: "8px",
+                        fontSize: 11,
+                        fontWeight: 900,
+                        cursor: "pointer"
+                      }}
+                    >
+                      <Download size={14} /> DOWNLOAD
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 13. CONTACT / PARTNERSHIP CTA */}
+          <section id="contact-cta" style={{ scrollMarginTop: 140 }}>
+            <div style={{ background: "#ffffff", borderRadius: "20px", padding: "48px", border: "2px solid #0085f4", boxShadow: "0 16px 40px rgba(0, 85, 244, 0.08)", textAlign: "center" }}>
+              <div style={{ fontSize: 11, fontWeight: 900, letterSpacing: "0.15em", textTransform: "uppercase", color: "#0085f4", marginBottom: 8 }}>
+                PARTNERSHIP & MUNICIPAL INQUIRIES
+              </div>
+              <h2 style={{ fontSize: 36, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginBottom: 16 }}>
+                Work With H2 Industries
               </h2>
-            </div>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
-              {valuesList.map((val, i) => {
-                const Icon = val.icon;
-                return (
-                  <div
-                    key={i}
-                    style={{
-                      background: "#ffffff",
-                      borderRadius: "20px",
-                      padding: "28px",
-                      border: "1px solid #E2E8F0",
-                      boxShadow: "0 8px 24px rgba(0, 74, 173, 0.04)",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "flex-start",
-                      gap: 14,
-                      transition: "transform 0.2s ease, boxShadow 0.2s ease"
-                    }}
-                  >
-                    <div style={{ width: 44, height: 44, borderRadius: "12px", background: "rgba(0, 133, 244, 0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <Icon size={22} color="#0085f4" />
-                    </div>
-                    <h3 style={{ fontSize: 16, fontWeight: 900, color: "#004aad", letterSpacing: "0.05em", margin: 0 }}>{val.title}</h3>
-                    <p style={{ fontSize: 13, color: "#475569", lineHeight: 1.6, margin: 0, fontWeight: 500 }}>{val.desc}</p>
-                  </div>
-                );
-              })}
+              <p style={{ fontSize: 15, color: "#546E7A", maxWidth: 640, margin: "0 auto 32px", lineHeight: 1.6 }}>
+                Whether you are specifying an upcoming AWWA municipal project, requesting custom CAD submittals, or establishing a regional distribution partnership, our engineering sales team is ready to assist.
+              </p>
+              <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
+                <a
+                  href="#contact"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 10,
+                    background: "linear-gradient(135deg, #004aad, #0085f4)",
+                    color: "#ffffff",
+                    padding: "16px 36px",
+                    borderRadius: "10px",
+                    fontSize: 14,
+                    fontWeight: 900,
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                    boxShadow: "0 8px 24px rgba(0,74,173,0.25)"
+                  }}
+                >
+                  REQUEST A QUOTE <ArrowRight size={16} />
+                </a>
+                <a
+                  href="tel:+15127828880"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 10,
+                    background: "#F8FAFC",
+                    color: "#004aad",
+                    border: "1.5px solid #E2E8F0",
+                    padding: "16px 36px",
+                    borderRadius: "10px",
+                    fontSize: 14,
+                    fontWeight: 900,
+                    textTransform: "uppercase",
+                    textDecoration: "none"
+                  }}
+                >
+                  <PhoneCall size={16} /> CONTACT SALES
+                </a>
+              </div>
             </div>
           </section>
 
-          {/* 4. FACILITIES & CERTIFICATIONS GRID */}
-          <section id="facilities" style={{ scrollMarginTop: 140 }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }} className="facilities-split">
-
-              {/* Left Column: Facilities Overview */}
-              <div style={{ background: "#ffffff", borderRadius: "24px", padding: "36px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.03)" }}>
-                <span style={{ fontSize: 12, fontWeight: 900, color: "#0085f4", letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                  MANUFACTURING & DISTRIBUTION
-                </span>
-                <h3 style={{ fontSize: 24, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginTop: 8, marginBottom: 24 }}>
-                  State-of-the-Art Production Hubs
-                </h3>
-
-                {/* Facility Image Container */}
-                <div style={{ position: "relative", height: 220, borderRadius: "16px", overflow: "hidden", marginBottom: 24, background: "linear-gradient(135deg, #004aad 0%, #0085f4 100%)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <Image src="/images/5.webp" alt="H2 Facility" fill style={{ objectFit: "cover", opacity: 0.8 }} />
-                  <div style={{ position: "relative", zIndex: 2, background: "rgba(0, 74, 173, 0.85)", padding: "12px 24px", borderRadius: "100px", border: "1px solid rgba(255,255,255,0.3)" }}>
-                    <span style={{ color: "#ffffff", fontSize: 12, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.1em" }}>120,000 SQ FT MANUFACTURING COMPLEX</span>
-                  </div>
-                </div>
-
-                <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                  {[
-                    { title: "Advanced Polymer & Metal Production", desc: "CNC Machining, Automated Molding, Hydrostatic Testing & Fabrication" },
-                    { title: "In-House Quality Assurance Lab", desc: "Rigorous load, pressure & dimensional tolerance testing before shipment" },
-                    { title: "North American Logistics Hubs", desc: "Strategic warehouses ensuring fast job site dispatch" },
-                    { title: "Sustainable Manufacturing", desc: "Zero VOC emission moulding lines and 85%+ material recovery" }
-                  ].map((f, i) => (
-                    <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                      <CheckCircle2 size={18} color="#0085f4" style={{ flexShrink: 0, marginTop: 2 }} />
-                      <div>
-                        <h4 style={{ fontSize: 14, fontWeight: 800, color: "#004aad", margin: 0 }}>{f.title}</h4>
-                        <p style={{ fontSize: 13, color: "#64748B", margin: 0, fontWeight: 500, lineHeight: 1.5 }}>{f.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Right Column: Certifications & Standards */}
-              <div id="certifications" style={{ background: "#ffffff", borderRadius: "24px", padding: "36px", border: "1px solid #E2E8F0", boxShadow: "0 10px 30px rgba(0, 74, 173, 0.03)", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-                <div>
-                  <span style={{ fontSize: 12, fontWeight: 900, color: "#0085f4", letterSpacing: "0.15em", textTransform: "uppercase" }}>
-                    STANDARDS & CERTIFICATIONS
-                  </span>
-                  <h3 style={{ fontSize: 24, fontWeight: 900, color: "#004aad", textTransform: "uppercase", fontStyle: "italic", marginTop: 8, marginBottom: 8 }}>
-                    Exceeding Industry Compliance
-                  </h3>
-                  <p style={{ fontSize: 14, color: "#64748B", fontWeight: 500, marginBottom: 24 }}>
-                    Every H2 product is tested and certified to international public works standards.
-                  </p>
-
-                  {/* Badges Grid (8 Cards) */}
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 }}>
-                    {certificationBadges.map((badge, i) => (
-                      <div
-                        key={i}
-                        style={{
-                          border: "1px solid #E2E8F0",
-                          borderRadius: "12px",
-                          padding: "16px",
-                          textAlign: "center",
-                          background: "#F8FAFC",
-                          transition: "border-color 0.2s",
-                        }}
-                      >
-                        <div style={{ fontSize: 14, fontWeight: 900, color: "#004aad", letterSpacing: "0.03em" }}>{badge.name}</div>
-                        <div style={{ fontSize: 10, fontWeight: 800, color: "#0085f4", marginTop: 4, letterSpacing: "0.08em" }}>{badge.sub}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div style={{ marginTop: 32 }}>
-                  <Link
-                    href="/quality"
-                    style={{
-                      width: "100%",
-                      padding: "14px 24px",
-                      background: "#004aad",
-                      color: "#ffffff",
-                      border: "none",
-                      borderRadius: "12px",
-                      fontSize: 13,
-                      fontWeight: 900,
-                      textTransform: "uppercase",
-                      letterSpacing: "0.05em",
-                      cursor: "pointer",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: 8,
-                      textDecoration: "none",
-                      boxShadow: "0 8px 20px rgba(0, 74, 173, 0.2)"
-                    }}
-                  >
-                    <span>View Quality Standards & Docs</span>
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-              </div>
-
-            </div>
-          </section>
-
-        </main>
+        </div>
       </div>
-
-      <style>{`
-        @media (max-width: 1024px) {
-          .company-grid { grid-template-columns: 1fr !important; }
-          .company-sidebar { position: relative !important; top: 0 !important; }
-          .overview-section { display: block !important; }
-          .facilities-split { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </div>
   );
 }

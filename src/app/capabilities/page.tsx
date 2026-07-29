@@ -2,6 +2,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TechnologyInnovation from "@/components/TechnologyInnovation";
 import ManufacturingCapabilities from "@/components/ManufacturingCapabilities";
+import { getSeoMetadata } from "@/data/seoConfig";
+
+export const metadata = getSeoMetadata("capabilities");
 
 export default function CapabilitiesPage() {
   return (

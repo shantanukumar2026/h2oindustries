@@ -1,6 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CompanyProfile from "@/components/CompanyProfile";
+import { getSeoMetadata } from "@/data/seoConfig";
+
+export const metadata = getSeoMetadata("company");
 
 export default function CompanyPage() {
   return (

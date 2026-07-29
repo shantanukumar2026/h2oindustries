@@ -71,9 +71,47 @@ export async function generateMetadata({ params }: PageProps) {
   const industry = industriesData[slug];
   if (!industry) return { title: "Industry Not Found | H2 Industries" };
 
+  const canonicalUrl = `https://h2industries-eta.vercel.app/industries/${slug}`;
+
   return {
     title: `${industry.title} | H2 Industries Infrastructure`,
     description: industry.subtitle,
+    keywords: [
+      industry.title,
+      industry.tagline,
+      "H2 Industries",
+      "waterworks castings",
+      "hydro infrastructure",
+      "AWWA standards",
+      "municipal water solutions"
+    ],
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${industry.title} | H2 Industries`,
+      description: industry.subtitle,
+      url: canonicalUrl,
+      siteName: "H2 Industries",
+      type: "website",
+      images: [
+        {
+          url: industry.heroImage || "/images/2.webp",
+          width: 1200,
+          height: 630,
+          alt: industry.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: industry.title,
+      description: industry.subtitle,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

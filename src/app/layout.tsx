@@ -29,23 +29,45 @@ const outfit = Outfit({
   display: "swap",
 });
 
+import { SITE_URL } from "@/data/seoConfig";
+
 export const metadata: Metadata = {
-  title: "Waterworks Industries | Precision Water Management Engineering",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "H2 Industries | Precision Water Management & Waterworks Infrastructure",
+    template: "%s | H2 Industries",
+  },
   description:
-    "Waterworks Industries designs and manufactures precision-engineered water management infrastructure — from modular sampling stations to stormwater inlet systems — dedicated to saving our oceans.",
-  keywords:
-    "Waterworks Industries, H2 Industries, water management, sampling stations, stormwater drainage, ocean conservation, industrial manufacturing, water infrastructure",
+    "H2 Industries designs and manufactures precision-engineered water management infrastructure — from modular sampling stations to AWWA ductile iron pipe fittings and curb inlet castings.",
+  keywords: [
+    "H2 Industries",
+    "waterworks castings",
+    "water management engineering",
+    "modular sampling stations",
+    "stormwater drainage infrastructure",
+    "AWWA gate valves",
+    "mechanical joint restraint gland",
+    "curb box Minneapolis pattern",
+    "ocean conservation engineering",
+    "municipal water infrastructure"
+  ],
   icons: {
     icon: "/Ww_Fevicon.png",
     shortcut: "/Ww_Fevicon.png",
     apple: "/Ww_Fevicon.png",
   },
   openGraph: {
-    title: "Waterworks Industries | Precision Water Management Engineering",
+    title: "H2 Industries | Precision Water Management Engineering",
     description:
       "Precision-engineered water management infrastructure dedicated to saving our oceans.",
     type: "website",
-    locale: "en_AU",
+    locale: "en_US",
+    siteName: "H2 Industries",
+    url: SITE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

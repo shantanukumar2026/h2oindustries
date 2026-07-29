@@ -3,6 +3,9 @@ import Footer from "@/components/Footer";
 import QualityCompliance from "@/components/QualityCompliance";
 import TechnicalStandards from "@/components/TechnicalStandards";
 import Sustainability from "@/components/Sustainability";
+import { getSeoMetadata } from "@/data/seoConfig";
+
+export const metadata = getSeoMetadata("quality");
 
 export default function QualityPage() {
   return (

@@ -2,6 +2,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Industries from "@/components/Industries";
 import GlobalSupplyNetwork from "@/components/GlobalSupplyNetwork";
+import { getSeoMetadata } from "@/data/seoConfig";
+
+export const metadata = getSeoMetadata("industries");
 
 export default function IndustriesPage() {
   return (

@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Barlow_Condensed, Plus_Jakarta_Sans, Outfit, Geist, Geist_Mono } from "next/font/google";
+import { Inter, Barlow_Condensed, Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -87,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${barlowCondensed.variable} ${jakarta.variable} ${outfit.variable} scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} ${barlowCondensed.variable} ${jakarta.variable} ${outfit.variable} scroll-smooth`}>
       <body className="antialiased overflow-x-hidden">{children}</body>
     </html>
   );

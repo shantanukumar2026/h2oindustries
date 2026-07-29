@@ -116,40 +116,100 @@
         "id": "stormwater",
         "title": "Precision-Engineered Drainage",
         "category": "Stormwater Infrastructure",
+        "tabSubtitle": "Durable solutions for efficient stormwater management.",
         "desc": "Machined to exacting tolerances, delivering consistent performance in municipal and civil stormwater infrastructure. Features a segmented barrel system for adaptable depth configurations.",
         "specs": {
-          "material": "High-Grade Aluminium",
-          "rating": "Municipal Class D",
-          "tolerance": "±0.1mm"
+          "MATERIAL": "High-Grade Aluminium",
+          "RATING": "Municipal Class D",
+          "TOLERANCE": "±0.1mm"
         },
-        "image": "/images/4.jpeg",
-        "icon": "Settings"
+        "image": "/images/curb-box.webp",
+        "icon": "Settings",
+        "howItWorks": [
+          { "step": 1, "text": "Installed in catch basin or manhole opening." },
+          { "step": 2, "text": "Stormwater flows through the barrel system." },
+          { "step": 3, "text": "Adjust depth using segmented barrels as required." },
+          { "step": 4, "text": "Provides stable performance and prevents erosion." }
+        ],
+        "keyBenefits": [
+          { "title": "Corrosion Resistant", "desc": "Built to withstand harsh environments.", "icon": "ShieldCheck" },
+          { "title": "Precision Machined", "desc": "Tight tolerances for reliable performance.", "icon": "Settings" },
+          { "title": "Modular Design", "desc": "Segmented barrels for flexible depth.", "icon": "Layers" },
+          { "title": "Long Service Life", "desc": "Engineered for durability and value.", "icon": "Droplet" }
+        ],
+        "callouts": [
+          { "title": "SECURE TOP CAP", "desc": "Precision-fit cap prevents debris entry and ensures system integrity.", "icon": "ShieldCheck" },
+          { "title": "SEGMENTED BARREL SYSTEM", "desc": "Modular segments allow adjustable depth to suit project needs.", "icon": "Layers" },
+          { "title": "PRECISION MACHINED", "desc": "Engineered to ±0.1mm tolerance for consistent fit and function.", "icon": "Target" },
+          { "title": "WIDE BASE SUPPORT", "desc": "Stable base design ensures secure installation and long-term stability.", "icon": "Droplet" }
+        ],
+        "idealFor": "Municipal drainage systems, roadway catch basins, industrial sites, parks, and urban infrastructure projects."
       },
       {
         "id": "monitoring",
         "title": "Modular Sampling Stations",
         "category": "Water Quality Monitoring",
+        "tabSubtitle": "Flexible systems for accurate water quality monitoring.",
         "desc": "A secure access platform for environmental engineers. The flat-panel dual-door design provides full interior visibility and accommodates complex probe assemblies.",
         "specs": {
-          "material": "Industrial Polymer",
-          "rating": "IP67 Enclosure",
-          "tolerance": "N/A"
+          "MATERIAL": "Industrial Polymer",
+          "RATING": "IP67 Enclosure",
+          "TOLERANCE": "N/A"
         },
-        "image": "/images/9.jpeg",
-        "icon": "Activity"
+        "image": "/images/sampling-probe-lr.webp",
+        "icon": "Activity",
+        "howItWorks": [
+          { "step": 1, "text": "Mount enclosure at field monitoring location." },
+          { "step": 2, "text": "Connect water sampling probes and telemetry." },
+          { "step": 3, "text": "Continuous real-time water quality tracking." },
+          { "step": 4, "text": "Secure dual-door access for maintenance." }
+        ],
+        "keyBenefits": [
+          { "title": "IP67 Sealed", "desc": "Weatherproof dual-door enclosure.", "icon": "ShieldCheck" },
+          { "title": "Telemetry Ready", "desc": "Integrated mounting for digital sensors.", "icon": "Settings" },
+          { "title": "Vandal Proof", "desc": "Heavy-duty locking hardware.", "icon": "Layers" },
+          { "title": "25+ Yr Lifespan", "desc": "UV resistant composite housing.", "icon": "Droplet" }
+        ],
+        "callouts": [
+          { "title": "WEATHERPROOF LOCKING HOUSING", "desc": "IP67 sealed enclosure protects sensitive sensors and electronics.", "icon": "ShieldCheck" },
+          { "title": "DUAL ACCESS DOORS", "desc": "180-degree swing doors allow fast probe calibration and servicing.", "icon": "Layers" },
+          { "title": "UNIVERSAL PROBE MOUNT", "desc": "Compatible with standard US EPA water quality monitoring probes.", "icon": "Target" },
+          { "title": "HEAVY-DUTY ANCHOR BASE", "desc": "Concrete pad mounting flange for maximum hurricane and wind resistance.", "icon": "Droplet" }
+        ],
+        "idealFor": "River water monitoring, EPA compliance stations, industrial effluent sites, and municipal water plants."
       },
       {
         "id": "urban",
         "title": "Black Series Column Drainage",
         "category": "Urban Water Management",
+        "tabSubtitle": "High-capacity drainage for modern urban infrastructure.",
         "desc": "Designed for urban environments demanding durability and aesthetics. Features an integrated stabilising foot plate for secure road and kerb installations.",
         "specs": {
-          "material": "HDPE Moulded",
-          "rating": "Heavy Duty",
-          "tolerance": "N/A"
+          "MATERIAL": "HDPE Moulded",
+          "RATING": "Heavy Duty AASTHO H-20",
+          "TOLERANCE": "N/A"
         },
-        "image": "/images/5.jpeg",
-        "icon": "Maximize"
+        "image": "/images/column-drain-water.webp",
+        "icon": "Maximize",
+        "howItWorks": [
+          { "step": 1, "text": "Position column flush with roadway curb." },
+          { "step": 2, "text": "Anchor stabilising foot plate into sub-base." },
+          { "step": 3, "text": "Direct stormwater into underground culvert." },
+          { "step": 4, "text": "Heavy-load traffic rating prevents cracking." }
+        ],
+        "keyBenefits": [
+          { "title": "AASHTO H-20 Rated", "desc": "Handles extreme highway truck loads.", "icon": "ShieldCheck" },
+          { "title": "High Flow Rate", "desc": "Maximized intake geometry.", "icon": "Settings" },
+          { "title": "Anti-Clog Grate", "desc": "Intercepts trash while maintaining flow.", "icon": "Layers" },
+          { "title": "Recycled HDPE", "desc": "Eco-friendly sustainable materials.", "icon": "Droplet" }
+        ],
+        "callouts": [
+          { "title": "TRAFFIC RATED GRATE", "desc": "AASHTO H-20 load certified for highway and street installation.", "icon": "ShieldCheck" },
+          { "title": "HIGH INTAKE COLUMNS", "desc": "Vertical intake slots maximize stormwater runoff capture.", "icon": "Layers" },
+          { "title": "STABILISING FOOT PLATE", "desc": "Integrated base plate prevents sinking in soft soils.", "icon": "Target" },
+          { "title": "SMOOTH INTERNAL BORE", "desc": "Prevents sediment buildup and minimizes maintenance cycles.", "icon": "Droplet" }
+        ],
+        "idealFor": "Urban streets, highway corridors, parking structures, commercial plazas, and transit hubs."
       }
     ]
   },

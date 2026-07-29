@@ -32,44 +32,44 @@ export default function HomePageClient() {
     <>
       <GlobalProgressBar containerRef={containerRef} />
       <Navbar />
-      
-      <main 
+
+      <main
         ref={containerRef}
         className="w-full relative"
       >
         <PresentationSlide><Hero /></PresentationSlide>
-        
+
         {/* 1. Introduction: Who we are */}
         <PresentationSlide><About /></PresentationSlide>
         <PresentationSlide><TrustGuarantee /></PresentationSlide>
-        
+
         {/* 2. Innovation: The problems we solve and how we approach them */}
         <PresentationSlide><Solutions /></PresentationSlide>
         <PresentationSlide><TechnologyInnovation /></PresentationSlide>
         <PresentationSlide><ResearchDevelopment /></PresentationSlide>
-        
+
         {/* 3. The Engine: Our facilities and how we build */}
         <PresentationSlide><InfrastructureFacilities /></PresentationSlide>
         <PresentationSlide><ManufacturingCapabilities /></PresentationSlide>
         <PresentationSlide><ManufacturingProcess /></PresentationSlide>
-        
+
         {/* 4. The Output: What we actually produce */}
         <PresentationSlide><CurbBoxFeature /></PresentationSlide>
         <PresentationSlide><Products /></PresentationSlide>
-        
+
         {/* 5. The Proof: Quality standards and real-world usage */}
         <PresentationSlide><QualityCompliance /></PresentationSlide>
         <PresentationSlide><TechnicalStandards /></PresentationSlide>
         <PresentationSlide><Industries /></PresentationSlide>
-        
+
         {/* 6. The Scale & Future: Global reach and commitment */}
         <PresentationSlide><GlobalSupplyNetwork /></PresentationSlide>
         <PresentationSlide><Sustainability /></PresentationSlide>
         <PresentationSlide><Partners /></PresentationSlide>
-        
+
         {/* 7. Blog / Insights */}
         <PresentationSlide><BlogSection /></PresentationSlide>
-        
+
         <PresentationSlide><Footer /></PresentationSlide>
       </main>
 
